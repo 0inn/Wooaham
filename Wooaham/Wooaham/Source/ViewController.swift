@@ -14,6 +14,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func goToNextVC(_ sender: Any) {
+        let vc = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: false)
+    }
 }
 
