@@ -25,6 +25,8 @@
 		A93273B027F9E8BB001B0EDB /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93273AF27F9E8BB001B0EDB /* MyPage.storyboard */; };
 		A93273B227F9ED1E001B0EDB /* ProfileEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273B127F9ED1E001B0EDB /* ProfileEditViewController.swift */; };
 		A93273B427F9F6D2001B0EDB /* AddSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273B327F9F6D2001B0EDB /* AddSchoolViewController.swift */; };
+		A93273B627FB2D57001B0EDB /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273B527FB2D57001B0EDB /* String.swift */; };
+		A93273B827FB2D7B001B0EDB /* NSMutableAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273B727FB2D7B001B0EDB /* NSMutableAttributedString.swift */; };
 		CE81C783B1BA87148374EAB8 /* Pods_Wooaham.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECC2A0843E732B2894F27C7 /* Pods_Wooaham.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		A93273AF27F9E8BB001B0EDB /* MyPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		A93273B127F9ED1E001B0EDB /* ProfileEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditViewController.swift; sourceTree = "<group>"; };
 		A93273B327F9F6D2001B0EDB /* AddSchoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSchoolViewController.swift; sourceTree = "<group>"; };
+		A93273B527FB2D57001B0EDB /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		A93273B727FB2D7B001B0EDB /* NSMutableAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSMutableAttributedString.swift; sourceTree = "<group>"; };
 		AECC2A0843E732B2894F27C7 /* Pods_Wooaham.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wooaham.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -139,6 +143,8 @@
 				A932739E27F9D940001B0EDB /* UIFont.swift */,
 				A93273A527F9E12E001B0EDB /* UIViewController.swift */,
 				A93273A727F9E1CC001B0EDB /* CALayer.swift */,
+				A93273B527FB2D57001B0EDB /* String.swift */,
+				A93273B727FB2D7B001B0EDB /* NSMutableAttributedString.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -304,11 +310,13 @@
 				A93273A427F9DD1C001B0EDB /* MyPageViewController.swift in Sources */,
 				A93273B427F9F6D2001B0EDB /* AddSchoolViewController.swift in Sources */,
 				A932739D27F9D222001B0EDB /* AuthSelectViewController.swift in Sources */,
+				A93273B627FB2D57001B0EDB /* String.swift in Sources */,
 				A932737F27F9C83D001B0EDB /* ViewController.swift in Sources */,
 				A93273B227F9ED1E001B0EDB /* ProfileEditViewController.swift in Sources */,
 				A93273A627F9E12E001B0EDB /* UIViewController.swift in Sources */,
 				A932737B27F9C83D001B0EDB /* AppDelegate.swift in Sources */,
 				A932739F27F9D940001B0EDB /* UIFont.swift in Sources */,
+				A93273B827FB2D7B001B0EDB /* NSMutableAttributedString.swift in Sources */,
 				A932737D27F9C83D001B0EDB /* SceneDelegate.swift in Sources */,
 				A93273A827F9E1CC001B0EDB /* CALayer.swift in Sources */,
 				A932739B27F9CF31001B0EDB /* UIView.swift in Sources */,
