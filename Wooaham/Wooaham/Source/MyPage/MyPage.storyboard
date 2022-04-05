@@ -20,20 +20,20 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="130"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="J7c-Jm-90a">
-                                        <rect key="frame" x="15" y="5" width="120" height="120"/>
+                                        <rect key="frame" x="20" y="5" width="120" height="120"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="J7c-Jm-90a" secondAttribute="height" multiplier="1:1" id="729-wS-Cqs"/>
                                             <constraint firstAttribute="width" constant="120" id="mUB-CF-wbV"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이주희 학생" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDn-33-OpH">
-                                        <rect key="frame" x="160" y="46.5" width="91.5" height="24"/>
+                                        <rect key="frame" x="165" y="46.5" width="91.5" height="24"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="id@wooaham.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ct-yx-nTp">
-                                        <rect key="frame" x="160" y="75.5" width="140" height="21"/>
+                                        <rect key="frame" x="165" y="75.5" width="140" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -48,7 +48,7 @@
                                 <constraints>
                                     <constraint firstItem="RDn-33-OpH" firstAttribute="leading" secondItem="J7c-Jm-90a" secondAttribute="trailing" constant="25" id="0rz-Vu-yV9"/>
                                     <constraint firstItem="ch1-fJ-USV" firstAttribute="centerY" secondItem="S0Y-NS-kCo" secondAttribute="centerY" id="8Kp-SP-h60"/>
-                                    <constraint firstItem="J7c-Jm-90a" firstAttribute="leading" secondItem="S0Y-NS-kCo" secondAttribute="leading" constant="15" id="J3L-7h-B7V"/>
+                                    <constraint firstItem="J7c-Jm-90a" firstAttribute="leading" secondItem="S0Y-NS-kCo" secondAttribute="leading" constant="20" id="J3L-7h-B7V"/>
                                     <constraint firstItem="J7c-Jm-90a" firstAttribute="centerY" secondItem="S0Y-NS-kCo" secondAttribute="centerY" id="Kq0-xl-FJn"/>
                                     <constraint firstAttribute="height" constant="130" id="VYS-BM-gCR"/>
                                     <constraint firstItem="4ct-yx-nTp" firstAttribute="top" secondItem="RDn-33-OpH" secondAttribute="bottom" constant="5" id="aaG-xz-Ux3"/>
@@ -130,7 +130,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJV-x4-AkR">
-                                <rect key="frame" x="15" y="830" width="76" height="32"/>
+                                <rect key="frame" x="15" y="815" width="76" height="32"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="로그아웃">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
@@ -153,7 +153,7 @@
                             <constraint firstItem="S0Y-NS-kCo" firstAttribute="top" secondItem="cGa-r9-puT" secondAttribute="top" id="ohd-C9-90B"/>
                             <constraint firstItem="jgn-8V-wvr" firstAttribute="top" secondItem="S0Y-NS-kCo" secondAttribute="bottom" id="r53-Zy-ouJ"/>
                             <constraint firstItem="S0Y-NS-kCo" firstAttribute="leading" secondItem="cGa-r9-puT" secondAttribute="leading" id="sfl-62-AaV"/>
-                            <constraint firstItem="cGa-r9-puT" firstAttribute="bottom" secondItem="YJV-x4-AkR" secondAttribute="bottom" id="wlV-Yh-CaG"/>
+                            <constraint firstItem="cGa-r9-puT" firstAttribute="bottom" secondItem="YJV-x4-AkR" secondAttribute="bottom" constant="15" id="wlV-Yh-CaG"/>
                             <constraint firstAttribute="trailing" secondItem="S0Y-NS-kCo" secondAttribute="trailing" id="xzM-Zg-wKF"/>
                             <constraint firstItem="jgn-8V-wvr" firstAttribute="leading" secondItem="cGa-r9-puT" secondAttribute="leading" id="yM1-3q-6nt"/>
                         </constraints>
@@ -438,7 +438,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42C-oU-7lv">
-                                <rect key="frame" x="15" y="830" width="76" height="32"/>
+                                <rect key="frame" x="15" y="815" width="76" height="32"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="계정탈퇴">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
@@ -449,7 +449,7 @@
                         <viewLayoutGuide key="safeArea" id="EwV-G7-ogx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="EwV-G7-ogx" firstAttribute="bottom" secondItem="42C-oU-7lv" secondAttribute="bottom" id="2DX-HE-fTE"/>
+                            <constraint firstItem="EwV-G7-ogx" firstAttribute="bottom" secondItem="42C-oU-7lv" secondAttribute="bottom" constant="15" id="2DX-HE-fTE"/>
                             <constraint firstItem="EwV-G7-ogx" firstAttribute="trailing" secondItem="gsT-81-Nwd" secondAttribute="trailing" id="2a8-ti-wX7"/>
                             <constraint firstItem="gsT-81-Nwd" firstAttribute="top" secondItem="EwV-G7-ogx" secondAttribute="top" id="9HB-3n-Obm"/>
                             <constraint firstItem="EwV-G7-ogx" firstAttribute="trailing" secondItem="u5c-oB-MmS" secondAttribute="trailing" id="AMu-c2-Qom"/>
@@ -471,7 +471,7 @@
         <scene sceneID="zu2-0i-SkR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DtW-5c-vkQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="마이페이지" image="person.fill" catalog="system" id="OGP-HK-wpb"/>
+                    <tabBarItem key="tabBarItem" title="마이페이지" image="mypage" id="OGP-HK-wpb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sNP-1N-Fa2">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -490,7 +490,7 @@
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="94"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="mypage" width="35" height="36"/>
         <image name="profile" width="291" height="300"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
