@@ -27,7 +27,8 @@ extension AlarmViewController {
     
     // 알람 추가 페이지로 이동
     @objc func addAlarm(_ sender: Any) {
-        
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddAlarmViewController") else { return }
+        self.present(vc, animated: true)
     }
 }
 
