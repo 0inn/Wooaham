@@ -33,6 +33,11 @@
 		A93273C427FC1DA3001B0EDB /* AlarmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273C227FC1DA3001B0EDB /* AlarmTableViewCell.swift */; };
 		A93273C527FC1DA3001B0EDB /* AlarmTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A93273C327FC1DA3001B0EDB /* AlarmTableViewCell.xib */; };
 		A93273C727FC2457001B0EDB /* AddAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273C627FC2457001B0EDB /* AddAlarmViewController.swift */; };
+		A93273CA27FEBAA2001B0EDB /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93273C927FEBAA2001B0EDB /* Map.storyboard */; };
+		A93273CC27FEBD28001B0EDB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273CB27FEBD28001B0EDB /* MapViewController.swift */; };
+		A93273CE27FEBDCB001B0EDB /* AlarmAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273CD27FEBDCB001B0EDB /* AlarmAlertViewController.swift */; };
+		A93273D127FEC7B0001B0EDB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93273D027FEC7B0001B0EDB /* Home.storyboard */; };
+		A93273D327FEC7E2001B0EDB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273D227FEC7E2001B0EDB /* HomeViewController.swift */; };
 		CE81C783B1BA87148374EAB8 /* Pods_Wooaham.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECC2A0843E732B2894F27C7 /* Pods_Wooaham.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +72,11 @@
 		A93273C227FC1DA3001B0EDB /* AlarmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTableViewCell.swift; sourceTree = "<group>"; };
 		A93273C327FC1DA3001B0EDB /* AlarmTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlarmTableViewCell.xib; sourceTree = "<group>"; };
 		A93273C627FC2457001B0EDB /* AddAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmViewController.swift; sourceTree = "<group>"; };
+		A93273C927FEBAA2001B0EDB /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		A93273CB27FEBD28001B0EDB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A93273CD27FEBDCB001B0EDB /* AlarmAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmAlertViewController.swift; sourceTree = "<group>"; };
+		A93273D027FEC7B0001B0EDB /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		A93273D227FEC7E2001B0EDB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AECC2A0843E732B2894F27C7 /* Pods_Wooaham.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wooaham.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -168,7 +178,9 @@
 				A932738027F9C83D001B0EDB /* Main.storyboard */,
 				A93273C027FC1AEF001B0EDB /* TabBarController.swift */,
 				A932739327F9CE66001B0EDB /* Login */,
+				A93273CF27FEC777001B0EDB /* Home */,
 				A93273B927FC1768001B0EDB /* Alarm */,
+				A93273C827FEBA7A001B0EDB /* Map */,
 				A93273A027F9DCE3001B0EDB /* MyPage */,
 			);
 			path = Source;
@@ -203,8 +215,27 @@
 				A93273C327FC1DA3001B0EDB /* AlarmTableViewCell.xib */,
 				A93273C227FC1DA3001B0EDB /* AlarmTableViewCell.swift */,
 				A93273C627FC2457001B0EDB /* AddAlarmViewController.swift */,
+				A93273CD27FEBDCB001B0EDB /* AlarmAlertViewController.swift */,
 			);
 			path = Alarm;
+			sourceTree = "<group>";
+		};
+		A93273C827FEBA7A001B0EDB /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				A93273C927FEBAA2001B0EDB /* Map.storyboard */,
+				A93273CB27FEBD28001B0EDB /* MapViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		A93273CF27FEC777001B0EDB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A93273D027FEC7B0001B0EDB /* Home.storyboard */,
+				A93273D227FEC7E2001B0EDB /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		BAA01814139471BE39761771 /* Frameworks */ = {
@@ -278,6 +309,8 @@
 				A932739527F9CE76001B0EDB /* Login.storyboard in Resources */,
 				A93273B027F9E8BB001B0EDB /* MyPage.storyboard in Resources */,
 				A93273C527FC1DA3001B0EDB /* AlarmTableViewCell.xib in Resources */,
+				A93273D127FEC7B0001B0EDB /* Home.storyboard in Resources */,
+				A93273CA27FEBAA2001B0EDB /* Map.storyboard in Resources */,
 				A932738727F9C83E001B0EDB /* LaunchScreen.storyboard in Resources */,
 				A93273BB27FC1799001B0EDB /* Alarm.storyboard in Resources */,
 				A932738427F9C83E001B0EDB /* Assets.xcassets in Resources */,
@@ -337,8 +370,11 @@
 				A932739727F9CE86001B0EDB /* LoginViewController.swift in Sources */,
 				A93273BF27FC1A82001B0EDB /* UITabBarController.swift in Sources */,
 				A93273A427F9DD1C001B0EDB /* MyPageViewController.swift in Sources */,
+				A93273CC27FEBD28001B0EDB /* MapViewController.swift in Sources */,
 				A93273B427F9F6D2001B0EDB /* AddSchoolViewController.swift in Sources */,
 				A932739D27F9D222001B0EDB /* AuthSelectViewController.swift in Sources */,
+				A93273CE27FEBDCB001B0EDB /* AlarmAlertViewController.swift in Sources */,
+				A93273D327FEC7E2001B0EDB /* HomeViewController.swift in Sources */,
 				A93273B627FB2D57001B0EDB /* String.swift in Sources */,
 				A93273C127FC1AEF001B0EDB /* TabBarController.swift in Sources */,
 				A93273BD27FC180C001B0EDB /* AlarmViewController.swift in Sources */,
