@@ -20,8 +20,8 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupCollectionViews()
-        setupViews()
+        setCollectionViews()
+        setViews()
     }
     
     @IBAction func noticeBtnClick(_ sender: Any) {
@@ -29,10 +29,20 @@ class HomeViewController: UIViewController {
         self.presentNVC(vc)
     }
     
+    @IBAction func mealBtnClick(_ sender: Any) {
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "MealPlannerViewController") as? MealPlannerViewController else { return }
+        self.presentNVC(vc)
+    }
+    
+    @IBAction func timetableBtnClick(_ sender: Any) {
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "TimeTableViewController") as? TimeTableViewController else { return }
+        self.presentNVC(vc)
+    }
+    
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    private func setupCollectionViews() {
+    private func setCollectionViews() {
         mealCollectionView.delegate = self
         mealCollectionView.dataSource = self
         mealCollectionView.register(UINib(nibName: MEAL_CELL, bundle: nil), forCellWithReuseIdentifier: MEAL_CELL)
@@ -80,7 +90,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 }
 
 extension HomeViewController {
-    private func setupViews() {
+    private func setViews() {
         schoolHW.roundCorners(cornerRadius: 10, maskedCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
         instHW.roundCorners(cornerRadius: 10, maskedCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
     }

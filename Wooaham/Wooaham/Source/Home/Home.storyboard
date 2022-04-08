@@ -115,6 +115,9 @@
                                                             <imageReference key="image" image="chevron.right" catalog="system" symbolScale="small"/>
                                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="bold"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="mealBtnClick:" destination="9d0-J8-u9r" eventType="touchUpInside" id="tDI-0d-WJk"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -166,6 +169,9 @@
                                                             <imageReference key="image" image="chevron.right" catalog="system" symbolScale="small"/>
                                                             <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" weight="bold"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="timetableBtnClick:" destination="9d0-J8-u9r" eventType="touchUpInside" id="aKf-nA-UlE"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -353,7 +359,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eBD-to-DqM">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="798"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wA4-fz-adl">
                                     <size key="itemSize" width="128" height="128"/>
@@ -368,15 +374,63 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="POh-2n-Rct" firstAttribute="bottom" secondItem="eBD-to-DqM" secondAttribute="bottom" id="9xZ-nq-mXZ"/>
-                            <constraint firstItem="eBD-to-DqM" firstAttribute="top" secondItem="POh-2n-Rct" secondAttribute="top" id="PdQ-S1-MJP"/>
+                            <constraint firstItem="eBD-to-DqM" firstAttribute="top" secondItem="POh-2n-Rct" secondAttribute="top" constant="20" id="PdQ-S1-MJP"/>
                             <constraint firstItem="eBD-to-DqM" firstAttribute="leading" secondItem="POh-2n-Rct" secondAttribute="leading" id="aYn-ZA-d5f"/>
                             <constraint firstItem="POh-2n-Rct" firstAttribute="trailing" secondItem="eBD-to-DqM" secondAttribute="trailing" id="e8y-Te-0NK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="noticeCollectionView" destination="eBD-to-DqM" id="mth-ab-hjG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cxE-cW-9wL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1409" y="1219"/>
+        </scene>
+        <!--Meal Planner View Controller-->
+        <scene sceneID="Eb5-hF-Yao">
+            <objects>
+                <viewController storyboardIdentifier="MealPlannerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VCD-pI-DpG" customClass="MealPlannerViewController" customModule="Wooaham" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aJM-tY-uIw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0Yu-I0-OcP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Puh-fc-k6N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2158" y="1219"/>
+        </scene>
+        <!--Time Table View Controller-->
+        <scene sceneID="jiv-op-7eO">
+            <objects>
+                <viewController storyboardIdentifier="TimeTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PNy-SK-lwA" customClass="TimeTableViewController" customModule="Wooaham" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oSy-II-Ylo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="agv-WU-P6b"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SWj-kc-2TC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2884" y="1219"/>
+        </scene>
+        <!--Homework View Controller-->
+        <scene sceneID="dc8-e2-R5E">
+            <objects>
+                <viewController storyboardIdentifier="HomeworkViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Kf8-zt-i9y" customClass="HomeworkViewController" customModule="Wooaham" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YZy-Zf-TN9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="LtE-d4-7L0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Pm-0w-bpA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3599" y="1219"/>
         </scene>
         <!--홈-->
         <scene sceneID="qx6-Ul-S1O">

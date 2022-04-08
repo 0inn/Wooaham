@@ -14,13 +14,16 @@ class AlarmViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupAlarmTableView()
-        setupNavigationBar()
+        setAlarmTableView()
+        setNavigationBar()
+        setRefresh()
     }
 }
 
 extension AlarmViewController {
-    private func setupNavigationBar() {
+    
+    // MARK: 네비게이션바
+    private func setNavigationBar() {
         // 네비게이션 바에 알람 추가 버튼
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addAlarm(_:)))
     }
@@ -30,10 +33,26 @@ extension AlarmViewController {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddAlarmViewController") else { return }
         self.present(vc, animated: true)
     }
+    
+    // MARK: 새로고침
+    private func setRefresh() {
+        let refresh = UIRefreshControl()
+        refresh.addTarget(self, action: #selector(updateUI(refresh:)), for: .valueChanged)
+        refresh.tintColor = .lightGray
+        alarmTableView.addSubview(refresh)
+    }
+    
+    @objc func updateUI(refresh: UIRefreshControl) {
+        refresh.endRefreshing() // 종료
+        alarmTableView.reloadData()  // 테이블 뷰 로드
+    }
+    
 }
 
+// MARK: 알람 전체 목록
 extension AlarmViewController: UITableViewDelegate, UITableViewDataSource {
-    private func setupAlarmTableView() {
+    
+    private func setAlarmTableView() {
         alarmTableView.delegate = self
         alarmTableView.dataSource = self
         alarmTableView.register(UINib(nibName: ALARM_CELL, bundle: nil), forCellReuseIdentifier: ALARM_CELL)
@@ -47,6 +66,19 @@ extension AlarmViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = alarmTableView.dequeueReusableCell(withIdentifier: ALARM_CELL, for: indexPath) as? AlarmTableViewCell else { return UITableViewCell() }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            // 데이터 삭제
+            alarmTableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddAlarmViewController") else { return }
+        // 데이터 날려야 됨
+        self.present(vc, animated: true)
     }
     
 }

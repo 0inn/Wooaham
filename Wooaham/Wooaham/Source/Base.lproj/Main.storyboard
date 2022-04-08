@@ -23,10 +23,10 @@
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
+                        <segue destination="a4b-4B-ycb" kind="relationship" relationship="viewControllers" id="qs7-KG-Oyx"/>
                         <segue destination="Zmk-KJ-yQu" kind="relationship" relationship="viewControllers" id="Ref-JD-0tk"/>
                         <segue destination="dPc-31-Q9V" kind="relationship" relationship="viewControllers" id="7oG-k1-hdq"/>
                         <segue destination="oeI-FA-sMs" kind="relationship" relationship="viewControllers" id="6F3-1R-NaY"/>
-                        <segue destination="a4b-4B-ycb" kind="relationship" relationship="viewControllers" id="qs7-KG-Oyx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xmN-q7-tYC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

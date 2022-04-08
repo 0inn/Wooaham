@@ -11,7 +11,6 @@ import Foundation
 class AddAlarmViewController: UIViewController {
     
     @IBOutlet weak var iconView: UIView!
-    
     @IBOutlet weak var iconImg: UIImageView!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var nameTextField: UITextField!
@@ -30,20 +29,11 @@ class AddAlarmViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupIcon()
     }
     
     // 취소 버튼
     @IBAction func cancelBtnClick(_ sender: Any) {
         self.dismiss(animated: true)
-    }
-    
-    // 아이콘 선택창 -> 나중에 고려 ^^
-    @objc func addIcon(_ sender: Any) {
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AlarmAlertViewController") else { return }
-        vc.modalTransitionStyle = .crossDissolve
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
     }
     
     // 알람 시간 설정
@@ -120,11 +110,4 @@ class AddAlarmViewController: UIViewController {
         self.dismiss(animated: true)
     }
     
-}
-
-extension AddAlarmViewController {
-    private func setupIcon() {
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(addIcon(_:)))
-        self.iconView.addGestureRecognizer(gesture)
-    }
 }

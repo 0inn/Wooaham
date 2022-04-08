@@ -35,9 +35,18 @@
 		A93273C727FC2457001B0EDB /* AddAlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273C627FC2457001B0EDB /* AddAlarmViewController.swift */; };
 		A93273CA27FEBAA2001B0EDB /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93273C927FEBAA2001B0EDB /* Map.storyboard */; };
 		A93273CC27FEBD28001B0EDB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273CB27FEBD28001B0EDB /* MapViewController.swift */; };
-		A93273CE27FEBDCB001B0EDB /* AlarmAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273CD27FEBDCB001B0EDB /* AlarmAlertViewController.swift */; };
 		A93273D127FEC7B0001B0EDB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93273D027FEC7B0001B0EDB /* Home.storyboard */; };
 		A93273D327FEC7E2001B0EDB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273D227FEC7E2001B0EDB /* HomeViewController.swift */; };
+		A93273D527FECB4A001B0EDB /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273D427FECB4A001B0EDB /* NoticeViewController.swift */; };
+		A93273DA27FECD7F001B0EDB /* MealPlannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273D827FECD7F001B0EDB /* MealPlannerCollectionViewCell.swift */; };
+		A93273DB27FECD7F001B0EDB /* MealPlannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A93273D927FECD7F001B0EDB /* MealPlannerCollectionViewCell.xib */; };
+		A93273DE27FED1B7001B0EDB /* TimeTableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273DC27FED1B7001B0EDB /* TimeTableCollectionViewCell.swift */; };
+		A93273DF27FED1B7001B0EDB /* TimeTableCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A93273DD27FED1B7001B0EDB /* TimeTableCollectionViewCell.xib */; };
+		A93273E327FEEA0E001B0EDB /* NoticeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273E127FEEA0E001B0EDB /* NoticeCollectionViewCell.swift */; };
+		A93273E427FEEA0E001B0EDB /* NoticeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A93273E227FEEA0E001B0EDB /* NoticeCollectionViewCell.xib */; };
+		A93273E727FEEC27001B0EDB /* MealPlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273E627FEEC27001B0EDB /* MealPlannerViewController.swift */; };
+		A93273EA27FEEC5D001B0EDB /* TimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273E927FEEC5D001B0EDB /* TimeTableViewController.swift */; };
+		A93273ED27FEEC76001B0EDB /* HomeworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273EC27FEEC76001B0EDB /* HomeworkViewController.swift */; };
 		CE81C783B1BA87148374EAB8 /* Pods_Wooaham.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECC2A0843E732B2894F27C7 /* Pods_Wooaham.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,9 +83,18 @@
 		A93273C627FC2457001B0EDB /* AddAlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmViewController.swift; sourceTree = "<group>"; };
 		A93273C927FEBAA2001B0EDB /* Map.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		A93273CB27FEBD28001B0EDB /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		A93273CD27FEBDCB001B0EDB /* AlarmAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmAlertViewController.swift; sourceTree = "<group>"; };
 		A93273D027FEC7B0001B0EDB /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		A93273D227FEC7E2001B0EDB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A93273D427FECB4A001B0EDB /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
+		A93273D827FECD7F001B0EDB /* MealPlannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		A93273D927FECD7F001B0EDB /* MealPlannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealPlannerCollectionViewCell.xib; sourceTree = "<group>"; };
+		A93273DC27FED1B7001B0EDB /* TimeTableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableCollectionViewCell.swift; sourceTree = "<group>"; };
+		A93273DD27FED1B7001B0EDB /* TimeTableCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeTableCollectionViewCell.xib; sourceTree = "<group>"; };
+		A93273E127FEEA0E001B0EDB /* NoticeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeCollectionViewCell.swift; sourceTree = "<group>"; };
+		A93273E227FEEA0E001B0EDB /* NoticeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoticeCollectionViewCell.xib; sourceTree = "<group>"; };
+		A93273E627FEEC27001B0EDB /* MealPlannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerViewController.swift; sourceTree = "<group>"; };
+		A93273E927FEEC5D001B0EDB /* TimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewController.swift; sourceTree = "<group>"; };
+		A93273EC27FEEC76001B0EDB /* HomeworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkViewController.swift; sourceTree = "<group>"; };
 		AECC2A0843E732B2894F27C7 /* Pods_Wooaham.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wooaham.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -215,7 +233,6 @@
 				A93273C327FC1DA3001B0EDB /* AlarmTableViewCell.xib */,
 				A93273C227FC1DA3001B0EDB /* AlarmTableViewCell.swift */,
 				A93273C627FC2457001B0EDB /* AddAlarmViewController.swift */,
-				A93273CD27FEBDCB001B0EDB /* AlarmAlertViewController.swift */,
 			);
 			path = Alarm;
 			sourceTree = "<group>";
@@ -234,8 +251,50 @@
 			children = (
 				A93273D027FEC7B0001B0EDB /* Home.storyboard */,
 				A93273D227FEC7E2001B0EDB /* HomeViewController.swift */,
+				A93273D927FECD7F001B0EDB /* MealPlannerCollectionViewCell.xib */,
+				A93273D827FECD7F001B0EDB /* MealPlannerCollectionViewCell.swift */,
+				A93273DD27FED1B7001B0EDB /* TimeTableCollectionViewCell.xib */,
+				A93273DC27FED1B7001B0EDB /* TimeTableCollectionViewCell.swift */,
+				A93273E027FEE9F7001B0EDB /* Notice */,
+				A93273E527FEEBE6001B0EDB /* MealPlanner */,
+				A93273E827FEEC45001B0EDB /* TimeTable */,
+				A93273EB27FEEC66001B0EDB /* Homework */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		A93273E027FEE9F7001B0EDB /* Notice */ = {
+			isa = PBXGroup;
+			children = (
+				A93273D427FECB4A001B0EDB /* NoticeViewController.swift */,
+				A93273E227FEEA0E001B0EDB /* NoticeCollectionViewCell.xib */,
+				A93273E127FEEA0E001B0EDB /* NoticeCollectionViewCell.swift */,
+			);
+			path = Notice;
+			sourceTree = "<group>";
+		};
+		A93273E527FEEBE6001B0EDB /* MealPlanner */ = {
+			isa = PBXGroup;
+			children = (
+				A93273E627FEEC27001B0EDB /* MealPlannerViewController.swift */,
+			);
+			path = MealPlanner;
+			sourceTree = "<group>";
+		};
+		A93273E827FEEC45001B0EDB /* TimeTable */ = {
+			isa = PBXGroup;
+			children = (
+				A93273E927FEEC5D001B0EDB /* TimeTableViewController.swift */,
+			);
+			path = TimeTable;
+			sourceTree = "<group>";
+		};
+		A93273EB27FEEC66001B0EDB /* Homework */ = {
+			isa = PBXGroup;
+			children = (
+				A93273EC27FEEC76001B0EDB /* HomeworkViewController.swift */,
+			);
+			path = Homework;
 			sourceTree = "<group>";
 		};
 		BAA01814139471BE39761771 /* Frameworks */ = {
@@ -311,9 +370,12 @@
 				A93273C527FC1DA3001B0EDB /* AlarmTableViewCell.xib in Resources */,
 				A93273D127FEC7B0001B0EDB /* Home.storyboard in Resources */,
 				A93273CA27FEBAA2001B0EDB /* Map.storyboard in Resources */,
+				A93273DF27FED1B7001B0EDB /* TimeTableCollectionViewCell.xib in Resources */,
 				A932738727F9C83E001B0EDB /* LaunchScreen.storyboard in Resources */,
+				A93273DB27FECD7F001B0EDB /* MealPlannerCollectionViewCell.xib in Resources */,
 				A93273BB27FC1799001B0EDB /* Alarm.storyboard in Resources */,
 				A932738427F9C83E001B0EDB /* Assets.xcassets in Resources */,
+				A93273E427FEEA0E001B0EDB /* NoticeCollectionViewCell.xib in Resources */,
 				A932738227F9C83D001B0EDB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,16 +431,20 @@
 			files = (
 				A932739727F9CE86001B0EDB /* LoginViewController.swift in Sources */,
 				A93273BF27FC1A82001B0EDB /* UITabBarController.swift in Sources */,
+				A93273ED27FEEC76001B0EDB /* HomeworkViewController.swift in Sources */,
 				A93273A427F9DD1C001B0EDB /* MyPageViewController.swift in Sources */,
 				A93273CC27FEBD28001B0EDB /* MapViewController.swift in Sources */,
 				A93273B427F9F6D2001B0EDB /* AddSchoolViewController.swift in Sources */,
 				A932739D27F9D222001B0EDB /* AuthSelectViewController.swift in Sources */,
-				A93273CE27FEBDCB001B0EDB /* AlarmAlertViewController.swift in Sources */,
 				A93273D327FEC7E2001B0EDB /* HomeViewController.swift in Sources */,
+				A93273DE27FED1B7001B0EDB /* TimeTableCollectionViewCell.swift in Sources */,
+				A93273EA27FEEC5D001B0EDB /* TimeTableViewController.swift in Sources */,
+				A93273E727FEEC27001B0EDB /* MealPlannerViewController.swift in Sources */,
 				A93273B627FB2D57001B0EDB /* String.swift in Sources */,
 				A93273C127FC1AEF001B0EDB /* TabBarController.swift in Sources */,
 				A93273BD27FC180C001B0EDB /* AlarmViewController.swift in Sources */,
 				A93273B227F9ED1E001B0EDB /* ProfileEditViewController.swift in Sources */,
+				A93273DA27FECD7F001B0EDB /* MealPlannerCollectionViewCell.swift in Sources */,
 				A93273A627F9E12E001B0EDB /* UIViewController.swift in Sources */,
 				A932737B27F9C83D001B0EDB /* AppDelegate.swift in Sources */,
 				A932739F27F9D940001B0EDB /* UIFont.swift in Sources */,
@@ -386,7 +452,9 @@
 				A932737D27F9C83D001B0EDB /* SceneDelegate.swift in Sources */,
 				A93273A827F9E1CC001B0EDB /* CALayer.swift in Sources */,
 				A932739B27F9CF31001B0EDB /* UIView.swift in Sources */,
+				A93273E327FEEA0E001B0EDB /* NoticeCollectionViewCell.swift in Sources */,
 				A932739927F9CEE6001B0EDB /* UIColor.swift in Sources */,
+				A93273D527FECB4A001B0EDB /* NoticeViewController.swift in Sources */,
 				A93273C727FC2457001B0EDB /* AddAlarmViewController.swift in Sources */,
 				A93273C427FC1DA3001B0EDB /* AlarmTableViewCell.swift in Sources */,
 			);
