@@ -7,6 +7,7 @@
 
 import UIKit
 
+// 코드로 짜자 탭바 !
 class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
