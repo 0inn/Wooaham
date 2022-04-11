@@ -25,7 +25,7 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func noticeBtnClick(_ sender: Any) {
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "NoticeViewController") as? NoticeViewController else { return }
+        guard let vc = UIStoryboard(name: "NoticeVC", bundle: nil).instantiateViewController(withIdentifier: "NoticeViewController") as? NoticeViewController else { return }
         self.presentNVC(vc)
     }
     

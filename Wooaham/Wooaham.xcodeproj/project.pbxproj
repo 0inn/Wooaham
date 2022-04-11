@@ -47,6 +47,9 @@
 		A93273E727FEEC27001B0EDB /* MealPlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273E627FEEC27001B0EDB /* MealPlannerViewController.swift */; };
 		A93273EA27FEEC5D001B0EDB /* TimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273E927FEEC5D001B0EDB /* TimeTableViewController.swift */; };
 		A93273ED27FEEC76001B0EDB /* HomeworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273EC27FEEC76001B0EDB /* HomeworkViewController.swift */; };
+		A932749B280315E7001B0EDB /* AlarmEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932749A280315E7001B0EDB /* AlarmEntity.swift */; };
+		A932749D28031604001B0EDB /* AlarmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932749C28031604001B0EDB /* AlarmDataManager.swift */; };
+		A932749F2803FD50001B0EDB /* NoticeVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A932749E2803FD50001B0EDB /* NoticeVC.storyboard */; };
 		CE81C783B1BA87148374EAB8 /* Pods_Wooaham.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECC2A0843E732B2894F27C7 /* Pods_Wooaham.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +98,9 @@
 		A93273E627FEEC27001B0EDB /* MealPlannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerViewController.swift; sourceTree = "<group>"; };
 		A93273E927FEEC5D001B0EDB /* TimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewController.swift; sourceTree = "<group>"; };
 		A93273EC27FEEC76001B0EDB /* HomeworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkViewController.swift; sourceTree = "<group>"; };
+		A932749A280315E7001B0EDB /* AlarmEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmEntity.swift; sourceTree = "<group>"; };
+		A932749C28031604001B0EDB /* AlarmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDataManager.swift; sourceTree = "<group>"; };
+		A932749E2803FD50001B0EDB /* NoticeVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NoticeVC.storyboard; sourceTree = "<group>"; };
 		AECC2A0843E732B2894F27C7 /* Pods_Wooaham.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wooaham.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -228,6 +234,8 @@
 		A93273B927FC1768001B0EDB /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
+				A932749828031544001B0EDB /* AlarmEntity */,
+				A93274992803154D001B0EDB /* AlarmDataManager */,
 				A93273BA27FC1799001B0EDB /* Alarm.storyboard */,
 				A93273BC27FC180C001B0EDB /* AlarmViewController.swift */,
 				A93273C327FC1DA3001B0EDB /* AlarmTableViewCell.xib */,
@@ -249,6 +257,8 @@
 		A93273CF27FEC777001B0EDB /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A93274972803152B001B0EDB /* HomeEntity */,
+				A93274962803151D001B0EDB /* HomeDataManager */,
 				A93273D027FEC7B0001B0EDB /* Home.storyboard */,
 				A93273D227FEC7E2001B0EDB /* HomeViewController.swift */,
 				A93273D927FECD7F001B0EDB /* MealPlannerCollectionViewCell.xib */,
@@ -266,6 +276,7 @@
 		A93273E027FEE9F7001B0EDB /* Notice */ = {
 			isa = PBXGroup;
 			children = (
+				A932749E2803FD50001B0EDB /* NoticeVC.storyboard */,
 				A93273D427FECB4A001B0EDB /* NoticeViewController.swift */,
 				A93273E227FEEA0E001B0EDB /* NoticeCollectionViewCell.xib */,
 				A93273E127FEEA0E001B0EDB /* NoticeCollectionViewCell.swift */,
@@ -295,6 +306,36 @@
 				A93273EC27FEEC76001B0EDB /* HomeworkViewController.swift */,
 			);
 			path = Homework;
+			sourceTree = "<group>";
+		};
+		A93274962803151D001B0EDB /* HomeDataManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeDataManager;
+			sourceTree = "<group>";
+		};
+		A93274972803152B001B0EDB /* HomeEntity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeEntity;
+			sourceTree = "<group>";
+		};
+		A932749828031544001B0EDB /* AlarmEntity */ = {
+			isa = PBXGroup;
+			children = (
+				A932749A280315E7001B0EDB /* AlarmEntity.swift */,
+			);
+			path = AlarmEntity;
+			sourceTree = "<group>";
+		};
+		A93274992803154D001B0EDB /* AlarmDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				A932749C28031604001B0EDB /* AlarmDataManager.swift */,
+			);
+			path = AlarmDataManager;
 			sourceTree = "<group>";
 		};
 		BAA01814139471BE39761771 /* Frameworks */ = {
@@ -372,6 +413,7 @@
 				A93273CA27FEBAA2001B0EDB /* Map.storyboard in Resources */,
 				A93273DF27FED1B7001B0EDB /* TimeTableCollectionViewCell.xib in Resources */,
 				A932738727F9C83E001B0EDB /* LaunchScreen.storyboard in Resources */,
+				A932749F2803FD50001B0EDB /* NoticeVC.storyboard in Resources */,
 				A93273DB27FECD7F001B0EDB /* MealPlannerCollectionViewCell.xib in Resources */,
 				A93273BB27FC1799001B0EDB /* Alarm.storyboard in Resources */,
 				A932738427F9C83E001B0EDB /* Assets.xcassets in Resources */,
@@ -431,6 +473,7 @@
 			files = (
 				A932739727F9CE86001B0EDB /* LoginViewController.swift in Sources */,
 				A93273BF27FC1A82001B0EDB /* UITabBarController.swift in Sources */,
+				A932749B280315E7001B0EDB /* AlarmEntity.swift in Sources */,
 				A93273ED27FEEC76001B0EDB /* HomeworkViewController.swift in Sources */,
 				A93273A427F9DD1C001B0EDB /* MyPageViewController.swift in Sources */,
 				A93273CC27FEBD28001B0EDB /* MapViewController.swift in Sources */,
@@ -439,6 +482,7 @@
 				A93273D327FEC7E2001B0EDB /* HomeViewController.swift in Sources */,
 				A93273DE27FED1B7001B0EDB /* TimeTableCollectionViewCell.swift in Sources */,
 				A93273EA27FEEC5D001B0EDB /* TimeTableViewController.swift in Sources */,
+				A932749D28031604001B0EDB /* AlarmDataManager.swift in Sources */,
 				A93273E727FEEC27001B0EDB /* MealPlannerViewController.swift in Sources */,
 				A93273B627FB2D57001B0EDB /* String.swift in Sources */,
 				A93273C127FC1AEF001B0EDB /* TabBarController.swift in Sources */,
