@@ -9,6 +9,12 @@ import UIKit
 
 class AlarmTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var alarmImg: UIImageView!
+    @IBOutlet weak var alarmTime: UILabel!
+    @IBOutlet weak var alarmAMPM: UILabel!
+    @IBOutlet weak var alarmTitle: UILabel!
+    @IBOutlet weak var alarmSwitch: UISwitch!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,4 +26,16 @@ class AlarmTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func insertZero(_ number: Int) -> String {
+        let str = String(format: "%02d", number)
+        return str
+    }
+    
+    func setAlarmData(_ alarmData: AlarmData){
+        alarmImg.image = setIcon(alarmData.iconId)
+        alarmTime.text = "\(insertZero(alarmData.hour)):\(insertZero(alarmData.minute))"
+        alarmAMPM.text = alarmData.ampm
+        alarmTitle.text = alarmData.title
+        alarmSwitch.isOn = alarmData.enabled
+    }
 }

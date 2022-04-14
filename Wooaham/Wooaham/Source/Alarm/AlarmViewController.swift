@@ -8,15 +8,28 @@
 import UIKit
 
 class AlarmViewController: UIViewController {
-
+    
+    lazy var alarmDataManager = AlarmDataManager()
+    var alarmList: [AlarmData]?
     @IBOutlet weak var alarmTableView: UITableView!
     let ALARM_CELL = "AlarmTableViewCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getAlarmAPI()
         setAlarmTableView()
         setNavigationBar()
         setRefresh()
+    }
+}
+
+extension AlarmViewController {
+    private func getAlarmAPI() {
+        alarmDataManager.getAlarm(self)
+    }
+    func didSuccessAlarm(_ alarmDatum: [AlarmData]) {
+        alarmList = alarmDatum
+        alarmTableView.reloadData()
     }
 }
 
@@ -60,17 +73,18 @@ extension AlarmViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return alarmList?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = alarmTableView.dequeueReusableCell(withIdentifier: ALARM_CELL, for: indexPath) as? AlarmTableViewCell else { return UITableViewCell() }
+        cell.setAlarmData((alarmList?[indexPath.row])!)
         return cell
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // 데이터 삭제
+            alarmList?.remove(at: indexPath.row)
             alarmTableView.deleteRows(at: [indexPath], with: .fade)
         }
     }

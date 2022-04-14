@@ -10,10 +10,17 @@ import Foundation
 
 class AddAlarmViewController: UIViewController {
     
-    @IBOutlet weak var iconView: UIView!
     @IBOutlet weak var iconImg: UIImageView!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBOutlet weak var firstView: UIView!
+    @IBOutlet weak var secondView: UIView!
+    @IBOutlet weak var thirdView: UIView!
+    
+    @IBOutlet weak var firstIcon: UIButton!
+    @IBOutlet weak var secondIcon: UIButton!
+    @IBOutlet weak var thirdIcon: UIButton!
     
     @IBOutlet weak var sun: UIButton!
     @IBOutlet weak var mon: UIButton!
@@ -23,17 +30,51 @@ class AddAlarmViewController: UIViewController {
     @IBOutlet weak var fri: UIButton!
     @IBOutlet weak var sat: UIButton!
     
+    var iconViews: [UIView]!
+    var iconBtns: [UIButton]!
+    
     var alarmTime: String!
     var setDays: [Bool] = [false, false, false, false, false, false, false]
     var postDays: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setData()
+    }
+    
+    private func setData() {
+        iconViews = [firstView, secondView, thirdView]
+        iconBtns = [firstIcon, secondIcon, thirdIcon]
     }
     
     // 취소 버튼
-    @IBAction func cancelBtnClick(_ sender: Any) {
+    @IBAction func cancelBtnDidTap(_ sender: Any) {
         self.dismiss(animated: true)
+    }
+    
+    @IBAction func firstIconDidTap(_ sender: UIButton) {
+        setBtnToggle(sender)
+    }
+    
+    @IBAction func secondIconDidTap(_ sender: UIButton) {
+        setBtnToggle(sender)
+    }
+    
+    @IBAction func thirdIconDidTap(_ sender: UIButton) {
+        setBtnToggle(sender)
+    }
+    
+    private func setBtnToggle(_ sender: UIButton) {
+        for btn in iconBtns {
+            if btn == sender {
+                btn.isSelected = true
+                iconViews[btn.tag].backgroundColor = .mainPink.withAlphaComponent(0.5)
+                iconImg.image = btn.image(for: .normal)
+            } else {
+                btn.isSelected = false
+                iconViews[btn.tag].backgroundColor = .systemBackground
+            }
+        }
     }
     
     // 알람 시간 설정
@@ -44,25 +85,25 @@ class AddAlarmViewController: UIViewController {
     }
     
     // 요일 설정 버튼 (일 - 토)
-    @IBAction func sunClick(_ sender: UIButton) {
+    @IBAction func sunDidTap(_ sender: UIButton) {
         selectDay(sender)
     }
-    @IBAction func monClick(_ sender: UIButton) {
+    @IBAction func monDidTap(_ sender: UIButton) {
         selectDay(sender)
     }
-    @IBAction func tueClick(_ sender: UIButton) {
+    @IBAction func tueDidTap(_ sender: UIButton) {
         selectDay(sender)
     }
-    @IBAction func wedClick(_ sender: UIButton) {
+    @IBAction func wedDidTap(_ sender: UIButton) {
         selectDay(sender)
     }
-    @IBAction func thurClick(_ sender: UIButton) {
+    @IBAction func thurDidTap(_ sender: UIButton) {
         selectDay(sender)
     }
-    @IBAction func friClick(_ sender: UIButton) {
+    @IBAction func friDidTap(_ sender: UIButton) {
         selectDay(sender)
     }
-    @IBAction func satClick(_ sender: UIButton) {
+    @IBAction func satDidTap(_ sender: UIButton) {
         selectDay(sender)
     }
     
@@ -79,13 +120,13 @@ class AddAlarmViewController: UIViewController {
     }
     
     // 삭제하기 버튼
-    @IBAction func deleteBtnClick(_ sender: Any) {
+    @IBAction func deleteBtnDidTap(_ sender: Any) {
         print("❌ 삭제")
         self.dismiss(animated: true)
     }
     
     // 완료 버튼
-    @IBAction func successBtnClick(_ sender: Any) {
+    @IBAction func successBtnDidTap(_ sender: Any) {
         guard let icon = iconImg, icon.image != nil else {
             self.presentAlert(title: "아이콘을 선택해주세요.")
             return

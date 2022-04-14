@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A90900822805CD3D00089CCA /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900812805CD3D00089CCA /* Const.swift */; };
+		A90900842805CD4800089CCA /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900832805CD4800089CCA /* URL.swift */; };
+		A90900862805CDAA00089CCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900852805CDAA00089CCA /* ViewController.swift */; };
+		A90900882805CDB300089CCA /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900872805CDB200089CCA /* Storyboard.swift */; };
+		A909008C2807F40800089CCA /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909008B2807F40800089CCA /* Functions.swift */; };
 		A932737B27F9C83D001B0EDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932737A27F9C83D001B0EDB /* AppDelegate.swift */; };
 		A932737D27F9C83D001B0EDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932737C27F9C83D001B0EDB /* SceneDelegate.swift */; };
 		A932738227F9C83D001B0EDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A932738027F9C83D001B0EDB /* Main.storyboard */; };
@@ -50,12 +55,20 @@
 		A932749B280315E7001B0EDB /* AlarmEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932749A280315E7001B0EDB /* AlarmEntity.swift */; };
 		A932749D28031604001B0EDB /* AlarmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932749C28031604001B0EDB /* AlarmDataManager.swift */; };
 		A932749F2803FD50001B0EDB /* NoticeVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A932749E2803FD50001B0EDB /* NoticeVC.storyboard */; };
+		A93274A12804007B001B0EDB /* MealPlannerVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93274A02804007B001B0EDB /* MealPlannerVC.storyboard */; };
+		A93274A828041A12001B0EDB /* MealDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93274A628041A12001B0EDB /* MealDetailCollectionViewCell.swift */; };
+		A93274A928041A12001B0EDB /* MealDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A93274A728041A12001B0EDB /* MealDetailCollectionViewCell.xib */; };
 		CE81C783B1BA87148374EAB8 /* Pods_Wooaham.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECC2A0843E732B2894F27C7 /* Pods_Wooaham.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18DD749792004D6FE0CEA5C7 /* Pods-Wooaham.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wooaham.debug.xcconfig"; path = "Target Support Files/Pods-Wooaham/Pods-Wooaham.debug.xcconfig"; sourceTree = "<group>"; };
 		A8B07838C85B081BE23AEA45 /* Pods-Wooaham.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wooaham.release.xcconfig"; path = "Target Support Files/Pods-Wooaham/Pods-Wooaham.release.xcconfig"; sourceTree = "<group>"; };
+		A90900812805CD3D00089CCA /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		A90900832805CD4800089CCA /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		A90900852805CDAA00089CCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A90900872805CDB200089CCA /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		A909008B2807F40800089CCA /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		A932737727F9C83D001B0EDB /* Wooaham.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wooaham.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A932737A27F9C83D001B0EDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A932737C27F9C83D001B0EDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +114,9 @@
 		A932749A280315E7001B0EDB /* AlarmEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmEntity.swift; sourceTree = "<group>"; };
 		A932749C28031604001B0EDB /* AlarmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDataManager.swift; sourceTree = "<group>"; };
 		A932749E2803FD50001B0EDB /* NoticeVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NoticeVC.storyboard; sourceTree = "<group>"; };
+		A93274A02804007B001B0EDB /* MealPlannerVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MealPlannerVC.storyboard; sourceTree = "<group>"; };
+		A93274A628041A12001B0EDB /* MealDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		A93274A728041A12001B0EDB /* MealDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealDetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		AECC2A0843E732B2894F27C7 /* Pods_Wooaham.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wooaham.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -146,7 +162,7 @@
 		A932737927F9C83D001B0EDB /* Wooaham */ = {
 			isa = PBXGroup;
 			children = (
-				A932738E27F9CD55001B0EDB /* Configuration */,
+				A932738E27F9CD55001B0EDB /* Constants */,
 				A932738F27F9CD60001B0EDB /* Base */,
 				A932739027F9CD69001B0EDB /* Util */,
 				A932739227F9CD80001B0EDB /* Source */,
@@ -159,11 +175,15 @@
 			path = Wooaham;
 			sourceTree = "<group>";
 		};
-		A932738E27F9CD55001B0EDB /* Configuration */ = {
+		A932738E27F9CD55001B0EDB /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				A90900812805CD3D00089CCA /* Const.swift */,
+				A90900872805CDB200089CCA /* Storyboard.swift */,
+				A90900852805CDAA00089CCA /* ViewController.swift */,
+				A90900832805CD4800089CCA /* URL.swift */,
 			);
-			path = Configuration;
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		A932738F27F9CD60001B0EDB /* Base */ = {
@@ -176,6 +196,7 @@
 		A932739027F9CD69001B0EDB /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				A909008B2807F40800089CCA /* Functions.swift */,
 				A932739127F9CD78001B0EDB /* Extension */,
 			);
 			path = Util;
@@ -287,7 +308,10 @@
 		A93273E527FEEBE6001B0EDB /* MealPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				A93274A02804007B001B0EDB /* MealPlannerVC.storyboard */,
 				A93273E627FEEC27001B0EDB /* MealPlannerViewController.swift */,
+				A93274A728041A12001B0EDB /* MealDetailCollectionViewCell.xib */,
+				A93274A628041A12001B0EDB /* MealDetailCollectionViewCell.swift */,
 			);
 			path = MealPlanner;
 			sourceTree = "<group>";
@@ -409,6 +433,7 @@
 				A932739527F9CE76001B0EDB /* Login.storyboard in Resources */,
 				A93273B027F9E8BB001B0EDB /* MyPage.storyboard in Resources */,
 				A93273C527FC1DA3001B0EDB /* AlarmTableViewCell.xib in Resources */,
+				A93274A12804007B001B0EDB /* MealPlannerVC.storyboard in Resources */,
 				A93273D127FEC7B0001B0EDB /* Home.storyboard in Resources */,
 				A93273CA27FEBAA2001B0EDB /* Map.storyboard in Resources */,
 				A93273DF27FED1B7001B0EDB /* TimeTableCollectionViewCell.xib in Resources */,
@@ -418,6 +443,7 @@
 				A93273BB27FC1799001B0EDB /* Alarm.storyboard in Resources */,
 				A932738427F9C83E001B0EDB /* Assets.xcassets in Resources */,
 				A93273E427FEEA0E001B0EDB /* NoticeCollectionViewCell.xib in Resources */,
+				A93274A928041A12001B0EDB /* MealDetailCollectionViewCell.xib in Resources */,
 				A932738227F9C83D001B0EDB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,11 +504,15 @@
 				A93273A427F9DD1C001B0EDB /* MyPageViewController.swift in Sources */,
 				A93273CC27FEBD28001B0EDB /* MapViewController.swift in Sources */,
 				A93273B427F9F6D2001B0EDB /* AddSchoolViewController.swift in Sources */,
+				A93274A828041A12001B0EDB /* MealDetailCollectionViewCell.swift in Sources */,
 				A932739D27F9D222001B0EDB /* AuthSelectViewController.swift in Sources */,
 				A93273D327FEC7E2001B0EDB /* HomeViewController.swift in Sources */,
 				A93273DE27FED1B7001B0EDB /* TimeTableCollectionViewCell.swift in Sources */,
+				A909008C2807F40800089CCA /* Functions.swift in Sources */,
 				A93273EA27FEEC5D001B0EDB /* TimeTableViewController.swift in Sources */,
 				A932749D28031604001B0EDB /* AlarmDataManager.swift in Sources */,
+				A90900822805CD3D00089CCA /* Const.swift in Sources */,
+				A90900842805CD4800089CCA /* URL.swift in Sources */,
 				A93273E727FEEC27001B0EDB /* MealPlannerViewController.swift in Sources */,
 				A93273B627FB2D57001B0EDB /* String.swift in Sources */,
 				A93273C127FC1AEF001B0EDB /* TabBarController.swift in Sources */,
@@ -494,10 +524,12 @@
 				A932739F27F9D940001B0EDB /* UIFont.swift in Sources */,
 				A93273B827FB2D7B001B0EDB /* NSMutableAttributedString.swift in Sources */,
 				A932737D27F9C83D001B0EDB /* SceneDelegate.swift in Sources */,
+				A90900862805CDAA00089CCA /* ViewController.swift in Sources */,
 				A93273A827F9E1CC001B0EDB /* CALayer.swift in Sources */,
 				A932739B27F9CF31001B0EDB /* UIView.swift in Sources */,
 				A93273E327FEEA0E001B0EDB /* NoticeCollectionViewCell.swift in Sources */,
 				A932739927F9CEE6001B0EDB /* UIColor.swift in Sources */,
+				A90900882805CDB300089CCA /* Storyboard.swift in Sources */,
 				A93273D527FECB4A001B0EDB /* NoticeViewController.swift in Sources */,
 				A93273C727FC2457001B0EDB /* AddAlarmViewController.swift in Sources */,
 				A93273C427FC1DA3001B0EDB /* AlarmTableViewCell.swift in Sources */,

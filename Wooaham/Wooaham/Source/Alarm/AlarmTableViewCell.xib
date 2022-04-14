@@ -81,6 +81,13 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="alarmAMPM" destination="JDY-7N-zRP" id="NVy-ze-JAm"/>
+                <outlet property="alarmImg" destination="EjY-Dg-VEM" id="QQF-Wn-kPy"/>
+                <outlet property="alarmSwitch" destination="KQK-q1-1jT" id="9OS-3K-nzn"/>
+                <outlet property="alarmTime" destination="Peg-gR-2mh" id="aIj-8D-IAA"/>
+                <outlet property="alarmTitle" destination="D6m-oC-Eb6" id="fPG-Dg-35I"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
         </tableViewCell>
     </objects>

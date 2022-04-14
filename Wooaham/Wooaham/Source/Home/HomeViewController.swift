@@ -30,12 +30,12 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func mealBtnClick(_ sender: Any) {
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "MealPlannerViewController") as? MealPlannerViewController else { return }
+        guard let vc = UIStoryboard(name: "MealPlannerVC", bundle: nil).instantiateViewController(withIdentifier: "MealPlannerViewController") as? MealPlannerViewController else { return }
         self.presentNVC(vc)
     }
     
     @IBAction func timetableBtnClick(_ sender: Any) {
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "TimeTableViewController") as? TimeTableViewController else { return }
+        guard let vc = UIStoryboard(name: "TimeTableVC", bundle: nil).instantiateViewController(withIdentifier: "TimeTableViewController") as? TimeTableViewController else { return }
         self.presentNVC(vc)
     }
     
