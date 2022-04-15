@@ -131,7 +131,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3sO-o4-PqG">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9f-eK-eAN">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9f-eK-eAN">
                                                         <rect key="frame" x="10" y="10" width="40" height="40"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="J9f-eK-eAN" secondAttribute="height" multiplier="1:1" id="dSC-eh-tPr"/>
@@ -167,7 +167,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h92-N2-jWE">
                                                 <rect key="frame" x="70" y="0.0" width="60" height="60"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqe-qK-HaU">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqe-qK-HaU">
                                                         <rect key="frame" x="7.5" y="7.5" width="45" height="45"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="45" id="OCw-k0-BKH"/>
@@ -203,7 +203,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rZJ-4G-dbE">
                                                 <rect key="frame" x="140" y="0.0" width="60" height="60"/>
                                                 <subviews>
-                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1t-PX-HPx">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1t-PX-HPx">
                                                         <rect key="frame" x="12.5" y="12.5" width="35" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="w1t-PX-HPx" secondAttribute="height" multiplier="1:1" id="WQ3-g4-fWW"/>

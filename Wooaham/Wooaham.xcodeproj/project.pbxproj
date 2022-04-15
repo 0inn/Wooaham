@@ -20,6 +20,8 @@
 		A909009C2809658300089CCA /* DeleteAlarmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909009B2809658300089CCA /* DeleteAlarmDataManager.swift */; };
 		A90900A02809673400089CCA /* AlarmSwtichDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909009F2809673400089CCA /* AlarmSwtichDataManager.swift */; };
 		A90900A228096BCB00089CCA /* AlarmTestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A128096BCB00089CCA /* AlarmTestResponse.swift */; };
+		A90900A42809733000089CCA /* EditAlarmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A32809733000089CCA /* EditAlarmDataManager.swift */; };
+		A90900A62809784000089CCA /* EditAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A52809784000089CCA /* EditAlarm.swift */; };
 		A932737B27F9C83D001B0EDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932737A27F9C83D001B0EDB /* AppDelegate.swift */; };
 		A932737D27F9C83D001B0EDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932737C27F9C83D001B0EDB /* SceneDelegate.swift */; };
 		A932738227F9C83D001B0EDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A932738027F9C83D001B0EDB /* Main.storyboard */; };
@@ -85,6 +87,8 @@
 		A909009B2809658300089CCA /* DeleteAlarmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAlarmDataManager.swift; sourceTree = "<group>"; };
 		A909009F2809673400089CCA /* AlarmSwtichDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSwtichDataManager.swift; sourceTree = "<group>"; };
 		A90900A128096BCB00089CCA /* AlarmTestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTestResponse.swift; sourceTree = "<group>"; };
+		A90900A32809733000089CCA /* EditAlarmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlarmDataManager.swift; sourceTree = "<group>"; };
+		A90900A52809784000089CCA /* EditAlarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlarm.swift; sourceTree = "<group>"; };
 		A932737727F9C83D001B0EDB /* Wooaham.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wooaham.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A932737A27F9C83D001B0EDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A932737C27F9C83D001B0EDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -368,8 +372,9 @@
 			children = (
 				A932749A280315E7001B0EDB /* AlarmResponse.swift */,
 				A909008D2809348000089CCA /* AlarmDetailResponse.swift */,
-				A909009928095AEC00089CCA /* AddAlarm.swift */,
 				A90900A128096BCB00089CCA /* AlarmTestResponse.swift */,
+				A909009928095AEC00089CCA /* AddAlarm.swift */,
+				A90900A52809784000089CCA /* EditAlarm.swift */,
 			);
 			path = AlarmEntity;
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 				A909009728095A9500089CCA /* AddAlarmDataManager.swift */,
 				A909009B2809658300089CCA /* DeleteAlarmDataManager.swift */,
 				A909009F2809673400089CCA /* AlarmSwtichDataManager.swift */,
+				A90900A32809733000089CCA /* EditAlarmDataManager.swift */,
 			);
 			path = AlarmDataManager;
 			sourceTree = "<group>";
@@ -523,6 +529,7 @@
 			files = (
 				A932739727F9CE86001B0EDB /* LoginViewController.swift in Sources */,
 				A93273BF27FC1A82001B0EDB /* UITabBarController.swift in Sources */,
+				A90900A42809733000089CCA /* EditAlarmDataManager.swift in Sources */,
 				A932749B280315E7001B0EDB /* AlarmResponse.swift in Sources */,
 				A93273ED27FEEC76001B0EDB /* HomeworkViewController.swift in Sources */,
 				A93273A427F9DD1C001B0EDB /* MyPageViewController.swift in Sources */,
@@ -559,6 +566,7 @@
 				A93273E327FEEA0E001B0EDB /* NoticeCollectionViewCell.swift in Sources */,
 				A932739927F9CEE6001B0EDB /* UIColor.swift in Sources */,
 				A90900882805CDB300089CCA /* Storyboard.swift in Sources */,
+				A90900A62809784000089CCA /* EditAlarm.swift in Sources */,
 				A93273D527FECB4A001B0EDB /* NoticeViewController.swift in Sources */,
 				A909009828095A9500089CCA /* AddAlarmDataManager.swift in Sources */,
 				A93273C727FC2457001B0EDB /* AddAlarmViewController.swift in Sources */,

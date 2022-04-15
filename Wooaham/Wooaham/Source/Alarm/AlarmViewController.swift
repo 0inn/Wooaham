@@ -18,6 +18,7 @@ class AlarmViewController: UIViewController {
     let ALARM_CELL = "AlarmTableViewCell"
     
     override func viewDidLoad() {
+        print(#function)
         super.viewDidLoad()
         setAlarmTableView()
         setNavigationBar()
@@ -50,7 +51,9 @@ extension AlarmViewController {
     
     // 알람 추가 페이지로 이동
     @objc func addAlarm(_ sender: Any) {
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddAlarmViewController") else { return }
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddAlarmViewController") as? AddAlarmViewController else { return }
+        vc.AddFlag = true
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }
     
@@ -101,7 +104,9 @@ extension AlarmViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddAlarmViewController") as? AddAlarmViewController else { return }
         // 데이터 전달 방식 나중에 바꾸자
+        vc.AddFlag = false
         vc.alarmId = alarmList?[indexPath.row].alarmId
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }
     

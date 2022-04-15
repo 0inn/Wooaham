@@ -19,6 +19,11 @@ class AddAlarmViewController: UIViewController {
     var userId: CLong?  // 나중에 무조건 jwt 사용해 저장
     var iconNum: CLong!
     
+    lazy var editAlarmDataManager = EditAlarmDataManager()
+    var editAlarmInfo: EditAlarmRequest!
+    
+    var AddFlag: Bool!
+    
     var iconViews: [UIView]!
     var iconBtns: [UIButton]!
     var dayBtns: [UIButton]!
@@ -58,8 +63,8 @@ class AddAlarmViewController: UIViewController {
     }
     
     private func setData() {
-        iconViews = [firstView, secondView, thirdView]
-        iconBtns = [firstIcon, secondIcon, thirdIcon]
+        iconViews = [UIView(), firstView, secondView, thirdView]
+        iconBtns = [UIButton(), firstIcon, secondIcon, thirdIcon]
         dayBtns = [sun,mon, tue, wed, thur, fri, sat]
     }
     
@@ -138,18 +143,34 @@ class AddAlarmViewController: UIViewController {
             }
         }
         print("✨ 알람 이름: \(name), 시간: \(self.alarmTime!) 선택한 요일: \(postDays)")
-        alarmInfo = AddAlarmRequest(title: name, time: alarmTime, daysOfWeek: postDays, enabled: true, before10min: tenMinSwitch.isOn, iconId: iconNum)
-        addAlarm()
+        if AddFlag {
+            alarmInfo = AddAlarmRequest(title: name,time: alarmTime, daysOfWeek: postDays, enabled: true, before10min: tenMinSwitch.isOn, iconId: iconNum)
+            addAlarm()
+        } else {
+            editAlarmInfo = EditAlarmRequest(title: name, time: alarmTime, daysOfWeek: postDays, enabled: alarmDetail.enabled, before10min: tenMinSwitch.isOn, iconId: iconNum)
+            editAlarm()
+        }
         self.dismiss(animated: true)
     }
     
 }
 
+// MARK: - 알람 생성
 extension AddAlarmViewController {
     private func addAlarm() {
         addAlarmDataManager.postAlarm(1, alarmInfo, self)
     }
     func didSuccessAddAlarm(_ alarmId: CLong) {
         print("🕰 \(alarmId)번 알람 생성 완료")
+    }
+}
+
+// MARK: - 알람 수정
+extension AddAlarmViewController {
+    private func editAlarm() {
+        editAlarmDataManager.editAlarm(alarmId ?? 0, editAlarmInfo, self)
+    }
+    func didSuccessEditAlarm(_ alarmId: CLong) {
+        print("🕰 \(alarmId)번 알람 수정 완료")
     }
 }
