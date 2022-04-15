@@ -14,6 +14,11 @@ class AddAlarmViewController: UIViewController {
     var alarmDetail: AlarmDetailData!
     var alarmId: CLong?
     
+    lazy var addAlarmDataManager = AddAlarmDataManager()
+    var alarmInfo: AddAlarmRequest!
+    var userId: CLong?  // 나중에 무조건 jwt 사용해 저장
+    var iconNum: CLong!
+    
     var iconViews: [UIView]!
     var iconBtns: [UIButton]!
     var dayBtns: [UIButton]!
@@ -73,6 +78,7 @@ class AddAlarmViewController: UIViewController {
                 btn.isSelected = true
                 iconViews[btn.tag].backgroundColor = .mainPink.withAlphaComponent(0.5)
                 iconImg.image = btn.image(for: .normal)
+                iconNum = CLong(btn.tag)
             } else {
                 btn.isSelected = false
                 iconViews[btn.tag].backgroundColor = .systemBackground
@@ -132,7 +138,18 @@ class AddAlarmViewController: UIViewController {
             }
         }
         print("✨ 알람 이름: \(name), 시간: \(self.alarmTime!) 선택한 요일: \(postDays)")
+        alarmInfo = AddAlarmRequest(title: name, time: alarmTime, daysOfWeek: postDays, enabled: true, before10min: tenMinSwitch.isOn, iconId: iconNum)
+        addAlarm()
         self.dismiss(animated: true)
     }
     
+}
+
+extension AddAlarmViewController {
+    private func addAlarm() {
+        addAlarmDataManager.postAlarm(1, alarmInfo, self)
+    }
+    func didSuccessAddAlarm(_ alarmId: CLong) {
+        print("🕰 \(alarmId)번 알람 생성 완료")
+    }
 }

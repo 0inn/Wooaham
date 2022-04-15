@@ -46,7 +46,7 @@ extension AddAlarmViewController {
     }
     
     private func setTime() {
-        alarmTime = "\(insertZero(alarmDetail.hour)):\(insertZero(alarmDetail.minute)) \(alarmDetail.ampm)"
+        alarmTime = "\(alarmDetail.time)"
         let formatter = DateFormatter()
         formatter.dateFormat = "hh:mm a"
         let dateTime = formatter.date(from: alarmTime)

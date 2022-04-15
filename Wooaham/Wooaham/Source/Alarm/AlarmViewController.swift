@@ -11,15 +11,21 @@ class AlarmViewController: UIViewController {
     
     lazy var alarmDataManager = AlarmDataManager()
     var alarmList: [AlarmData]?
+    
+    lazy var deleteAlarmDataManger = DeleteAlarmDataManager()
+    
     @IBOutlet weak var alarmTableView: UITableView!
     let ALARM_CELL = "AlarmTableViewCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getAlarmAPI()
         setAlarmTableView()
         setNavigationBar()
         setRefresh()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        getAlarmAPI()
     }
 }
 
@@ -58,7 +64,7 @@ extension AlarmViewController {
     
     @objc func updateUI(refresh: UIRefreshControl) {
         refresh.endRefreshing() // 종료
-        alarmTableView.reloadData()  // 테이블 뷰 로드
+        getAlarmAPI()
     }
     
 }
@@ -79,12 +85,14 @@ extension AlarmViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = alarmTableView.dequeueReusableCell(withIdentifier: ALARM_CELL, for: indexPath) as? AlarmTableViewCell else { return UITableViewCell() }
+        cell.alarmId = alarmList?[indexPath.row].alarmId
         cell.setAlarmData((alarmList?[indexPath.row])!)
         return cell
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
+            deleteAlarmDataManger.deleteAlarm(alarmList?[indexPath.row].alarmId ?? 0)
             alarmList?.remove(at: indexPath.row)
             alarmTableView.deleteRows(at: [indexPath], with: .fade)
         }

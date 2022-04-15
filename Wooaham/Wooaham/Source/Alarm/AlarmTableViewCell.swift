@@ -8,10 +8,12 @@
 import UIKit
 
 class AlarmTableViewCell: UITableViewCell {
-
+    
+    lazy var alarmSwitchDataManager = AlarmSwitchDataManager()
+    var alarmId: CLong!
+    
     @IBOutlet weak var alarmImg: UIImageView!
     @IBOutlet weak var alarmTime: UILabel!
-    @IBOutlet weak var alarmAMPM: UILabel!
     @IBOutlet weak var alarmTitle: UILabel!
     @IBOutlet weak var alarmSwitch: UISwitch!
     
@@ -26,6 +28,10 @@ class AlarmTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func alarmSwitchValueChanged(_ sender: Any) {
+        alarmSwitchDataManager.postAlarmSwitch(alarmId, alarmSwitch.isOn)
+    }
+    
     func insertZero(_ number: Int) -> String {
         let str = String(format: "%02d", number)
         return str
@@ -33,8 +39,7 @@ class AlarmTableViewCell: UITableViewCell {
     
     func setAlarmData(_ alarmData: AlarmData){
         alarmImg.image = setIcon(alarmData.iconId)
-        alarmTime.text = "\(insertZero(alarmData.hour)):\(insertZero(alarmData.minute))"
-        alarmAMPM.text = alarmData.ampm
+        alarmTime.text = "\(alarmData.time)"
         alarmTitle.text = alarmData.title
         alarmSwitch.isOn = alarmData.enabled
     }

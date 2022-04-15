@@ -30,6 +30,9 @@
                     </label>
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KQK-q1-1jT">
                         <rect key="frame" x="331" y="59.5" width="51" height="31"/>
+                        <connections>
+                            <action selector="alarmSwitchValueChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="Sw5-Bp-bmr"/>
+                        </connections>
                     </switch>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uwf-oA-bAR">
                         <rect key="frame" x="20" y="30" width="90" height="90"/>
@@ -60,29 +63,20 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDY-7N-zRP">
-                        <rect key="frame" x="245.5" y="40" width="52.5" height="42"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Uwf-oA-bAR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="4Z5-Bq-pdC"/>
                     <constraint firstItem="D6m-oC-Eb6" firstAttribute="leading" secondItem="Uwf-oA-bAR" secondAttribute="trailing" constant="10" id="J2I-Lm-Lbn"/>
-                    <constraint firstItem="JDY-7N-zRP" firstAttribute="leading" secondItem="Peg-gR-2mh" secondAttribute="trailing" constant="5" id="OMY-Uk-3cX"/>
                     <constraint firstItem="Peg-gR-2mh" firstAttribute="leading" secondItem="D6m-oC-Eb6" secondAttribute="leading" id="Xr8-dG-6FF"/>
                     <constraint firstItem="Uwf-oA-bAR" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ZY8-Ds-jZa"/>
                     <constraint firstItem="KQK-q1-1jT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="aJi-lX-URG"/>
                     <constraint firstItem="D6m-oC-Eb6" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="1.4" id="b9s-xd-3pa"/>
                     <constraint firstItem="Peg-gR-2mh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" multiplier="0.8" id="eU6-jT-fUM"/>
-                    <constraint firstItem="JDY-7N-zRP" firstAttribute="bottom" secondItem="Peg-gR-2mh" secondAttribute="bottom" constant="-5" id="tZC-fW-wn5"/>
                     <constraint firstAttribute="trailing" secondItem="KQK-q1-1jT" secondAttribute="trailing" constant="20" id="uuF-lq-u1p"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="alarmAMPM" destination="JDY-7N-zRP" id="NVy-ze-JAm"/>
                 <outlet property="alarmImg" destination="EjY-Dg-VEM" id="QQF-Wn-kPy"/>
                 <outlet property="alarmSwitch" destination="KQK-q1-1jT" id="9OS-3K-nzn"/>
                 <outlet property="alarmTime" destination="Peg-gR-2mh" id="aIj-8D-IAA"/>

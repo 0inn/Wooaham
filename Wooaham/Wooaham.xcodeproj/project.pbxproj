@@ -15,6 +15,11 @@
 		A909008E2809348000089CCA /* AlarmDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909008D2809348000089CCA /* AlarmDetailResponse.swift */; };
 		A90900902809358600089CCA /* AlarmDetailDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909008F2809358600089CCA /* AlarmDetailDataManager.swift */; };
 		A909009228093AEF00089CCA /* AlarmDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909009128093AEF00089CCA /* AlarmDetail.swift */; };
+		A909009828095A9500089CCA /* AddAlarmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909009728095A9500089CCA /* AddAlarmDataManager.swift */; };
+		A909009A28095AEC00089CCA /* AddAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909009928095AEC00089CCA /* AddAlarm.swift */; };
+		A909009C2809658300089CCA /* DeleteAlarmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909009B2809658300089CCA /* DeleteAlarmDataManager.swift */; };
+		A90900A02809673400089CCA /* AlarmSwtichDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909009F2809673400089CCA /* AlarmSwtichDataManager.swift */; };
+		A90900A228096BCB00089CCA /* AlarmTestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A128096BCB00089CCA /* AlarmTestResponse.swift */; };
 		A932737B27F9C83D001B0EDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932737A27F9C83D001B0EDB /* AppDelegate.swift */; };
 		A932737D27F9C83D001B0EDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932737C27F9C83D001B0EDB /* SceneDelegate.swift */; };
 		A932738227F9C83D001B0EDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A932738027F9C83D001B0EDB /* Main.storyboard */; };
@@ -75,6 +80,11 @@
 		A909008D2809348000089CCA /* AlarmDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDetailResponse.swift; sourceTree = "<group>"; };
 		A909008F2809358600089CCA /* AlarmDetailDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDetailDataManager.swift; sourceTree = "<group>"; };
 		A909009128093AEF00089CCA /* AlarmDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDetail.swift; sourceTree = "<group>"; };
+		A909009728095A9500089CCA /* AddAlarmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmDataManager.swift; sourceTree = "<group>"; };
+		A909009928095AEC00089CCA /* AddAlarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarm.swift; sourceTree = "<group>"; };
+		A909009B2809658300089CCA /* DeleteAlarmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAlarmDataManager.swift; sourceTree = "<group>"; };
+		A909009F2809673400089CCA /* AlarmSwtichDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSwtichDataManager.swift; sourceTree = "<group>"; };
+		A90900A128096BCB00089CCA /* AlarmTestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTestResponse.swift; sourceTree = "<group>"; };
 		A932737727F9C83D001B0EDB /* Wooaham.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wooaham.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A932737A27F9C83D001B0EDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A932737C27F9C83D001B0EDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -358,6 +368,8 @@
 			children = (
 				A932749A280315E7001B0EDB /* AlarmResponse.swift */,
 				A909008D2809348000089CCA /* AlarmDetailResponse.swift */,
+				A909009928095AEC00089CCA /* AddAlarm.swift */,
+				A90900A128096BCB00089CCA /* AlarmTestResponse.swift */,
 			);
 			path = AlarmEntity;
 			sourceTree = "<group>";
@@ -367,6 +379,9 @@
 			children = (
 				A932749C28031604001B0EDB /* AlarmDataManager.swift */,
 				A909008F2809358600089CCA /* AlarmDetailDataManager.swift */,
+				A909009728095A9500089CCA /* AddAlarmDataManager.swift */,
+				A909009B2809658300089CCA /* DeleteAlarmDataManager.swift */,
+				A909009F2809673400089CCA /* AlarmSwtichDataManager.swift */,
 			);
 			path = AlarmDataManager;
 			sourceTree = "<group>";
@@ -528,6 +543,7 @@
 				A93273C127FC1AEF001B0EDB /* TabBarController.swift in Sources */,
 				A93273BD27FC180C001B0EDB /* AlarmViewController.swift in Sources */,
 				A93273B227F9ED1E001B0EDB /* ProfileEditViewController.swift in Sources */,
+				A909009C2809658300089CCA /* DeleteAlarmDataManager.swift in Sources */,
 				A93273DA27FECD7F001B0EDB /* MealPlannerCollectionViewCell.swift in Sources */,
 				A93273A627F9E12E001B0EDB /* UIViewController.swift in Sources */,
 				A932737B27F9C83D001B0EDB /* AppDelegate.swift in Sources */,
@@ -535,15 +551,19 @@
 				A93273B827FB2D7B001B0EDB /* NSMutableAttributedString.swift in Sources */,
 				A932737D27F9C83D001B0EDB /* SceneDelegate.swift in Sources */,
 				A909008E2809348000089CCA /* AlarmDetailResponse.swift in Sources */,
+				A90900A228096BCB00089CCA /* AlarmTestResponse.swift in Sources */,
 				A90900862805CDAA00089CCA /* ViewController.swift in Sources */,
+				A90900A02809673400089CCA /* AlarmSwtichDataManager.swift in Sources */,
 				A93273A827F9E1CC001B0EDB /* CALayer.swift in Sources */,
 				A932739B27F9CF31001B0EDB /* UIView.swift in Sources */,
 				A93273E327FEEA0E001B0EDB /* NoticeCollectionViewCell.swift in Sources */,
 				A932739927F9CEE6001B0EDB /* UIColor.swift in Sources */,
 				A90900882805CDB300089CCA /* Storyboard.swift in Sources */,
 				A93273D527FECB4A001B0EDB /* NoticeViewController.swift in Sources */,
+				A909009828095A9500089CCA /* AddAlarmDataManager.swift in Sources */,
 				A93273C727FC2457001B0EDB /* AddAlarmViewController.swift in Sources */,
 				A93273C427FC1DA3001B0EDB /* AlarmTableViewCell.swift in Sources */,
+				A909009A28095AEC00089CCA /* AddAlarm.swift in Sources */,
 				A909009228093AEF00089CCA /* AlarmDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

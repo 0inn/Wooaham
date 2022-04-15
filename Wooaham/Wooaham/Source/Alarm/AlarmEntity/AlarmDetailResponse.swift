@@ -18,7 +18,6 @@ struct AlarmDetailResponse: Codable {
 struct AlarmDetailData: Codable {
     let alarmId, userId, iconId: Int
     let title: String
-    let hour, minute: Int
-    let ampm, daysOfWeek: String
+    let time, daysOfWeek: String
     let enabled, before10min: Bool
 }
