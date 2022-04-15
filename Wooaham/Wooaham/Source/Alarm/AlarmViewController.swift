@@ -25,7 +25,8 @@ class AlarmViewController: UIViewController {
 
 extension AlarmViewController {
     private func getAlarmAPI() {
-        alarmDataManager.getAlarm(self)
+        // userId 받아서 줘야 돼
+        alarmDataManager.getAlarm(1, self)
     }
     func didSuccessAlarm(_ alarmDatum: [AlarmData]) {
         alarmList = alarmDatum
@@ -90,8 +91,9 @@ extension AlarmViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddAlarmViewController") else { return }
-        // 데이터 날려야 됨
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddAlarmViewController") as? AddAlarmViewController else { return }
+        // 데이터 전달 방식 나중에 바꾸자
+        vc.alarmId = alarmList?[indexPath.row].alarmId
         self.present(vc, animated: true)
     }
     

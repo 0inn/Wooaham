@@ -10,6 +10,17 @@ import Foundation
 
 class AddAlarmViewController: UIViewController {
     
+    lazy var alarmDetailDataManager = AlarmDetailDataManager()
+    var alarmDetail: AlarmDetailData!
+    var alarmId: CLong?
+    
+    var iconViews: [UIView]!
+    var iconBtns: [UIButton]!
+    var dayBtns: [UIButton]!
+    
+    var alarmTime: String!
+    var postDays: String = ""
+    
     @IBOutlet weak var iconImg: UIImageView!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var nameTextField: UITextField!
@@ -30,21 +41,21 @@ class AddAlarmViewController: UIViewController {
     @IBOutlet weak var fri: UIButton!
     @IBOutlet weak var sat: UIButton!
     
-    var iconViews: [UIView]!
-    var iconBtns: [UIButton]!
-    
-    var alarmTime: String!
-    var setDays: [Bool] = [false, false, false, false, false, false, false]
-    var postDays: String = ""
+    @IBOutlet weak var tenMinSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setData()
+        // 저장 방식 생각하자
+        if alarmId != nil {
+            getAlarmDetailAPI()
+        }
     }
     
     private func setData() {
         iconViews = [firstView, secondView, thirdView]
         iconBtns = [firstIcon, secondIcon, thirdIcon]
+        dayBtns = [sun,mon, tue, wed, thur, fri, sat]
     }
     
     // 취소 버튼
@@ -52,15 +63,7 @@ class AddAlarmViewController: UIViewController {
         self.dismiss(animated: true)
     }
     
-    @IBAction func firstIconDidTap(_ sender: UIButton) {
-        setBtnToggle(sender)
-    }
-    
-    @IBAction func secondIconDidTap(_ sender: UIButton) {
-        setBtnToggle(sender)
-    }
-    
-    @IBAction func thirdIconDidTap(_ sender: UIButton) {
+    @IBAction func IconDidTap(_ sender: UIButton) {
         setBtnToggle(sender)
     }
     
@@ -81,41 +84,22 @@ class AddAlarmViewController: UIViewController {
     @IBAction func changeAlarmTime(_ sender: UIDatePicker) {
         let formatter = DateFormatter()
         formatter.dateFormat = "hh:mm a"
-        self.alarmTime = formatter.string(from: datePicker.date)
+        alarmTime = formatter.string(from: datePicker.date)
     }
     
     // 요일 설정 버튼 (일 - 토)
-    @IBAction func sunDidTap(_ sender: UIButton) {
-        selectDay(sender)
-    }
-    @IBAction func monDidTap(_ sender: UIButton) {
-        selectDay(sender)
-    }
-    @IBAction func tueDidTap(_ sender: UIButton) {
-        selectDay(sender)
-    }
-    @IBAction func wedDidTap(_ sender: UIButton) {
-        selectDay(sender)
-    }
-    @IBAction func thurDidTap(_ sender: UIButton) {
-        selectDay(sender)
-    }
-    @IBAction func friDidTap(_ sender: UIButton) {
-        selectDay(sender)
-    }
-    @IBAction func satDidTap(_ sender: UIButton) {
+    @IBAction func daysBtnDidTap(_ sender: UIButton) {
         selectDay(sender)
     }
     
-    private func selectDay(_ btn: UIButton) {
+    // 요일 선택 - 리팩토링 필요
+    func selectDay(_ btn: UIButton) {
         if btn.isSelected {
-            btn.backgroundColor = .systemBackground
-            btn.isSelected = false
-            self.setDays[btn.tag] = false
+            dayBtns[btn.tag].backgroundColor = .systemBackground
+            dayBtns[btn.tag].isSelected = false
         } else {
-            btn.tintColor = .systemPink
-            btn.isSelected = true
-            self.setDays[btn.tag] = true
+            dayBtns[btn.tag].tintColor = .systemPink
+            dayBtns[btn.tag].isSelected = true
         }
     }
     
@@ -135,19 +119,19 @@ class AddAlarmViewController: UIViewController {
             self.presentAlert(title: "알람 이름을 입력해주세요.")
             return
         }
-        guard let time = self.alarmTime, time != "" else {
+        guard let time = alarmTime, time != "hh:mm a" else {
             self.presentAlert(title: "알람 시간을 설정해주세요.")
             return
         }
         // 방식은 나중에 구체화
         for i in 0...6 {
-            if self.setDays[i] == true {
-                self.postDays += "1"
+            if dayBtns[i].isSelected {
+                postDays += "1"
             } else {
-                self.postDays += "0"
+                postDays += "0"
             }
         }
-        print("✨ 알람 이름: \(name), 시간: \(self.alarmTime!) 선택한 요일: \(self.postDays)")
+        print("✨ 알람 이름: \(name), 시간: \(self.alarmTime!) 선택한 요일: \(postDays)")
         self.dismiss(animated: true)
     }
     

@@ -1,20 +1,20 @@
 //
-//  AlarmDataManager.swift
+//  AlarmDetailDataManager.swift
 //  Wooaham
 //
-//  Created by 김영인 on 2022/04/10.
+//  Created by 김영인 on 2022/04/15.
 //
 
 import Alamofire
 
-class AlarmDataManager {
+class AlarmDetailDataManager {
     
-    func getAlarm(_ userId: CLong, _ delegate: AlarmViewController) {
+    func getAlarmDetail(_ alarmId: CLong, _ delegate: AddAlarmViewController) {
         
-        let url = "\(Const.URL.BASE_URL)/alarms"
+        let url = "\(Const.URL.BASE_URL)/alarms/details"
         
         let params: [String: CLong] = [
-            "userId": 1
+            "alarmId": alarmId
         ]
         
         AF.request(url,
@@ -23,13 +23,13 @@ class AlarmDataManager {
                    encoding: URLEncoding.default,
                    headers: nil)
         .validate()
-        .responseDecodable(of: AlarmResponse.self) { (response) in
+        .responseDecodable(of: AlarmDetailResponse.self) { (response) in
             switch response.result {
             case .success(let response):
                 if response.success {
-                    delegate.didSuccessAlarm(response.data)
+                    delegate.didSuccessAlarmDetail(response.data)
                 } else {
-                    //delegate.failedToRequestAlarm("오늘의딜 불러오는데 실패하였습니다.")
+                    //delegate.failedToRequestAlarmDetail("오늘의딜 불러오는데 실패하였습니다.")
                 }
                 print("🔥\(response)")
             case .failure(let error):
@@ -39,4 +39,3 @@ class AlarmDataManager {
         
     }
 }
-

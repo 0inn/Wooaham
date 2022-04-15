@@ -47,8 +47,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="WuY-Vb-ryz">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WuY-Vb-ryz">
                                 <rect key="frame" x="0.0" y="284" width="414" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="671700118.08771706">
+                                    <!--2022-04-15 07:21:58 +0000-->
+                                </date>
                                 <connections>
                                     <action selector="changeAlarmTime:" destination="ax8-Md-0Fq" eventType="valueChanged" id="Xel-wq-dZ9"/>
                                 </connections>
@@ -138,7 +141,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="school"/>
                                                         <connections>
-                                                            <action selector="firstIconDidTap:" destination="ax8-Md-0Fq" eventType="touchUpInside" id="0EV-ss-kg6"/>
+                                                            <action selector="IconDidTap:" destination="ax8-Md-0Fq" eventType="touchUpInside" id="XQG-lp-qyI"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -174,7 +177,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="bus"/>
                                                         <connections>
-                                                            <action selector="secondIconDidTap:" destination="ax8-Md-0Fq" eventType="touchUpInside" id="2XN-X4-1XE"/>
+                                                            <action selector="IconDidTap:" destination="ax8-Md-0Fq" eventType="touchUpInside" id="tTd-ta-5ym"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -210,7 +213,7 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="house"/>
                                                         <connections>
-                                                            <action selector="thirdIconDidTap:" destination="ax8-Md-0Fq" eventType="touchUpInside" id="o4T-S8-qbr"/>
+                                                            <action selector="IconDidTap:" destination="ax8-Md-0Fq" eventType="touchUpInside" id="Qke-XD-0tH"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -235,7 +238,6 @@
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="rZJ-4G-dbE" firstAttribute="width" secondItem="rZJ-4G-dbE" secondAttribute="height" multiplier="1:1" id="IkY-gs-uzH"/>
                                             <constraint firstItem="h92-N2-jWE" firstAttribute="width" secondItem="h92-N2-jWE" secondAttribute="height" multiplier="1:1" id="KJw-2d-4DE"/>
                                         </constraints>
                                     </stackView>
@@ -270,7 +272,7 @@
                                             <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="sunDidTap:" destination="ax8-Md-0Fq" eventType="touchUpInside" id="TW7-ZZ-ID9"/>
+                                            <action selector="daysBtnDidTap:" destination="ax8-Md-0Fq" eventType="touchUpInside" id="3q9-ur-GZx"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBr-Tg-fZW">
@@ -288,7 +290,7 @@
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="monDidTap:" destination="ax8-Md-0Fq" eventType="touchUpInside" id="PH5-Vh-p1L"/>
+                                            <action selector="daysBtnDidTap:" destination="ax8-Md-0Fq" eventType="touchUpInside" id="jXz-gb-ff7"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1H-Hi-BA6">
@@ -306,7 +308,7 @@
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="tueDidTap:" destination="ax8-Md-0Fq" eventType="touchUpInside" id="dgc-RH-EmW"/>
+                                            <action selector="daysBtnDidTap:" destination="ax8-Md-0Fq" eventType="touchUpInside" id="juc-hI-QIK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gp4-bl-V0V">
@@ -324,7 +326,7 @@
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="wedDidTap:" destination="ax8-Md-0Fq" eventType="touchUpInside" id="hqc-jU-3Cp"/>
+                                            <action selector="daysBtnDidTap:" destination="ax8-Md-0Fq" eventType="touchUpInside" id="RCe-c2-LxH"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rqq-2n-Uki">
@@ -342,7 +344,7 @@
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="thurDidTap:" destination="ax8-Md-0Fq" eventType="touchUpInside" id="YlM-PK-F7L"/>
+                                            <action selector="daysBtnDidTap:" destination="ax8-Md-0Fq" eventType="touchUpInside" id="6Tk-Y5-sA7"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5d8-NN-9gD">
@@ -360,7 +362,7 @@
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="friDidTap:" destination="ax8-Md-0Fq" eventType="touchUpInside" id="Hot-kb-RpB"/>
+                                            <action selector="daysBtnDidTap:" destination="ax8-Md-0Fq" eventType="touchUpInside" id="aZ3-We-a6p"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ba2-h2-5po">
@@ -378,7 +380,7 @@
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="satDidTap:" destination="ax8-Md-0Fq" eventType="touchUpInside" id="fbF-QV-7dM"/>
+                                            <action selector="daysBtnDidTap:" destination="ax8-Md-0Fq" eventType="touchUpInside" id="k1J-j7-zyF"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -462,6 +464,7 @@
                         <outlet property="secondIcon" destination="jqe-qK-HaU" id="OgZ-4s-4W2"/>
                         <outlet property="secondView" destination="h92-N2-jWE" id="LyX-n2-IJq"/>
                         <outlet property="sun" destination="UqD-JE-awX" id="mYx-Mw-ZAf"/>
+                        <outlet property="tenMinSwitch" destination="uNv-yd-96N" id="YoM-0f-zxk"/>
                         <outlet property="thirdIcon" destination="w1t-PX-HPx" id="TqR-Ch-LbT"/>
                         <outlet property="thirdView" destination="rZJ-4G-dbE" id="Vhb-Zk-lUy"/>
                         <outlet property="thur" destination="rqq-2n-Uki" id="Eq5-C3-yUd"/>
