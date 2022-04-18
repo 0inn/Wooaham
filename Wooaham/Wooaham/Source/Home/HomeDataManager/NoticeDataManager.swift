@@ -1,20 +1,20 @@
 //
-//  AlarmDataManager.swift
+//  NoticeDataManager.swift
 //  Wooaham
 //
-//  Created by 김영인 on 2022/04/10.
+//  Created by 김영인 on 2022/04/15.
 //
 
 import Alamofire
 
-class AlarmDataManager {
+class NoticeDataManager {
     
-    func getAlarm(_ userId: CLong, _ delegate: AlarmViewController) {
+    func getNotice(_ classCode: String, _ delegate: NoticeViewController) {
         
-        let url = "\(Const.URL.BASE_URL)/alarms"
+        let url = "\(Const.URL.BASE_URL)/info/notice/"
         
-        let params: [String: CLong] = [
-            "userId": 1
+        let params: [String: String] = [
+            "classCode": classCode
         ]
         
         AF.request(url,
@@ -27,7 +27,7 @@ class AlarmDataManager {
             switch response.result {
             case .success(let response):
                 if response.success {
-                    delegate.didSuccessAlarm(response.data)
+                    //delegate.didSuccessNotice(response.data)
                 } else {
                     //delegate.failedToRequestAlarm("실패")
                 }
@@ -39,4 +39,3 @@ class AlarmDataManager {
     }
     
 }
-

@@ -46,6 +46,9 @@
                 <constraint firstItem="tP4-k9-MNY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="mhl-wu-ufH"/>
                 <constraint firstItem="tP4-k9-MNY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="sfW-0N-i52"/>
             </constraints>
+            <connections>
+                <outlet property="noticeTitle" destination="Urd-Cw-gtD" id="AH8-YJ-pdl"/>
+            </connections>
             <point key="canvasLocation" x="139" y="110"/>
         </collectionViewCell>
     </objects>

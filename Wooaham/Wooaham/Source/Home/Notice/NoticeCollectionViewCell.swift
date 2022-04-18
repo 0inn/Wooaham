@@ -9,9 +9,15 @@ import UIKit
 
 class NoticeCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var noticeTitle: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func setNotice(_ noticeInfo: NoticeData) {
+        noticeTitle.text = noticeInfo.title
     }
 
 }

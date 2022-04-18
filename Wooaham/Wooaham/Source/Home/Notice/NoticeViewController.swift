@@ -8,6 +8,9 @@
 import UIKit
 
 class NoticeViewController: UIViewController {
+    
+    lazy var noticeDataManager = NoticeDataManager()
+    var noticeList: [NoticeData]?
 
     @IBOutlet weak var noticeCollectionView: UICollectionView!
     let NOTICE_CELL = "NoticeCollectionViewCell"
@@ -29,11 +32,12 @@ extension NoticeViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return noticeList?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = noticeCollectionView.dequeueReusableCell(withReuseIdentifier: NOTICE_CELL, for: indexPath) as! NoticeCollectionViewCell
+        //cell.setNotice(noticeList?[indexPath.row])
         return cell
     }
     
