@@ -21,6 +21,16 @@ extension UIViewController {
         self.present(vc, animated: false)
     }
     
+    // MARK: 최상위 뷰 전환
+    func changeRootViewController(_ viewControllerToPresent: UIViewController) {
+        if let window = UIApplication.shared.windows.first {
+            window.rootViewController = viewControllerToPresent
+        } else {
+            viewControllerToPresent.modalPresentationStyle = .overFullScreen
+            self.present(viewControllerToPresent, animated: true, completion: nil)
+        }
+    }
+    
     // MARK: 취소와 확인이 뜨는 UIAlertController
     func presentAlert(title: String, message: String? = nil,
                       isCancelActionIncluded: Bool = false,
