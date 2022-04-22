@@ -16,14 +16,14 @@
 		A90900902809358600089CCA /* AlarmDetailDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909008F2809358600089CCA /* AlarmDetailDataManager.swift */; };
 		A909009228093AEF00089CCA /* AlarmDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909009128093AEF00089CCA /* AlarmDetail.swift */; };
 		A909009828095A9500089CCA /* AddAlarmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909009728095A9500089CCA /* AddAlarmDataManager.swift */; };
-		A909009A28095AEC00089CCA /* AddAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909009928095AEC00089CCA /* AddAlarm.swift */; };
+		A909009A28095AEC00089CCA /* AddAlarmResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909009928095AEC00089CCA /* AddAlarmResponse.swift */; };
 		A909009C2809658300089CCA /* DeleteAlarmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909009B2809658300089CCA /* DeleteAlarmDataManager.swift */; };
 		A90900A02809673400089CCA /* AlarmSwtichDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909009F2809673400089CCA /* AlarmSwtichDataManager.swift */; };
 		A90900A228096BCB00089CCA /* AlarmTestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A128096BCB00089CCA /* AlarmTestResponse.swift */; };
 		A90900A42809733000089CCA /* EditAlarmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A32809733000089CCA /* EditAlarmDataManager.swift */; };
-		A90900A62809784000089CCA /* EditAlarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A52809784000089CCA /* EditAlarm.swift */; };
+		A90900A62809784000089CCA /* EditAlarmRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A52809784000089CCA /* EditAlarmRequest.swift */; };
 		A90900A8280999CA00089CCA /* NoticeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A7280999CA00089CCA /* NoticeResponse.swift */; };
-		A90900AA280999DA00089CCA /* NoticeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A9280999DA00089CCA /* NoticeDataManager.swift */; };
+		A90900AA280999DA00089CCA /* NoticeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A9280999DA00089CCA /* NoticeAPI.swift */; };
 		A932737B27F9C83D001B0EDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932737A27F9C83D001B0EDB /* AppDelegate.swift */; };
 		A932737D27F9C83D001B0EDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932737C27F9C83D001B0EDB /* SceneDelegate.swift */; };
 		A932738227F9C83D001B0EDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A932738027F9C83D001B0EDB /* Main.storyboard */; };
@@ -70,6 +70,8 @@
 		A93274A12804007B001B0EDB /* MealPlannerVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93274A02804007B001B0EDB /* MealPlannerVC.storyboard */; };
 		A93274A828041A12001B0EDB /* MealDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93274A628041A12001B0EDB /* MealDetailCollectionViewCell.swift */; };
 		A93274A928041A12001B0EDB /* MealDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A93274A728041A12001B0EDB /* MealDetailCollectionViewCell.xib */; };
+		A9BB8EAD2812675E004F2990 /* AddAlarmRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BB8EAC2812675E004F2990 /* AddAlarmRequest.swift */; };
+		A9BB8EAF28126781004F2990 /* EditAlarmResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BB8EAE28126781004F2990 /* EditAlarmResponse.swift */; };
 		CE81C783B1BA87148374EAB8 /* Pods_Wooaham.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECC2A0843E732B2894F27C7 /* Pods_Wooaham.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,14 +87,14 @@
 		A909008F2809358600089CCA /* AlarmDetailDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDetailDataManager.swift; sourceTree = "<group>"; };
 		A909009128093AEF00089CCA /* AlarmDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDetail.swift; sourceTree = "<group>"; };
 		A909009728095A9500089CCA /* AddAlarmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmDataManager.swift; sourceTree = "<group>"; };
-		A909009928095AEC00089CCA /* AddAlarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarm.swift; sourceTree = "<group>"; };
+		A909009928095AEC00089CCA /* AddAlarmResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmResponse.swift; sourceTree = "<group>"; };
 		A909009B2809658300089CCA /* DeleteAlarmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAlarmDataManager.swift; sourceTree = "<group>"; };
 		A909009F2809673400089CCA /* AlarmSwtichDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSwtichDataManager.swift; sourceTree = "<group>"; };
 		A90900A128096BCB00089CCA /* AlarmTestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTestResponse.swift; sourceTree = "<group>"; };
 		A90900A32809733000089CCA /* EditAlarmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlarmDataManager.swift; sourceTree = "<group>"; };
-		A90900A52809784000089CCA /* EditAlarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlarm.swift; sourceTree = "<group>"; };
+		A90900A52809784000089CCA /* EditAlarmRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlarmRequest.swift; sourceTree = "<group>"; };
 		A90900A7280999CA00089CCA /* NoticeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeResponse.swift; sourceTree = "<group>"; };
-		A90900A9280999DA00089CCA /* NoticeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDataManager.swift; sourceTree = "<group>"; };
+		A90900A9280999DA00089CCA /* NoticeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeAPI.swift; sourceTree = "<group>"; };
 		A932737727F9C83D001B0EDB /* Wooaham.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wooaham.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A932737A27F9C83D001B0EDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A932737C27F9C83D001B0EDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,7 +116,7 @@
 		A93273B327F9F6D2001B0EDB /* AddSchoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSchoolViewController.swift; sourceTree = "<group>"; };
 		A93273B527FB2D57001B0EDB /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		A93273B727FB2D7B001B0EDB /* NSMutableAttributedString+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+.swift"; sourceTree = "<group>"; };
-		A93273BA27FC1799001B0EDB /* Alarm.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Alarm.storyboard; path = Wooaham/Source/Login/Alarm.storyboard; sourceTree = SOURCE_ROOT; };
+		A93273BA27FC1799001B0EDB /* Alarm.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Alarm.storyboard; path = Wooaham/Source/Alarm/Alarm.storyboard; sourceTree = SOURCE_ROOT; };
 		A93273BC27FC180C001B0EDB /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		A93273BE27FC1A82001B0EDB /* UITabBarController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+.swift"; sourceTree = "<group>"; };
 		A93273C027FC1AEF001B0EDB /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -141,6 +143,8 @@
 		A93274A02804007B001B0EDB /* MealPlannerVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MealPlannerVC.storyboard; sourceTree = "<group>"; };
 		A93274A628041A12001B0EDB /* MealDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		A93274A728041A12001B0EDB /* MealDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealDetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		A9BB8EAC2812675E004F2990 /* AddAlarmRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmRequest.swift; sourceTree = "<group>"; };
+		A9BB8EAE28126781004F2990 /* EditAlarmResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlarmResponse.swift; sourceTree = "<group>"; };
 		AECC2A0843E732B2894F27C7 /* Pods_Wooaham.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wooaham.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -175,17 +179,24 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		A90900D0280C238C00089CCA /* Alarm */ = {
+		A90900D0280C238C00089CCA /* AlarmAPIs */ = {
 			isa = PBXGroup;
 			children = (
+				A9BB8EA2281266B0004F2990 /* AlarmAPI */,
+				A9BB8EA7281266F6004F2990 /* AlarmSwitchAPI */,
+				A9BB8EA3281266C2004F2990 /* AlarmDetailAPI */,
+				A9BB8EA4281266C9004F2990 /* AddAlarmAPI */,
+				A9BB8EA6281266E1004F2990 /* EditAlarmAPI */,
+				A9BB8EA5281266CD004F2990 /* DeleteAlarmAPI */,
 			);
-			path = Alarm;
+			path = AlarmAPIs;
 			sourceTree = "<group>";
 		};
 		A90900D1280C23A100089CCA /* APIModels */ = {
 			isa = PBXGroup;
 			children = (
-				A90900D4280C240400089CCA /* Alarm */,
+				A9BB8EB1281267BF004F2990 /* NoticeModels */,
+				A90900D4280C240400089CCA /* AlarmModels */,
 			);
 			path = APIModels;
 			sourceTree = "<group>";
@@ -193,7 +204,8 @@
 		A90900D2280C23A600089CCA /* APIServices */ = {
 			isa = PBXGroup;
 			children = (
-				A90900D0280C238C00089CCA /* Alarm */,
+				A9BB8EB0281267A0004F2990 /* NoticeAPIs */,
+				A90900D0280C238C00089CCA /* AlarmAPIs */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -205,11 +217,16 @@
 			path = APIConstants;
 			sourceTree = "<group>";
 		};
-		A90900D4280C240400089CCA /* Alarm */ = {
+		A90900D4280C240400089CCA /* AlarmModels */ = {
 			isa = PBXGroup;
 			children = (
+				A9BB8EA82812671B004F2990 /* AlarmModel */,
+				A9BB8EA928126720004F2990 /* AlarmDetailModel */,
+				A9BB8EAA28126726004F2990 /* AddAlarmModel */,
+				A9BB8EAB28126731004F2990 /* EditAlarmModel */,
+				A90900A128096BCB00089CCA /* AlarmTestResponse.swift */,
 			);
-			path = Alarm;
+			path = AlarmModels;
 			sourceTree = "<group>";
 		};
 		A932736E27F9C83D001B0EDB = {
@@ -327,14 +344,10 @@
 		A93273B927FC1768001B0EDB /* Alarm */ = {
 			isa = PBXGroup;
 			children = (
-				A932749828031544001B0EDB /* AlarmEntity */,
-				A93274992803154D001B0EDB /* AlarmDataManager */,
 				A93273BA27FC1799001B0EDB /* Alarm.storyboard */,
 				A93273BC27FC180C001B0EDB /* AlarmViewController.swift */,
-				A93273C327FC1DA3001B0EDB /* AlarmTableViewCell.xib */,
-				A93273C227FC1DA3001B0EDB /* AlarmTableViewCell.swift */,
-				A93273C627FC2457001B0EDB /* AddAlarmViewController.swift */,
-				A909009128093AEF00089CCA /* AlarmDetail.swift */,
+				A9BB8EB42812682B004F2990 /* AlarmTableViewCell */,
+				A9BB8EB52812684C004F2990 /* AlarmDetail */,
 			);
 			path = Alarm;
 			sourceTree = "<group>";
@@ -351,14 +364,7 @@
 		A93273CF27FEC777001B0EDB /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				A93274972803152B001B0EDB /* HomeEntity */,
-				A93274962803151D001B0EDB /* HomeDataManager */,
-				A93273D027FEC7B0001B0EDB /* Home.storyboard */,
-				A93273D227FEC7E2001B0EDB /* HomeViewController.swift */,
-				A93273D927FECD7F001B0EDB /* MealPlannerCollectionViewCell.xib */,
-				A93273D827FECD7F001B0EDB /* MealPlannerCollectionViewCell.swift */,
-				A93273DD27FED1B7001B0EDB /* TimeTableCollectionViewCell.xib */,
-				A93273DC27FED1B7001B0EDB /* TimeTableCollectionViewCell.swift */,
+				A9BB8EB8281268CA004F2990 /* Home */,
 				A93273E027FEE9F7001B0EDB /* Notice */,
 				A93273E527FEEBE6001B0EDB /* MealPlanner */,
 				A93273E827FEEC45001B0EDB /* TimeTable */,
@@ -405,45 +411,149 @@
 			path = Homework;
 			sourceTree = "<group>";
 		};
-		A93274962803151D001B0EDB /* HomeDataManager */ = {
+		A9BB8EA2281266B0004F2990 /* AlarmAPI */ = {
 			isa = PBXGroup;
 			children = (
-				A90900A9280999DA00089CCA /* NoticeDataManager.swift */,
+				A932749C28031604001B0EDB /* AlarmDataManager.swift */,
 			);
-			path = HomeDataManager;
+			path = AlarmAPI;
 			sourceTree = "<group>";
 		};
-		A93274972803152B001B0EDB /* HomeEntity */ = {
+		A9BB8EA3281266C2004F2990 /* AlarmDetailAPI */ = {
+			isa = PBXGroup;
+			children = (
+				A909008F2809358600089CCA /* AlarmDetailDataManager.swift */,
+			);
+			path = AlarmDetailAPI;
+			sourceTree = "<group>";
+		};
+		A9BB8EA4281266C9004F2990 /* AddAlarmAPI */ = {
+			isa = PBXGroup;
+			children = (
+				A909009728095A9500089CCA /* AddAlarmDataManager.swift */,
+			);
+			path = AddAlarmAPI;
+			sourceTree = "<group>";
+		};
+		A9BB8EA5281266CD004F2990 /* DeleteAlarmAPI */ = {
+			isa = PBXGroup;
+			children = (
+				A909009B2809658300089CCA /* DeleteAlarmDataManager.swift */,
+			);
+			path = DeleteAlarmAPI;
+			sourceTree = "<group>";
+		};
+		A9BB8EA6281266E1004F2990 /* EditAlarmAPI */ = {
+			isa = PBXGroup;
+			children = (
+				A90900A32809733000089CCA /* EditAlarmDataManager.swift */,
+			);
+			path = EditAlarmAPI;
+			sourceTree = "<group>";
+		};
+		A9BB8EA7281266F6004F2990 /* AlarmSwitchAPI */ = {
+			isa = PBXGroup;
+			children = (
+				A909009F2809673400089CCA /* AlarmSwtichDataManager.swift */,
+			);
+			path = AlarmSwitchAPI;
+			sourceTree = "<group>";
+		};
+		A9BB8EA82812671B004F2990 /* AlarmModel */ = {
+			isa = PBXGroup;
+			children = (
+				A932749A280315E7001B0EDB /* AlarmResponse.swift */,
+			);
+			path = AlarmModel;
+			sourceTree = "<group>";
+		};
+		A9BB8EA928126720004F2990 /* AlarmDetailModel */ = {
+			isa = PBXGroup;
+			children = (
+				A909008D2809348000089CCA /* AlarmDetailResponse.swift */,
+			);
+			path = AlarmDetailModel;
+			sourceTree = "<group>";
+		};
+		A9BB8EAA28126726004F2990 /* AddAlarmModel */ = {
+			isa = PBXGroup;
+			children = (
+				A9BB8EAC2812675E004F2990 /* AddAlarmRequest.swift */,
+				A909009928095AEC00089CCA /* AddAlarmResponse.swift */,
+			);
+			path = AddAlarmModel;
+			sourceTree = "<group>";
+		};
+		A9BB8EAB28126731004F2990 /* EditAlarmModel */ = {
+			isa = PBXGroup;
+			children = (
+				A90900A52809784000089CCA /* EditAlarmRequest.swift */,
+				A9BB8EAE28126781004F2990 /* EditAlarmResponse.swift */,
+			);
+			path = EditAlarmModel;
+			sourceTree = "<group>";
+		};
+		A9BB8EB0281267A0004F2990 /* NoticeAPIs */ = {
+			isa = PBXGroup;
+			children = (
+				A90900A9280999DA00089CCA /* NoticeAPI.swift */,
+			);
+			path = NoticeAPIs;
+			sourceTree = "<group>";
+		};
+		A9BB8EB1281267BF004F2990 /* NoticeModels */ = {
+			isa = PBXGroup;
+			children = (
+				A9BB8EB2281267E2004F2990 /* NoticeModel */,
+			);
+			path = NoticeModels;
+			sourceTree = "<group>";
+		};
+		A9BB8EB2281267E2004F2990 /* NoticeModel */ = {
 			isa = PBXGroup;
 			children = (
 				A90900A7280999CA00089CCA /* NoticeResponse.swift */,
 			);
-			path = HomeEntity;
+			path = NoticeModel;
 			sourceTree = "<group>";
 		};
-		A932749828031544001B0EDB /* AlarmEntity */ = {
+		A9BB8EB42812682B004F2990 /* AlarmTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				A932749A280315E7001B0EDB /* AlarmResponse.swift */,
-				A909008D2809348000089CCA /* AlarmDetailResponse.swift */,
-				A90900A128096BCB00089CCA /* AlarmTestResponse.swift */,
-				A909009928095AEC00089CCA /* AddAlarm.swift */,
-				A90900A52809784000089CCA /* EditAlarm.swift */,
+				A93273C327FC1DA3001B0EDB /* AlarmTableViewCell.xib */,
+				A93273C227FC1DA3001B0EDB /* AlarmTableViewCell.swift */,
 			);
-			path = AlarmEntity;
+			path = AlarmTableViewCell;
 			sourceTree = "<group>";
 		};
-		A93274992803154D001B0EDB /* AlarmDataManager */ = {
+		A9BB8EB52812684C004F2990 /* AlarmDetail */ = {
 			isa = PBXGroup;
 			children = (
-				A932749C28031604001B0EDB /* AlarmDataManager.swift */,
-				A909008F2809358600089CCA /* AlarmDetailDataManager.swift */,
-				A909009728095A9500089CCA /* AddAlarmDataManager.swift */,
-				A909009B2809658300089CCA /* DeleteAlarmDataManager.swift */,
-				A909009F2809673400089CCA /* AlarmSwtichDataManager.swift */,
-				A90900A32809733000089CCA /* EditAlarmDataManager.swift */,
+				A93273C627FC2457001B0EDB /* AddAlarmViewController.swift */,
+				A909009128093AEF00089CCA /* AlarmDetail.swift */,
 			);
-			path = AlarmDataManager;
+			path = AlarmDetail;
+			sourceTree = "<group>";
+		};
+		A9BB8EB62812687C004F2990 /* HomeCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A93273D927FECD7F001B0EDB /* MealPlannerCollectionViewCell.xib */,
+				A93273D827FECD7F001B0EDB /* MealPlannerCollectionViewCell.swift */,
+				A93273DD27FED1B7001B0EDB /* TimeTableCollectionViewCell.xib */,
+				A93273DC27FED1B7001B0EDB /* TimeTableCollectionViewCell.swift */,
+			);
+			path = HomeCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		A9BB8EB8281268CA004F2990 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A93273D027FEC7B0001B0EDB /* Home.storyboard */,
+				A93273D227FEC7E2001B0EDB /* HomeViewController.swift */,
+				A9BB8EB62812687C004F2990 /* HomeCollectionViewCell */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		BAA01814139471BE39761771 /* Frameworks */ = {
@@ -606,9 +716,10 @@
 				A93273B227F9ED1E001B0EDB /* ProfileEditViewController.swift in Sources */,
 				A909009C2809658300089CCA /* DeleteAlarmDataManager.swift in Sources */,
 				A93273DA27FECD7F001B0EDB /* MealPlannerCollectionViewCell.swift in Sources */,
-				A90900AA280999DA00089CCA /* NoticeDataManager.swift in Sources */,
+				A90900AA280999DA00089CCA /* NoticeAPI.swift in Sources */,
 				A93273A627F9E12E001B0EDB /* UIViewController+.swift in Sources */,
 				A932737B27F9C83D001B0EDB /* AppDelegate.swift in Sources */,
+				A9BB8EAF28126781004F2990 /* EditAlarmResponse.swift in Sources */,
 				A932739F27F9D940001B0EDB /* UIFont+.swift in Sources */,
 				A93273B827FB2D7B001B0EDB /* NSMutableAttributedString+.swift in Sources */,
 				A932737D27F9C83D001B0EDB /* SceneDelegate.swift in Sources */,
@@ -622,12 +733,13 @@
 				A93273E327FEEA0E001B0EDB /* NoticeCollectionViewCell.swift in Sources */,
 				A932739927F9CEE6001B0EDB /* UIColor+.swift in Sources */,
 				A90900882805CDB300089CCA /* Storyboard.swift in Sources */,
-				A90900A62809784000089CCA /* EditAlarm.swift in Sources */,
+				A90900A62809784000089CCA /* EditAlarmRequest.swift in Sources */,
 				A93273D527FECB4A001B0EDB /* NoticeViewController.swift in Sources */,
+				A9BB8EAD2812675E004F2990 /* AddAlarmRequest.swift in Sources */,
 				A909009828095A9500089CCA /* AddAlarmDataManager.swift in Sources */,
 				A93273C727FC2457001B0EDB /* AddAlarmViewController.swift in Sources */,
 				A93273C427FC1DA3001B0EDB /* AlarmTableViewCell.swift in Sources */,
-				A909009A28095AEC00089CCA /* AddAlarm.swift in Sources */,
+				A909009A28095AEC00089CCA /* AddAlarmResponse.swift in Sources */,
 				A909009228093AEF00089CCA /* AlarmDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

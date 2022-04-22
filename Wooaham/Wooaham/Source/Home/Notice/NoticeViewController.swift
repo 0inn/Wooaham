@@ -9,7 +9,7 @@ import UIKit
 
 class NoticeViewController: UIViewController {
     
-    lazy var noticeDataManager = NoticeDataManager()
+    lazy var noticeAPI = NoticeAPI()
     var noticeList: [NoticeData]?
 
     @IBOutlet weak var noticeCollectionView: UICollectionView!
@@ -19,8 +19,19 @@ class NoticeViewController: UIViewController {
         super.viewDidLoad()
         self.title = "공지 및 알림사항"
         setNoticeCollectionView()
+        getNoticeAPI()
     }
 
+}
+
+extension NoticeViewController {
+    private func getNoticeAPI() {
+        noticeAPI.getNotice("123123", self)
+    }
+    func didSuccessNotice(_ noticeDatum: [NoticeData]) {
+        noticeList = noticeDatum
+        noticeCollectionView.reloadData()
+    }
 }
 
 extension NoticeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -37,7 +48,7 @@ extension NoticeViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = noticeCollectionView.dequeueReusableCell(withReuseIdentifier: NOTICE_CELL, for: indexPath) as! NoticeCollectionViewCell
-        //cell.setNotice(noticeList?[indexPath.row])
+        cell.setNotice((noticeList?[indexPath.row])!)
         return cell
     }
     

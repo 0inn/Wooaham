@@ -1,8 +1,8 @@
 //
-//  AddAlarm.swift
+//  AddAlarmRequest.swift
 //  Wooaham
 //
-//  Created by 김영인 on 2022/04/15.
+//  Created by 김영인 on 2022/04/22.
 //
 
 import Foundation
@@ -15,11 +15,4 @@ struct AddAlarmRequest: Codable {
     var enabled: Bool?
     var before10min: Bool?
     var iconId: CLong
-}
-
-// MARK: - AddAlarmResponse
-struct AddAlarmResponse: Codable {
-    let success: Bool
-    let data: CLong
-    let error: Bool?
 }

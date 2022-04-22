@@ -17,7 +17,7 @@ class NoticeCollectionViewCell: UICollectionViewCell {
     }
     
     func setNotice(_ noticeInfo: NoticeData) {
-        noticeTitle.text = noticeInfo.title
+        noticeTitle.text = noticeInfo.contents
     }
 
 }

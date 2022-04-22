@@ -1,5 +1,5 @@
 //
-//  NoticeDataManager.swift
+//  NoticeAPI.swift
 //  Wooaham
 //
 //  Created by 김영인 on 2022/04/15.
@@ -7,7 +7,7 @@
 
 import Alamofire
 
-class NoticeDataManager {
+class NoticeAPI{
     
     func getNotice(_ classCode: String, _ delegate: NoticeViewController) {
         
@@ -23,11 +23,11 @@ class NoticeDataManager {
                    encoding: URLEncoding.default,
                    headers: nil)
         .validate()
-        .responseDecodable(of: AlarmResponse.self) { (response) in
+        .responseDecodable(of: NoticeResponse.self) { (response) in
             switch response.result {
             case .success(let response):
                 if response.success {
-                    //delegate.didSuccessNotice(response.data)
+                    delegate.didSuccessNotice(response.data)
                 } else {
                     //delegate.failedToRequestAlarm("실패")
                 }
