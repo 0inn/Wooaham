@@ -9,19 +9,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--홈-->
+        <!--👶🏻-->
         <scene sceneID="K9Y-9d-pD0">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9d0-J8-u9r" customClass="HomeViewController" customModule="Wooaham" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o87-bs-ejT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1700"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1150"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l7a-38-N4u">
-                                <rect key="frame" x="0.0" y="88" width="414" height="1578"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="1028"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ynS-Vk-XRl">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="990"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kYg-QV-aiZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
@@ -302,8 +302,8 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="jph-N7-tbz" firstAttribute="leading" secondItem="ynS-Vk-XRl" secondAttribute="leading" id="1Af-18-mZY"/>
-                                            <constraint firstAttribute="height" constant="1500" id="G1q-fI-bC4"/>
                                             <constraint firstItem="jph-N7-tbz" firstAttribute="top" secondItem="Yml-fZ-KQi" secondAttribute="bottom" id="JfC-hv-rKw"/>
+                                            <constraint firstAttribute="bottom" secondItem="jph-N7-tbz" secondAttribute="bottom" constant="20" id="Yss-yd-gLP"/>
                                             <constraint firstItem="Yml-fZ-KQi" firstAttribute="leading" secondItem="ynS-Vk-XRl" secondAttribute="leading" id="a6p-Sz-m0H"/>
                                             <constraint firstAttribute="trailing" secondItem="jph-N7-tbz" secondAttribute="trailing" id="bih-To-4jZ"/>
                                             <constraint firstAttribute="trailing" secondItem="MxZ-hU-Fga" secondAttribute="trailing" id="c5p-pm-VRU"/>
@@ -337,12 +337,14 @@
                             <constraint firstItem="Mrn-Oo-EC7" firstAttribute="bottom" secondItem="l7a-38-N4u" secondAttribute="bottom" id="lul-VK-o6a"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="홈" id="Ddm-Xy-mfy"/>
-                    <size key="freeformSize" width="414" height="1700"/>
+                    <navigationItem key="navigationItem" title="👶🏻" id="Ddm-Xy-mfy">
+                        <barButtonItem key="backBarButtonItem" title=" " id="DKu-5x-okF"/>
+                    </navigationItem>
+                    <size key="freeformSize" width="414" height="1150"/>
                     <connections>
-                        <outlet property="instHW" destination="7Mw-d6-FOd" id="cS1-L4-mo0"/>
+                        <outlet property="academyHomeworkView" destination="7Mw-d6-FOd" id="IuF-19-HJz"/>
                         <outlet property="mealCollectionView" destination="gEI-4y-6iz" id="ot5-Ah-YXh"/>
-                        <outlet property="schoolHW" destination="JcP-nE-yuj" id="1Pw-kc-Ta6"/>
+                        <outlet property="schoolHomeworkView" destination="JcP-nE-yuj" id="WDe-Re-lcM"/>
                         <outlet property="timeTableCollectionView" destination="anY-Jc-tKx" id="8xb-6g-Ycb"/>
                     </connections>
                 </viewController>

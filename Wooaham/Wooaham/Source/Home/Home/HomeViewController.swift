@@ -12,16 +12,21 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var mealCollectionView: UICollectionView!
     @IBOutlet weak var timeTableCollectionView: UICollectionView!
     
-    @IBOutlet weak var schoolHW: UIView!
-    @IBOutlet weak var instHW: UIView!
+    @IBOutlet weak var schoolHomeworkView: UIView!
+    @IBOutlet weak var academyHomeworkView: UIView!
     
     let MEAL_CELL = "MealPlannerCollectionViewCell"
     let TIME_CELL = "TimeTableCollectionViewCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setCollectionViews()
-        setViews()
+        setUI()
+    }
+    
+    private func setUI() {
+        setCollectionView()
+        setView()
+        setViewEvent()
     }
     
     @IBAction func noticeBtnClick(_ sender: Any) {
@@ -39,10 +44,20 @@ class HomeViewController: UIViewController {
         self.presentNVC(vc)
     }
     
+    @objc func schoolHomeworkVC(_ sender: Any) {
+        guard let vc = UIStoryboard(name: Const.Storyboard.Name.schoolHomeworkSB, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.Identifier.schoolHomeworkVC) as? SchoolHomeworkViewController else { return }
+        self.presentNVC(vc)
+    }
+    
+    @objc func academyHomeworkVC(_ sender: Any) {
+        guard let vc = UIStoryboard(name: Const.Storyboard.Name.academyHomeworkSB, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.Identifier.academyHomeworkVC) as? AcademyHomeworkViewController else { return }
+        self.presentNVC(vc)
+    }
+    
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    private func setCollectionViews() {
+    private func setCollectionView() {
         mealCollectionView.delegate = self
         mealCollectionView.dataSource = self
         mealCollectionView.register(UINib(nibName: MEAL_CELL, bundle: nil), forCellWithReuseIdentifier: MEAL_CELL)
@@ -90,8 +105,14 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 }
 
 extension HomeViewController {
-    private func setViews() {
-        schoolHW.roundCorners(cornerRadius: 10, maskedCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
-        instHW.roundCorners(cornerRadius: 10, maskedCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
+    private func setView() {
+        schoolHomeworkView.roundCorners(cornerRadius: 10, maskedCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
+        academyHomeworkView.roundCorners(cornerRadius: 10, maskedCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
+    }
+    private func setViewEvent() {
+        let schoolGesture = UITapGestureRecognizer(target: self, action: #selector(schoolHomeworkVC(_:)))
+        schoolHomeworkView.addGestureRecognizer(schoolGesture)
+        let academyGesture = UITapGestureRecognizer(target: self, action: #selector(academyHomeworkVC(_:)))
+        academyHomeworkView.addGestureRecognizer(academyGesture)
     }
 }
