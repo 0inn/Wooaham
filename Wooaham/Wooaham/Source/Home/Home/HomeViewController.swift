@@ -45,12 +45,14 @@ class HomeViewController: UIViewController {
     }
     
     @objc func schoolHomeworkVC(_ sender: Any) {
-        guard let vc = UIStoryboard(name: Const.Storyboard.Name.schoolHomeworkSB, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.Identifier.schoolHomeworkVC) as? SchoolHomeworkViewController else { return }
+        guard let vc = UIStoryboard(name: Const.Storyboard.Name.homeworkSB, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.Identifier.homeworkVC) as? HomeworkViewController else { return }
+        vc.isSchoolHW = true
         self.presentNVC(vc)
     }
     
     @objc func academyHomeworkVC(_ sender: Any) {
-        guard let vc = UIStoryboard(name: Const.Storyboard.Name.academyHomeworkSB, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.Identifier.academyHomeworkVC) as? AcademyHomeworkViewController else { return }
+        guard let vc = UIStoryboard(name: Const.Storyboard.Name.homeworkSB, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.Identifier.homeworkVC) as? HomeworkViewController else { return }
+        vc.isSchoolHW = false
         self.presentNVC(vc)
     }
     

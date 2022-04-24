@@ -13,8 +13,7 @@ extension Const {
             static let homeSB = "Home"
             static let noticeSB = "Notice"
             static let alarmSB = "Alarm"
-            static let schoolHomeworkSB = "SchoolHomework"
-            static let academyHomeworkSB = "AcademyHomework"
+            static let homeworkSB = "Homework"
         }
     }
 }

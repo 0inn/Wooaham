@@ -13,8 +13,7 @@ extension Const {
             static let homeVC = "HomeViewController"
             static let noticeVC = "NoticeViewController"
             static let alarmVC = "AlarmViewController"
-            static let schoolHomeworkVC = "SchoolHomeworkViewController"
-            static let academyHomeworkVC = "AcademyHomeworkViewController"
+            static let homeworkVC = "HomeworkViewController"
         }
     }
 }

@@ -1,5 +1,5 @@
 //
-//  SchoolHomeworkResponse.swift
+//  HomeworkResponse.swift
 //  Wooaham
 //
 //  Created by 김영인 on 2022/04/24.
@@ -7,15 +7,13 @@
 
 import Foundation
 
-// MARK: - SchoolHomeworkResponse
-struct SchoolHomeworkResponse: Codable {
+struct HomeworkResponse: Codable {
     let success: Bool
-    let data: [SchoolHomeworkData]
+    let data: [HomeworkData]
     let error: Bool?
 }
 
-// MARK: - SchoolData
-struct SchoolHomeworkData: Codable {
+struct HomeworkData: Codable {
     let homeworkId, userId: Int
     let title: String
     let checked: Bool

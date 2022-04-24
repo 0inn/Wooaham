@@ -1,5 +1,5 @@
 //
-//  SchoolHomeworkAPI.swift
+//  AcademyHomeworkAPI.swift
 //  Wooaham
 //
 //  Created by 김영인 on 2022/04/24.
@@ -7,11 +7,11 @@
 
 import Alamofire
 
-class SchoolHomeworkAPI{
+class AcademyHomeworkAPI{
     
-    func getSchoolHomework(_ userId: String, _ delegate: HomeworkViewController) {
+    func getAcademyHomework(_ userId: String, _ delegate: HomeworkViewController) {
         
-        let url = "\(Const.URL.BASE_URL)/info/hw/school/"
+        let url = "\(Const.URL.BASE_URL)/info/hw/academy/"
         
         let params: [String: String] = [
             "userId": userId
