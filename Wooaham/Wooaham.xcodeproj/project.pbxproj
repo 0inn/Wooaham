@@ -66,12 +66,14 @@
 		A93273ED27FEEC76001B0EDB /* HomeworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273EC27FEEC76001B0EDB /* HomeworkViewController.swift */; };
 		A932749B280315E7001B0EDB /* AlarmResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932749A280315E7001B0EDB /* AlarmResponse.swift */; };
 		A932749D28031604001B0EDB /* AlarmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932749C28031604001B0EDB /* AlarmDataManager.swift */; };
-		A932749F2803FD50001B0EDB /* NoticeVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A932749E2803FD50001B0EDB /* NoticeVC.storyboard */; };
-		A93274A12804007B001B0EDB /* MealPlannerVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93274A02804007B001B0EDB /* MealPlannerVC.storyboard */; };
+		A932749F2803FD50001B0EDB /* Notice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A932749E2803FD50001B0EDB /* Notice.storyboard */; };
+		A93274A12804007B001B0EDB /* MealPlanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93274A02804007B001B0EDB /* MealPlanner.storyboard */; };
 		A93274A828041A12001B0EDB /* MealDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93274A628041A12001B0EDB /* MealDetailCollectionViewCell.swift */; };
 		A93274A928041A12001B0EDB /* MealDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A93274A728041A12001B0EDB /* MealDetailCollectionViewCell.xib */; };
 		A9BB8EAD2812675E004F2990 /* AddAlarmRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BB8EAC2812675E004F2990 /* AddAlarmRequest.swift */; };
 		A9BB8EAF28126781004F2990 /* EditAlarmResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BB8EAE28126781004F2990 /* EditAlarmResponse.swift */; };
+		A9BB8EBA28127787004F2990 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BB8EB928127787004F2990 /* Icon.swift */; };
+		A9BB8EBC28128556004F2990 /* TimeTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9BB8EBB28128556004F2990 /* TimeTable.storyboard */; };
 		CE81C783B1BA87148374EAB8 /* Pods_Wooaham.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECC2A0843E732B2894F27C7 /* Pods_Wooaham.framework */; };
 /* End PBXBuildFile section */
 
@@ -139,12 +141,14 @@
 		A93273EC27FEEC76001B0EDB /* HomeworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkViewController.swift; sourceTree = "<group>"; };
 		A932749A280315E7001B0EDB /* AlarmResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmResponse.swift; sourceTree = "<group>"; };
 		A932749C28031604001B0EDB /* AlarmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDataManager.swift; sourceTree = "<group>"; };
-		A932749E2803FD50001B0EDB /* NoticeVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NoticeVC.storyboard; sourceTree = "<group>"; };
-		A93274A02804007B001B0EDB /* MealPlannerVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MealPlannerVC.storyboard; sourceTree = "<group>"; };
+		A932749E2803FD50001B0EDB /* Notice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notice.storyboard; sourceTree = "<group>"; };
+		A93274A02804007B001B0EDB /* MealPlanner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MealPlanner.storyboard; sourceTree = "<group>"; };
 		A93274A628041A12001B0EDB /* MealDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		A93274A728041A12001B0EDB /* MealDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealDetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		A9BB8EAC2812675E004F2990 /* AddAlarmRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmRequest.swift; sourceTree = "<group>"; };
 		A9BB8EAE28126781004F2990 /* EditAlarmResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlarmResponse.swift; sourceTree = "<group>"; };
+		A9BB8EB928127787004F2990 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
+		A9BB8EBB28128556004F2990 /* TimeTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeTable.storyboard; sourceTree = "<group>"; };
 		AECC2A0843E732B2894F27C7 /* Pods_Wooaham.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wooaham.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -270,6 +274,7 @@
 				A90900812805CD3D00089CCA /* Const.swift */,
 				A90900872805CDB200089CCA /* Storyboard.swift */,
 				A90900852805CDAA00089CCA /* ViewController.swift */,
+				A9BB8EB928127787004F2990 /* Icon.swift */,
 				A90900832805CD4800089CCA /* URL.swift */,
 			);
 			path = Constants;
@@ -376,10 +381,10 @@
 		A93273E027FEE9F7001B0EDB /* Notice */ = {
 			isa = PBXGroup;
 			children = (
-				A932749E2803FD50001B0EDB /* NoticeVC.storyboard */,
+				A932749E2803FD50001B0EDB /* Notice.storyboard */,
 				A93273D427FECB4A001B0EDB /* NoticeViewController.swift */,
-				A93273E227FEEA0E001B0EDB /* NoticeCollectionViewCell.xib */,
-				A93273E127FEEA0E001B0EDB /* NoticeCollectionViewCell.swift */,
+				A9BB8EBD281294AF004F2990 /* NoticeCell */,
+				A9F2DD6728129622003AE78B /* NoticeDetail */,
 			);
 			path = Notice;
 			sourceTree = "<group>";
@@ -387,7 +392,7 @@
 		A93273E527FEEBE6001B0EDB /* MealPlanner */ = {
 			isa = PBXGroup;
 			children = (
-				A93274A02804007B001B0EDB /* MealPlannerVC.storyboard */,
+				A93274A02804007B001B0EDB /* MealPlanner.storyboard */,
 				A93273E627FEEC27001B0EDB /* MealPlannerViewController.swift */,
 				A93274A728041A12001B0EDB /* MealDetailCollectionViewCell.xib */,
 				A93274A628041A12001B0EDB /* MealDetailCollectionViewCell.swift */,
@@ -398,6 +403,7 @@
 		A93273E827FEEC45001B0EDB /* TimeTable */ = {
 			isa = PBXGroup;
 			children = (
+				A9BB8EBB28128556004F2990 /* TimeTable.storyboard */,
 				A93273E927FEEC5D001B0EDB /* TimeTableViewController.swift */,
 			);
 			path = TimeTable;
@@ -535,7 +541,7 @@
 			path = AlarmDetail;
 			sourceTree = "<group>";
 		};
-		A9BB8EB62812687C004F2990 /* HomeCollectionViewCell */ = {
+		A9BB8EB62812687C004F2990 /* HomeCells */ = {
 			isa = PBXGroup;
 			children = (
 				A93273D927FECD7F001B0EDB /* MealPlannerCollectionViewCell.xib */,
@@ -543,7 +549,7 @@
 				A93273DD27FED1B7001B0EDB /* TimeTableCollectionViewCell.xib */,
 				A93273DC27FED1B7001B0EDB /* TimeTableCollectionViewCell.swift */,
 			);
-			path = HomeCollectionViewCell;
+			path = HomeCells;
 			sourceTree = "<group>";
 		};
 		A9BB8EB8281268CA004F2990 /* Home */ = {
@@ -551,9 +557,25 @@
 			children = (
 				A93273D027FEC7B0001B0EDB /* Home.storyboard */,
 				A93273D227FEC7E2001B0EDB /* HomeViewController.swift */,
-				A9BB8EB62812687C004F2990 /* HomeCollectionViewCell */,
+				A9BB8EB62812687C004F2990 /* HomeCells */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		A9BB8EBD281294AF004F2990 /* NoticeCell */ = {
+			isa = PBXGroup;
+			children = (
+				A93273E227FEEA0E001B0EDB /* NoticeCollectionViewCell.xib */,
+				A93273E127FEEA0E001B0EDB /* NoticeCollectionViewCell.swift */,
+			);
+			path = NoticeCell;
+			sourceTree = "<group>";
+		};
+		A9F2DD6728129622003AE78B /* NoticeDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NoticeDetail;
 			sourceTree = "<group>";
 		};
 		BAA01814139471BE39761771 /* Frameworks */ = {
@@ -626,13 +648,14 @@
 			files = (
 				A932739527F9CE76001B0EDB /* Login.storyboard in Resources */,
 				A93273B027F9E8BB001B0EDB /* MyPage.storyboard in Resources */,
+				A9BB8EBC28128556004F2990 /* TimeTable.storyboard in Resources */,
 				A93273C527FC1DA3001B0EDB /* AlarmTableViewCell.xib in Resources */,
-				A93274A12804007B001B0EDB /* MealPlannerVC.storyboard in Resources */,
+				A93274A12804007B001B0EDB /* MealPlanner.storyboard in Resources */,
 				A93273D127FEC7B0001B0EDB /* Home.storyboard in Resources */,
 				A93273CA27FEBAA2001B0EDB /* Map.storyboard in Resources */,
 				A93273DF27FED1B7001B0EDB /* TimeTableCollectionViewCell.xib in Resources */,
 				A932738727F9C83E001B0EDB /* LaunchScreen.storyboard in Resources */,
-				A932749F2803FD50001B0EDB /* NoticeVC.storyboard in Resources */,
+				A932749F2803FD50001B0EDB /* Notice.storyboard in Resources */,
 				A93273DB27FECD7F001B0EDB /* MealPlannerCollectionViewCell.xib in Resources */,
 				A93273BB27FC1799001B0EDB /* Alarm.storyboard in Resources */,
 				A932738427F9C83E001B0EDB /* Assets.xcassets in Resources */,
@@ -719,6 +742,7 @@
 				A90900AA280999DA00089CCA /* NoticeAPI.swift in Sources */,
 				A93273A627F9E12E001B0EDB /* UIViewController+.swift in Sources */,
 				A932737B27F9C83D001B0EDB /* AppDelegate.swift in Sources */,
+				A9BB8EBA28127787004F2990 /* Icon.swift in Sources */,
 				A9BB8EAF28126781004F2990 /* EditAlarmResponse.swift in Sources */,
 				A932739F27F9D940001B0EDB /* UIFont+.swift in Sources */,
 				A93273B827FB2D7B001B0EDB /* NSMutableAttributedString+.swift in Sources */,

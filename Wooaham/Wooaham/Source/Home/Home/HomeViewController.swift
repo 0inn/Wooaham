@@ -25,17 +25,17 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func noticeBtnClick(_ sender: Any) {
-        guard let vc = UIStoryboard(name: "NoticeVC", bundle: nil).instantiateViewController(withIdentifier: "NoticeViewController") as? NoticeViewController else { return }
+        guard let vc = UIStoryboard(name: "Notice", bundle: nil).instantiateViewController(withIdentifier: "NoticeViewController") as? NoticeViewController else { return }
         self.presentNVC(vc)
     }
     
     @IBAction func mealBtnClick(_ sender: Any) {
-        guard let vc = UIStoryboard(name: "MealPlannerVC", bundle: nil).instantiateViewController(withIdentifier: "MealPlannerViewController") as? MealPlannerViewController else { return }
+        guard let vc = UIStoryboard(name: "MealPlanner", bundle: nil).instantiateViewController(withIdentifier: "MealPlannerViewController") as? MealPlannerViewController else { return }
         self.presentNVC(vc)
     }
     
     @IBAction func timetableBtnClick(_ sender: Any) {
-        guard let vc = UIStoryboard(name: "TimeTableVC", bundle: nil).instantiateViewController(withIdentifier: "TimeTableViewController") as? TimeTableViewController else { return }
+        guard let vc = UIStoryboard(name: "TimeTable", bundle: nil).instantiateViewController(withIdentifier: "TimeTableViewController") as? TimeTableViewController else { return }
         self.presentNVC(vc)
     }
     
