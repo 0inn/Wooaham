@@ -74,6 +74,11 @@
 		A9AD1A6528191DC20070F9AE /* NoticeDetailAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A6428191DC20070F9AE /* NoticeDetailAPI.swift */; };
 		A9AD1A6828191E2A0070F9AE /* NoticeDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A6728191E2A0070F9AE /* NoticeDetailResponse.swift */; };
 		A9AD1A6A281921FD0070F9AE /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A69281921FD0070F9AE /* UINavigationController+.swift */; };
+		A9AD1A6C281929640070F9AE /* WriteNotice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9AD1A6B281929640070F9AE /* WriteNotice.storyboard */; };
+		A9AD1A6E281929740070F9AE /* WriteNoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A6D281929740070F9AE /* WriteNoticeViewController.swift */; };
+		A9AD1A71281933BB0070F9AE /* WriteNoticeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A70281933BB0070F9AE /* WriteNoticeRequest.swift */; };
+		A9AD1A73281933FC0070F9AE /* WriteNoticeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A72281933FC0070F9AE /* WriteNoticeAPI.swift */; };
+		A9AD1A75281936070070F9AE /* WriteNoticeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A74281936070070F9AE /* WriteNoticeResponse.swift */; };
 		A9BB8EAD2812675E004F2990 /* AddAlarmRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BB8EAC2812675E004F2990 /* AddAlarmRequest.swift */; };
 		A9BB8EAF28126781004F2990 /* EditAlarmResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BB8EAE28126781004F2990 /* EditAlarmResponse.swift */; };
 		A9BB8EBA28127787004F2990 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BB8EB928127787004F2990 /* Icon.swift */; };
@@ -160,6 +165,11 @@
 		A9AD1A6428191DC20070F9AE /* NoticeDetailAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailAPI.swift; sourceTree = "<group>"; };
 		A9AD1A6728191E2A0070F9AE /* NoticeDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailResponse.swift; sourceTree = "<group>"; };
 		A9AD1A69281921FD0070F9AE /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
+		A9AD1A6B281929640070F9AE /* WriteNotice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WriteNotice.storyboard; sourceTree = "<group>"; };
+		A9AD1A6D281929740070F9AE /* WriteNoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteNoticeViewController.swift; sourceTree = "<group>"; };
+		A9AD1A70281933BB0070F9AE /* WriteNoticeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteNoticeRequest.swift; sourceTree = "<group>"; };
+		A9AD1A72281933FC0070F9AE /* WriteNoticeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteNoticeAPI.swift; sourceTree = "<group>"; };
+		A9AD1A74281936070070F9AE /* WriteNoticeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteNoticeResponse.swift; sourceTree = "<group>"; };
 		A9BB8EAC2812675E004F2990 /* AddAlarmRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmRequest.swift; sourceTree = "<group>"; };
 		A9BB8EAE28126781004F2990 /* EditAlarmResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlarmResponse.swift; sourceTree = "<group>"; };
 		A9BB8EB928127787004F2990 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
@@ -410,7 +420,7 @@
 				A93273D427FECB4A001B0EDB /* NoticeViewController.swift */,
 				A9BB8EBD281294AF004F2990 /* NoticeCell */,
 				A9F2DD6728129622003AE78B /* NoticeDetail */,
-				A9AD1A5D281917600070F9AE /* NoticeWrite */,
+				A9AD1A5D281917600070F9AE /* WriteNotice */,
 				A9AD1A5E281917710070F9AE /* NoticeReaders */,
 			);
 			path = Notice;
@@ -447,11 +457,13 @@
 			path = Homework;
 			sourceTree = "<group>";
 		};
-		A9AD1A5D281917600070F9AE /* NoticeWrite */ = {
+		A9AD1A5D281917600070F9AE /* WriteNotice */ = {
 			isa = PBXGroup;
 			children = (
+				A9AD1A6B281929640070F9AE /* WriteNotice.storyboard */,
+				A9AD1A6D281929740070F9AE /* WriteNoticeViewController.swift */,
 			);
-			path = NoticeWrite;
+			path = WriteNotice;
 			sourceTree = "<group>";
 		};
 		A9AD1A5E281917710070F9AE /* NoticeReaders */ = {
@@ -467,6 +479,15 @@
 				A9AD1A6728191E2A0070F9AE /* NoticeDetailResponse.swift */,
 			);
 			path = NoticeDetailModel;
+			sourceTree = "<group>";
+		};
+		A9AD1A6F281933AA0070F9AE /* WriteNoticeModel */ = {
+			isa = PBXGroup;
+			children = (
+				A9AD1A70281933BB0070F9AE /* WriteNoticeRequest.swift */,
+				A9AD1A74281936070070F9AE /* WriteNoticeResponse.swift */,
+			);
+			path = WriteNoticeModel;
 			sourceTree = "<group>";
 		};
 		A9BB8EA2281266B0004F2990 /* AlarmAPI */ = {
@@ -556,6 +577,7 @@
 			children = (
 				A90900A9280999DA00089CCA /* NoticeAPI.swift */,
 				A9AD1A6428191DC20070F9AE /* NoticeDetailAPI.swift */,
+				A9AD1A72281933FC0070F9AE /* WriteNoticeAPI.swift */,
 			);
 			path = NoticeAPIs;
 			sourceTree = "<group>";
@@ -563,6 +585,7 @@
 		A9BB8EB1281267BF004F2990 /* NoticeModels */ = {
 			isa = PBXGroup;
 			children = (
+				A9AD1A6F281933AA0070F9AE /* WriteNoticeModel */,
 				A9AD1A6628191E1D0070F9AE /* NoticeDetailModel */,
 				A9BB8EB2281267E2004F2990 /* NoticeModel */,
 			);
@@ -753,6 +776,7 @@
 				A93273E427FEEA0E001B0EDB /* NoticeCollectionViewCell.xib in Resources */,
 				A9CEF42728157B6D00B7B25B /* HomeworkTableViewCell.xib in Resources */,
 				A93274A928041A12001B0EDB /* MealDetailCollectionViewCell.xib in Resources */,
+				A9AD1A6C281929640070F9AE /* WriteNotice.storyboard in Resources */,
 				A932738227F9C83D001B0EDB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -831,6 +855,7 @@
 				A93273B227F9ED1E001B0EDB /* ProfileEditViewController.swift in Sources */,
 				A9AD1A6A281921FD0070F9AE /* UINavigationController+.swift in Sources */,
 				A9AD1A6228191C860070F9AE /* NoticeDetailViewController.swift in Sources */,
+				A9AD1A71281933BB0070F9AE /* WriteNoticeRequest.swift in Sources */,
 				A9CEF41928156D9A00B7B25B /* HomeworkViewController.swift in Sources */,
 				A909009C2809658300089CCA /* DeleteAlarmDataManager.swift in Sources */,
 				A93273DA27FECD7F001B0EDB /* MealPlannerCollectionViewCell.swift in Sources */,
@@ -844,6 +869,7 @@
 				A93273B827FB2D7B001B0EDB /* NSMutableAttributedString+.swift in Sources */,
 				A932737D27F9C83D001B0EDB /* SceneDelegate.swift in Sources */,
 				A9CEF42C28157D4B00B7B25B /* HomeworkResponse.swift in Sources */,
+				A9AD1A6E281929740070F9AE /* WriteNoticeViewController.swift in Sources */,
 				A909008E2809348000089CCA /* AlarmDetailResponse.swift in Sources */,
 				A90900A228096BCB00089CCA /* AlarmTestResponse.swift in Sources */,
 				A90900A8280999CA00089CCA /* NoticeResponse.swift in Sources */,
@@ -854,6 +880,8 @@
 				A93273E327FEEA0E001B0EDB /* NoticeCollectionViewCell.swift in Sources */,
 				A932739927F9CEE6001B0EDB /* UIColor+.swift in Sources */,
 				A90900882805CDB300089CCA /* Storyboard.swift in Sources */,
+				A9AD1A73281933FC0070F9AE /* WriteNoticeAPI.swift in Sources */,
+				A9AD1A75281936070070F9AE /* WriteNoticeResponse.swift in Sources */,
 				A90900A62809784000089CCA /* EditAlarmRequest.swift in Sources */,
 				A93273D527FECB4A001B0EDB /* NoticeViewController.swift in Sources */,
 				A9CEF4332815897800B7B25B /* AcademyHomeworkAPI.swift in Sources */,

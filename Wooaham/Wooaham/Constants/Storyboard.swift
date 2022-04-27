@@ -14,6 +14,7 @@ extension Const {
             
             static let noticeSB = "Notice"
             static let noticeDetailSB = "NoticeDetail"
+            static let wrtieNoticeSB = "WriteNotice"
             
             static let alarmSB = "Alarm"
             

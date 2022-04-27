@@ -14,6 +14,7 @@ extension Const {
             
             static let noticeVC = "NoticeViewController"
             static let noticeDetailVC = "NoticeDetailViewController"
+            static let writeNoticeVC = "WriteNoticeViewController"
             
             static let alarmVC = "AlarmViewController"
             

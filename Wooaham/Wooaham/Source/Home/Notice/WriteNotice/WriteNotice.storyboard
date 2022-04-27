@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Write Notice View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="WriteNoticeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="WriteNoticeViewController" customModule="Wooaham" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="제목을 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fib-Zu-m52">
+                                <rect key="frame" x="20" y="104" width="374" height="45"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="upy-mP-3ws"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cpw-yd-8Fe">
+                                <rect key="frame" x="20" y="169" width="374" height="673"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="systemGray5Color"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rzO-Ey-DAc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Awk-Rs-DBb">
+                                        <rect key="frame" x="10" y="9" width="50" height="32"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="취소">
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
+                                            <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="cancelNoticeBtnDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="po2-ZX-srt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVp-tP-wme">
+                                        <rect key="frame" x="354" y="9" width="50" height="32"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="완료">
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addNoticeBtnDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="IKY-lP-MXU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Awk-Rs-DBb" firstAttribute="centerY" secondItem="rzO-Ey-DAc" secondAttribute="centerY" id="5yn-5o-ADg"/>
+                                    <constraint firstItem="lVp-tP-wme" firstAttribute="centerY" secondItem="rzO-Ey-DAc" secondAttribute="centerY" id="dbi-dz-bEm"/>
+                                    <constraint firstAttribute="height" constant="50" id="hN7-fY-9ta"/>
+                                    <constraint firstItem="Awk-Rs-DBb" firstAttribute="leading" secondItem="rzO-Ey-DAc" secondAttribute="leading" constant="10" id="ocP-wJ-glv"/>
+                                    <constraint firstAttribute="trailing" secondItem="lVp-tP-wme" secondAttribute="trailing" constant="10" id="x3l-NK-KxY"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="systemGray5Color"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rzO-Ey-DAc" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="AXQ-YC-aah"/>
+                            <constraint firstItem="rzO-Ey-DAc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="BIE-8N-zo2"/>
+                            <constraint firstItem="cpw-yd-8Fe" firstAttribute="top" secondItem="Fib-Zu-m52" secondAttribute="bottom" constant="20" id="BU7-6w-Aw9"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="cpw-yd-8Fe" secondAttribute="bottom" constant="20" id="BsD-Er-I22"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="rzO-Ey-DAc" secondAttribute="trailing" id="C1X-P6-9SG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cpw-yd-8Fe" secondAttribute="trailing" constant="20" id="CHh-Uj-D9F"/>
+                            <constraint firstItem="cpw-yd-8Fe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Ewv-gO-Ymp"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Fib-Zu-m52" secondAttribute="trailing" constant="20" id="Ltm-Tb-yKO"/>
+                            <constraint firstItem="Fib-Zu-m52" firstAttribute="top" secondItem="rzO-Ey-DAc" secondAttribute="bottom" constant="10" id="dTK-g5-yKZ"/>
+                            <constraint firstItem="Fib-Zu-m52" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="xIp-Ty-tKz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentTextView" destination="cpw-yd-8Fe" id="LPN-82-u7V"/>
+                        <outlet property="titleTextField" destination="Fib-Zu-m52" id="nEw-i4-LBx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46" y="70"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

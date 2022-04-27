@@ -19,16 +19,26 @@ class NoticeViewController: UIViewController {
         super.viewDidLoad()
         setNavigationBar()
         setNoticeCollectionView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         getNoticeAPI()
     }
     
     private func setNavigationBar() {
         self.title = "공지 및 알림사항"
         self.navigationItem.backButtonTitle = " "
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(writeNotice(_:)))
     }
-
+    
+    @objc func writeNotice(_ sender: Any) {
+        guard let vc = UIStoryboard(name: Const.Storyboard.Name.wrtieNoticeSB, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.Identifier.writeNoticeVC) as? WriteNoticeViewController else { return }
+        self.presentVC(vc)
+    }
 }
 
+// MARK: - 공지사항 API 연동
 extension NoticeViewController {
     private func getNoticeAPI() {
         noticeAPI.getNotice("123123", self)
@@ -39,6 +49,7 @@ extension NoticeViewController {
     }
 }
 
+// MARK: - 공지사항 리스트 collectionView
 extension NoticeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     private func setNoticeCollectionView() {
