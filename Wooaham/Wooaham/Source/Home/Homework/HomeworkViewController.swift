@@ -120,6 +120,14 @@ extension HomeworkViewController: UITableViewDataSource {
             homeworkTableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let vc = UIStoryboard(name: Const.Storyboard.Name.writeHomeworkSB, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.Identifier.writeHomeworkVC) as? WriteHomeworkViewController else { return }
+        vc.isEditHW = true
+        vc.hwId = homeworkList?[indexPath.row].homeworkId
+        vc.content = homeworkList?[indexPath.row].title
+        presentVC(vc)
+    }
 }
 
 extension HomeworkViewController: HomeworkDelegate {

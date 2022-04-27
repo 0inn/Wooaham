@@ -88,6 +88,8 @@
 		A9AD1A8B281952430070F9AE /* DeleteHomeworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A8A281952430070F9AE /* DeleteHomeworkResponse.swift */; };
 		A9AD1A8F281956620070F9AE /* HomeworkCheckResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A8E281956620070F9AE /* HomeworkCheckResponse.swift */; };
 		A9AD1A91281956B80070F9AE /* HomeworkCheckAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A90281956B80070F9AE /* HomeworkCheckAPI.swift */; };
+		A9AD1A94281960720070F9AE /* EditHomeworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A93281960720070F9AE /* EditHomeworkAPI.swift */; };
+		A9AD1A97281961200070F9AE /* EditHomeworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A96281961200070F9AE /* EditHomeworkResponse.swift */; };
 		A9BB8EAD2812675E004F2990 /* AddAlarmRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BB8EAC2812675E004F2990 /* AddAlarmRequest.swift */; };
 		A9BB8EAF28126781004F2990 /* EditAlarmResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BB8EAE28126781004F2990 /* EditAlarmResponse.swift */; };
 		A9BB8EBA28127787004F2990 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BB8EB928127787004F2990 /* Icon.swift */; };
@@ -188,6 +190,8 @@
 		A9AD1A8A281952430070F9AE /* DeleteHomeworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteHomeworkResponse.swift; sourceTree = "<group>"; };
 		A9AD1A8E281956620070F9AE /* HomeworkCheckResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkCheckResponse.swift; sourceTree = "<group>"; };
 		A9AD1A90281956B80070F9AE /* HomeworkCheckAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkCheckAPI.swift; sourceTree = "<group>"; };
+		A9AD1A93281960720070F9AE /* EditHomeworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHomeworkAPI.swift; sourceTree = "<group>"; };
+		A9AD1A96281961200070F9AE /* EditHomeworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditHomeworkResponse.swift; sourceTree = "<group>"; };
 		A9BB8EAC2812675E004F2990 /* AddAlarmRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmRequest.swift; sourceTree = "<group>"; };
 		A9BB8EAE28126781004F2990 /* EditAlarmResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlarmResponse.swift; sourceTree = "<group>"; };
 		A9BB8EB928127787004F2990 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
@@ -583,6 +587,22 @@
 			path = HomeworkCheckModel;
 			sourceTree = "<group>";
 		};
+		A9AD1A92281960620070F9AE /* EditHomeworkAPI */ = {
+			isa = PBXGroup;
+			children = (
+				A9AD1A93281960720070F9AE /* EditHomeworkAPI.swift */,
+			);
+			path = EditHomeworkAPI;
+			sourceTree = "<group>";
+		};
+		A9AD1A95281961120070F9AE /* EditHomeworkModel */ = {
+			isa = PBXGroup;
+			children = (
+				A9AD1A96281961200070F9AE /* EditHomeworkResponse.swift */,
+			);
+			path = EditHomeworkModel;
+			sourceTree = "<group>";
+		};
 		A9BB8EA2281266B0004F2990 /* AlarmAPI */ = {
 			isa = PBXGroup;
 			children = (
@@ -747,6 +767,7 @@
 				A9AD1A7D28194D6F0070F9AE /* HomeworkModel */,
 				A9AD1A7C28194D560070F9AE /* WriteHomeworkModel */,
 				A9AD1A89281952340070F9AE /* DeleteHomeworkModel */,
+				A9AD1A95281961120070F9AE /* EditHomeworkModel */,
 				A9AD1A8D2819564E0070F9AE /* HomeworkCheckModel */,
 			);
 			path = HomeworkModels;
@@ -758,6 +779,7 @@
 				A9CEF42E2815806900B7B25B /* SchoolHomeworkAPI */,
 				A9CEF42F2815807200B7B25B /* AcademyHomeworkAPI */,
 				A9AD1A87281950A20070F9AE /* WriteHomeworkAPI */,
+				A9AD1A92281960620070F9AE /* EditHomeworkAPI */,
 				A9AD1A88281950B40070F9AE /* DeleteHomeworkAPI */,
 				A9AD1A8C281956410070F9AE /* HomeworkCheckAPI */,
 			);
@@ -933,6 +955,7 @@
 				A9AD1A6528191DC20070F9AE /* NoticeDetailAPI.swift in Sources */,
 				A932739727F9CE86001B0EDB /* LoginViewController.swift in Sources */,
 				A93273BF27FC1A82001B0EDB /* UITabBarController+.swift in Sources */,
+				A9AD1A97281961200070F9AE /* EditHomeworkResponse.swift in Sources */,
 				A90900A42809733000089CCA /* EditAlarmDataManager.swift in Sources */,
 				A932749B280315E7001B0EDB /* AlarmResponse.swift in Sources */,
 				A93273A427F9DD1C001B0EDB /* MyPageViewController.swift in Sources */,
@@ -982,6 +1005,7 @@
 				A93273E327FEEA0E001B0EDB /* NoticeCollectionViewCell.swift in Sources */,
 				A932739927F9CEE6001B0EDB /* UIColor+.swift in Sources */,
 				A90900882805CDB300089CCA /* Storyboard.swift in Sources */,
+				A9AD1A94281960720070F9AE /* EditHomeworkAPI.swift in Sources */,
 				A9AD1A73281933FC0070F9AE /* WriteNoticeAPI.swift in Sources */,
 				A9AD1A91281956B80070F9AE /* HomeworkCheckAPI.swift in Sources */,
 				A9AD1A8128194D8D0070F9AE /* WriteHomeworkRequest.swift in Sources */,
