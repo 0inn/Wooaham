@@ -94,7 +94,7 @@ class AddAlarmViewController: UIViewController {
     // 알람 시간 설정
     @IBAction func changeAlarmTime(_ sender: UIDatePicker) {
         let formatter = DateFormatter()
-        formatter.dateFormat = "hh:mm a"
+        formatter.dateFormat = "a hh:mm"
         alarmTime = formatter.string(from: datePicker.date)
     }
     
@@ -130,7 +130,7 @@ class AddAlarmViewController: UIViewController {
             self.presentAlert(title: "알람 이름을 입력해주세요.")
             return
         }
-        guard let time = alarmTime, time != "hh:mm a" else {
+        guard let time = alarmTime, time != "a hh:mm" else {
             self.presentAlert(title: "알람 시간을 설정해주세요.")
             return
         }
