@@ -11,8 +11,12 @@ extension Const {
     struct Storyboard {
         struct Name {
             static let homeSB = "Home"
+            
             static let noticeSB = "Notice"
+            static let noticeDetailSB = "NoticeDetail"
+            
             static let alarmSB = "Alarm"
+            
             static let homeworkSB = "Homework"
         }
     }

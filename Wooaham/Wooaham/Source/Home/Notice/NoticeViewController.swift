@@ -17,9 +17,14 @@ class NoticeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "공지 및 알림사항"
+        setNavigationBar()
         setNoticeCollectionView()
         getNoticeAPI()
+    }
+    
+    private func setNavigationBar() {
+        self.title = "공지 및 알림사항"
+        self.navigationItem.backButtonTitle = " "
     }
 
 }
@@ -50,6 +55,13 @@ extension NoticeViewController: UICollectionViewDelegate, UICollectionViewDataSo
         let cell = noticeCollectionView.dequeueReusableCell(withReuseIdentifier: NOTICE_CELL, for: indexPath) as! NoticeCollectionViewCell
         cell.setNotice((noticeList?[indexPath.row])!)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let noticeId = noticeList?[indexPath.row].noticeId
+        guard let vc = UIStoryboard(name: Const.Storyboard.Name.noticeDetailSB, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.Identifier.noticeDetailVC) as? NoticeDetailViewController else { return }
+        vc.noticeId = noticeId
+        self.presentNVC(vc)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

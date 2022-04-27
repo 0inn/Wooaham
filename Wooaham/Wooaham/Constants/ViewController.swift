@@ -11,8 +11,12 @@ extension Const {
     struct ViewController {
         struct Identifier {
             static let homeVC = "HomeViewController"
+            
             static let noticeVC = "NoticeViewController"
+            static let noticeDetailVC = "NoticeDetailViewController"
+            
             static let alarmVC = "AlarmViewController"
+            
             static let homeworkVC = "HomeworkViewController"
         }
     }
