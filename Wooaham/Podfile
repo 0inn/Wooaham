@@ -10,6 +10,7 @@ target 'Wooaham' do
   pod 'KakaoSDKUser'
   
   pod 'Tabman'
+  pod 'SwipeCellKit'
 
   pod 'SnapKit'
   pod 'Then'

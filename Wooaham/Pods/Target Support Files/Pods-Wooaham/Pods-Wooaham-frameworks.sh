@@ -182,6 +182,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/KakaoSDKUser/KakaoSDKUser.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Tabman/Tabman.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Then/Then.framework"
 fi
@@ -192,6 +193,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/KakaoSDKUser/KakaoSDKUser.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwipeCellKit/SwipeCellKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Tabman/Tabman.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Then/Then.framework"
 fi
