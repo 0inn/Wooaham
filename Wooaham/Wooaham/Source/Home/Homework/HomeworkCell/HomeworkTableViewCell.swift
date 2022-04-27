@@ -8,7 +8,7 @@
 import UIKit
 
 protocol HomeworkDelegate {
-    func checkHomework(_ isCheck: Bool)
+    func checkHomework(_ homeworkId: CLong)
 }
 
 class HomeworkTableViewCell: UITableViewCell {
@@ -16,6 +16,7 @@ class HomeworkTableViewCell: UITableViewCell {
     static let identifier = "HomeworkTableViewCell"
     
     var delegate: HomeworkDelegate?
+    var homeworkId: CLong?
     
     @IBOutlet weak var homeworkBtn: UIButton!
     @IBOutlet weak var homeworkLabel: UILabel!
@@ -28,7 +29,7 @@ class HomeworkTableViewCell: UITableViewCell {
     @IBAction func homeworkBtnDidTap(_ sender: UIButton) {
         sender.isSelected.toggle()
         setButtonColor(sender)
-        self.delegate?.checkHomework(sender.isSelected)
+        self.delegate?.checkHomework(homeworkId ?? 0)
     }
     
     private func setButton() {
@@ -40,6 +41,7 @@ class HomeworkTableViewCell: UITableViewCell {
         homeworkBtn.isSelected = data.checked
         setButtonColor(homeworkBtn)
         homeworkLabel.text = data.title
+        homeworkId = data.homeworkId
     }
     
     func setButtonColor(_ btn: UIButton) {

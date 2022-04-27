@@ -16,6 +16,7 @@ class HomeworkViewController: UIViewController {
     var homeworkList: [HomeworkData]?
     
     lazy var deleteHomeworkAPI = DeleteHomeworkAPI()
+    lazy var homeworkCheckAPI = HomeworkCheckAPI()
 
     @IBOutlet weak var homeworkTableView: UITableView!
     
@@ -103,9 +104,11 @@ extension HomeworkViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell  = tableView.dequeueReusableCell(withIdentifier: HomeworkTableViewCell.identifier, for: indexPath) as? HomeworkTableViewCell else { return UITableViewCell() }
+        guard let cell  = homeworkTableView.dequeueReusableCell(withIdentifier: HomeworkTableViewCell.identifier, for: indexPath) as? HomeworkTableViewCell else { return UITableViewCell() }
         
         cell.setData((homeworkList?[indexPath.row])!)
+        
+        cell.delegate = self
         
         return cell
     }
@@ -120,7 +123,7 @@ extension HomeworkViewController: UITableViewDataSource {
 }
 
 extension HomeworkViewController: HomeworkDelegate {
-    func checkHomework(_ isCheck: Bool) {
-        print("✅ \(isCheck)")
+    func checkHomework(_ homeworkId: CLong) {
+        homeworkCheckAPI.postHomeworkCheck(homeworkId)
     }
 }
