@@ -24,7 +24,12 @@ class HomeworkViewController: UIViewController {
     }
     
     private func setUI() {
+        setNavigationBar()
         setTableView()
+    }
+    
+    private func setNavigationBar() {
+        self.title = isSchoolHW ?? false ? "학교 숙제" : "학원 숙제"
     }
     
     private func setTableView() {
