@@ -13,7 +13,7 @@ class ProfileEditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "프로필 변경"
+        setNavigationBar()
         setupSchool()
     }
     
@@ -21,6 +21,11 @@ class ProfileEditViewController: UIViewController {
     @objc func addSchool(_ sender: Any) {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddSchoolViewController") else { return }
         self.presentNVC(vc)
+    }
+    
+    private func setNavigationBar() {
+        self.title = "프로필 변경"
+        self.navigationItem.backButtonTitle = " "
     }
 
 }

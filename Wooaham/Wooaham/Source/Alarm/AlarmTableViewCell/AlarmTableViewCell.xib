@@ -23,8 +23,8 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Peg-gR-2mh">
-                        <rect key="frame" x="120" y="33" width="120.5" height="54"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                        <rect key="frame" x="120" y="36" width="107.5" height="48"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>

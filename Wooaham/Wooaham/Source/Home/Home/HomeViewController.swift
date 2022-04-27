@@ -96,9 +96,9 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch collectionView {
         case mealCollectionView:
-            return CGSize(width: 180, height: self.mealCollectionView.frame.height)
+            return CGSize(width: 160, height: self.mealCollectionView.frame.height)
         case timeTableCollectionView:
-            return CGSize(width: 75, height: self.timeTableCollectionView.frame.height)
+            return CGSize(width: 70, height: self.timeTableCollectionView.frame.height)
         default:
             return CGSize(width: 0, height: 0)
         }

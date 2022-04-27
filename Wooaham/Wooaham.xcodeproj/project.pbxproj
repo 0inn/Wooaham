@@ -399,6 +399,8 @@
 				A93273D427FECB4A001B0EDB /* NoticeViewController.swift */,
 				A9BB8EBD281294AF004F2990 /* NoticeCell */,
 				A9F2DD6728129622003AE78B /* NoticeDetail */,
+				A9AD1A5D281917600070F9AE /* NoticeWrite */,
+				A9AD1A5E281917710070F9AE /* NoticeReaders */,
 			);
 			path = Notice;
 			sourceTree = "<group>";
@@ -432,6 +434,20 @@
 				A9CEF42428157B6D00B7B25B /* HomeworkTableViewCell.swift */,
 			);
 			path = Homework;
+			sourceTree = "<group>";
+		};
+		A9AD1A5D281917600070F9AE /* NoticeWrite */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NoticeWrite;
+			sourceTree = "<group>";
+		};
+		A9AD1A5E281917710070F9AE /* NoticeReaders */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NoticeReaders;
 			sourceTree = "<group>";
 		};
 		A9BB8EA2281266B0004F2990 /* AlarmAPI */ = {

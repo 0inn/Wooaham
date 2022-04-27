@@ -79,7 +79,7 @@ extension AlarmViewController: UITableViewDelegate, UITableViewDataSource {
         alarmTableView.delegate = self
         alarmTableView.dataSource = self
         alarmTableView.register(UINib(nibName: ALARM_CELL, bundle: nil), forCellReuseIdentifier: ALARM_CELL)
-        alarmTableView.rowHeight = 150
+        alarmTableView.rowHeight = 130
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
