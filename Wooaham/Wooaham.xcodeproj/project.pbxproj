@@ -79,6 +79,13 @@
 		A9AD1A71281933BB0070F9AE /* WriteNoticeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A70281933BB0070F9AE /* WriteNoticeRequest.swift */; };
 		A9AD1A73281933FC0070F9AE /* WriteNoticeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A72281933FC0070F9AE /* WriteNoticeAPI.swift */; };
 		A9AD1A75281936070070F9AE /* WriteNoticeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A74281936070070F9AE /* WriteNoticeResponse.swift */; };
+		A9AD1A79281949F00070F9AE /* WriteHomework.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9AD1A78281949F00070F9AE /* WriteHomework.storyboard */; };
+		A9AD1A7B281949F90070F9AE /* WriteHomeworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A7A281949F90070F9AE /* WriteHomeworkViewController.swift */; };
+		A9AD1A7F28194D850070F9AE /* WriteHomeworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A7E28194D850070F9AE /* WriteHomeworkResponse.swift */; };
+		A9AD1A8128194D8D0070F9AE /* WriteHomeworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A8028194D8D0070F9AE /* WriteHomeworkRequest.swift */; };
+		A9AD1A8428194E020070F9AE /* WriteHomeworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A8328194E020070F9AE /* WriteHomeworkAPI.swift */; };
+		A9AD1A86281950960070F9AE /* DeleteHomeworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A85281950960070F9AE /* DeleteHomeworkAPI.swift */; };
+		A9AD1A8B281952430070F9AE /* DeleteHomeworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A8A281952430070F9AE /* DeleteHomeworkResponse.swift */; };
 		A9BB8EAD2812675E004F2990 /* AddAlarmRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BB8EAC2812675E004F2990 /* AddAlarmRequest.swift */; };
 		A9BB8EAF28126781004F2990 /* EditAlarmResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BB8EAE28126781004F2990 /* EditAlarmResponse.swift */; };
 		A9BB8EBA28127787004F2990 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BB8EB928127787004F2990 /* Icon.swift */; };
@@ -170,6 +177,13 @@
 		A9AD1A70281933BB0070F9AE /* WriteNoticeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteNoticeRequest.swift; sourceTree = "<group>"; };
 		A9AD1A72281933FC0070F9AE /* WriteNoticeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteNoticeAPI.swift; sourceTree = "<group>"; };
 		A9AD1A74281936070070F9AE /* WriteNoticeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteNoticeResponse.swift; sourceTree = "<group>"; };
+		A9AD1A78281949F00070F9AE /* WriteHomework.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WriteHomework.storyboard; sourceTree = "<group>"; };
+		A9AD1A7A281949F90070F9AE /* WriteHomeworkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteHomeworkViewController.swift; sourceTree = "<group>"; };
+		A9AD1A7E28194D850070F9AE /* WriteHomeworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteHomeworkResponse.swift; sourceTree = "<group>"; };
+		A9AD1A8028194D8D0070F9AE /* WriteHomeworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteHomeworkRequest.swift; sourceTree = "<group>"; };
+		A9AD1A8328194E020070F9AE /* WriteHomeworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteHomeworkAPI.swift; sourceTree = "<group>"; };
+		A9AD1A85281950960070F9AE /* DeleteHomeworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteHomeworkAPI.swift; sourceTree = "<group>"; };
+		A9AD1A8A281952430070F9AE /* DeleteHomeworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteHomeworkResponse.swift; sourceTree = "<group>"; };
 		A9BB8EAC2812675E004F2990 /* AddAlarmRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmRequest.swift; sourceTree = "<group>"; };
 		A9BB8EAE28126781004F2990 /* EditAlarmResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlarmResponse.swift; sourceTree = "<group>"; };
 		A9BB8EB928127787004F2990 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
@@ -451,8 +465,8 @@
 			children = (
 				A9CEF41C28156DCF00B7B25B /* Homework.storyboard */,
 				A9CEF41828156D9A00B7B25B /* HomeworkViewController.swift */,
-				A9CEF42528157B6D00B7B25B /* HomeworkTableViewCell.xib */,
-				A9CEF42428157B6D00B7B25B /* HomeworkTableViewCell.swift */,
+				A9AD1A77281949350070F9AE /* HomeworkCell */,
+				A9AD1A762819485E0070F9AE /* WriteHomework */,
 			);
 			path = Homework;
 			sourceTree = "<group>";
@@ -488,6 +502,65 @@
 				A9AD1A74281936070070F9AE /* WriteNoticeResponse.swift */,
 			);
 			path = WriteNoticeModel;
+			sourceTree = "<group>";
+		};
+		A9AD1A762819485E0070F9AE /* WriteHomework */ = {
+			isa = PBXGroup;
+			children = (
+				A9AD1A78281949F00070F9AE /* WriteHomework.storyboard */,
+				A9AD1A7A281949F90070F9AE /* WriteHomeworkViewController.swift */,
+			);
+			path = WriteHomework;
+			sourceTree = "<group>";
+		};
+		A9AD1A77281949350070F9AE /* HomeworkCell */ = {
+			isa = PBXGroup;
+			children = (
+				A9CEF42528157B6D00B7B25B /* HomeworkTableViewCell.xib */,
+				A9CEF42428157B6D00B7B25B /* HomeworkTableViewCell.swift */,
+			);
+			path = HomeworkCell;
+			sourceTree = "<group>";
+		};
+		A9AD1A7C28194D560070F9AE /* WriteHomeworkModel */ = {
+			isa = PBXGroup;
+			children = (
+				A9AD1A8028194D8D0070F9AE /* WriteHomeworkRequest.swift */,
+				A9AD1A7E28194D850070F9AE /* WriteHomeworkResponse.swift */,
+			);
+			path = WriteHomeworkModel;
+			sourceTree = "<group>";
+		};
+		A9AD1A7D28194D6F0070F9AE /* HomeworkModel */ = {
+			isa = PBXGroup;
+			children = (
+				A9CEF42B28157D4B00B7B25B /* HomeworkResponse.swift */,
+			);
+			path = HomeworkModel;
+			sourceTree = "<group>";
+		};
+		A9AD1A87281950A20070F9AE /* WriteHomeworkAPI */ = {
+			isa = PBXGroup;
+			children = (
+				A9AD1A8328194E020070F9AE /* WriteHomeworkAPI.swift */,
+			);
+			path = WriteHomeworkAPI;
+			sourceTree = "<group>";
+		};
+		A9AD1A88281950B40070F9AE /* DeleteHomeworkAPI */ = {
+			isa = PBXGroup;
+			children = (
+				A9AD1A85281950960070F9AE /* DeleteHomeworkAPI.swift */,
+			);
+			path = DeleteHomeworkAPI;
+			sourceTree = "<group>";
+		};
+		A9AD1A89281952340070F9AE /* DeleteHomeworkModel */ = {
+			isa = PBXGroup;
+			children = (
+				A9AD1A8A281952430070F9AE /* DeleteHomeworkResponse.swift */,
+			);
+			path = DeleteHomeworkModel;
 			sourceTree = "<group>";
 		};
 		A9BB8EA2281266B0004F2990 /* AlarmAPI */ = {
@@ -651,7 +724,9 @@
 		A9CEF42828157C9600B7B25B /* HomeworkModels */ = {
 			isa = PBXGroup;
 			children = (
-				A9CEF42B28157D4B00B7B25B /* HomeworkResponse.swift */,
+				A9AD1A7D28194D6F0070F9AE /* HomeworkModel */,
+				A9AD1A7C28194D560070F9AE /* WriteHomeworkModel */,
+				A9AD1A89281952340070F9AE /* DeleteHomeworkModel */,
 			);
 			path = HomeworkModels;
 			sourceTree = "<group>";
@@ -661,6 +736,8 @@
 			children = (
 				A9CEF42E2815806900B7B25B /* SchoolHomeworkAPI */,
 				A9CEF42F2815807200B7B25B /* AcademyHomeworkAPI */,
+				A9AD1A87281950A20070F9AE /* WriteHomeworkAPI */,
+				A9AD1A88281950B40070F9AE /* DeleteHomeworkAPI */,
 			);
 			path = HomeworkAPIs;
 			sourceTree = "<group>";
@@ -759,6 +836,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A932739527F9CE76001B0EDB /* Login.storyboard in Resources */,
+				A9AD1A79281949F00070F9AE /* WriteHomework.storyboard in Resources */,
 				A93273B027F9E8BB001B0EDB /* MyPage.storyboard in Resources */,
 				A9BB8EBC28128556004F2990 /* TimeTable.storyboard in Resources */,
 				A93273C527FC1DA3001B0EDB /* AlarmTableViewCell.xib in Resources */,
@@ -865,10 +943,12 @@
 				A9BB8EBA28127787004F2990 /* Icon.swift in Sources */,
 				A9BB8EAF28126781004F2990 /* EditAlarmResponse.swift in Sources */,
 				A9CEF4312815808400B7B25B /* SchoolHomeworkAPI.swift in Sources */,
+				A9AD1A8B281952430070F9AE /* DeleteHomeworkResponse.swift in Sources */,
 				A932739F27F9D940001B0EDB /* UIFont+.swift in Sources */,
 				A93273B827FB2D7B001B0EDB /* NSMutableAttributedString+.swift in Sources */,
 				A932737D27F9C83D001B0EDB /* SceneDelegate.swift in Sources */,
 				A9CEF42C28157D4B00B7B25B /* HomeworkResponse.swift in Sources */,
+				A9AD1A86281950960070F9AE /* DeleteHomeworkAPI.swift in Sources */,
 				A9AD1A6E281929740070F9AE /* WriteNoticeViewController.swift in Sources */,
 				A909008E2809348000089CCA /* AlarmDetailResponse.swift in Sources */,
 				A90900A228096BCB00089CCA /* AlarmTestResponse.swift in Sources */,
@@ -881,9 +961,11 @@
 				A932739927F9CEE6001B0EDB /* UIColor+.swift in Sources */,
 				A90900882805CDB300089CCA /* Storyboard.swift in Sources */,
 				A9AD1A73281933FC0070F9AE /* WriteNoticeAPI.swift in Sources */,
+				A9AD1A8128194D8D0070F9AE /* WriteHomeworkRequest.swift in Sources */,
 				A9AD1A75281936070070F9AE /* WriteNoticeResponse.swift in Sources */,
 				A90900A62809784000089CCA /* EditAlarmRequest.swift in Sources */,
 				A93273D527FECB4A001B0EDB /* NoticeViewController.swift in Sources */,
+				A9AD1A7B281949F90070F9AE /* WriteHomeworkViewController.swift in Sources */,
 				A9CEF4332815897800B7B25B /* AcademyHomeworkAPI.swift in Sources */,
 				A9BB8EAD2812675E004F2990 /* AddAlarmRequest.swift in Sources */,
 				A909009828095A9500089CCA /* AddAlarmDataManager.swift in Sources */,
@@ -892,7 +974,9 @@
 				A909009A28095AEC00089CCA /* AddAlarmResponse.swift in Sources */,
 				A9AD1A6828191E2A0070F9AE /* NoticeDetailResponse.swift in Sources */,
 				A9CEF42628157B6D00B7B25B /* HomeworkTableViewCell.swift in Sources */,
+				A9AD1A7F28194D850070F9AE /* WriteHomeworkResponse.swift in Sources */,
 				A909009228093AEF00089CCA /* AlarmDetail.swift in Sources */,
+				A9AD1A8428194E020070F9AE /* WriteHomeworkAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

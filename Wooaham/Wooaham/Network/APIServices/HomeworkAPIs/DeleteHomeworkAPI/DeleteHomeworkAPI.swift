@@ -1,17 +1,17 @@
 //
-//  DeleteAlarmDataManager.swift
+//  DeleteHomeworkAPI.swift
 //  Wooaham
 //
-//  Created by 김영인 on 2022/04/15.
+//  Created by 김영인 on 2022/04/27.
 //
 
 import Alamofire
 
-class DeleteAlarmDataManager {
+class DeleteHomeworkAPI {
     
-    func deleteAlarm(_ alarmId: CLong) {
+    func deleteHomework(_ homeworkId: CLong) {
         
-        let url = "\(Const.URL.BASE_URL)/alarms/\(alarmId)"
+        let url = "\(Const.URL.BASE_URL)/info/hw/\(homeworkId)"
     
         AF.request(url,
                    method: .delete,
@@ -19,7 +19,7 @@ class DeleteAlarmDataManager {
                    encoding: JSONEncoding.default,
                    headers: nil)
         .validate()
-        .responseDecodable(of: AlarmTestResponse.self) { (response) in
+        .responseDecodable(of: DeleteHomeworkResponse.self) { (response) in
             switch response.result {
             case .success(let response):
                 print("🔥\(response)")
@@ -30,3 +30,4 @@ class DeleteAlarmDataManager {
     }
     
 }
+

@@ -14,22 +14,37 @@ class HomeworkViewController: UIViewController {
     lazy var schoolHomeworkAPI = SchoolHomeworkAPI()
     lazy var academyHomeworkAPI = AcademyHomeworkAPI()
     var homeworkList: [HomeworkData]?
+    
+    lazy var deleteHomeworkAPI = DeleteHomeworkAPI()
 
     @IBOutlet weak var homeworkTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         getHomeworkAPI()
     }
     
     private func setUI() {
         setNavigationBar()
         setTableView()
+        setRefresh()
     }
     
     private func setNavigationBar() {
         self.title = isSchoolHW ?? false ? "학교 숙제" : "학원 숙제"
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addHomework(_:)))
+    }
+    
+    @objc func addHomework(_ sender: Any) {
+        guard let vc = UIStoryboard(name: Const.Storyboard.Name.writeHomeworkSB, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.Identifier.writeHomeworkVC) as? WriteHomeworkViewController else { return }
+        vc.isSchoolHW = isSchoolHW
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
     }
     
     private func setTableView() {
@@ -61,6 +76,21 @@ extension HomeworkViewController {
     }
 }
 
+extension HomeworkViewController {
+    // MARK: 새로고침
+    private func setRefresh() {
+        let refresh = UIRefreshControl()
+        refresh.addTarget(self, action: #selector(updateUI(refresh:)), for: .valueChanged)
+        refresh.tintColor = .lightGray
+        homeworkTableView.addSubview(refresh)
+    }
+    
+    @objc func updateUI(refresh: UIRefreshControl) {
+        refresh.endRefreshing() // 종료
+        getHomeworkAPI()
+    }
+}
+
 extension HomeworkViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
@@ -78,5 +108,19 @@ extension HomeworkViewController: UITableViewDataSource {
         cell.setData((homeworkList?[indexPath.row])!)
         
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            deleteHomeworkAPI.deleteHomework(homeworkList?[indexPath.row].homeworkId ?? 0)
+            homeworkList?.remove(at: indexPath.row)
+            homeworkTableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+}
+
+extension HomeworkViewController: HomeworkDelegate {
+    func checkHomework(_ isCheck: Bool) {
+        print("✅ \(isCheck)")
     }
 }

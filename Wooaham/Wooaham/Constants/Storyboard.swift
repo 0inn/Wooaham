@@ -19,6 +19,7 @@ extension Const {
             static let alarmSB = "Alarm"
             
             static let homeworkSB = "Homework"
+            static let writeHomeworkSB = "WriteHomework"
         }
     }
 }

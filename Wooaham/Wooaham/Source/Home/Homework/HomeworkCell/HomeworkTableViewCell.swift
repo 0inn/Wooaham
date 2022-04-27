@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol HomeworkDelegate {
+    func checkHomework(_ isCheck: Bool)
+}
+
 class HomeworkTableViewCell: UITableViewCell {
     
     static let identifier = "HomeworkTableViewCell"
+    
+    var delegate: HomeworkDelegate?
     
     @IBOutlet weak var homeworkBtn: UIButton!
     @IBOutlet weak var homeworkLabel: UILabel!
@@ -22,8 +28,8 @@ class HomeworkTableViewCell: UITableViewCell {
     @IBAction func homeworkBtnDidTap(_ sender: UIButton) {
         sender.isSelected.toggle()
         setButtonColor(sender)
+        self.delegate?.checkHomework(sender.isSelected)
     }
-    
     
     private func setButton() {
         homeworkBtn.setImage(UIImage(systemName: "checkmark.circle"), for: .normal)

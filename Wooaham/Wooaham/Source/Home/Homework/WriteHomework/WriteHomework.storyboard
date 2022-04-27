@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Write Homework View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="WriteHomeworkViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="WriteHomeworkViewController" customModule="Wooaham" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="숙제를 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hpJ-5s-Y9q">
+                                <rect key="frame" x="20" y="104" width="374" height="45"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="6lC-R3-Aee"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZ5-DY-HQQ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1a-rO-rUy">
+                                        <rect key="frame" x="10" y="9" width="50" height="32"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="취소">
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
+                                            <color key="baseForegroundColor" systemColor="systemRedColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="cancelHomeworkBtnDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="GGO-ah-Rsi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l1P-sE-p5c">
+                                        <rect key="frame" x="354" y="9" width="50" height="32"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="완료">
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addHomeworkBtnDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="yx2-SP-Rie"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="l1P-sE-p5c" firstAttribute="centerY" secondItem="bZ5-DY-HQQ" secondAttribute="centerY" id="Ggg-w6-35m"/>
+                                    <constraint firstItem="g1a-rO-rUy" firstAttribute="leading" secondItem="bZ5-DY-HQQ" secondAttribute="leading" constant="10" id="N7b-cV-h9v"/>
+                                    <constraint firstItem="g1a-rO-rUy" firstAttribute="centerY" secondItem="bZ5-DY-HQQ" secondAttribute="centerY" id="WDn-IL-Pof"/>
+                                    <constraint firstAttribute="trailing" secondItem="l1P-sE-p5c" secondAttribute="trailing" constant="10" id="oph-gC-Za7"/>
+                                    <constraint firstAttribute="height" constant="50" id="vV4-mp-Oww"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="systemGray5Color"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hpJ-5s-Y9q" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="20" id="1IT-lj-0bj"/>
+                            <constraint firstItem="bZ5-DY-HQQ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ArI-Zj-NrZ"/>
+                            <constraint firstItem="hpJ-5s-Y9q" firstAttribute="top" secondItem="bZ5-DY-HQQ" secondAttribute="bottom" constant="10" id="LEp-eU-llg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hpJ-5s-Y9q" secondAttribute="trailing" constant="20" id="VLr-dA-wt7"/>
+                            <constraint firstItem="bZ5-DY-HQQ" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="XPr-al-sSR"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bZ5-DY-HQQ" secondAttribute="trailing" id="ylm-0Y-qRT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="homeworkTextField" destination="hpJ-5s-Y9q" id="Jsz-Gs-Px3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46" y="70"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
