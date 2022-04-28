@@ -94,6 +94,7 @@ extension NoticeViewController: SwipeCollectionViewCellDelegate {
             let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
                 // 공지사항 삭제
                 self.deleteNoticeAPI.deleteNotice(self.noticeList?[indexPath.row].noticeId ?? 0)
+                self.noticeList?.remove(at: indexPath.row)
             }
             deleteAction.backgroundColor = .systemBackground
             deleteAction.textColor = .systemRed
