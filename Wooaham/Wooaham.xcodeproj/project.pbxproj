@@ -94,6 +94,8 @@
 		A9AD1A9E281A6A680070F9AE /* EditNoticeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A9D281A6A680070F9AE /* EditNoticeResponse.swift */; };
 		A9AD1AA0281A6A870070F9AE /* EditNoticeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A9F281A6A870070F9AE /* EditNoticeRequest.swift */; };
 		A9AD1AA2281A6B500070F9AE /* EditNoticeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1AA1281A6B500070F9AE /* EditNoticeAPI.swift */; };
+		A9AD1AA5281A745B0070F9AE /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1AA4281A745B0070F9AE /* Response.swift */; };
+		A9AD1AA8281A74920070F9AE /* ReadNoticeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1AA7281A74920070F9AE /* ReadNoticeAPI.swift */; };
 		A9BB8EAD2812675E004F2990 /* AddAlarmRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BB8EAC2812675E004F2990 /* AddAlarmRequest.swift */; };
 		A9BB8EAF28126781004F2990 /* EditAlarmResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BB8EAE28126781004F2990 /* EditAlarmResponse.swift */; };
 		A9BB8EBA28127787004F2990 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BB8EB928127787004F2990 /* Icon.swift */; };
@@ -200,6 +202,8 @@
 		A9AD1A9D281A6A680070F9AE /* EditNoticeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoticeResponse.swift; sourceTree = "<group>"; };
 		A9AD1A9F281A6A870070F9AE /* EditNoticeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoticeRequest.swift; sourceTree = "<group>"; };
 		A9AD1AA1281A6B500070F9AE /* EditNoticeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoticeAPI.swift; sourceTree = "<group>"; };
+		A9AD1AA4281A745B0070F9AE /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		A9AD1AA7281A74920070F9AE /* ReadNoticeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadNoticeAPI.swift; sourceTree = "<group>"; };
 		A9BB8EAC2812675E004F2990 /* AddAlarmRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmRequest.swift; sourceTree = "<group>"; };
 		A9BB8EAE28126781004F2990 /* EditAlarmResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlarmResponse.swift; sourceTree = "<group>"; };
 		A9BB8EB928127787004F2990 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
@@ -261,6 +265,7 @@
 		A90900D1280C23A100089CCA /* APIModels */ = {
 			isa = PBXGroup;
 			children = (
+				A9AD1AA4281A745B0070F9AE /* Response.swift */,
 				A9CEF42828157C9600B7B25B /* HomeworkModels */,
 				A9BB8EB1281267BF004F2990 /* NoticeModels */,
 				A90900D4280C240400089CCA /* AlarmModels */,
@@ -710,6 +715,7 @@
 				A9AD1A72281933FC0070F9AE /* WriteNoticeAPI.swift */,
 				A9AD1A99281A64BC0070F9AE /* DeleteNoticeAPI.swift */,
 				A9AD1AA1281A6B500070F9AE /* EditNoticeAPI.swift */,
+				A9AD1AA7281A74920070F9AE /* ReadNoticeAPI.swift */,
 			);
 			path = NoticeAPIs;
 			sourceTree = "<group>";
@@ -980,6 +986,7 @@
 				A932749B280315E7001B0EDB /* AlarmResponse.swift in Sources */,
 				A93273A427F9DD1C001B0EDB /* MyPageViewController.swift in Sources */,
 				A93273CC27FEBD28001B0EDB /* MapViewController.swift in Sources */,
+				A9AD1AA8281A74920070F9AE /* ReadNoticeAPI.swift in Sources */,
 				A93273B427F9F6D2001B0EDB /* AddSchoolViewController.swift in Sources */,
 				A93274A828041A12001B0EDB /* MealDetailCollectionViewCell.swift in Sources */,
 				A932739D27F9D222001B0EDB /* AuthSelectViewController.swift in Sources */,
@@ -1030,6 +1037,7 @@
 				A90900882805CDB300089CCA /* Storyboard.swift in Sources */,
 				A9AD1A94281960720070F9AE /* EditHomeworkAPI.swift in Sources */,
 				A9AD1A73281933FC0070F9AE /* WriteNoticeAPI.swift in Sources */,
+				A9AD1AA5281A745B0070F9AE /* Response.swift in Sources */,
 				A9AD1A91281956B80070F9AE /* HomeworkCheckAPI.swift in Sources */,
 				A9AD1A8128194D8D0070F9AE /* WriteHomeworkRequest.swift in Sources */,
 				A9AD1A75281936070070F9AE /* WriteNoticeResponse.swift in Sources */,

@@ -11,6 +11,8 @@ class NoticeDetailViewController: UIViewController {
     
     lazy var noticeDetailAPI = NoticeDetailAPI()
     var noticeDetail: NoticeDetailData?
+    
+    lazy var readNoticeAPI = ReadNoticeAPI()
     var noticeId: CLong?
 
     @IBOutlet weak var noticeContentLabel: UILabel!
@@ -18,6 +20,7 @@ class NoticeDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getNoticeDetailAPI()
+        postReadNoticeAPI()
     }
 }
 
@@ -29,5 +32,9 @@ extension NoticeDetailViewController {
     func didSuccessNoticeDetail(_ noticeDetailData: NoticeDetailData) {
         self.title = noticeDetailData.title
         noticeContentLabel.text = noticeDetailData.contents
+    }
+    
+    private func postReadNoticeAPI() {
+        readNoticeAPI.postReadNotice(noticeId ?? 0, 2)
     }
 }

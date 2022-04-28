@@ -10,7 +10,6 @@ import Alamofire
 class DeleteNoticeAPI {
     
     func deleteNotice(_ noticeId: CLong) {
-        print(noticeId)
         
         let url = "\(Const.URL.BASE_URL)/info/notice/\(noticeId)"
 
