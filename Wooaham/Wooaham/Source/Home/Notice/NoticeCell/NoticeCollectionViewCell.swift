@@ -7,7 +7,9 @@
 
 import UIKit
 
-class NoticeCollectionViewCell: UICollectionViewCell {
+import SwipeCellKit
+
+class NoticeCollectionViewCell: SwipeCollectionViewCell {
 
     @IBOutlet weak var noticeTitle: UILabel!
     

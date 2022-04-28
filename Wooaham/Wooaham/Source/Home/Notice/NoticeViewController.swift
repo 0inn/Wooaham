@@ -7,6 +7,8 @@
 
 import UIKit
 
+import SwipeCellKit
+
 class NoticeViewController: UIViewController {
     
     lazy var noticeAPI = NoticeAPI()
@@ -65,6 +67,7 @@ extension NoticeViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = noticeCollectionView.dequeueReusableCell(withReuseIdentifier: NOTICE_CELL, for: indexPath) as! NoticeCollectionViewCell
         cell.setNotice((noticeList?[indexPath.row])!)
+        cell.delegate = self
         return cell
     }
     
@@ -77,5 +80,34 @@ extension NoticeViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.noticeCollectionView.frame.width - 30, height: 50)
+    }
+}
+
+// MARK: - SwipeCellKit 적용하여 공지사항 삭제 및 수정
+extension NoticeViewController: SwipeCollectionViewCellDelegate {
+    func collectionView(_ collectionView: UICollectionView, editActionsForItemAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        switch orientation {
+        case .right:
+            let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
+                // 공지사항 삭제
+            }
+            deleteAction.backgroundColor = .systemBackground
+            deleteAction.textColor = .systemRed
+            return [deleteAction]
+        case .left:
+            let editAction = SwipeAction(style: .destructive, title: "Edit") { action, indexPath in
+                // 공지사항 편집
+            }
+            editAction.backgroundColor = .systemBackground
+            editAction.textColor = .systemBlue
+            return [editAction]
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, editActionsOptionsForItemAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeOptions {
+        var options = SwipeOptions()
+        options.expansionStyle = .destructive
+        options.transitionStyle = .border
+        return options
     }
 }
