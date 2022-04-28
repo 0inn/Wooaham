@@ -8,11 +8,14 @@
 import UIKit
 
 import SwipeCellKit
+import Pageboy
 
 class NoticeViewController: UIViewController {
     
     lazy var noticeAPI = NoticeAPI()
     var noticeList: [NoticeData]?
+    
+    lazy var deleteNoticeAPI = DeleteNoticeAPI()
 
     @IBOutlet weak var noticeCollectionView: UICollectionView!
     let NOTICE_CELL = "NoticeCollectionViewCell"
@@ -90,6 +93,7 @@ extension NoticeViewController: SwipeCollectionViewCellDelegate {
         case .right:
             let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
                 // 공지사항 삭제
+                self.deleteNoticeAPI.deleteNotice(self.noticeList?[indexPath.row].noticeId ?? 0)
             }
             deleteAction.backgroundColor = .systemBackground
             deleteAction.textColor = .systemRed
@@ -97,6 +101,12 @@ extension NoticeViewController: SwipeCollectionViewCellDelegate {
         case .left:
             let editAction = SwipeAction(style: .destructive, title: "Edit") { action, indexPath in
                 // 공지사항 편집
+                guard let vc = UIStoryboard(name: Const.Storyboard.Name.wrtieNoticeSB, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.Identifier.writeNoticeVC) as? WriteNoticeViewController else { return }
+                vc.isEdit = true
+                vc.noticeId = self.noticeList?[indexPath.row].noticeId
+                vc.noticeTitle = self.noticeList?[indexPath.row].title
+                vc.noticeContent = self.noticeList?[indexPath.row].contents
+                self.presentVC(vc)
             }
             editAction.backgroundColor = .systemBackground
             editAction.textColor = .systemBlue

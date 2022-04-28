@@ -10,12 +10,24 @@ import UIKit
 class WriteNoticeViewController: UIViewController {
     
     lazy var writeNoticeAPI = WriteNoticeAPI()
+    lazy var editNoticeAPI = EditNoticeAPI()
+    
+    var noticeId: CLong?
+    var isEdit: Bool?
+    var noticeTitle: String?
+    var noticeContent: String?
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTextField()
+    }
+    
+    private func setTextField() {
+        titleTextField.text = noticeTitle ?? ""
+        contentTextView.text = noticeContent ?? ""
     }
     
     @IBAction func cancelNoticeBtnDidTap(_ sender: Any) {
@@ -34,7 +46,13 @@ class WriteNoticeViewController: UIViewController {
         }
         
         let writeNoticeInput = WriteNoticeRequest(title: title, contents: content)
-        writeNoticeAPI.postNotice(1, writeNoticeInput, self)
+        
+        if isEdit ?? false {
+            editNoticeAPI.editNotice(noticeId ?? 0, writeNoticeInput)
+        } else {
+            writeNoticeAPI.postNotice(1, writeNoticeInput, self)
+        }
+        
         self.dismiss(animated: true)
     }
 }
