@@ -29,8 +29,8 @@
         <scene sceneID="6kV-d3-lLQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9XE-o6-Kpy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="지도" id="Yim-hx-8dK">
-                        <imageReference key="image" image="map" symbolScale="large"/>
+                    <tabBarItem key="tabBarItem" title="지도" selectedImage="map.fill" catalog="system" id="Yim-hx-8dK">
+                        <imageReference key="image" image="map" catalog="system" symbolScale="large"/>
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="5"/>
                         <inset key="landscapeImageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
@@ -50,7 +50,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="map" width="45" height="47"/>
+        <image name="map" catalog="system" width="128" height="110"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

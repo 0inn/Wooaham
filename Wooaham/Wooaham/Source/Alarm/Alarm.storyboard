@@ -480,7 +480,7 @@
         <scene sceneID="Vhh-ND-vEG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0hS-6H-MuG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="알람" image="alarm" id="hwr-f3-4Zl"/>
+                    <tabBarItem key="tabBarItem" title="알람" image="clock" catalog="system" selectedImage="clock.fill" id="hwr-f3-4Zl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9h0-zh-szC">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -497,10 +497,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="alarm" width="35" height="36.5"/>
         <image name="bus" width="62" height="62"/>
+        <image name="clock" catalog="system" width="128" height="121"/>
+        <image name="clock.fill" catalog="system" width="128" height="121"/>
         <image name="house" width="51" height="51"/>
-        <image name="school" width="102" height="102"/>
+        <image name="school" width="51" height="51"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

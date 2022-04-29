@@ -371,7 +371,7 @@
         <scene sceneID="qx6-Ul-S1O">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u4I-uJ-zK4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="홈" image="home" id="axc-JB-9CW"/>
+                    <tabBarItem key="tabBarItem" title="홈" image="house" catalog="system" selectedImage="house.fill" id="axc-JB-9CW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qrf-Nt-cxz">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -492,7 +492,8 @@
     </scenes>
     <resources>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
-        <image name="home" width="40" height="41"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
