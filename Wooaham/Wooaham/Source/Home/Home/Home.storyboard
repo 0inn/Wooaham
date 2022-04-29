@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--👶🏻-->
+        <!--성곡초등학교 1학년 5반-->
         <scene sceneID="K9Y-9d-pD0">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9d0-J8-u9r" customClass="HomeViewController" customModule="Wooaham" customModuleProvider="target" sceneMemberID="viewController">
@@ -26,14 +26,14 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kYg-QV-aiZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="공지 및 알림사항" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRu-DU-F4B">
-                                                        <rect key="frame" x="15" y="20" width="118" height="21.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="📢 공지 및 알림사항" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MRu-DU-F4B">
+                                                        <rect key="frame" x="15" y="20" width="146" height="21.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGP-Ry-xn6">
-                                                        <rect key="frame" x="133" y="15.5" width="32.5" height="31"/>
+                                                        <rect key="frame" x="161" y="15.5" width="32.5" height="31"/>
                                                         <color key="tintColor" systemColor="systemGray4Color"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain">
@@ -75,8 +75,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MxZ-hU-Fga">
                                                 <rect key="frame" x="0.0" y="130" width="414" height="310"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="급식표" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNk-8b-8gf">
-                                                        <rect key="frame" x="15" y="20" width="47" height="21.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🍽 급식표" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNk-8b-8gf">
+                                                        <rect key="frame" x="15" y="20" width="75.5" height="21.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -93,7 +93,7 @@
                                                         <cells/>
                                                     </collectionView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7KM-Da-MDy">
-                                                        <rect key="frame" x="62" y="15.5" width="32.5" height="31"/>
+                                                        <rect key="frame" x="90.5" y="15.5" width="32.5" height="31"/>
                                                         <color key="tintColor" systemColor="systemGray4Color"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain">
@@ -129,8 +129,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yml-fZ-KQi">
                                                 <rect key="frame" x="0.0" y="440" width="414" height="150"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시간표" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLk-c8-r6l">
-                                                        <rect key="frame" x="15" y="20" width="47" height="21.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🗓 시간표" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLk-c8-r6l">
+                                                        <rect key="frame" x="15" y="20" width="75.5" height="21.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -147,7 +147,7 @@
                                                         <cells/>
                                                     </collectionView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qP-qq-c7q">
-                                                        <rect key="frame" x="62" y="15.5" width="32.5" height="31"/>
+                                                        <rect key="frame" x="90.5" y="15.5" width="32.5" height="31"/>
                                                         <color key="tintColor" systemColor="systemGray4Color"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain">
@@ -183,8 +183,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jph-N7-tbz">
                                                 <rect key="frame" x="0.0" y="590" width="414" height="310"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="숙제" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcp-gN-rAO">
-                                                        <rect key="frame" x="15" y="20" width="31.5" height="21.5"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✏️ 숙제" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcp-gN-rAO">
+                                                        <rect key="frame" x="15" y="20" width="59.5" height="21.5"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -352,7 +352,7 @@
                             <constraint firstItem="Mrn-Oo-EC7" firstAttribute="bottom" secondItem="l7a-38-N4u" secondAttribute="bottom" id="lul-VK-o6a"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="👶🏻" id="Ddm-Xy-mfy">
+                    <navigationItem key="navigationItem" title="성곡초등학교 1학년 5반" id="Ddm-Xy-mfy">
                         <barButtonItem key="backBarButtonItem" title=" " id="DKu-5x-okF"/>
                     </navigationItem>
                     <size key="freeformSize" width="414" height="1150"/>
@@ -451,7 +451,7 @@
             <objects>
                 <viewController id="q1j-Pb-10O" customClass="NoticeViewController" customModule="Wooaham" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4pe-fo-hRd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="63.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="63"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OJF-gO-sah">
