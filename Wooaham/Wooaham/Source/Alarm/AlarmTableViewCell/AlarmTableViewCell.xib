@@ -17,8 +17,8 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인하대학교" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6m-oC-Eb6">
-                        <rect key="frame" x="120" y="93" width="86.5" height="24"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                        <rect key="frame" x="120" y="96" width="65" height="18"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -39,6 +39,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="school" translatesAutoresizingMaskIntoConstraints="NO" id="EjY-Dg-VEM">
                                 <rect key="frame" x="15" y="15" width="60" height="60"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EjY-Dg-VEM" secondAttribute="height" multiplier="1:1" id="4hT-8g-Ziv"/>
                                     <constraint firstAttribute="width" constant="60" id="ZeE-dx-aci"/>
@@ -86,6 +87,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="school" width="102" height="102"/>
+        <image name="school" width="51" height="51"/>
     </resources>
 </document>

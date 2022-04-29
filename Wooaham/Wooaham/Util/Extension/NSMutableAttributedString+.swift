@@ -9,11 +9,11 @@ import UIKit
 
 extension NSMutableAttributedString {
 
-    func bold(string: String, fontSize: CGFloat) -> NSMutableAttributedString {
-        let font = UIFont.boldSystemFont(ofSize: fontSize)
+    func semibold(string: String, fontSize: CGFloat) -> NSMutableAttributedString {
+        let font = UIFont.systemFont(ofSize: fontSize, weight: .semibold)
         let attributes: [NSAttributedString.Key: Any] = [
             .font: font,
-            .foregroundColor: UIColor.mainGreen
+            ///.foregroundColor: UIColor.mainGreen
         ]
         self.append(NSAttributedString(string: string, attributes: attributes))
         return self
