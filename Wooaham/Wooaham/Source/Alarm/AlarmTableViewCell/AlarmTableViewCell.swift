@@ -39,16 +39,13 @@ class AlarmTableViewCell: UITableViewCell {
     
     func setAlarmData(_ alarmData: AlarmData){
         alarmImg.image = setIcon(alarmData.iconId)
-//        alarmTime.text = alarmData.time
         
         let time = alarmData.time
         let ampmRange = time.index(time.startIndex, offsetBy: 2)
         let ampm = time[time.startIndex...ampmRange]
-        print(ampm)
 
         let timeRange = time.index(after: ampmRange)
         let onlyTime = time[timeRange..<time.endIndex]
-        print(onlyTime)
 
         alarmTime.attributedText = NSMutableAttributedString()
             .regular(string: "\(ampm)", fontSize: 30)

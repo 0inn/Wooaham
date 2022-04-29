@@ -47,11 +47,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WuY-Vb-ryz">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="WuY-Vb-ryz">
                                 <rect key="frame" x="0.0" y="284" width="414" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="671700118.08771706">
-                                    <!--2022-04-15 07:21:58 +0000-->
-                                </date>
                                 <connections>
                                     <action selector="changeAlarmTime:" destination="ax8-Md-0Fq" eventType="valueChanged" id="Xel-wq-dZ9"/>
                                 </connections>
@@ -98,6 +95,7 @@
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="azM-Qy-ONq">
                                                 <rect key="frame" x="15" y="15" width="70" height="70"/>
+                                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="azM-Qy-ONq" secondAttribute="height" multiplier="1:1" id="mDS-Ph-oo4"/>
                                                     <constraint firstAttribute="width" constant="70" id="xNH-pD-vQJ"/>

@@ -49,7 +49,7 @@ extension AddAlarmViewController {
     private func setTime() {
         alarmTime = "\(alarmDetail.time)"
         let formatter = DateFormatter()
-        formatter.dateFormat = "hh:mm a"
+        formatter.dateFormat = "a hh:mm"
         let dateTime = formatter.date(from: alarmTime)
         datePicker.setDate(dateTime ?? Date(), animated: false)
     }
