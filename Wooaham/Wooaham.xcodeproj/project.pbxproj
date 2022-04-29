@@ -96,6 +96,8 @@
 		A9AD1AA2281A6B500070F9AE /* EditNoticeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1AA1281A6B500070F9AE /* EditNoticeAPI.swift */; };
 		A9AD1AA5281A745B0070F9AE /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1AA4281A745B0070F9AE /* Response.swift */; };
 		A9AD1AA8281A74920070F9AE /* ReadNoticeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1AA7281A74920070F9AE /* ReadNoticeAPI.swift */; };
+		A9AD1AC6281BE4910070F9AE /* SmallHomeworkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1AC4281BE4910070F9AE /* SmallHomeworkTableViewCell.swift */; };
+		A9AD1AC7281BE4910070F9AE /* SmallHomeworkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9AD1AC5281BE4910070F9AE /* SmallHomeworkTableViewCell.xib */; };
 		A9BB8EAD2812675E004F2990 /* AddAlarmRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BB8EAC2812675E004F2990 /* AddAlarmRequest.swift */; };
 		A9BB8EAF28126781004F2990 /* EditAlarmResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BB8EAE28126781004F2990 /* EditAlarmResponse.swift */; };
 		A9BB8EBA28127787004F2990 /* Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9BB8EB928127787004F2990 /* Icon.swift */; };
@@ -204,6 +206,8 @@
 		A9AD1AA1281A6B500070F9AE /* EditNoticeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoticeAPI.swift; sourceTree = "<group>"; };
 		A9AD1AA4281A745B0070F9AE /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		A9AD1AA7281A74920070F9AE /* ReadNoticeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadNoticeAPI.swift; sourceTree = "<group>"; };
+		A9AD1AC4281BE4910070F9AE /* SmallHomeworkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallHomeworkTableViewCell.swift; sourceTree = "<group>"; };
+		A9AD1AC5281BE4910070F9AE /* SmallHomeworkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmallHomeworkTableViewCell.xib; sourceTree = "<group>"; };
 		A9BB8EAC2812675E004F2990 /* AddAlarmRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmRequest.swift; sourceTree = "<group>"; };
 		A9BB8EAE28126781004F2990 /* EditAlarmResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlarmResponse.swift; sourceTree = "<group>"; };
 		A9BB8EB928127787004F2990 /* Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icon.swift; sourceTree = "<group>"; };
@@ -539,6 +543,8 @@
 			children = (
 				A9CEF42528157B6D00B7B25B /* HomeworkTableViewCell.xib */,
 				A9CEF42428157B6D00B7B25B /* HomeworkTableViewCell.swift */,
+				A9AD1AC5281BE4910070F9AE /* SmallHomeworkTableViewCell.xib */,
+				A9AD1AC4281BE4910070F9AE /* SmallHomeworkTableViewCell.swift */,
 			);
 			path = HomeworkCell;
 			sourceTree = "<group>";
@@ -926,6 +932,7 @@
 				A93274A928041A12001B0EDB /* MealDetailCollectionViewCell.xib in Resources */,
 				A9AD1A6C281929640070F9AE /* WriteNotice.storyboard in Resources */,
 				A932738227F9C83D001B0EDB /* Main.storyboard in Resources */,
+				A9AD1AC7281BE4910070F9AE /* SmallHomeworkTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1000,6 +1007,7 @@
 				A90900822805CD3D00089CCA /* Const.swift in Sources */,
 				A90900842805CD4800089CCA /* URL.swift in Sources */,
 				A93273E727FEEC27001B0EDB /* MealPlannerViewController.swift in Sources */,
+				A9AD1AC6281BE4910070F9AE /* SmallHomeworkTableViewCell.swift in Sources */,
 				A93273B627FB2D57001B0EDB /* String+.swift in Sources */,
 				A93273C127FC1AEF001B0EDB /* TabBarController.swift in Sources */,
 				A93273BD27FC180C001B0EDB /* AlarmViewController.swift in Sources */,

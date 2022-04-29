@@ -17,7 +17,7 @@ class HomeworkViewController: UIViewController {
     
     lazy var deleteHomeworkAPI = DeleteHomeworkAPI()
     lazy var homeworkCheckAPI = HomeworkCheckAPI()
-
+    
     @IBOutlet weak var homeworkTableView: UITableView!
     
     override func viewDidLoad() {
@@ -52,15 +52,24 @@ class HomeworkViewController: UIViewController {
         let nib = UINib(nibName: HomeworkTableViewCell.identifier, bundle: nil)
         homeworkTableView.register(nib, forCellReuseIdentifier: HomeworkTableViewCell.identifier)
         
+        let smallNib = UINib(nibName: SmallHomeworkTableViewCell.identifier, bundle: nil)
+        homeworkTableView.register(smallNib, forCellReuseIdentifier: SmallHomeworkTableViewCell.identifier)
+        
         homeworkTableView.delegate = self
         homeworkTableView.dataSource = self
+        
+        homeworkTableView.rowHeight = UITableView.automaticDimension
+        homeworkTableView.estimatedRowHeight = 50
     }
     
 }
 
 extension HomeworkViewController {
     private func getHomeworkAPI() {
-        isSchoolHW ?? false ? getSchoolHomeworkAPI() : getAcemdemyHomeworkAPI()
+        if (isSchoolHW ?? false || homeworkTableView.tag == 1) { getSchoolHomeworkAPI()
+        } else {
+            getAcemdemyHomeworkAPI()
+        }
     }
     
     private func getSchoolHomeworkAPI() {
@@ -93,26 +102,36 @@ extension HomeworkViewController {
 }
 
 extension HomeworkViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        switch homeworkTableView.tag {
+//        case 0:
+//            return 50
+//        default:
+//            return 20
+//        }
+//    }
 }
 
 extension HomeworkViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return homeworkList?.count ?? 0
+        return homeworkList?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell  = homeworkTableView.dequeueReusableCell(withIdentifier: HomeworkTableViewCell.identifier, for: indexPath) as? HomeworkTableViewCell else { return UITableViewCell() }
-        
-        cell.setData((homeworkList?[indexPath.row])!)
-        
-        cell.delegate = self
-        
-        return cell
+        switch homeworkTableView.tag {
+        case 0:
+            guard let cell  = homeworkTableView.dequeueReusableCell(withIdentifier: HomeworkTableViewCell.identifier, for: indexPath) as? HomeworkTableViewCell else { return UITableViewCell() }
+            cell.setData((homeworkList?[indexPath.row])!)
+            cell.delegate = self
+            return cell
+        default:
+            guard let cell  = homeworkTableView.dequeueReusableCell(withIdentifier: SmallHomeworkTableViewCell.identifier, for: indexPath) as? SmallHomeworkTableViewCell else { return UITableViewCell() }
+            cell.setData((homeworkList?[indexPath.row])!)
+            cell.delegate = self
+            return cell
+        }
     }
-
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             deleteHomeworkAPI.deleteHomework(homeworkList?[indexPath.row].homeworkId ?? 0)
