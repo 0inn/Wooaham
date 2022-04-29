@@ -15,18 +15,30 @@ class NoticeViewController: UIViewController {
     var noticeList: [NoticeData]?
     
     lazy var deleteNoticeAPI = DeleteNoticeAPI()
-
+    
     @IBOutlet weak var noticeCollectionView: UICollectionView!
     let NOTICE_CELL = "NoticeCollectionViewCell"
+    
+    @IBOutlet weak var pageControl: UIPageControl!
+    var nowPage: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBar()
         setNoticeCollectionView()
+        if (noticeCollectionView.tag == 1) {
+            setHomeNotice()
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         getNoticeAPI()
+    }
+    
+    // 홈 화면 공지사항 설정
+    private func setHomeNotice() {
+        setupPageControl()
+        bannerTimer()
     }
     
     private func setNavigationBar() {
@@ -53,6 +65,31 @@ extension NoticeViewController {
     }
 }
 
+// MARK: - 홈 화면 공지사항 자동 스크롤
+extension NoticeViewController {
+    private func setupPageControl() {
+        pageControl.numberOfPages = noticeList?.count ?? 0
+        pageControl.currentPage = 0
+        pageControl.isHidden = true
+    }
+    
+    private func bannerTimer(){
+        let _: Timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { (Timer) in
+            self.bannerMove()
+        }
+    }
+    
+    private func bannerMove() {
+        if nowPage == (noticeList?.count ?? 0) - 1 {
+            noticeCollectionView.scrollToItem(at: NSIndexPath(item: 0, section: 0) as IndexPath, at: .right, animated: true)
+            nowPage = 0
+            return
+        }
+        nowPage += 1
+        noticeCollectionView.scrollToItem(at: NSIndexPath(item: nowPage, section: 0) as IndexPath, at: .right, animated: true)
+    }
+}
+
 // MARK: - 공지사항 리스트 collectionView
 extension NoticeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -69,7 +106,9 @@ extension NoticeViewController: UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = noticeCollectionView.dequeueReusableCell(withReuseIdentifier: NOTICE_CELL, for: indexPath) as! NoticeCollectionViewCell
         cell.setNotice((noticeList?[indexPath.row])!)
-        cell.delegate = self
+        if (noticeCollectionView.tag == 0) {
+            cell.delegate = self
+        }
         return cell
     }
     
@@ -81,7 +120,11 @@ extension NoticeViewController: UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.noticeCollectionView.frame.width - 30, height: 50)
+        if noticeCollectionView.tag == 0 {
+            return CGSize(width: self.noticeCollectionView.frame.width - 10, height: 50)
+        } else {
+            return CGSize(width: self.noticeCollectionView.frame.width - 10, height: 50)
+        }
     }
 }
 

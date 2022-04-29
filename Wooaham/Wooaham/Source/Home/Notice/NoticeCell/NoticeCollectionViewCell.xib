@@ -17,10 +17,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tP4-k9-MNY">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="50"/>
+                        <rect key="frame" x="10" y="0.0" width="380" height="50"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="공지사항입니다 ! ! !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Urd-Cw-gtD">
-                                <rect key="frame" x="142" y="16" width="116.5" height="18"/>
+                                <rect key="frame" x="132" y="16" width="116.5" height="18"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -42,8 +42,8 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="tP4-k9-MNY" secondAttribute="bottom" id="BUO-mG-Tjj"/>
-                <constraint firstAttribute="trailing" secondItem="tP4-k9-MNY" secondAttribute="trailing" id="His-hg-kn4"/>
-                <constraint firstItem="tP4-k9-MNY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="mhl-wu-ufH"/>
+                <constraint firstAttribute="trailing" secondItem="tP4-k9-MNY" secondAttribute="trailing" constant="10" id="His-hg-kn4"/>
+                <constraint firstItem="tP4-k9-MNY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="mhl-wu-ufH"/>
                 <constraint firstItem="tP4-k9-MNY" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="sfW-0N-i52"/>
             </constraints>
             <connections>

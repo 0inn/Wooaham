@@ -10,6 +10,8 @@ import UIKit
 import SwipeCellKit
 
 class NoticeCollectionViewCell: SwipeCollectionViewCell {
+    
+    static let identifier = "NoticeCollectionViewCell"
 
     @IBOutlet weak var noticeTitle: UILabel!
     
