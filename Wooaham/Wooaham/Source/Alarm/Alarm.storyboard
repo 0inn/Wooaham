@@ -137,7 +137,7 @@
                                                         </constraints>
                                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="school"/>
+                                                        <state key="normal" image="house"/>
                                                         <connections>
                                                             <action selector="IconDidTap:" destination="ax8-Md-0Fq" eventType="touchUpInside" id="XQG-lp-qyI"/>
                                                         </connections>
@@ -173,7 +173,7 @@
                                                         </constraints>
                                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="bus"/>
+                                                        <state key="normal" image="school"/>
                                                         <connections>
                                                             <action selector="IconDidTap:" destination="ax8-Md-0Fq" eventType="touchUpInside" id="tTd-ta-5ym"/>
                                                         </connections>
@@ -209,7 +209,7 @@
                                                         </constraints>
                                                         <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="house"/>
+                                                        <state key="normal" image="bus"/>
                                                         <connections>
                                                             <action selector="IconDidTap:" destination="ax8-Md-0Fq" eventType="touchUpInside" id="Qke-XD-0tH"/>
                                                         </connections>

@@ -144,10 +144,10 @@ class AddAlarmViewController: UIViewController {
         }
         print("✨ 알람 이름: \(name), 시간: \(self.alarmTime!) 선택한 요일: \(postDays)")
         if AddFlag {
-            alarmInfo = AddAlarmRequest(title: name,time: alarmTime, daysOfWeek: postDays, enabled: true, before10min: tenMinSwitch.isOn, iconId: iconNum)
+            alarmInfo = AddAlarmRequest(title: name,time: alarmTime, daysOfWeek: postDays, enabled: true, before10min: tenMinSwitch.isOn, iconId: iconNum + 3)
             addAlarm()
         } else {
-            editAlarmInfo = EditAlarmRequest(title: name, time: alarmTime, daysOfWeek: postDays, enabled: alarmDetail.enabled, before10min: tenMinSwitch.isOn, iconId: iconNum)
+            editAlarmInfo = EditAlarmRequest(title: name, time: alarmTime, daysOfWeek: postDays, enabled: alarmDetail.enabled, before10min: tenMinSwitch.isOn, iconId: iconNum + 3)
             editAlarm()
         }
         self.dismiss(animated: true)

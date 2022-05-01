@@ -451,7 +451,7 @@
             <objects>
                 <viewController id="q1j-Pb-10O" customClass="NoticeViewController" customModule="Wooaham" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4pe-fo-hRd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="63"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="63.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="OJF-gO-sah">
@@ -470,6 +470,7 @@
                                 <rect key="frame" x="149" y="37.5" width="116" height="26"/>
                             </pageControl>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="E5D-Mw-vkc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Jg-q5-vIP" firstAttribute="centerX" secondItem="4pe-fo-hRd" secondAttribute="centerX" id="2Fn-rB-bnP"/>

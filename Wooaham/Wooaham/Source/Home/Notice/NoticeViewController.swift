@@ -26,19 +26,10 @@ class NoticeViewController: UIViewController {
         super.viewDidLoad()
         setNavigationBar()
         setNoticeCollectionView()
-        if (noticeCollectionView.tag == 1) {
-            setHomeNotice()
-        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         getNoticeAPI()
-    }
-    
-    // 홈 화면 공지사항 설정
-    private func setHomeNotice() {
-        setupPageControl()
-        bannerTimer()
     }
     
     private func setNavigationBar() {
@@ -57,11 +48,15 @@ class NoticeViewController: UIViewController {
 // MARK: - 공지사항 API 연동
 extension NoticeViewController {
     private func getNoticeAPI() {
-        noticeAPI.getNotice("123123", self)
+        noticeAPI.getNotice("7010057_2_1", self)
     }
     func didSuccessNotice(_ noticeDatum: [NoticeData]) {
         noticeList = noticeDatum
         noticeCollectionView.reloadData()
+        if (noticeCollectionView.tag == 1 && noticeList?.count != 0) {
+            setupPageControl()
+            bannerTimer()
+        }
     }
 }
 
@@ -74,7 +69,7 @@ extension NoticeViewController {
     }
     
     private func bannerTimer(){
-        let _: Timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: true) { (Timer) in
+        let _: Timer = Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { (Timer) in
             self.bannerMove()
         }
     }
@@ -105,7 +100,9 @@ extension NoticeViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = noticeCollectionView.dequeueReusableCell(withReuseIdentifier: NOTICE_CELL, for: indexPath) as! NoticeCollectionViewCell
-        cell.setNotice((noticeList?[indexPath.row])!)
+        if noticeList?.count != 0  {
+            cell.setNotice((noticeList?[indexPath.row])!)
+        }
         if (noticeCollectionView.tag == 0) {
             cell.delegate = self
         }

@@ -35,9 +35,9 @@ extension AddAlarmViewController {
     }
     
     private func setIcon() {
-        let btn = iconBtns[alarmDetail.iconId]
+        let btn = iconBtns[alarmDetail.iconId - 3]
         btn.isSelected = true
-        iconViews[alarmDetail.iconId].backgroundColor = .mainPink.withAlphaComponent(0.5)
+        iconViews[alarmDetail.iconId - 3].backgroundColor = .mainPink.withAlphaComponent(0.5)
         iconImg.image = btn.image(for: .normal)
         iconNum = alarmDetail.iconId
     }
