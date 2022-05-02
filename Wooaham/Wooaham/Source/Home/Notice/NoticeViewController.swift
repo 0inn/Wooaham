@@ -55,7 +55,7 @@ extension NoticeViewController {
         noticeCollectionView.reloadData()
         if (noticeCollectionView.tag == 1 && noticeList?.count != 0) {
             setupPageControl()
-            bannerTimer()
+            //bannerTimer()
         }
     }
 }

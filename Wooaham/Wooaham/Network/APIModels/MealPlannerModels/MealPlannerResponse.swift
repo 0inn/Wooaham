@@ -8,17 +8,17 @@
 import Foundation
 
 struct MealPlannerResponse: Codable {
-    let mealServiceDietInfo: [MealPlannerInfo]
+    let mealServiceDietInfo: [MealPlannerInfo]!
 }
 
 struct MealPlannerInfo: Codable {
-    let head: [MealPlannerHead]
-    let row: [MealPlannerRow]
+    let head: [MealPlannerHead]!
+    let row: [MealPlannerRow]!
 }
 
 struct MealPlannerHead: Codable {
-    let list_total_count: CLong
-    let RESULT: MealPlannerResult
+    let list_total_count: Int?
+    let RESULT: MealPlannerResult!
 }
 
 struct MealPlannerResult: Codable {
@@ -27,15 +27,15 @@ struct MealPlannerResult: Codable {
 
 struct MealPlannerRow: Codable {
     let MLSV_YMD: String
-    let CAL_INFO, ORPLC_INFO: String
+    let CAL_INFO: String
     let DDISH_NM: String
     let SCHUL_NM: String
 
-    enum CodingKeys: String, CodingKey {
-        case MLSV_YMD = "date"
-        case CAL_INFO = "kcal"
-        case ORPLC_INFO = "origin"
-        case DDISH_NM = "dishName"
-        case SCHUL_NM = "schoolName"
-    }
+//    enum CodingKeys: String, CodingKey {
+//        case MLSV_YMD = "date"
+//        case CAL_INFO = "kcal"
+//        case ORPLC_INFO = "origin"
+//        case DDISH_NM = "dishName"
+//        case SCHUL_NM = "schoolName"
+//    }
 }

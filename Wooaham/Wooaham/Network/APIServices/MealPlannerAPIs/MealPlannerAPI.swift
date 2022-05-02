@@ -9,28 +9,25 @@ import Alamofire
 
 class MealPlannerAPI{
     
-    func getMealPlanner(_ info: MealPlannerRequest) {
+    func getMealPlanner(_ userId: CLong, _ info: MealPlannerRequest, _ delegate: MealPlannerViewController) {
         
-        let url = "\(Const.URL.BASE_URL)/info/lunchtable"
+        let url = "\(Const.URL.BASE_URL)/info/lunchtable/\(userId)"
         
-        print(info)
-        
-        let body: [String: String] = [
-            "sidoCode": info.sidoCode,
-            "schoolCode": info.schoolCode,
+        let body: [String: Any] = [
             "startDay": info.startDay,
-            "endDay": info.endDay
+            "endDay": info.endDay,
         ]
         
         AF.request(url,
                    method: .get,
                    parameters: body,
-                   encoding: URLEncoding.default,
+                   encoding: URLEncoding.queryString,
                    headers: nil)
         .validate()
-        .responseDecodable(of: MealPlannerResponse.self) { (responseObject) -> Void in
-            switch responseObject.result {
+        .responseDecodable(of: MealPlannerResponse.self) { (response) in
+            switch response.result {
             case .success(let response):
+                delegate.didSuccessMealPlanner(response.mealServiceDietInfo[1].row)
                 print("🔥\(response)")
             case .failure(let error):
                 print("🔥\(error)")

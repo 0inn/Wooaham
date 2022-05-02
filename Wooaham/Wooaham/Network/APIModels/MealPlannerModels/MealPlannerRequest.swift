@@ -9,8 +9,6 @@ import Foundation
 
 
 struct MealPlannerRequest {
-    let sidoCode: String
-    let schoolCode: String
     let startDay: String
     let endDay: String
 }
