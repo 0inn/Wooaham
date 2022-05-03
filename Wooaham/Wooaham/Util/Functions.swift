@@ -36,3 +36,11 @@ func getTodayTitle() -> String {
     let todayString = dateFormatter.string(from: today as Date)
     return todayString
 }
+
+func getTodaymmdd() -> String {
+    let today = NSDate()
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "M월 d일 (EEEE)"
+    let todayString = dateFormatter.string(from: today as Date)
+    return todayString
+}

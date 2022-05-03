@@ -24,6 +24,7 @@
 		A90900A62809784000089CCA /* EditAlarmRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A52809784000089CCA /* EditAlarmRequest.swift */; };
 		A90900A8280999CA00089CCA /* NoticeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A7280999CA00089CCA /* NoticeResponse.swift */; };
 		A90900AA280999DA00089CCA /* NoticeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A9280999DA00089CCA /* NoticeAPI.swift */; };
+		A92D82BC28215FFF00DB796E /* MealPlannerOneDayAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D82BB28215FFF00DB796E /* MealPlannerOneDayAPI.swift */; };
 		A932737B27F9C83D001B0EDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932737A27F9C83D001B0EDB /* AppDelegate.swift */; };
 		A932737D27F9C83D001B0EDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932737C27F9C83D001B0EDB /* SceneDelegate.swift */; };
 		A932738227F9C83D001B0EDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A932738027F9C83D001B0EDB /* Main.storyboard */; };
@@ -55,8 +56,6 @@
 		A93273D127FEC7B0001B0EDB /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93273D027FEC7B0001B0EDB /* Home.storyboard */; };
 		A93273D327FEC7E2001B0EDB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273D227FEC7E2001B0EDB /* HomeViewController.swift */; };
 		A93273D527FECB4A001B0EDB /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273D427FECB4A001B0EDB /* NoticeViewController.swift */; };
-		A93273DA27FECD7F001B0EDB /* MealPlannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273D827FECD7F001B0EDB /* MealPlannerCollectionViewCell.swift */; };
-		A93273DB27FECD7F001B0EDB /* MealPlannerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A93273D927FECD7F001B0EDB /* MealPlannerCollectionViewCell.xib */; };
 		A93273DE27FED1B7001B0EDB /* TimeTableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273DC27FED1B7001B0EDB /* TimeTableCollectionViewCell.swift */; };
 		A93273DF27FED1B7001B0EDB /* TimeTableCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A93273DD27FED1B7001B0EDB /* TimeTableCollectionViewCell.xib */; };
 		A93273E327FEEA0E001B0EDB /* NoticeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273E127FEEA0E001B0EDB /* NoticeCollectionViewCell.swift */; };
@@ -134,6 +133,7 @@
 		A90900A52809784000089CCA /* EditAlarmRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlarmRequest.swift; sourceTree = "<group>"; };
 		A90900A7280999CA00089CCA /* NoticeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeResponse.swift; sourceTree = "<group>"; };
 		A90900A9280999DA00089CCA /* NoticeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeAPI.swift; sourceTree = "<group>"; };
+		A92D82BB28215FFF00DB796E /* MealPlannerOneDayAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerOneDayAPI.swift; sourceTree = "<group>"; };
 		A932737727F9C83D001B0EDB /* Wooaham.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wooaham.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A932737A27F9C83D001B0EDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A932737C27F9C83D001B0EDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,8 +167,6 @@
 		A93273D027FEC7B0001B0EDB /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		A93273D227FEC7E2001B0EDB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A93273D427FECB4A001B0EDB /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
-		A93273D827FECD7F001B0EDB /* MealPlannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerCollectionViewCell.swift; sourceTree = "<group>"; };
-		A93273D927FECD7F001B0EDB /* MealPlannerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealPlannerCollectionViewCell.xib; sourceTree = "<group>"; };
 		A93273DC27FED1B7001B0EDB /* TimeTableCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableCollectionViewCell.swift; sourceTree = "<group>"; };
 		A93273DD27FED1B7001B0EDB /* TimeTableCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeTableCollectionViewCell.xib; sourceTree = "<group>"; };
 		A93273E127FEEA0E001B0EDB /* NoticeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -514,6 +512,7 @@
 			isa = PBXGroup;
 			children = (
 				A99D2132281C0F190042F4BE /* MealPlannerAPI.swift */,
+				A92D82BB28215FFF00DB796E /* MealPlannerOneDayAPI.swift */,
 			);
 			path = MealPlannerAPIs;
 			sourceTree = "<group>";
@@ -788,8 +787,6 @@
 		A9BB8EB62812687C004F2990 /* HomeCells */ = {
 			isa = PBXGroup;
 			children = (
-				A93273D927FECD7F001B0EDB /* MealPlannerCollectionViewCell.xib */,
-				A93273D827FECD7F001B0EDB /* MealPlannerCollectionViewCell.swift */,
 				A93273DD27FED1B7001B0EDB /* TimeTableCollectionViewCell.xib */,
 				A93273DC27FED1B7001B0EDB /* TimeTableCollectionViewCell.swift */,
 			);
@@ -946,7 +943,6 @@
 				A93273DF27FED1B7001B0EDB /* TimeTableCollectionViewCell.xib in Resources */,
 				A932738727F9C83E001B0EDB /* LaunchScreen.storyboard in Resources */,
 				A932749F2803FD50001B0EDB /* Notice.storyboard in Resources */,
-				A93273DB27FECD7F001B0EDB /* MealPlannerCollectionViewCell.xib in Resources */,
 				A93273BB27FC1799001B0EDB /* Alarm.storyboard in Resources */,
 				A932738427F9C83E001B0EDB /* Assets.xcassets in Resources */,
 				A93273E427FEEA0E001B0EDB /* NoticeCollectionViewCell.xib in Resources */,
@@ -1040,10 +1036,10 @@
 				A9AD1A71281933BB0070F9AE /* WriteNoticeRequest.swift in Sources */,
 				A9CEF41928156D9A00B7B25B /* HomeworkViewController.swift in Sources */,
 				A909009C2809658300089CCA /* DeleteAlarmDataManager.swift in Sources */,
-				A93273DA27FECD7F001B0EDB /* MealPlannerCollectionViewCell.swift in Sources */,
 				A90900AA280999DA00089CCA /* NoticeAPI.swift in Sources */,
 				A93273A627F9E12E001B0EDB /* UIViewController+.swift in Sources */,
 				A932737B27F9C83D001B0EDB /* AppDelegate.swift in Sources */,
+				A92D82BC28215FFF00DB796E /* MealPlannerOneDayAPI.swift in Sources */,
 				A9BB8EBA28127787004F2990 /* Icon.swift in Sources */,
 				A9AD1AA2281A6B500070F9AE /* EditNoticeAPI.swift in Sources */,
 				A9BB8EAF28126781004F2990 /* EditAlarmResponse.swift in Sources */,

@@ -9,18 +9,28 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var mealCollectionView: UICollectionView!
+    lazy var mealPlannerOneDayAPI = MealPlannerOneDayAPI()
+    
+    @IBOutlet weak var mealTopView: UIView!
+    @IBOutlet weak var mealBelowView: UIView!
+    
+    @IBOutlet weak var mealPlannerDateLabel: UILabel!
+    @IBOutlet weak var mealPlannerFood: UITextView!
+    
     @IBOutlet weak var timeTableCollectionView: UICollectionView!
     
     @IBOutlet weak var schoolHomeworkView: UIView!
     @IBOutlet weak var academyHomeworkView: UIView!
     
-    let MEAL_CELL = "MealPlannerCollectionViewCell"
     let TIME_CELL = "TimeTableCollectionViewCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getMealPlannerOneDayAPI()
     }
     
     private func setUI() {
@@ -58,12 +68,24 @@ class HomeViewController: UIViewController {
     
 }
 
+// MARK: - 홈 화면 급식표 API 호출
+extension HomeViewController {
+    private func getMealPlannerOneDayAPI() {
+        mealPlannerDateLabel.text = getTodaymmdd()
+        mealPlannerOneDayAPI.getMealPlannerOneDay(1, getToday(), self)
+    }
+    
+    func didSuccessMealPlannerOneDay(_ mealInfo: MealPlannerRow) {
+        mealPlannerFood.text = mealInfo.DDISH_NM
+    }
+    
+    func didFailMealPlannerOneDay() {
+        mealPlannerFood.text = "오늘은 급식이 없습니다. 😢"
+    }
+}
+
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     private func setCollectionView() {
-        mealCollectionView.delegate = self
-        mealCollectionView.dataSource = self
-        mealCollectionView.register(UINib(nibName: MEAL_CELL, bundle: nil), forCellWithReuseIdentifier: MEAL_CELL)
-        
         timeTableCollectionView.delegate = self
         timeTableCollectionView.dataSource = self
         timeTableCollectionView.register(UINib(nibName: TIME_CELL, bundle: nil), forCellWithReuseIdentifier: TIME_CELL)
@@ -71,8 +93,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
-        case mealCollectionView:
-            return 5
         case timeTableCollectionView:
             return 7
         default:
@@ -82,9 +102,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch collectionView {
-        case mealCollectionView:
-            guard let cell = mealCollectionView.dequeueReusableCell(withReuseIdentifier: MEAL_CELL, for: indexPath) as? MealPlannerCollectionViewCell else { return UICollectionViewCell()}
-            return cell
         case timeTableCollectionView:
             guard let cell = timeTableCollectionView.dequeueReusableCell(withReuseIdentifier: TIME_CELL, for: indexPath) as? TimeTableCollectionViewCell else { return UICollectionViewCell()}
             return cell
@@ -95,8 +112,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch collectionView {
-        case mealCollectionView:
-            return CGSize(width: 160, height: self.mealCollectionView.frame.height)
         case timeTableCollectionView:
             return CGSize(width: 70, height: self.timeTableCollectionView.frame.height)
         default:
@@ -108,6 +123,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
 extension HomeViewController {
     private func setView() {
+        mealTopView.roundCorners(cornerRadius: 10, maskedCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
+        mealBelowView.roundCorners(cornerRadius: 10, maskedCorners: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner])
         schoolHomeworkView.roundCorners(cornerRadius: 10, maskedCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
         academyHomeworkView.roundCorners(cornerRadius: 10, maskedCorners: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
     }
