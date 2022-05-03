@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="t40-3v-pP8">
-                                <rect key="frame" x="139.5" y="54" width="135" height="104"/>
+                                <rect key="frame" x="135.5" y="54" width="143" height="114"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4Y-Zg-nZn">
-                                        <rect key="frame" x="0.0" y="0.0" width="36.5" height="104"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="36.5" height="114"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="chevron.left" catalog="system">
@@ -30,14 +30,14 @@
                                             <action selector="lastweekBtnDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="glu-Ld-4jC"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="급식표" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLQ-ru-6vE">
-                                        <rect key="frame" x="46.5" y="0.0" width="42" height="104"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLQ-ru-6vE">
+                                        <rect key="frame" x="46.5" y="0.0" width="50" height="114"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIP-1B-LKM">
-                                        <rect key="frame" x="98.5" y="0.0" width="36.5" height="104"/>
+                                        <rect key="frame" x="106.5" y="0.0" width="36.5" height="114"/>
                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system">
@@ -148,7 +148,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="화" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SY5-20-FKc">
                                                         <rect key="frame" x="35" y="52" width="13" height="18"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -225,7 +225,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="수" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJc-HX-GVX">
                                                         <rect key="frame" x="35" y="52" width="13" height="18"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -302,7 +302,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmW-pd-cKW">
                                                         <rect key="frame" x="35" y="52" width="13" height="18"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -379,7 +379,7 @@
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="금" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0PZ-YC-ABd">
                                                         <rect key="frame" x="35" y="52" width="13" height="18"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -482,7 +482,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7LC-NC-RX9" secondAttribute="trailing" constant="20" id="0dg-1w-2cU"/>
-                            <constraint firstItem="7LC-NC-RX9" firstAttribute="top" secondItem="t40-3v-pP8" secondAttribute="bottom" constant="10" id="2mc-Iw-cBP"/>
+                            <constraint firstItem="7LC-NC-RX9" firstAttribute="top" secondItem="t40-3v-pP8" secondAttribute="bottom" id="2mc-Iw-cBP"/>
                             <constraint firstItem="t40-3v-pP8" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="6iu-Ed-LRz"/>
                             <constraint firstAttribute="trailing" secondItem="7SZ-k6-zlv" secondAttribute="trailing" constant="20" id="Ow3-cD-OZa"/>
                             <constraint firstItem="t40-3v-pP8" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="POh-zZ-TLZ"/>
@@ -495,10 +495,18 @@
                     </view>
                     <connections>
                         <outlet property="allergyLabel" destination="7SZ-k6-zlv" id="OQ0-Lz-5Jm"/>
+                        <outlet property="fri" destination="0PZ-YC-ABd" id="tj0-ek-NOk"/>
                         <outlet property="friFood" destination="4v4-vQ-CNA" id="FT4-b0-yhN"/>
+                        <outlet property="leftBtn" destination="f4Y-Zg-nZn" id="pv0-PG-h24"/>
+                        <outlet property="mon" destination="GKb-8d-I8Z" id="9bK-gD-kwI"/>
                         <outlet property="monFood" destination="kLy-7U-BvI" id="ESC-c8-vrv"/>
+                        <outlet property="rightBtn" destination="DIP-1B-LKM" id="gxe-qn-dps"/>
+                        <outlet property="thur" destination="JmW-pd-cKW" id="CmO-Ly-Nzd"/>
                         <outlet property="thurFood" destination="3mY-G6-mOC" id="zZ3-XX-kFc"/>
+                        <outlet property="todayLabel" destination="aLQ-ru-6vE" id="BKd-GI-AEv"/>
+                        <outlet property="tue" destination="SY5-20-FKc" id="hFH-xb-hql"/>
                         <outlet property="tueFood" destination="Isz-m8-c46" id="iWF-jV-r2m"/>
+                        <outlet property="wed" destination="PJc-HX-GVX" id="W92-v1-I3R"/>
                         <outlet property="wedFood" destination="q2C-j8-csJ" id="ORO-6i-1Vk"/>
                     </connections>
                 </viewController>

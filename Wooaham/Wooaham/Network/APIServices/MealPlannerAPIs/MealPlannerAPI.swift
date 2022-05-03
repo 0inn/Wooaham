@@ -9,13 +9,12 @@ import Alamofire
 
 class MealPlannerAPI{
     
-    func getMealPlanner(_ userId: CLong, _ info: MealPlannerRequest, _ delegate: MealPlannerViewController) {
+    func getMealPlanner(_ userId: CLong, _ startDay: String, _ delegate: MealPlannerViewController) {
         
         let url = "\(Const.URL.BASE_URL)/info/lunchtable/\(userId)"
         
         let body: [String: Any] = [
-            "startDay": info.startDay,
-            "endDay": info.endDay,
+            "startDay": startDay
         ]
         
         AF.request(url,

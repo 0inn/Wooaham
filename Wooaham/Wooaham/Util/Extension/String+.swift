@@ -35,7 +35,7 @@ extension String {
                     numberString = "0"
                 }
                 guard let doubleValue = Double(numberString)
-                    else { return self }
+                else { return self }
                 return numberFormatter.string(from: NSNumber(value: doubleValue)) ?? self
             } else if numberArray.count == 2 {
                 var numberString = numberArray[0]
@@ -43,20 +43,27 @@ extension String {
                     numberString = "0"
                 }
                 guard let doubleValue = Double(numberString)
-                    else {
-                        return self
+                else {
+                    return self
                 }
                 return (numberFormatter.string(from: NSNumber(value: doubleValue)) ?? numberString) + ".\(numberArray[1])"
             }
         }
         else {
             guard let doubleValue = Double(self)
-                else {
-                    return self
+            else {
+                return self
             }
             return numberFormatter.string(from: NSNumber(value: doubleValue)) ?? self
         }
         return self
+    }
+    
+    // MARK: - 문자열 substring
+    func subString(from: Int, to: Int) -> String {
+        let startIndex = self.index(self.startIndex, offsetBy: from)
+        let endIndex = self.index(self.startIndex, offsetBy: to)
+        return String(self[startIndex...endIndex])
     }
     
 }

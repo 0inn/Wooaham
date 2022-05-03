@@ -70,7 +70,6 @@
 		A93274A828041A12001B0EDB /* MealDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93274A628041A12001B0EDB /* MealDetailCollectionViewCell.swift */; };
 		A93274A928041A12001B0EDB /* MealDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A93274A728041A12001B0EDB /* MealDetailCollectionViewCell.xib */; };
 		A99D212E281C0D2D0042F4BE /* MealPlannerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99D212D281C0D2D0042F4BE /* MealPlannerResponse.swift */; };
-		A99D2130281C0ED70042F4BE /* MealPlannerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99D212F281C0ED70042F4BE /* MealPlannerRequest.swift */; };
 		A99D2133281C0F190042F4BE /* MealPlannerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99D2132281C0F190042F4BE /* MealPlannerAPI.swift */; };
 		A9AD1A6028191C740070F9AE /* NoticeDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9AD1A5F28191C740070F9AE /* NoticeDetail.storyboard */; };
 		A9AD1A6228191C860070F9AE /* NoticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A6128191C860070F9AE /* NoticeDetailViewController.swift */; };
@@ -183,7 +182,6 @@
 		A93274A628041A12001B0EDB /* MealDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		A93274A728041A12001B0EDB /* MealDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealDetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		A99D212D281C0D2D0042F4BE /* MealPlannerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerResponse.swift; sourceTree = "<group>"; };
-		A99D212F281C0ED70042F4BE /* MealPlannerRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerRequest.swift; sourceTree = "<group>"; };
 		A99D2132281C0F190042F4BE /* MealPlannerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerAPI.swift; sourceTree = "<group>"; };
 		A9AD1A5F28191C740070F9AE /* NoticeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NoticeDetail.storyboard; sourceTree = "<group>"; };
 		A9AD1A6128191C860070F9AE /* NoticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailViewController.swift; sourceTree = "<group>"; };
@@ -507,7 +505,6 @@
 		A99D212C281C0D1D0042F4BE /* MealPlannerModels */ = {
 			isa = PBXGroup;
 			children = (
-				A99D212F281C0ED70042F4BE /* MealPlannerRequest.swift */,
 				A99D212D281C0D2D0042F4BE /* MealPlannerResponse.swift */,
 			);
 			path = MealPlannerModels;
@@ -1060,7 +1057,6 @@
 				A9AD1A86281950960070F9AE /* DeleteHomeworkAPI.swift in Sources */,
 				A9AD1A6E281929740070F9AE /* WriteNoticeViewController.swift in Sources */,
 				A909008E2809348000089CCA /* AlarmDetailResponse.swift in Sources */,
-				A99D2130281C0ED70042F4BE /* MealPlannerRequest.swift in Sources */,
 				A90900A228096BCB00089CCA /* AlarmTestResponse.swift in Sources */,
 				A90900A8280999CA00089CCA /* NoticeResponse.swift in Sources */,
 				A90900862805CDAA00089CCA /* ViewController.swift in Sources */,
