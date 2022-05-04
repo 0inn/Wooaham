@@ -10,6 +10,8 @@ import Foundation
 extension Const {
     struct Storyboard {
         struct Name {
+            static let joinSB = "Join"
+            
             static let homeSB = "Home"
             
             static let noticeSB = "Notice"

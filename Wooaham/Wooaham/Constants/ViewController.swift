@@ -10,6 +10,7 @@ import Foundation
 extension Const {
     struct ViewController {
         struct Identifier {
+            static let authSelectVC = "AuthSelectViewController"
             static let homeVC = "HomeViewController"
             
             static let noticeVC = "NoticeViewController"

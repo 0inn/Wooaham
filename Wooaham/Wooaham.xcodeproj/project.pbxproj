@@ -25,13 +25,15 @@
 		A90900A8280999CA00089CCA /* NoticeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A7280999CA00089CCA /* NoticeResponse.swift */; };
 		A90900AA280999DA00089CCA /* NoticeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A9280999DA00089CCA /* NoticeAPI.swift */; };
 		A92D82BC28215FFF00DB796E /* MealPlannerOneDayAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D82BB28215FFF00DB796E /* MealPlannerOneDayAPI.swift */; };
+		A92D82BE28224F9800DB796E /* Join.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92D82BD28224F9800DB796E /* Join.storyboard */; };
+		A92D82C22822514900DB796E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D82C12822514900DB796E /* LoginViewController.swift */; };
+		A92D82C4282252B800DB796E /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D82C3282252B800DB796E /* JoinViewController.swift */; };
 		A932737B27F9C83D001B0EDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932737A27F9C83D001B0EDB /* AppDelegate.swift */; };
 		A932737D27F9C83D001B0EDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932737C27F9C83D001B0EDB /* SceneDelegate.swift */; };
 		A932738227F9C83D001B0EDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A932738027F9C83D001B0EDB /* Main.storyboard */; };
 		A932738427F9C83E001B0EDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A932738327F9C83E001B0EDB /* Assets.xcassets */; };
 		A932738727F9C83E001B0EDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A932738527F9C83E001B0EDB /* LaunchScreen.storyboard */; };
 		A932739527F9CE76001B0EDB /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A932739427F9CE76001B0EDB /* Login.storyboard */; };
-		A932739727F9CE86001B0EDB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932739627F9CE86001B0EDB /* LoginViewController.swift */; };
 		A932739927F9CEE6001B0EDB /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932739827F9CEE6001B0EDB /* UIColor+.swift */; };
 		A932739B27F9CF31001B0EDB /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932739A27F9CF31001B0EDB /* UIView+.swift */; };
 		A932739D27F9D222001B0EDB /* AuthSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932739C27F9D222001B0EDB /* AuthSelectViewController.swift */; };
@@ -134,6 +136,9 @@
 		A90900A7280999CA00089CCA /* NoticeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeResponse.swift; sourceTree = "<group>"; };
 		A90900A9280999DA00089CCA /* NoticeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeAPI.swift; sourceTree = "<group>"; };
 		A92D82BB28215FFF00DB796E /* MealPlannerOneDayAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerOneDayAPI.swift; sourceTree = "<group>"; };
+		A92D82BD28224F9800DB796E /* Join.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Join.storyboard; sourceTree = "<group>"; };
+		A92D82C12822514900DB796E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A92D82C3282252B800DB796E /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		A932737727F9C83D001B0EDB /* Wooaham.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wooaham.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A932737A27F9C83D001B0EDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A932737C27F9C83D001B0EDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,7 +147,6 @@
 		A932738627F9C83E001B0EDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A932738827F9C83E001B0EDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A932739427F9CE76001B0EDB /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		A932739627F9CE86001B0EDB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A932739827F9CEE6001B0EDB /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		A932739A27F9CF31001B0EDB /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		A932739C27F9D222001B0EDB /* AuthSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSelectViewController.swift; sourceTree = "<group>"; };
@@ -310,6 +314,25 @@
 			path = AlarmModels;
 			sourceTree = "<group>";
 		};
+		A92D82BF28224FB400DB796E /* Join */ = {
+			isa = PBXGroup;
+			children = (
+				A92D82BD28224F9800DB796E /* Join.storyboard */,
+				A932739C27F9D222001B0EDB /* AuthSelectViewController.swift */,
+				A92D82C3282252B800DB796E /* JoinViewController.swift */,
+			);
+			path = Join;
+			sourceTree = "<group>";
+		};
+		A92D82C028224FBA00DB796E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A932739427F9CE76001B0EDB /* Login.storyboard */,
+				A92D82C12822514900DB796E /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		A932736E27F9C83D001B0EDB = {
 			isa = PBXGroup;
 			children = (
@@ -406,9 +429,8 @@
 		A932739327F9CE66001B0EDB /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				A932739427F9CE76001B0EDB /* Login.storyboard */,
-				A932739627F9CE86001B0EDB /* LoginViewController.swift */,
-				A932739C27F9D222001B0EDB /* AuthSelectViewController.swift */,
+				A92D82C028224FBA00DB796E /* Login */,
+				A92D82BF28224FB400DB796E /* Join */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -934,6 +956,7 @@
 				A9AD1A79281949F00070F9AE /* WriteHomework.storyboard in Resources */,
 				A93273B027F9E8BB001B0EDB /* MyPage.storyboard in Resources */,
 				A9BB8EBC28128556004F2990 /* TimeTable.storyboard in Resources */,
+				A92D82BE28224F9800DB796E /* Join.storyboard in Resources */,
 				A93273C527FC1DA3001B0EDB /* AlarmTableViewCell.xib in Resources */,
 				A9AD1A6028191C740070F9AE /* NoticeDetail.storyboard in Resources */,
 				A93274A12804007B001B0EDB /* MealPlanner.storyboard in Resources */,
@@ -1004,8 +1027,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9AD1A6528191DC20070F9AE /* NoticeDetailAPI.swift in Sources */,
-				A932739727F9CE86001B0EDB /* LoginViewController.swift in Sources */,
 				A93273BF27FC1A82001B0EDB /* UITabBarController+.swift in Sources */,
+				A92D82C22822514900DB796E /* LoginViewController.swift in Sources */,
 				A9AD1A97281961200070F9AE /* EditHomeworkResponse.swift in Sources */,
 				A90900A42809733000089CCA /* EditAlarmDataManager.swift in Sources */,
 				A932749B280315E7001B0EDB /* AlarmResponse.swift in Sources */,
@@ -1055,6 +1078,7 @@
 				A909008E2809348000089CCA /* AlarmDetailResponse.swift in Sources */,
 				A90900A228096BCB00089CCA /* AlarmTestResponse.swift in Sources */,
 				A90900A8280999CA00089CCA /* NoticeResponse.swift in Sources */,
+				A92D82C4282252B800DB796E /* JoinViewController.swift in Sources */,
 				A90900862805CDAA00089CCA /* ViewController.swift in Sources */,
 				A90900A02809673400089CCA /* AlarmSwtichDataManager.swift in Sources */,
 				A93273A827F9E1CC001B0EDB /* CALayer+.swift in Sources */,
