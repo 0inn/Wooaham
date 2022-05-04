@@ -45,6 +45,10 @@ class MealPlannerViewController: UIViewController {
         getTodayMealAPI()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = false
+    }
+    
     @IBAction func lastweekBtnDidTap(_ sender: Any) {
         getMealPlannerAPI(startDay)
     }
