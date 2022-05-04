@@ -27,9 +27,9 @@ struct MealPlannerResult: Codable {
 
 struct MealPlannerRow: Codable {
     let MLSV_YMD: String
-    let CAL_INFO: String
+    let CAL_INFO: String?
     let DDISH_NM: String
-    let SCHUL_NM: String
+    let SCHUL_NM: String?
 
 //    enum CodingKeys: String, CodingKey {
 //        case MLSV_YMD = "date"

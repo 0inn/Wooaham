@@ -55,8 +55,7 @@ class MealPlannerViewController: UIViewController {
     
     // MARK: - 오늘 날짜 보내서 급식표 호출
     private func getTodayMealAPI() {
-        startDay = getToday()
-        getMealPlannerAPI("20220423")
+        getMealPlannerAPI(getToday())
         todayLabel.text = getTodayTitle()
     }
     
@@ -94,7 +93,7 @@ extension MealPlannerViewController {
             foodLabels?[day].text = mealPlannerList?[day].DDISH_NM
             let month = mealPlannerList?[day].MLSV_YMD.subString(from: 4, to: 5)
             let date = mealPlannerList?[day].MLSV_YMD.subString(from: 6, to: 7)
-            weekdays?[day].text = "\(month ?? "")/\(date ?? "")"
+            weekdays?[day].text = "(\(month ?? "")/\(date ?? ""))"
         }
     }
 }
