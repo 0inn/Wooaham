@@ -11,6 +11,8 @@ extension Const {
     struct ViewController {
         struct Identifier {
             static let authSelectVC = "AuthSelectViewController"
+            static let joinVC = "JoinViewController"
+            
             static let homeVC = "HomeViewController"
             
             static let noticeVC = "NoticeViewController"

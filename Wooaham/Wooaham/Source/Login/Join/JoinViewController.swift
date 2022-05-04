@@ -9,6 +9,8 @@ import UIKit
 
 class JoinViewController: UIViewController {
     
+    var auth: String?
+    
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!

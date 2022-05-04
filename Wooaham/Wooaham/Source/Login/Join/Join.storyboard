@@ -13,17 +13,17 @@
             <objects>
                 <viewController storyboardIdentifier="JoinViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="JoinViewController" customModule="Wooaham" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wooaham" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dV-FX-3wd">
-                                <rect key="frame" x="134" y="150.5" width="146" height="36"/>
+                                <rect key="frame" x="134" y="161" width="146" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
                                 <color key="textColor" red="1" green="0.74901960779999999" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yAI-VC-FwD" userLabel="아이디/비밀번호">
-                                <rect key="frame" x="30" y="268" width="354" height="306"/>
+                                <rect key="frame" x="30" y="295" width="354" height="306"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vJD-KM-FQw">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="44"/>
@@ -84,11 +84,19 @@
                                     <constraint firstItem="PBk-YP-Tre" firstAttribute="centerX" secondItem="yAI-VC-FwD" secondAttribute="centerX" id="kx3-Nc-cUo"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정보를 입력해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNO-7U-cQz">
+                                <rect key="frame" x="138.5" y="236" width="137" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="eNO-7U-cQz" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="8lU-HJ-I6b"/>
                             <constraint firstItem="7dV-FX-3wd" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="HKN-3p-NIS"/>
+                            <constraint firstItem="eNO-7U-cQz" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.55" id="Ktl-KA-X58"/>
                             <constraint firstItem="7dV-FX-3wd" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.4" id="QMX-pX-bTE"/>
                             <constraint firstItem="yAI-VC-FwD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="Qwn-CO-jVs"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yAI-VC-FwD" secondAttribute="trailing" constant="30" id="VR1-lP-TRL"/>
@@ -145,7 +153,7 @@
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="Y6W-OH-hqX" kind="push" id="gba-b8-ZeD"/>
+                                            <action selector="studentBtnDidTap:" destination="gt3-nH-URm" eventType="touchUpInside" id="n75-ly-CVp"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLM-DL-dA5">
@@ -165,6 +173,9 @@
                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="parentBtnDidTap:" destination="gt3-nH-URm" eventType="touchUpInside" id="vl4-sA-YCi"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZn-3G-Og0">
                                         <rect key="frame" x="0.0" y="140" width="354" height="50"/>
@@ -183,6 +194,9 @@
                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="teacherBtnDidTap:" destination="gt3-nH-URm" eventType="touchUpInside" id="0sM-OA-iBW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
