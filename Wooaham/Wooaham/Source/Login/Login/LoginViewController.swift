@@ -9,7 +9,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
     
@@ -21,15 +21,17 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         resetTextField()
     }
-    
+
     // MARK: - 가입하기 버튼 클릭
-    @IBAction func joinBtnDidTap(_ sender: Any) {
+    @IBAction func goToJoinBtnDidTap(_ sender: Any) {
         guard let vc = UIStoryboard(name: Const.Storyboard.Name.joinSB, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.Identifier.authSelectVC) as? AuthSelectViewController else { return }
         presentNVC(vc)
     }
     
     // MARK: - 로그인 버튼 클릭
     @IBAction func loginBtnDidTap(_ sender: Any) {
+        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
+        changeRootViewController(vc)
     }
 
     private func setUI() {
@@ -38,7 +40,7 @@ class LoginViewController: UIViewController {
     }
     
     private func resetTextField() {
-        [nameTextField, passwordTextField].forEach {
+        [idTextField, passwordTextField].forEach {
             $0?.text?.removeAll()
         }
     }
@@ -53,14 +55,14 @@ class LoginViewController: UIViewController {
     }
     
     private func setTextField() {
-        nameTextField.clearButtonMode = .whileEditing
-        [nameTextField, passwordTextField].forEach {
+        idTextField.clearButtonMode = .whileEditing
+        [idTextField, passwordTextField].forEach {
             $0?.addTarget(self, action: #selector(editingChanged(_:)), for: .editingChanged)
         }
     }
     
     @objc func editingChanged(_ textField: UITextField) {
-        if (nameTextField.hasText && passwordTextField.hasText) {
+        if (idTextField.hasText && passwordTextField.hasText) {
             loginBtn.backgroundColor = .mainPink
             loginBtn.isEnabled = true
         } else {
