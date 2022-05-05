@@ -11,6 +11,8 @@ class JoinViewController: UIViewController {
     
     var auth: String?
     
+    lazy var joinAPI = JoinAPI()
+    
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
@@ -23,6 +25,7 @@ class JoinViewController: UIViewController {
     }
 
     @IBAction func joinBtnDidTap(_ sender: Any) {
+        joinAPI.postJoin(JoinRequest(email: idTextField.text ?? "", password: passwordTextField.text ?? "", name: nameTextField.text ?? "", birth: birthTextField.text ?? "", role: auth ?? ""), self)
         guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
         changeRootViewController(vc)
     }
