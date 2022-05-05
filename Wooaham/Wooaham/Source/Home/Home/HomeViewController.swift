@@ -10,6 +10,9 @@ import UIKit
 class HomeViewController: UIViewController {
     
     lazy var mealPlannerOneDayAPI = MealPlannerOneDayAPI()
+    lazy var timeTableOneDayAPI = TimeTableOneDayAPI()
+    
+    var timeTable: [TimeTableOneDayRow]?
     
     @IBOutlet weak var mealTopView: UIView!
     @IBOutlet weak var mealBelowView: UIView!
@@ -31,6 +34,7 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         getMealPlannerOneDayAPI()
+        getTimeTableOneDayAPI()
     }
     
     private func setUI() {
@@ -68,8 +72,11 @@ class HomeViewController: UIViewController {
     
 }
 
-// MARK: - 홈 화면 급식표 API 호출
+// MARK: - 홈 화면 API 호출
+
 extension HomeViewController {
+    
+    // 급식표 API 호출
     private func getMealPlannerOneDayAPI() {
         mealPlannerDateLabel.text = getTodaymmdd()
         mealPlannerOneDayAPI.getMealPlannerOneDay(1, getToday(), self)
@@ -81,6 +88,16 @@ extension HomeViewController {
     
     func didFailMealPlannerOneDay() {
         mealPlannerFood.text = "오늘은 급식이 없습니다. 😢"
+    }
+    
+    // 시간표 API 호출
+    private func getTimeTableOneDayAPI() {
+        timeTableOneDayAPI.getTimeTableOneDay(1, self)
+    }
+    
+    func didSuccessTimeTableOneDay(_ timeTableInfo: [TimeTableOneDayRow]) {
+        timeTable = timeTableInfo
+        timeTableCollectionView.reloadData()
     }
 }
 
@@ -94,7 +111,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch collectionView {
         case timeTableCollectionView:
-            return 7
+            return timeTable?.count ?? 0
         default:
             return 0
         }
@@ -104,6 +121,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         switch collectionView {
         case timeTableCollectionView:
             guard let cell = timeTableCollectionView.dequeueReusableCell(withReuseIdentifier: TIME_CELL, for: indexPath) as? TimeTableCollectionViewCell else { return UICollectionViewCell()}
+            cell.setData(timeTable?[indexPath.row] ?? TimeTableOneDayRow(time: "", grade: "", classNum: "", school: "", subject: ""))
             return cell
         default:
             return UICollectionViewCell()
@@ -113,7 +131,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch collectionView {
         case timeTableCollectionView:
-            return CGSize(width: 70, height: self.timeTableCollectionView.frame.height)
+            return CGSize(width: 80, height: self.timeTableCollectionView.frame.height)
         default:
             return CGSize(width: 0, height: 0)
         }

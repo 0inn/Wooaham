@@ -21,10 +21,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="80" height="75"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Us3-j2-O9p">
-                                <rect key="frame" x="0.0" y="0.0" width="80" height="35"/>
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1교시" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Us-Mp-wsa">
-                                        <rect key="frame" x="23.5" y="8.5" width="33.5" height="18"/>
+                                        <rect key="frame" x="23.5" y="6" width="33.5" height="18"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -32,7 +32,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.7725490196" green="0.89411764709999997" blue="0.69411764710000001" alpha="0.79700434600000003" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="HWy-3a-DgC"/>
+                                    <constraint firstAttribute="height" constant="30" id="HWy-3a-DgC"/>
                                     <constraint firstItem="6Us-Mp-wsa" firstAttribute="centerY" secondItem="Us3-j2-O9p" secondAttribute="centerY" id="QZK-gI-7w5"/>
                                     <constraint firstItem="6Us-Mp-wsa" firstAttribute="centerX" secondItem="Us3-j2-O9p" secondAttribute="centerX" id="zwg-7G-TgC"/>
                                 </constraints>
@@ -42,8 +42,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="국어" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCu-wg-oZD">
-                                <rect key="frame" x="27" y="43.5" width="26" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="국어" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCu-wg-oZD">
+                                <rect key="frame" x="12.5" y="41.5" width="55" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="TKz-Rj-KHc"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -53,9 +56,9 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Us3-j2-O9p" secondAttribute="trailing" id="0eC-oZ-X8e"/>
                             <constraint firstItem="Us3-j2-O9p" firstAttribute="leading" secondItem="ucA-DP-XYQ" secondAttribute="leading" id="2gl-9K-QWp"/>
-                            <constraint firstItem="HCu-wg-oZD" firstAttribute="centerX" secondItem="ucA-DP-XYQ" secondAttribute="centerX" id="Ck9-Hg-I4w"/>
+                            <constraint firstItem="HCu-wg-oZD" firstAttribute="centerY" secondItem="ucA-DP-XYQ" secondAttribute="centerY" multiplier="1.35" id="9VH-aX-Qgz"/>
+                            <constraint firstItem="HCu-wg-oZD" firstAttribute="centerX" secondItem="ucA-DP-XYQ" secondAttribute="centerX" id="EI4-gG-Lkq"/>
                             <constraint firstItem="Us3-j2-O9p" firstAttribute="top" secondItem="ucA-DP-XYQ" secondAttribute="top" id="PPX-Vs-juw"/>
-                            <constraint firstItem="HCu-wg-oZD" firstAttribute="centerY" secondItem="ucA-DP-XYQ" secondAttribute="centerY" multiplier="1.4" id="rME-LY-T3B"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -79,9 +82,11 @@
                 <constraint firstAttribute="bottom" secondItem="ucA-DP-XYQ" secondAttribute="bottom" id="vDN-ld-YOD"/>
             </constraints>
             <connections>
+                <outlet property="subjectLabel" destination="HCu-wg-oZD" id="pHB-up-Tq6"/>
+                <outlet property="timeLabel" destination="6Us-Mp-wsa" id="A9n-vE-kF9"/>
                 <outlet property="topView" destination="Us3-j2-O9p" id="wrk-5V-kQY"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
+            <point key="canvasLocation" x="137.68115942028987" y="109.48660714285714"/>
         </collectionViewCell>
     </objects>
     <resources>

@@ -68,11 +68,11 @@
 		A932749D28031604001B0EDB /* AlarmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932749C28031604001B0EDB /* AlarmDataManager.swift */; };
 		A932749F2803FD50001B0EDB /* Notice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A932749E2803FD50001B0EDB /* Notice.storyboard */; };
 		A93274A12804007B001B0EDB /* MealPlanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93274A02804007B001B0EDB /* MealPlanner.storyboard */; };
-		A93274A828041A12001B0EDB /* MealDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93274A628041A12001B0EDB /* MealDetailCollectionViewCell.swift */; };
-		A93274A928041A12001B0EDB /* MealDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A93274A728041A12001B0EDB /* MealDetailCollectionViewCell.xib */; };
 		A996E4AD2823A41600926DDC /* JoinAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A996E4AC2823A41600926DDC /* JoinAPI.swift */; };
 		A996E4B12823A48000926DDC /* JoinRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A996E4B02823A48000926DDC /* JoinRequest.swift */; };
 		A996E4B32823A9F600926DDC /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A996E4B22823A9F600926DDC /* LoginAPI.swift */; };
+		A996E4B62823B57800926DDC /* TimeTableOneDayAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A996E4B52823B57800926DDC /* TimeTableOneDayAPI.swift */; };
+		A996E4B92823B5B400926DDC /* TimeTableResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A996E4B82823B5B400926DDC /* TimeTableResponse.swift */; };
 		A99D212E281C0D2D0042F4BE /* MealPlannerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99D212D281C0D2D0042F4BE /* MealPlannerResponse.swift */; };
 		A99D2133281C0F190042F4BE /* MealPlannerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99D2132281C0F190042F4BE /* MealPlannerAPI.swift */; };
 		A9AD1A6028191C740070F9AE /* NoticeDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9AD1A5F28191C740070F9AE /* NoticeDetail.storyboard */; };
@@ -184,11 +184,11 @@
 		A932749C28031604001B0EDB /* AlarmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDataManager.swift; sourceTree = "<group>"; };
 		A932749E2803FD50001B0EDB /* Notice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notice.storyboard; sourceTree = "<group>"; };
 		A93274A02804007B001B0EDB /* MealPlanner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MealPlanner.storyboard; sourceTree = "<group>"; };
-		A93274A628041A12001B0EDB /* MealDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailCollectionViewCell.swift; sourceTree = "<group>"; };
-		A93274A728041A12001B0EDB /* MealDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MealDetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		A996E4AC2823A41600926DDC /* JoinAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinAPI.swift; sourceTree = "<group>"; };
 		A996E4B02823A48000926DDC /* JoinRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRequest.swift; sourceTree = "<group>"; };
 		A996E4B22823A9F600926DDC /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
+		A996E4B52823B57800926DDC /* TimeTableOneDayAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableOneDayAPI.swift; sourceTree = "<group>"; };
+		A996E4B82823B5B400926DDC /* TimeTableResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableResponse.swift; sourceTree = "<group>"; };
 		A99D212D281C0D2D0042F4BE /* MealPlannerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerResponse.swift; sourceTree = "<group>"; };
 		A99D2132281C0F190042F4BE /* MealPlannerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerAPI.swift; sourceTree = "<group>"; };
 		A9AD1A5F28191C740070F9AE /* NoticeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NoticeDetail.storyboard; sourceTree = "<group>"; };
@@ -286,6 +286,7 @@
 				A9CEF42828157C9600B7B25B /* HomeworkModels */,
 				A9BB8EB1281267BF004F2990 /* NoticeModels */,
 				A99D212C281C0D1D0042F4BE /* MealPlannerModels */,
+				A996E4B72823B59100926DDC /* TimeTableModels */,
 				A90900D4280C240400089CCA /* AlarmModels */,
 			);
 			path = APIModels;
@@ -298,6 +299,7 @@
 				A9CEF42D2815806200B7B25B /* HomeworkAPIs */,
 				A9BB8EB0281267A0004F2990 /* NoticeAPIs */,
 				A99D2131281C0F070042F4BE /* MealPlannerAPIs */,
+				A996E4B42823B56500926DDC /* TimeTableAPI */,
 				A90900D0280C238C00089CCA /* AlarmAPIs */,
 			);
 			path = APIServices;
@@ -504,8 +506,6 @@
 			children = (
 				A93274A02804007B001B0EDB /* MealPlanner.storyboard */,
 				A93273E627FEEC27001B0EDB /* MealPlannerViewController.swift */,
-				A93274A728041A12001B0EDB /* MealDetailCollectionViewCell.xib */,
-				A93274A628041A12001B0EDB /* MealDetailCollectionViewCell.swift */,
 			);
 			path = MealPlanner;
 			sourceTree = "<group>";
@@ -545,6 +545,22 @@
 				A996E4B02823A48000926DDC /* JoinRequest.swift */,
 			);
 			path = LoginModels;
+			sourceTree = "<group>";
+		};
+		A996E4B42823B56500926DDC /* TimeTableAPI */ = {
+			isa = PBXGroup;
+			children = (
+				A996E4B52823B57800926DDC /* TimeTableOneDayAPI.swift */,
+			);
+			path = TimeTableAPI;
+			sourceTree = "<group>";
+		};
+		A996E4B72823B59100926DDC /* TimeTableModels */ = {
+			isa = PBXGroup;
+			children = (
+				A996E4B82823B5B400926DDC /* TimeTableResponse.swift */,
+			);
+			path = TimeTableModels;
 			sourceTree = "<group>";
 		};
 		A99D212C281C0D1D0042F4BE /* MealPlannerModels */ = {
@@ -995,7 +1011,6 @@
 				A932738427F9C83E001B0EDB /* Assets.xcassets in Resources */,
 				A93273E427FEEA0E001B0EDB /* NoticeCollectionViewCell.xib in Resources */,
 				A9CEF42728157B6D00B7B25B /* HomeworkTableViewCell.xib in Resources */,
-				A93274A928041A12001B0EDB /* MealDetailCollectionViewCell.xib in Resources */,
 				A9AD1A6C281929640070F9AE /* WriteNotice.storyboard in Resources */,
 				A932738227F9C83D001B0EDB /* Main.storyboard in Resources */,
 				A9AD1AC7281BE4910070F9AE /* SmallHomeworkTableViewCell.xib in Resources */,
@@ -1052,6 +1067,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9AD1A6528191DC20070F9AE /* NoticeDetailAPI.swift in Sources */,
+				A996E4B92823B5B400926DDC /* TimeTableResponse.swift in Sources */,
 				A93273BF27FC1A82001B0EDB /* UITabBarController+.swift in Sources */,
 				A92D82C22822514900DB796E /* LoginViewController.swift in Sources */,
 				A9AD1A97281961200070F9AE /* EditHomeworkResponse.swift in Sources */,
@@ -1061,7 +1077,6 @@
 				A93273CC27FEBD28001B0EDB /* MapViewController.swift in Sources */,
 				A9AD1AA8281A74920070F9AE /* ReadNoticeAPI.swift in Sources */,
 				A93273B427F9F6D2001B0EDB /* AddSchoolViewController.swift in Sources */,
-				A93274A828041A12001B0EDB /* MealDetailCollectionViewCell.swift in Sources */,
 				A932739D27F9D222001B0EDB /* AuthSelectViewController.swift in Sources */,
 				A9AD1A9A281A64BC0070F9AE /* DeleteNoticeAPI.swift in Sources */,
 				A93273D327FEC7E2001B0EDB /* HomeViewController.swift in Sources */,
@@ -1114,6 +1129,7 @@
 				A932739927F9CEE6001B0EDB /* UIColor+.swift in Sources */,
 				A90900882805CDB300089CCA /* Storyboard.swift in Sources */,
 				A9AD1A94281960720070F9AE /* EditHomeworkAPI.swift in Sources */,
+				A996E4B62823B57800926DDC /* TimeTableOneDayAPI.swift in Sources */,
 				A9AD1A73281933FC0070F9AE /* WriteNoticeAPI.swift in Sources */,
 				A9AD1AA5281A745B0070F9AE /* Response.swift in Sources */,
 				A9AD1A91281956B80070F9AE /* HomeworkCheckAPI.swift in Sources */,
