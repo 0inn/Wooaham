@@ -1,31 +1,31 @@
 //
-//  TimeTableResponse.swift
+//  TimeTableOneDayResponse.swift
 //  Wooaham
 //
-//  Created by 김영인 on 2022/05/06.
+//  Created by 김영인 on 2022/05/05.
 //
 
 import Foundation
 
-struct TimeTableResponse: Codable {
-    let elsTimetable: [TimeTableInfo]!
+struct TimeTableOneDayResponse: Codable {
+    let elsTimetable: [TimeTableOneDayInfo]!
 }
 
-struct TimeTableInfo: Codable {
-    let head: [TimeTableHead]!
-    let row: [[TimeTableRow]]!
+struct TimeTableOneDayInfo: Codable {
+    let head: [TimeTableOneDayHead]!
+    let row: [TimeTableOneDayRow]!
 }
 
-struct TimeTableHead: Codable {
+struct TimeTableOneDayHead: Codable {
     let list_total_count: Int?
-    let RESULT: TimeTableResult!
+    let RESULT: TimeTableOneDayResult!
 }
 
-struct TimeTableResult: Codable {
+struct TimeTableOneDayResult: Codable {
     let MESSAGE, CODE: String
 }
 
-struct TimeTableRow: Codable {
+struct TimeTableOneDayRow: Codable {
     let time: String
     let grade: String
     let classNum: String

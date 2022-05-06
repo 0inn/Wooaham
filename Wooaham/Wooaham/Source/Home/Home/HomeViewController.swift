@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var academyHomeworkView: UIView!
     
     let TIME_CELL = "TimeTableCollectionViewCell"
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -131,7 +131,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch collectionView {
         case timeTableCollectionView:
-            return CGSize(width: 80, height: self.timeTableCollectionView.frame.height)
+            if timeTable?[indexPath.row].subject.count ?? 0 >= 5 {
+                return CGSize(width: 90, height: self.timeTableCollectionView.frame.height)
+            } else {
+                return CGSize(width: 75, height: self.timeTableCollectionView.frame.height)
+            }
         default:
             return CGSize(width: 0, height: 0)
         }
