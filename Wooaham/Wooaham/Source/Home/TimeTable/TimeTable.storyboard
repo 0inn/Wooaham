@@ -16,14 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시간표" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QM3-mK-sLg">
-                                <rect key="frame" x="185" y="54" width="44.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QM3-mK-sLg">
+                                <rect key="frame" x="207" y="54" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="BzK-PP-bys" userLabel="시간표">
-                                <rect key="frame" x="20" y="94.5" width="374" height="551"/>
+                                <rect key="frame" x="20" y="74" width="374" height="551"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hag-pJ-hea" userLabel="요일">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="57.5"/>
@@ -975,6 +975,7 @@
                         <outlet property="thur4" destination="2bw-JU-U0C" id="GVv-sZ-Chy"/>
                         <outlet property="thur5" destination="C9x-ub-djc" id="pHl-T1-kKF"/>
                         <outlet property="thur6" destination="LkT-Fs-5VN" id="Faj-Bh-yb5"/>
+                        <outlet property="timeTableTitle" destination="QM3-mK-sLg" id="Tmp-D2-DcT"/>
                         <outlet property="tue1" destination="bIF-tj-17M" id="cJl-eA-kHk"/>
                         <outlet property="tue2" destination="XnZ-Sy-ygV" id="b8a-I6-osc"/>
                         <outlet property="tue3" destination="hJx-ms-ghU" id="AtB-MH-Mxh"/>

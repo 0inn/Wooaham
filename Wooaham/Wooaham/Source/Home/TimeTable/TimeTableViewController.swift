@@ -13,6 +13,8 @@ class TimeTableViewController: UIViewController {
     var timeTable: [[TimeTableRow]]?
     var week: [[UILabel]] = [[]]
     
+    @IBOutlet weak var timeTableTitle: UILabel!
+    
     @IBOutlet weak var monView: UIView!
     @IBOutlet weak var friView: UIView!
     
@@ -86,9 +88,10 @@ class TimeTableViewController: UIViewController {
             for j in 0...5 {
                 week[i][j].text = ""
                 week[i][j].numberOfLines = 0
-                week[i][j].font = .systemFont(ofSize: 13, weight: .regular)
+                week[i][j].font = .systemFont(ofSize: 12.5, weight: .regular)
             }
         }
+        timeTableTitle.text = "\(getTodayTitle()) 시간표"
     }
     
     private func setTimeTable() {
