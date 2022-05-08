@@ -33,7 +33,7 @@ class JoinAPI {
                 delegate.didSuccessJoin()
             case .failure:
                 let decoder = JSONDecoder()
-                if let data = response.data, let error = try? decoder.decode(JoinErrorResponse.self, from: data) {
+                if let data = response.data, let error = try? decoder.decode(ErrorResponse.self, from: data) {
                     delegate.failedToRequestJoin(error.message ?? "회원가입에 실패하였습니다.")
                 }
             }

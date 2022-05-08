@@ -8,6 +8,8 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    lazy var loginAPI = LoginAPI()
 
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -30,8 +32,10 @@ class LoginViewController: UIViewController {
     
     // MARK: - 로그인 버튼 클릭
     @IBAction func loginBtnDidTap(_ sender: Any) {
-        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
-        changeRootViewController(vc)
+        guard let id = idTextField.text, let pw = passwordTextField.text else {
+            return
+        }
+        loginAPI.postlogin(email: id, password: pw, self)
     }
 
     private func setUI() {
@@ -71,4 +75,16 @@ class LoginViewController: UIViewController {
         }
     }
     
+}
+
+//MARK: - 로그인 API 연동
+extension LoginViewController {
+    func didSuccessLogin() {
+        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
+        changeRootViewController(vc)
+    }
+    
+    func failedToRequestLogin(_ msg: String) {
+        presentAlert(title: msg)
+    }
 }
