@@ -20,7 +20,9 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var mealPlannerDateLabel: UILabel!
     @IBOutlet weak var mealPlannerFood: UITextView!
     
+    @IBOutlet weak var noTimeTableLabel: UILabel!
     @IBOutlet weak var timeTableCollectionView: UICollectionView!
+    
     
     @IBOutlet weak var schoolHomeworkView: UIView!
     @IBOutlet weak var academyHomeworkView: UIView!
@@ -96,8 +98,13 @@ extension HomeViewController {
     }
     
     func didSuccessTimeTableOneDay(_ timeTableInfo: [TimeTableOneDayRow]) {
+        noTimeTableLabel.text?.removeAll()
         timeTable = timeTableInfo
         timeTableCollectionView.reloadData()
+    }
+    
+    func failToRequestTimeTableOneDay() {
+        noTimeTableLabel.text = "오늘은 수업이 없습니다."
     }
 }
 

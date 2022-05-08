@@ -26,7 +26,11 @@ class TimeTableOneDayAPI{
         .responseDecodable(of: TimeTableOneDayResponse.self) { (response) in
             switch response.result {
             case .success(let response):
-                delegate.didSuccessTimeTableOneDay(response.elsTimetable[1].row)
+                guard let info = response.elsTimetable?[1].row else {
+                    delegate.failToRequestTimeTableOneDay()
+                    return
+                }
+                delegate.didSuccessTimeTableOneDay(info)
                 print("🔥\(response)")
             case .failure(let error):
                 print("🔥\(error)")

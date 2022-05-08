@@ -69,6 +69,7 @@
 		A932749F2803FD50001B0EDB /* Notice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A932749E2803FD50001B0EDB /* Notice.storyboard */; };
 		A93274A12804007B001B0EDB /* MealPlanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93274A02804007B001B0EDB /* MealPlanner.storyboard */; };
 		A93740EC2827846F006FCC32 /* JoinResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93740EB2827846F006FCC32 /* JoinResponse.swift */; };
+		A93740F028279A70006FCC32 /* SearchSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93740EF28279A70006FCC32 /* SearchSchoolViewController.swift */; };
 		A975743D2824EB530044D774 /* TimeTableResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A975743C2824EB530044D774 /* TimeTableResponse.swift */; };
 		A996E4AD2823A41600926DDC /* JoinAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A996E4AC2823A41600926DDC /* JoinAPI.swift */; };
 		A996E4B12823A48000926DDC /* JoinRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A996E4B02823A48000926DDC /* JoinRequest.swift */; };
@@ -188,6 +189,7 @@
 		A932749E2803FD50001B0EDB /* Notice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notice.storyboard; sourceTree = "<group>"; };
 		A93274A02804007B001B0EDB /* MealPlanner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MealPlanner.storyboard; sourceTree = "<group>"; };
 		A93740EB2827846F006FCC32 /* JoinResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinResponse.swift; sourceTree = "<group>"; };
+		A93740EF28279A70006FCC32 /* SearchSchoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSchoolViewController.swift; sourceTree = "<group>"; };
 		A975743C2824EB530044D774 /* TimeTableResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableResponse.swift; sourceTree = "<group>"; };
 		A996E4AC2823A41600926DDC /* JoinAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinAPI.swift; sourceTree = "<group>"; };
 		A996E4B02823A48000926DDC /* JoinRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRequest.swift; sourceTree = "<group>"; };
@@ -458,6 +460,7 @@
 				A93273AF27F9E8BB001B0EDB /* MyPage.storyboard */,
 				A93273A327F9DD1C001B0EDB /* MyPageViewController.swift */,
 				A93273B127F9ED1E001B0EDB /* ProfileEditViewController.swift */,
+				A93740EF28279A70006FCC32 /* SearchSchoolViewController.swift */,
 				A93273B327F9F6D2001B0EDB /* AddSchoolViewController.swift */,
 			);
 			path = MyPage;
@@ -1113,6 +1116,7 @@
 				A93273BD27FC180C001B0EDB /* AlarmViewController.swift in Sources */,
 				A93273B227F9ED1E001B0EDB /* ProfileEditViewController.swift in Sources */,
 				A9AD1A6A281921FD0070F9AE /* UINavigationController+.swift in Sources */,
+				A93740F028279A70006FCC32 /* SearchSchoolViewController.swift in Sources */,
 				A9AD1A6228191C860070F9AE /* NoticeDetailViewController.swift in Sources */,
 				A996E4B32823A9F600926DDC /* LoginAPI.swift in Sources */,
 				A9AD1A71281933BB0070F9AE /* WriteNoticeRequest.swift in Sources */,

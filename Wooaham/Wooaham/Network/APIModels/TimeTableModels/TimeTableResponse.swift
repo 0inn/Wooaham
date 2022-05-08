@@ -8,12 +8,12 @@
 import Foundation
 
 struct TimeTableResponse: Codable {
-    let elsTimetable: [TimeTableInfo]!
+    let elsTimetable: [TimeTableInfo]?
 }
 
 struct TimeTableInfo: Codable {
-    let head: [TimeTableHead]!
-    let row: [[TimeTableRow]]!
+    let head: [TimeTableHead]?
+    let row: [[TimeTableRow]]?
 }
 
 struct TimeTableHead: Codable {
