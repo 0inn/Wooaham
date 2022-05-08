@@ -63,7 +63,7 @@ extension JoinViewController {
         changeRootViewController(vc)
     }
     
-    func failedToRequestJoin() {
-        self.presentAlert(title: "회원가입에 실패하였습니다.")
+    func failedToRequestJoin(_ msg: String) {
+        self.presentAlert(title: msg)
     }
 }

@@ -27,21 +27,18 @@ class JoinAPI {
                    encoding: JSONEncoding.default,
                    headers: nil)
         .validate()
-        .responseDecodable(of: JoinResponse.self) { (response) in
+        .response { response in
             switch response.result {
-            case .success(let response):
-                if response.success {
-                    delegate.didSuccessJoin()
-                    print("🔥\(response)")
-                } else {
-                    delegate.failedToRequestJoin()
+            case .success:
+                delegate.didSuccessJoin()
+            case .failure:
+                let decoder = JSONDecoder()
+                if let data = response.data, let error = try? decoder.decode(JoinErrorResponse.self, from: data) {
+                    delegate.failedToRequestJoin(error.message ?? "회원가입에 실패하였습니다.")
                 }
-                print("🔥\(response)")
-            case .failure(let error):
-                print("🔥\(error)")
             }
+            
         }
-
-        
     }
+    
 }
