@@ -27,6 +27,21 @@ class JoinAPI {
                    encoding: JSONEncoding.default,
                    headers: nil)
         .validate()
+        .responseDecodable(of: JoinResponse.self) { (response) in
+            switch response.result {
+            case .success(let response):
+                if response.success {
+                    delegate.didSuccessJoin()
+                    print("🔥\(response)")
+                } else {
+                    delegate.failedToRequestJoin()
+                }
+                print("🔥\(response)")
+            case .failure(let error):
+                print("🔥\(error)")
+            }
+        }
+
         
     }
 }

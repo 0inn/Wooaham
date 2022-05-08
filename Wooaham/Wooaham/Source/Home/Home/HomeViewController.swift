@@ -87,7 +87,7 @@ extension HomeViewController {
     }
     
     func didFailMealPlannerOneDay() {
-        mealPlannerFood.text = "오늘은 급식이 없습니다. 😢"
+        mealPlannerFood.text = "오늘은 급식이 없습니다."
     }
     
     // 시간표 API 호출

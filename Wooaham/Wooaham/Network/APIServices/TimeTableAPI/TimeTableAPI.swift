@@ -13,9 +13,13 @@ class TimeTableAPI{
         
         let url = "\(Const.URL.BASE_URL)/info/timetable/\(userId)"
         
+        let param: [String: Any] = [
+            "startDay": getToday()
+        ]
+        
         AF.request(url,
                    method: .get,
-                   parameters: nil,
+                   parameters: param,
                    encoding: URLEncoding.queryString,
                    headers: nil)
         .validate()

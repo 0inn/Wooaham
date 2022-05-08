@@ -26,8 +26,6 @@ class JoinViewController: UIViewController {
 
     @IBAction func joinBtnDidTap(_ sender: Any) {
         joinAPI.postJoin(JoinRequest(email: idTextField.text ?? "", password: passwordTextField.text ?? "", name: nameTextField.text ?? "", birth: birthTextField.text ?? "", role: auth ?? ""), self)
-        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
-        changeRootViewController(vc)
     }
     
     private func setUI() {
@@ -57,4 +55,15 @@ class JoinViewController: UIViewController {
         }
     }
 
+}
+
+extension JoinViewController {
+    func didSuccessJoin() {
+        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
+        changeRootViewController(vc)
+    }
+    
+    func failedToRequestJoin() {
+        self.presentAlert(title: "회원가입에 실패하였습니다.")
+    }
 }

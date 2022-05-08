@@ -211,9 +211,17 @@
                                                             <action selector="timetableBtnClick:" destination="9d0-J8-u9r" eventType="touchUpInside" id="aKf-nA-UlE"/>
                                                         </connections>
                                                     </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘은 수업이 없습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bN-eb-8pe">
+                                                        <rect key="frame" x="136" y="66" width="142" height="18"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstItem="5bN-eb-8pe" firstAttribute="centerY" secondItem="Yml-fZ-KQi" secondAttribute="centerY" id="5au-F4-6vI"/>
+                                                    <constraint firstItem="5bN-eb-8pe" firstAttribute="centerX" secondItem="Yml-fZ-KQi" secondAttribute="centerX" id="9O3-Ds-C8v"/>
                                                     <constraint firstAttribute="trailing" secondItem="anY-Jc-tKx" secondAttribute="trailing" id="AtT-Bg-fLO"/>
                                                     <constraint firstAttribute="bottom" secondItem="anY-Jc-tKx" secondAttribute="bottom" constant="20" id="GnK-fg-fRC"/>
                                                     <constraint firstItem="9qP-qq-c7q" firstAttribute="leading" secondItem="vLk-c8-r6l" secondAttribute="trailing" id="NaO-Ue-frg"/>
