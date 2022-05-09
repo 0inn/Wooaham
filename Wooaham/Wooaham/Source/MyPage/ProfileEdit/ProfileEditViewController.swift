@@ -11,6 +11,12 @@ class ProfileEditViewController: UIViewController {
 
     @IBOutlet weak var schoolView: UIView!
     
+    @IBOutlet weak var profileImgLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var roleLabel: UILabel!
+    @IBOutlet weak var schoolLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBar()
@@ -19,7 +25,7 @@ class ProfileEditViewController: UIViewController {
     
     // 학교 등록 페이지로 이동
     @objc func addSchool(_ sender: Any) {
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddSchoolViewController") else { return }
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SearchSchoolViewController") else { return }
         self.presentNVC(vc)
     }
     
