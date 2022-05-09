@@ -27,9 +27,11 @@ class LoginAPI {
         .responseDecodable(of: LoginResponse.self) { response in
             switch response.result {
             case .success(let response):
-                let accessToken = response.data?.jwt
+                guard let accessToken = response.data?.jwt else { return }
+                guard let userId = response.data?.userId else { return }
                 let token = TokenUtils()
-                token.create(url, account: "accessToken", value: accessToken ?? "")
+                token.create(url, userId: userId, jwt: accessToken)
+                UserId.shared.userId = userId
                 delegate.didSuccessLogin()
             case .failure:
                 let decoder = JSONDecoder()

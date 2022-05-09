@@ -10,13 +10,13 @@ import Alamofire
  
 class TokenUtils {
     
-    func create(_ service: String, account: String, value: String) {
+    func create(_ service: String, userId: CLong, jwt: String) {
         
         let keyChainQuery: NSDictionary = [
             kSecClass : kSecClassGenericPassword,
             kSecAttrService: service,
-            kSecAttrAccount: account,
-            kSecValueData: value.data(using: .utf8, allowLossyConversion: false)!
+            kSecAttrAccount: userId,
+            kSecValueData: jwt.data(using: .utf8, allowLossyConversion: false)!
         ]
         
         SecItemDelete(keyChainQuery)
@@ -25,11 +25,11 @@ class TokenUtils {
         assert(status == noErr, "failed to saving Token")
     }
     
-    func read(_ service: String, account: String) -> String? {
+    func read(_ service: String, userId: CLong) -> String? {
         let KeyChainQuery: NSDictionary = [
             kSecClass: kSecClassGenericPassword,
             kSecAttrService: service,
-            kSecAttrAccount: account,
+            kSecAttrAccount: userId,
             kSecReturnData: kCFBooleanTrue,
             kSecMatchLimit: kSecMatchLimitOne
         ]
@@ -47,11 +47,11 @@ class TokenUtils {
         }
     }
     
-    func delete(_ service: String, account: String) {
+    func delete(_ service: String, userId: CLong) {
         let keyChainQuery: NSDictionary = [
             kSecClass: kSecClassGenericPassword,
             kSecAttrService: service,
-            kSecAttrAccount: account
+            kSecAttrAccount: userId
         ]
         
         let status = SecItemDelete(keyChainQuery)
@@ -59,9 +59,9 @@ class TokenUtils {
     }
     
     // header에 jwt 넣는 함수
-    func getAuthorizationHeader(serviceID: String) -> HTTPHeaders? {
+    func getAuthorizationHeader(serviceID: String, userId: CLong) -> HTTPHeaders? {
         let serviceID = serviceID
-        if let accessToken = self.read(serviceID, account: "accessToken") {
+        if let accessToken = self.read(serviceID, userId: userId) {
             return ["ACCESS-TOKEN" : "\(accessToken)"] as HTTPHeaders
         } else {
             return nil

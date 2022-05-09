@@ -11,7 +11,7 @@
 		A90900842805CD4800089CCA /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900832805CD4800089CCA /* URL.swift */; };
 		A90900862805CDAA00089CCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900852805CDAA00089CCA /* ViewController.swift */; };
 		A90900882805CDB300089CCA /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900872805CDB200089CCA /* Storyboard.swift */; };
-		A909008C2807F40800089CCA /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909008B2807F40800089CCA /* Functions.swift */; };
+		A909008C2807F40800089CCA /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909008B2807F40800089CCA /* DateUtil.swift */; };
 		A909008E2809348000089CCA /* AlarmDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909008D2809348000089CCA /* AlarmDetailResponse.swift */; };
 		A90900902809358600089CCA /* AlarmDetailDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909008F2809358600089CCA /* AlarmDetailDataManager.swift */; };
 		A909009228093AEF00089CCA /* AlarmDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909009128093AEF00089CCA /* AlarmDetail.swift */; };
@@ -70,6 +70,13 @@
 		A93274A12804007B001B0EDB /* MealPlanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93274A02804007B001B0EDB /* MealPlanner.storyboard */; };
 		A93740EC2827846F006FCC32 /* JoinResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93740EB2827846F006FCC32 /* JoinResponse.swift */; };
 		A93740F028279A70006FCC32 /* SearchSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93740EF28279A70006FCC32 /* SearchSchoolViewController.swift */; };
+		A93740F22827A2F9006FCC32 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93740F12827A2F9006FCC32 /* ErrorResponse.swift */; };
+		A93740F42827B1FC006FCC32 /* TokenUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93740F32827B1FC006FCC32 /* TokenUtil.swift */; };
+		A93740F82827B375006FCC32 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93740F72827B375006FCC32 /* LoginResponse.swift */; };
+		A93740FE2827C19F006FCC32 /* MyPageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93740FD2827C19F006FCC32 /* MyPageAPI.swift */; };
+		A93741032827C2BF006FCC32 /* setUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741022827C2BF006FCC32 /* setUtil.swift */; };
+		A93741062827C59C006FCC32 /* MyPageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741052827C59C006FCC32 /* MyPageResponse.swift */; };
+		A93741082827CE40006FCC32 /* UserId.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741072827CE40006FCC32 /* UserId.swift */; };
 		A975743D2824EB530044D774 /* TimeTableResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A975743C2824EB530044D774 /* TimeTableResponse.swift */; };
 		A996E4AD2823A41600926DDC /* JoinAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A996E4AC2823A41600926DDC /* JoinAPI.swift */; };
 		A996E4B12823A48000926DDC /* JoinRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A996E4B02823A48000926DDC /* JoinRequest.swift */; };
@@ -129,7 +136,7 @@
 		A90900832805CD4800089CCA /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
 		A90900852805CDAA00089CCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A90900872805CDB200089CCA /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
-		A909008B2807F40800089CCA /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		A909008B2807F40800089CCA /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 		A909008D2809348000089CCA /* AlarmDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDetailResponse.swift; sourceTree = "<group>"; };
 		A909008F2809358600089CCA /* AlarmDetailDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDetailDataManager.swift; sourceTree = "<group>"; };
 		A909009128093AEF00089CCA /* AlarmDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDetail.swift; sourceTree = "<group>"; };
@@ -190,6 +197,13 @@
 		A93274A02804007B001B0EDB /* MealPlanner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MealPlanner.storyboard; sourceTree = "<group>"; };
 		A93740EB2827846F006FCC32 /* JoinResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinResponse.swift; sourceTree = "<group>"; };
 		A93740EF28279A70006FCC32 /* SearchSchoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSchoolViewController.swift; sourceTree = "<group>"; };
+		A93740F12827A2F9006FCC32 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		A93740F32827B1FC006FCC32 /* TokenUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUtil.swift; sourceTree = "<group>"; };
+		A93740F72827B375006FCC32 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		A93740FD2827C19F006FCC32 /* MyPageAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageAPI.swift; sourceTree = "<group>"; };
+		A93741022827C2BF006FCC32 /* setUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setUtil.swift; sourceTree = "<group>"; };
+		A93741052827C59C006FCC32 /* MyPageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageResponse.swift; sourceTree = "<group>"; };
+		A93741072827CE40006FCC32 /* UserId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserId.swift; sourceTree = "<group>"; };
 		A975743C2824EB530044D774 /* TimeTableResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableResponse.swift; sourceTree = "<group>"; };
 		A996E4AC2823A41600926DDC /* JoinAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinAPI.swift; sourceTree = "<group>"; };
 		A996E4B02823A48000926DDC /* JoinRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRequest.swift; sourceTree = "<group>"; };
@@ -290,12 +304,14 @@
 			isa = PBXGroup;
 			children = (
 				A9AD1AA4281A745B0070F9AE /* Response.swift */,
+				A93740F12827A2F9006FCC32 /* ErrorResponse.swift */,
 				A996E4AF2823A46B00926DDC /* LoginModels */,
 				A9CEF42828157C9600B7B25B /* HomeworkModels */,
 				A9BB8EB1281267BF004F2990 /* NoticeModels */,
 				A99D212C281C0D1D0042F4BE /* MealPlannerModels */,
 				A996E4B72823B59100926DDC /* TimeTableModels */,
 				A90900D4280C240400089CCA /* AlarmModels */,
+				A93741042827C589006FCC32 /* MyPageModels */,
 			);
 			path = APIModels;
 			sourceTree = "<group>";
@@ -309,6 +325,7 @@
 				A99D2131281C0F070042F4BE /* MealPlannerAPIs */,
 				A996E4B42823B56500926DDC /* TimeTableAPI */,
 				A90900D0280C238C00089CCA /* AlarmAPIs */,
+				A93740FC2827C09F006FCC32 /* MyPageAPIs */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -409,7 +426,9 @@
 		A932739027F9CD69001B0EDB /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				A909008B2807F40800089CCA /* Functions.swift */,
+				A93741012827C295006FCC32 /* setUtil */,
+				A93741002827C283006FCC32 /* DateUtil */,
+				A93740FF2827C27B006FCC32 /* TokenUtil */,
 				A932739127F9CD78001B0EDB /* Extension */,
 			);
 			path = Util;
@@ -458,10 +477,9 @@
 			isa = PBXGroup;
 			children = (
 				A93273AF27F9E8BB001B0EDB /* MyPage.storyboard */,
-				A93273A327F9DD1C001B0EDB /* MyPageViewController.swift */,
-				A93273B127F9ED1E001B0EDB /* ProfileEditViewController.swift */,
-				A93740EF28279A70006FCC32 /* SearchSchoolViewController.swift */,
-				A93273B327F9F6D2001B0EDB /* AddSchoolViewController.swift */,
+				A93740F92827BFAF006FCC32 /* Profile */,
+				A93740FB2827BFD9006FCC32 /* ProfileEdit */,
+				A93740FA2827BFC1006FCC32 /* MyPageSchool */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -543,8 +561,91 @@
 		A93740EA282782DF006FCC32 /* Secret */ = {
 			isa = PBXGroup;
 			children = (
+				A93741072827CE40006FCC32 /* UserId.swift */,
 			);
 			path = Secret;
+			sourceTree = "<group>";
+		};
+		A93740F52827B358006FCC32 /* LoginModels */ = {
+			isa = PBXGroup;
+			children = (
+				A93740F72827B375006FCC32 /* LoginResponse.swift */,
+			);
+			path = LoginModels;
+			sourceTree = "<group>";
+		};
+		A93740F62827B35E006FCC32 /* JoinModels */ = {
+			isa = PBXGroup;
+			children = (
+				A996E4B02823A48000926DDC /* JoinRequest.swift */,
+				A93740EB2827846F006FCC32 /* JoinResponse.swift */,
+			);
+			path = JoinModels;
+			sourceTree = "<group>";
+		};
+		A93740F92827BFAF006FCC32 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A93273A327F9DD1C001B0EDB /* MyPageViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		A93740FA2827BFC1006FCC32 /* MyPageSchool */ = {
+			isa = PBXGroup;
+			children = (
+				A93740EF28279A70006FCC32 /* SearchSchoolViewController.swift */,
+				A93273B327F9F6D2001B0EDB /* AddSchoolViewController.swift */,
+			);
+			path = MyPageSchool;
+			sourceTree = "<group>";
+		};
+		A93740FB2827BFD9006FCC32 /* ProfileEdit */ = {
+			isa = PBXGroup;
+			children = (
+				A93273B127F9ED1E001B0EDB /* ProfileEditViewController.swift */,
+			);
+			path = ProfileEdit;
+			sourceTree = "<group>";
+		};
+		A93740FC2827C09F006FCC32 /* MyPageAPIs */ = {
+			isa = PBXGroup;
+			children = (
+				A93740FD2827C19F006FCC32 /* MyPageAPI.swift */,
+			);
+			path = MyPageAPIs;
+			sourceTree = "<group>";
+		};
+		A93740FF2827C27B006FCC32 /* TokenUtil */ = {
+			isa = PBXGroup;
+			children = (
+				A93740F32827B1FC006FCC32 /* TokenUtil.swift */,
+			);
+			path = TokenUtil;
+			sourceTree = "<group>";
+		};
+		A93741002827C283006FCC32 /* DateUtil */ = {
+			isa = PBXGroup;
+			children = (
+				A909008B2807F40800089CCA /* DateUtil.swift */,
+			);
+			path = DateUtil;
+			sourceTree = "<group>";
+		};
+		A93741012827C295006FCC32 /* setUtil */ = {
+			isa = PBXGroup;
+			children = (
+				A93741022827C2BF006FCC32 /* setUtil.swift */,
+			);
+			path = setUtil;
+			sourceTree = "<group>";
+		};
+		A93741042827C589006FCC32 /* MyPageModels */ = {
+			isa = PBXGroup;
+			children = (
+				A93741052827C59C006FCC32 /* MyPageResponse.swift */,
+			);
+			path = MyPageModels;
 			sourceTree = "<group>";
 		};
 		A996E4AE2823A41B00926DDC /* LoginAPIs */ = {
@@ -559,8 +660,8 @@
 		A996E4AF2823A46B00926DDC /* LoginModels */ = {
 			isa = PBXGroup;
 			children = (
-				A996E4B02823A48000926DDC /* JoinRequest.swift */,
-				A93740EB2827846F006FCC32 /* JoinResponse.swift */,
+				A93740F62827B35E006FCC32 /* JoinModels */,
+				A93740F52827B358006FCC32 /* LoginModels */,
 			);
 			path = LoginModels;
 			sourceTree = "<group>";
@@ -1090,6 +1191,7 @@
 				A996E4B92823B5B400926DDC /* TimeTableOneDayResponse.swift in Sources */,
 				A93273BF27FC1A82001B0EDB /* UITabBarController+.swift in Sources */,
 				A92D82C22822514900DB796E /* LoginViewController.swift in Sources */,
+				A93740F82827B375006FCC32 /* LoginResponse.swift in Sources */,
 				A9AD1A97281961200070F9AE /* EditHomeworkResponse.swift in Sources */,
 				A90900A42809733000089CCA /* EditAlarmDataManager.swift in Sources */,
 				A932749B280315E7001B0EDB /* AlarmResponse.swift in Sources */,
@@ -1101,9 +1203,12 @@
 				A932739D27F9D222001B0EDB /* AuthSelectViewController.swift in Sources */,
 				A9AD1A9A281A64BC0070F9AE /* DeleteNoticeAPI.swift in Sources */,
 				A93273D327FEC7E2001B0EDB /* HomeViewController.swift in Sources */,
+				A93740F22827A2F9006FCC32 /* ErrorResponse.swift in Sources */,
 				A90900902809358600089CCA /* AlarmDetailDataManager.swift in Sources */,
+				A93741062827C59C006FCC32 /* MyPageResponse.swift in Sources */,
+				A93741032827C2BF006FCC32 /* setUtil.swift in Sources */,
 				A93273DE27FED1B7001B0EDB /* TimeTableCollectionViewCell.swift in Sources */,
-				A909008C2807F40800089CCA /* Functions.swift in Sources */,
+				A909008C2807F40800089CCA /* DateUtil.swift in Sources */,
 				A93273EA27FEEC5D001B0EDB /* TimeTableViewController.swift in Sources */,
 				A932749D28031604001B0EDB /* AlarmDataManager.swift in Sources */,
 				A90900822805CD3D00089CCA /* Const.swift in Sources */,
@@ -1117,6 +1222,7 @@
 				A93273B227F9ED1E001B0EDB /* ProfileEditViewController.swift in Sources */,
 				A9AD1A6A281921FD0070F9AE /* UINavigationController+.swift in Sources */,
 				A93740F028279A70006FCC32 /* SearchSchoolViewController.swift in Sources */,
+				A93741082827CE40006FCC32 /* UserId.swift in Sources */,
 				A9AD1A6228191C860070F9AE /* NoticeDetailViewController.swift in Sources */,
 				A996E4B32823A9F600926DDC /* LoginAPI.swift in Sources */,
 				A9AD1A71281933BB0070F9AE /* WriteNoticeRequest.swift in Sources */,
@@ -1158,6 +1264,7 @@
 				A9AD1A91281956B80070F9AE /* HomeworkCheckAPI.swift in Sources */,
 				A9AD1A8128194D8D0070F9AE /* WriteHomeworkRequest.swift in Sources */,
 				A9AD1A75281936070070F9AE /* WriteNoticeResponse.swift in Sources */,
+				A93740F42827B1FC006FCC32 /* TokenUtil.swift in Sources */,
 				A90900A62809784000089CCA /* EditAlarmRequest.swift in Sources */,
 				A93273D527FECB4A001B0EDB /* NoticeViewController.swift in Sources */,
 				A9AD1A7B281949F90070F9AE /* WriteHomeworkViewController.swift in Sources */,
@@ -1177,6 +1284,7 @@
 				A9AD1A8F281956620070F9AE /* HomeworkCheckResponse.swift in Sources */,
 				A909009228093AEF00089CCA /* AlarmDetail.swift in Sources */,
 				A9AD1A8428194E020070F9AE /* WriteHomeworkAPI.swift in Sources */,
+				A93740FE2827C19F006FCC32 /* MyPageAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
