@@ -10,6 +10,8 @@ import UIKit
 class MyPageViewController: UIViewController {
     
     lazy var myPageAPI = MyPageAPI()
+    var myPageInfo: MyPageData?
+    var sendMyPageInfo: ((MyPageData) -> (MyPageData))?
     
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var schoolView: UIView!
@@ -27,7 +29,8 @@ class MyPageViewController: UIViewController {
     
     // 프로필 수정 페이지로 이동
     @objc func profileEdit(_ sender: Any) {
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "ProfileEditViewController") else { return }
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "ProfileEditViewController") as? ProfileEditViewController else { return }
+        vc.mypageInfo = myPageInfo
         self.presentNVC(vc)
     }
     
@@ -62,6 +65,7 @@ extension MyPageViewController {
     }
     
     func didSuccessMyPage(_ profileInfo: MyPageData) {
+        myPageInfo = profileInfo
         nameLabel.text = (profileInfo.name ?? "") +  " " + setRole(profileInfo.role ?? "")
         emailLabel.text = profileInfo.email
     }

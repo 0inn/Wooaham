@@ -33,3 +33,16 @@ func setRole(_ role: String) -> String {
         return ""
     }
 }
+
+func setProfileIcon(_ role: String) -> String {
+    switch role {
+    case "STUDENT":
+        return "🧒🏻"
+    case "TEACHER":
+        return "🧑🏻‍🏫 "
+    case "PARENT":
+        return "🧑🏻"
+    default:
+        return ""
+    }
+}

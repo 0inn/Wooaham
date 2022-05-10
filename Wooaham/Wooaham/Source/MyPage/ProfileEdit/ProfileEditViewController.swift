@@ -8,7 +8,9 @@
 import UIKit
 
 class ProfileEditViewController: UIViewController {
-
+    
+    var mypageInfo: MyPageData?
+    
     @IBOutlet weak var schoolView: UIView!
     
     @IBOutlet weak var profileImgLabel: UILabel!
@@ -19,8 +21,7 @@ class ProfileEditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNavigationBar()
-        setupSchool()
+        setUI()
     }
     
     // 학교 등록 페이지로 이동
@@ -29,16 +30,26 @@ class ProfileEditViewController: UIViewController {
         self.presentNVC(vc)
     }
     
+    private func setUI() {
+        setNavigationBar()
+        setSchool()
+        setProfile()
+    }
+    
     private func setNavigationBar() {
         self.title = "프로필 변경"
         self.navigationItem.backButtonTitle = " "
     }
-
-}
-
-extension ProfileEditViewController {
-    private func setupSchool() {
+    
+    private func setSchool() {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(addSchool(_:)))
         self.schoolView.addGestureRecognizer(gesture)
+    }
+    
+    private func setProfile() {
+        profileImgLabel.text = setProfileIcon(mypageInfo?.role ?? "")
+        nameLabel.text = mypageInfo?.name
+        emailLabel.text = mypageInfo?.email
+        roleLabel.text = setRole(mypageInfo?.role ?? "")
     }
 }
