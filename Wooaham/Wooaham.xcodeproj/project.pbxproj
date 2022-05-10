@@ -24,6 +24,8 @@
 		A90900A62809784000089CCA /* EditAlarmRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A52809784000089CCA /* EditAlarmRequest.swift */; };
 		A90900A8280999CA00089CCA /* NoticeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A7280999CA00089CCA /* NoticeResponse.swift */; };
 		A90900AA280999DA00089CCA /* NoticeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A9280999DA00089CCA /* NoticeAPI.swift */; };
+		A923CBBD282A446E00608B3F /* QuitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CBBC282A446E00608B3F /* QuitAPI.swift */; };
+		A923CBC0282A4AE600608B3F /* AddParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CBBF282A4AE600608B3F /* AddParentViewController.swift */; };
 		A92D82BC28215FFF00DB796E /* MealPlannerOneDayAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D82BB28215FFF00DB796E /* MealPlannerOneDayAPI.swift */; };
 		A92D82BE28224F9800DB796E /* Join.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92D82BD28224F9800DB796E /* Join.storyboard */; };
 		A92D82C22822514900DB796E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D82C12822514900DB796E /* LoginViewController.swift */; };
@@ -149,6 +151,8 @@
 		A90900A52809784000089CCA /* EditAlarmRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlarmRequest.swift; sourceTree = "<group>"; };
 		A90900A7280999CA00089CCA /* NoticeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeResponse.swift; sourceTree = "<group>"; };
 		A90900A9280999DA00089CCA /* NoticeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeAPI.swift; sourceTree = "<group>"; };
+		A923CBBC282A446E00608B3F /* QuitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitAPI.swift; sourceTree = "<group>"; };
+		A923CBBF282A4AE600608B3F /* AddParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParentViewController.swift; sourceTree = "<group>"; };
 		A92D82BB28215FFF00DB796E /* MealPlannerOneDayAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerOneDayAPI.swift; sourceTree = "<group>"; };
 		A92D82BD28224F9800DB796E /* Join.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Join.storyboard; sourceTree = "<group>"; };
 		A92D82C12822514900DB796E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -349,6 +353,14 @@
 			path = AlarmModels;
 			sourceTree = "<group>";
 		};
+		A923CBBE282A4ABA00608B3F /* MyPageParent */ = {
+			isa = PBXGroup;
+			children = (
+				A923CBBF282A4AE600608B3F /* AddParentViewController.swift */,
+			);
+			path = MyPageParent;
+			sourceTree = "<group>";
+		};
 		A92D82BF28224FB400DB796E /* Join */ = {
 			isa = PBXGroup;
 			children = (
@@ -480,6 +492,7 @@
 				A93740F92827BFAF006FCC32 /* Profile */,
 				A93740FB2827BFD9006FCC32 /* ProfileEdit */,
 				A93740FA2827BFC1006FCC32 /* MyPageSchool */,
+				A923CBBE282A4ABA00608B3F /* MyPageParent */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -653,6 +666,7 @@
 			children = (
 				A996E4AC2823A41600926DDC /* JoinAPI.swift */,
 				A996E4B22823A9F600926DDC /* LoginAPI.swift */,
+				A923CBBC282A446E00608B3F /* QuitAPI.swift */,
 			);
 			path = LoginAPIs;
 			sourceTree = "<group>";
@@ -1248,6 +1262,7 @@
 				A909008E2809348000089CCA /* AlarmDetailResponse.swift in Sources */,
 				A90900A228096BCB00089CCA /* AlarmTestResponse.swift in Sources */,
 				A90900A8280999CA00089CCA /* NoticeResponse.swift in Sources */,
+				A923CBBD282A446E00608B3F /* QuitAPI.swift in Sources */,
 				A92D82C4282252B800DB796E /* JoinViewController.swift in Sources */,
 				A90900862805CDAA00089CCA /* ViewController.swift in Sources */,
 				A90900A02809673400089CCA /* AlarmSwtichDataManager.swift in Sources */,
@@ -1264,6 +1279,7 @@
 				A9AD1A91281956B80070F9AE /* HomeworkCheckAPI.swift in Sources */,
 				A9AD1A8128194D8D0070F9AE /* WriteHomeworkRequest.swift in Sources */,
 				A9AD1A75281936070070F9AE /* WriteNoticeResponse.swift in Sources */,
+				A923CBC0282A4AE600608B3F /* AddParentViewController.swift in Sources */,
 				A93740F42827B1FC006FCC32 /* TokenUtil.swift in Sources */,
 				A90900A62809784000089CCA /* EditAlarmRequest.swift in Sources */,
 				A93273D527FECB4A001B0EDB /* NoticeViewController.swift in Sources */,

@@ -15,6 +15,7 @@ class MyPageViewController: UIViewController {
     
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var schoolView: UIView!
+    @IBOutlet weak var parentView: UIView!
     
     @IBOutlet weak var profileImgLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -40,22 +41,33 @@ class MyPageViewController: UIViewController {
         self.presentNVC(vc)
     }
     
+    // 부모님 등록 페이지로 이동
+    @objc func addParent(_ sender: Any) {
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddParentViewController") else { return }
+        self.presentNVC(vc)
+    }
+    
     private func setGesture() {
-        setupProfile()
-        setupSchool()
+        setProfile()
+        setSchool()
+        setParent()
     }
 
     
 }
 
 extension MyPageViewController {
-    private func setupProfile() {
+    private func setProfile() {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(profileEdit(_:)))
         self.profileView.addGestureRecognizer(gesture)
     }
-    private func setupSchool() {
+    private func setSchool() {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(addSchool(_:)))
         self.schoolView.addGestureRecognizer(gesture)
+    }
+    private func setParent() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(addParent(_:)))
+        self.parentView.addGestureRecognizer(gesture)
     }
 }
 
