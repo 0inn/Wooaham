@@ -26,6 +26,7 @@
 		A90900AA280999DA00089CCA /* NoticeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A9280999DA00089CCA /* NoticeAPI.swift */; };
 		A923CBBD282A446E00608B3F /* QuitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CBBC282A446E00608B3F /* QuitAPI.swift */; };
 		A923CBC0282A4AE600608B3F /* AddParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CBBF282A4AE600608B3F /* AddParentViewController.swift */; };
+		A923CBC2282A53EB00608B3F /* AddParentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CBC1282A53EB00608B3F /* AddParentAPI.swift */; };
 		A92D82BC28215FFF00DB796E /* MealPlannerOneDayAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D82BB28215FFF00DB796E /* MealPlannerOneDayAPI.swift */; };
 		A92D82BE28224F9800DB796E /* Join.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92D82BD28224F9800DB796E /* Join.storyboard */; };
 		A92D82C22822514900DB796E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D82C12822514900DB796E /* LoginViewController.swift */; };
@@ -153,6 +154,7 @@
 		A90900A9280999DA00089CCA /* NoticeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeAPI.swift; sourceTree = "<group>"; };
 		A923CBBC282A446E00608B3F /* QuitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitAPI.swift; sourceTree = "<group>"; };
 		A923CBBF282A4AE600608B3F /* AddParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParentViewController.swift; sourceTree = "<group>"; };
+		A923CBC1282A53EB00608B3F /* AddParentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParentAPI.swift; sourceTree = "<group>"; };
 		A92D82BB28215FFF00DB796E /* MealPlannerOneDayAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerOneDayAPI.swift; sourceTree = "<group>"; };
 		A92D82BD28224F9800DB796E /* Join.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Join.storyboard; sourceTree = "<group>"; };
 		A92D82C12822514900DB796E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -625,6 +627,7 @@
 			isa = PBXGroup;
 			children = (
 				A93740FD2827C19F006FCC32 /* MyPageAPI.swift */,
+				A923CBC1282A53EB00608B3F /* AddParentAPI.swift */,
 			);
 			path = MyPageAPIs;
 			sourceTree = "<group>";
@@ -1234,6 +1237,7 @@
 				A99D2133281C0F190042F4BE /* MealPlannerAPI.swift in Sources */,
 				A93273BD27FC180C001B0EDB /* AlarmViewController.swift in Sources */,
 				A93273B227F9ED1E001B0EDB /* ProfileEditViewController.swift in Sources */,
+				A923CBC2282A53EB00608B3F /* AddParentAPI.swift in Sources */,
 				A9AD1A6A281921FD0070F9AE /* UINavigationController+.swift in Sources */,
 				A93740F028279A70006FCC32 /* SearchSchoolViewController.swift in Sources */,
 				A93741082827CE40006FCC32 /* UserId.swift in Sources */,

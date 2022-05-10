@@ -44,7 +44,7 @@ class MyPageViewController: UIViewController {
     // 부모님 등록 페이지로 이동
     @objc func addParent(_ sender: Any) {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddParentViewController") else { return }
-        self.presentNVC(vc)
+        self.presentVC(vc)
     }
     
     private func setGesture() {
@@ -78,6 +78,7 @@ extension MyPageViewController {
     
     func didSuccessMyPage(_ profileInfo: MyPageData) {
         myPageInfo = profileInfo
+        profileImgLabel.text = setProfileIcon(profileInfo.role ?? "")
         nameLabel.text = (profileInfo.name ?? "") +  " " + setRole(profileInfo.role ?? "")
         emailLabel.text = profileInfo.email
     }

@@ -46,4 +46,17 @@ extension UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    // MARK: 확인을 눌러 dismiss
+    func dismissAlert(title: String, message: String? = nil,
+                        isCancelActionIncluded: Bool = false,
+                        preferredStyle style: UIAlertController.Style = .alert,
+                        handler: ((UIAlertAction) -> Void)? = nil) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: style)
+        let actionDone = UIAlertAction(title: "확인", style: .default, handler: { action in
+            self.dismiss(animated: true)
+        })
+        alert.addAction(actionDone)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 }

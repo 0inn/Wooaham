@@ -59,7 +59,7 @@ class JoinViewController: UIViewController {
 
 extension JoinViewController {
     func didSuccessJoin() {
-        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
+        guard let vc = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
         changeRootViewController(vc)
     }
     
