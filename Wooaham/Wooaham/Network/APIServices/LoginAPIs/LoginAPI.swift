@@ -32,6 +32,7 @@ class LoginAPI {
                 let token = TokenUtils()
                 token.create(url, userId: userId, jwt: accessToken)
                 UserId.shared.userId = userId
+                JWT.shared.jwt = accessToken
                 delegate.didSuccessLogin()
             case .failure:
                 let decoder = JSONDecoder()

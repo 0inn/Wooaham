@@ -15,7 +15,7 @@ class MyPageAPI {
         let url = "\(Const.URL.BASE_URL)/users/\(userId)"
         
         let token = TokenUtils()
-        guard let header = token.getAuthorizationHeader(serviceID: url, userId: userId) else {
+        guard let header = token.getAuthorizationHeader(accessToken: JWT.shared.jwt ?? "") else {
             return
         }
         
