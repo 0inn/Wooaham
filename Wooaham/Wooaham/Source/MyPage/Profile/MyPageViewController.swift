@@ -37,7 +37,7 @@ class MyPageViewController: UIViewController {
     
     // 학교 등록 페이지로 이동
     @objc func addSchool(_ sender: Any) {
-        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddSchoolViewController") else { return }
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SearchSchoolViewController") else { return }
         self.presentNVC(vc)
     }
     

@@ -195,7 +195,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ucK-cF-QkM">
-                                <rect key="frame" x="20" y="148" width="374" height="331.5"/>
+                                <rect key="frame" x="20" y="152.5" width="374" height="411.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="학교 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6h-QP-LWe">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
@@ -249,33 +249,32 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nab-6v-Eaq">
+                                        <rect key="frame" x="0.0" y="361.5" width="374" height="50"/>
+                                        <color key="backgroundColor" red="0.7725490196" green="0.89411764709999997" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="mcF-8M-VWS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="등록하기">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEg-PL-8Ku">
-                                <rect key="frame" x="20" y="560.5" width="374" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="U1f-Y6-zQz"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="등록하기">
-                                    <backgroundConfiguration key="background" cornerRadius="22">
-                                        <color key="backgroundColor" red="0.7725490196" green="0.89411764709999997" blue="0.69411764710000001" alpha="0.79700434600000003" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ubL-ZM-JRY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ucK-cF-QkM" firstAttribute="leading" secondItem="ubL-ZM-JRY" secondAttribute="leading" constant="20" id="3VB-NG-w31"/>
-                            <constraint firstItem="lEg-PL-8Ku" firstAttribute="leading" secondItem="ubL-ZM-JRY" secondAttribute="leading" constant="20" id="3YN-K7-t5D"/>
-                            <constraint firstItem="lEg-PL-8Ku" firstAttribute="centerX" secondItem="kHF-HY-WhU" secondAttribute="centerX" id="5Hw-Re-KXj"/>
-                            <constraint firstItem="lEg-PL-8Ku" firstAttribute="centerY" secondItem="kHF-HY-WhU" secondAttribute="centerY" multiplier="1.3" id="HYK-z9-hyQ"/>
                             <constraint firstItem="ubL-ZM-JRY" firstAttribute="trailing" secondItem="ucK-cF-QkM" secondAttribute="trailing" constant="20" id="g33-p7-S6K"/>
-                            <constraint firstItem="ubL-ZM-JRY" firstAttribute="trailing" secondItem="lEg-PL-8Ku" secondAttribute="trailing" constant="20" id="pTJ-aS-boZ"/>
-                            <constraint firstItem="ucK-cF-QkM" firstAttribute="centerY" secondItem="kHF-HY-WhU" secondAttribute="centerY" multiplier="0.7" id="s58-Rk-3yp"/>
+                            <constraint firstItem="ucK-cF-QkM" firstAttribute="centerY" secondItem="kHF-HY-WhU" secondAttribute="centerY" multiplier="0.8" id="s58-Rk-3yp"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -292,7 +291,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="b4B-ft-AVG">
-                                <rect key="frame" x="20" y="134" width="374" height="90.5"/>
+                                <rect key="frame" x="20" y="64" width="374" height="170.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="학교 이름을 검색해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZZ-1y-1CA">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
@@ -316,10 +315,27 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6He-di-Lts">
+                                        <rect key="frame" x="0.0" y="120.5" width="374" height="50"/>
+                                        <color key="backgroundColor" red="0.7725490196" green="0.89411764709999997" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="uT1-ne-ik4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="검색하기">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6Er-AI-yp5">
-                                <rect key="frame" x="20" y="244.5" width="374" height="617.5"/>
+                                <rect key="frame" x="20" y="254.5" width="374" height="607.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -328,11 +344,11 @@
                         <constraints>
                             <constraint firstItem="6Er-AI-yp5" firstAttribute="leading" secondItem="heJ-SD-CXI" secondAttribute="leading" constant="20" id="0Xl-Ub-Jvj"/>
                             <constraint firstItem="b4B-ft-AVG" firstAttribute="leading" secondItem="pcb-Zk-3by" secondAttribute="leading" constant="20" id="8WY-Zd-UWB"/>
-                            <constraint firstItem="b4B-ft-AVG" firstAttribute="centerY" secondItem="pcb-Zk-3by" secondAttribute="centerY" multiplier="0.4" id="Nbe-BC-5Ws"/>
                             <constraint firstItem="heJ-SD-CXI" firstAttribute="bottom" secondItem="6Er-AI-yp5" secondAttribute="bottom" id="XFb-TF-E7C"/>
                             <constraint firstItem="6Er-AI-yp5" firstAttribute="top" secondItem="b4B-ft-AVG" secondAttribute="bottom" constant="20" id="bbl-ge-5Qk"/>
                             <constraint firstItem="heJ-SD-CXI" firstAttribute="trailing" secondItem="6Er-AI-yp5" secondAttribute="trailing" constant="20" id="cDG-8q-HjW"/>
                             <constraint firstItem="heJ-SD-CXI" firstAttribute="trailing" secondItem="b4B-ft-AVG" secondAttribute="trailing" constant="20" id="l1X-vd-5zs"/>
+                            <constraint firstItem="b4B-ft-AVG" firstAttribute="top" secondItem="heJ-SD-CXI" secondAttribute="top" constant="20" id="yv8-N4-F89"/>
                         </constraints>
                     </view>
                 </viewController>
