@@ -10,7 +10,6 @@ import Alamofire
 class MyPageAPI {
     
     func getMyPage(_ userId: CLong, _ delegate: MyPageViewController) {
-        URLCache.shared.removeAllCachedResponses()
         
         let url = "\(Const.URL.BASE_URL)/users/\(userId)"
         

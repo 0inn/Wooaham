@@ -9,6 +9,7 @@ import UIKit
 
 class ProfileEditViewController: UIViewController {
     
+    var quitAPI = QuitAPI()
     var mypageInfo: MyPageData?
     
     @IBOutlet weak var schoolView: UIView!
@@ -28,6 +29,15 @@ class ProfileEditViewController: UIViewController {
     @objc func addSchool(_ sender: Any) {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SearchSchoolViewController") else { return }
         self.presentNVC(vc)
+    }
+    
+    @IBAction func quitBtnDidTap(_ sender: Any) {
+        let alert = UIAlertController(title: "계정탈퇴", message: "정말 탈퇴를 진행하시겠습니까?", preferredStyle: .alert)
+        let actionDone = UIAlertAction(title: "확인", style: .default, handler: { action in
+            self.quitAPI.quit(UserId.shared.userId ?? 0, self)
+        })
+        alert.addAction(actionDone)
+        self.present(alert, animated: true, completion: nil)
     }
     
     private func setUI() {
@@ -51,5 +61,17 @@ class ProfileEditViewController: UIViewController {
         nameLabel.text = mypageInfo?.name
         emailLabel.text = mypageInfo?.email
         roleLabel.text = setRole(mypageInfo?.role ?? "")
+    }
+}
+
+extension ProfileEditViewController {
+    func didSuccessQuit() {
+        presentAlert(title: "성공적으로 탈퇴되었습니다.")
+        guard let vc = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
+        changeRootViewController(vc)
+    }
+    
+    func failedToRequestQuit(_ msg: String) {
+        presentAlert(title: msg)
     }
 }
