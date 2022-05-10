@@ -27,6 +27,8 @@
 		A923CBBD282A446E00608B3F /* QuitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CBBC282A446E00608B3F /* QuitAPI.swift */; };
 		A923CBC0282A4AE600608B3F /* AddParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CBBF282A4AE600608B3F /* AddParentViewController.swift */; };
 		A923CBC2282A53EB00608B3F /* AddParentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CBC1282A53EB00608B3F /* AddParentAPI.swift */; };
+		A923CBC5282A93DE00608B3F /* Phone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A923CBC4282A93DE00608B3F /* Phone.storyboard */; };
+		A923CBC8282A93ED00608B3F /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CBC7282A93ED00608B3F /* PhoneViewController.swift */; };
 		A92D82BC28215FFF00DB796E /* MealPlannerOneDayAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D82BB28215FFF00DB796E /* MealPlannerOneDayAPI.swift */; };
 		A92D82BE28224F9800DB796E /* Join.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92D82BD28224F9800DB796E /* Join.storyboard */; };
 		A92D82C22822514900DB796E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D82C12822514900DB796E /* LoginViewController.swift */; };
@@ -155,6 +157,8 @@
 		A923CBBC282A446E00608B3F /* QuitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitAPI.swift; sourceTree = "<group>"; };
 		A923CBBF282A4AE600608B3F /* AddParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParentViewController.swift; sourceTree = "<group>"; };
 		A923CBC1282A53EB00608B3F /* AddParentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParentAPI.swift; sourceTree = "<group>"; };
+		A923CBC4282A93DE00608B3F /* Phone.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Phone.storyboard; sourceTree = "<group>"; };
+		A923CBC7282A93ED00608B3F /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
 		A92D82BB28215FFF00DB796E /* MealPlannerOneDayAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerOneDayAPI.swift; sourceTree = "<group>"; };
 		A92D82BD28224F9800DB796E /* Join.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Join.storyboard; sourceTree = "<group>"; };
 		A92D82C12822514900DB796E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -363,6 +367,15 @@
 			path = MyPageParent;
 			sourceTree = "<group>";
 		};
+		A923CBC3282A938800608B3F /* Phone */ = {
+			isa = PBXGroup;
+			children = (
+				A923CBC4282A93DE00608B3F /* Phone.storyboard */,
+				A923CBC7282A93ED00608B3F /* PhoneViewController.swift */,
+			);
+			path = Phone;
+			sourceTree = "<group>";
+		};
 		A92D82BF28224FB400DB796E /* Join */ = {
 			isa = PBXGroup;
 			children = (
@@ -527,6 +540,7 @@
 				A93273E527FEEBE6001B0EDB /* MealPlanner */,
 				A93273E827FEEC45001B0EDB /* TimeTable */,
 				A93273EB27FEEC66001B0EDB /* Homework */,
+				A923CBC3282A938800608B3F /* Phone */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1142,6 +1156,7 @@
 				A93273D127FEC7B0001B0EDB /* Home.storyboard in Resources */,
 				A93273CA27FEBAA2001B0EDB /* Map.storyboard in Resources */,
 				A9CEF41D28156DCF00B7B25B /* Homework.storyboard in Resources */,
+				A923CBC5282A93DE00608B3F /* Phone.storyboard in Resources */,
 				A93273DF27FED1B7001B0EDB /* TimeTableCollectionViewCell.xib in Resources */,
 				A932738727F9C83E001B0EDB /* LaunchScreen.storyboard in Resources */,
 				A932749F2803FD50001B0EDB /* Notice.storyboard in Resources */,
@@ -1213,6 +1228,7 @@
 				A90900A42809733000089CCA /* EditAlarmDataManager.swift in Sources */,
 				A932749B280315E7001B0EDB /* AlarmResponse.swift in Sources */,
 				A93273A427F9DD1C001B0EDB /* MyPageViewController.swift in Sources */,
+				A923CBC8282A93ED00608B3F /* PhoneViewController.swift in Sources */,
 				A93273CC27FEBD28001B0EDB /* MapViewController.swift in Sources */,
 				A975743D2824EB530044D774 /* TimeTableResponse.swift in Sources */,
 				A9AD1AA8281A74920070F9AE /* ReadNoticeAPI.swift in Sources */,
