@@ -30,6 +30,8 @@
 		A923CBC5282A93DE00608B3F /* Phone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A923CBC4282A93DE00608B3F /* Phone.storyboard */; };
 		A923CBC8282A93ED00608B3F /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CBC7282A93ED00608B3F /* PhoneViewController.swift */; };
 		A923CBCC282B530300608B3F /* AddPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CBCB282B530300608B3F /* AddPhoneViewController.swift */; };
+		A923CBCE282B66FB00608B3F /* MapKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CBCD282B66FB00608B3F /* MapKey.swift */; };
+		A923CBCF282B6FD100608B3F /* Pods_Wooaham.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECC2A0843E732B2894F27C7 /* Pods_Wooaham.framework */; };
 		A92D82BC28215FFF00DB796E /* MealPlannerOneDayAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D82BB28215FFF00DB796E /* MealPlannerOneDayAPI.swift */; };
 		A92D82BE28224F9800DB796E /* Join.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92D82BD28224F9800DB796E /* Join.storyboard */; };
 		A92D82C22822514900DB796E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D82C12822514900DB796E /* LoginViewController.swift */; };
@@ -132,7 +134,6 @@
 		A9CEF42C28157D4B00B7B25B /* HomeworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CEF42B28157D4B00B7B25B /* HomeworkResponse.swift */; };
 		A9CEF4312815808400B7B25B /* SchoolHomeworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CEF4302815808400B7B25B /* SchoolHomeworkAPI.swift */; };
 		A9CEF4332815897800B7B25B /* AcademyHomeworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CEF4322815897800B7B25B /* AcademyHomeworkAPI.swift */; };
-		CE81C783B1BA87148374EAB8 /* Pods_Wooaham.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECC2A0843E732B2894F27C7 /* Pods_Wooaham.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -161,6 +162,7 @@
 		A923CBC4282A93DE00608B3F /* Phone.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Phone.storyboard; sourceTree = "<group>"; };
 		A923CBC7282A93ED00608B3F /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
 		A923CBCB282B530300608B3F /* AddPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhoneViewController.swift; sourceTree = "<group>"; };
+		A923CBCD282B66FB00608B3F /* MapKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKey.swift; sourceTree = "<group>"; };
 		A92D82BB28215FFF00DB796E /* MealPlannerOneDayAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerOneDayAPI.swift; sourceTree = "<group>"; };
 		A92D82BD28224F9800DB796E /* Join.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Join.storyboard; sourceTree = "<group>"; };
 		A92D82C12822514900DB796E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -273,7 +275,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE81C783B1BA87148374EAB8 /* Pods_Wooaham.framework in Frameworks */,
+				A923CBCF282B6FD100608B3F /* Pods_Wooaham.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,6 +596,7 @@
 			isa = PBXGroup;
 			children = (
 				A93741072827CE40006FCC32 /* UserId.swift */,
+				A923CBCD282B66FB00608B3F /* MapKey.swift */,
 			);
 			path = Secret;
 			sourceTree = "<group>";
@@ -1299,6 +1302,7 @@
 				A9AD1A94281960720070F9AE /* EditHomeworkAPI.swift in Sources */,
 				A996E4B62823B57800926DDC /* TimeTableOneDayAPI.swift in Sources */,
 				A9AD1A73281933FC0070F9AE /* WriteNoticeAPI.swift in Sources */,
+				A923CBCE282B66FB00608B3F /* MapKey.swift in Sources */,
 				A9AD1AA5281A745B0070F9AE /* Response.swift in Sources */,
 				A9AD1A91281956B80070F9AE /* HomeworkCheckAPI.swift in Sources */,
 				A9AD1A8128194D8D0070F9AE /* WriteHomeworkRequest.swift in Sources */,
@@ -1472,6 +1476,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				EXCLUDED_ARCHS = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Wooaham/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1484,6 +1489,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.0inn.Wooaham;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1512,6 +1518,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.0inn.Wooaham;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

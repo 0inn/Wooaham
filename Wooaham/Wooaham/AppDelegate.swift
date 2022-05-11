@@ -14,6 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // 네비게이션 바 백버튼 이미지 수정
         UINavigationBar.appearance().backIndicatorImage = Const.Icon.back
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = Const.Icon.back
+        
+        //NMFAuthManager.shared().clientId = MapKey.clientId
 
         return true
     }
