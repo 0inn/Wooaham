@@ -57,20 +57,20 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="70"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eG9-rA-S6M">
-                                        <rect key="frame" x="350.5" y="18" width="53.5" height="34.5"/>
+                                        <rect key="frame" x="354" y="19" width="50" height="32"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="완료">
-                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="successBtnDidTap:" destination="ax8-Md-0Fq" eventType="touchUpInside" id="syv-wS-Wnt"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCT-gh-sFV">
-                                        <rect key="frame" x="10" y="18" width="53.5" height="34.5"/>
+                                        <rect key="frame" x="10" y="19" width="50" height="32"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="취소">
-                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="17"/>
+                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="15"/>
                                             <color key="baseForegroundColor" systemColor="systemRedColor"/>
                                         </buttonConfiguration>
                                         <connections>

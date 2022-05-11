@@ -60,6 +60,12 @@ class HomeViewController: UIViewController {
         self.presentNVC(vc)
     }
     
+    @IBAction func phoneBtnClick(_ sender: Any) {
+        guard let vc = UIStoryboard(name: "Phone", bundle: nil).instantiateViewController(withIdentifier: "PhoneViewController") as? PhoneViewController else { return }
+        self.presentNVC(vc)
+    }
+
+    
     @objc func schoolHomeworkVC(_ sender: Any) {
         guard let vc = UIStoryboard(name: Const.Storyboard.Name.homeworkSB, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.Identifier.homeworkVC) as? HomeworkViewController else { return }
         vc.isSchoolHW = true

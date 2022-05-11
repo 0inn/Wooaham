@@ -29,6 +29,7 @@
 		A923CBC2282A53EB00608B3F /* AddParentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CBC1282A53EB00608B3F /* AddParentAPI.swift */; };
 		A923CBC5282A93DE00608B3F /* Phone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A923CBC4282A93DE00608B3F /* Phone.storyboard */; };
 		A923CBC8282A93ED00608B3F /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CBC7282A93ED00608B3F /* PhoneViewController.swift */; };
+		A923CBCC282B530300608B3F /* AddPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CBCB282B530300608B3F /* AddPhoneViewController.swift */; };
 		A92D82BC28215FFF00DB796E /* MealPlannerOneDayAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D82BB28215FFF00DB796E /* MealPlannerOneDayAPI.swift */; };
 		A92D82BE28224F9800DB796E /* Join.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92D82BD28224F9800DB796E /* Join.storyboard */; };
 		A92D82C22822514900DB796E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D82C12822514900DB796E /* LoginViewController.swift */; };
@@ -159,6 +160,7 @@
 		A923CBC1282A53EB00608B3F /* AddParentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParentAPI.swift; sourceTree = "<group>"; };
 		A923CBC4282A93DE00608B3F /* Phone.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Phone.storyboard; sourceTree = "<group>"; };
 		A923CBC7282A93ED00608B3F /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
+		A923CBCB282B530300608B3F /* AddPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhoneViewController.swift; sourceTree = "<group>"; };
 		A92D82BB28215FFF00DB796E /* MealPlannerOneDayAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerOneDayAPI.swift; sourceTree = "<group>"; };
 		A92D82BD28224F9800DB796E /* Join.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Join.storyboard; sourceTree = "<group>"; };
 		A92D82C12822514900DB796E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 			children = (
 				A923CBC4282A93DE00608B3F /* Phone.storyboard */,
 				A923CBC7282A93ED00608B3F /* PhoneViewController.swift */,
+				A923CBCB282B530300608B3F /* AddPhoneViewController.swift */,
 			);
 			path = Phone;
 			sourceTree = "<group>";
@@ -1252,6 +1255,7 @@
 				A93273C127FC1AEF001B0EDB /* TabBarController.swift in Sources */,
 				A99D2133281C0F190042F4BE /* MealPlannerAPI.swift in Sources */,
 				A93273BD27FC180C001B0EDB /* AlarmViewController.swift in Sources */,
+				A923CBCC282B530300608B3F /* AddPhoneViewController.swift in Sources */,
 				A93273B227F9ED1E001B0EDB /* ProfileEditViewController.swift in Sources */,
 				A923CBC2282A53EB00608B3F /* AddParentAPI.swift in Sources */,
 				A9AD1A6A281921FD0070F9AE /* UINavigationController+.swift in Sources */,
