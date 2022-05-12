@@ -51,7 +51,7 @@ class MyPageViewController: UIViewController {
     // 나의 자녀 페이지로 이동
     @objc func myStudent(_ sender: Any) {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "MyPageStudentViewController") else { return }
-        self.presentVC(vc)
+        self.presentNVC(vc)
     }
 
     
