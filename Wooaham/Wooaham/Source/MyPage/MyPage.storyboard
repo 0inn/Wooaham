@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7qe-4a-NUG">
-                                <rect key="frame" x="0.0" y="88" width="414" height="241"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="301.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S0Y-NS-kCo">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
@@ -138,8 +138,47 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PhB-8a-S71" userLabel="구분선">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q1g-QB-gd5" userLabel="구분선">
                                         <rect key="frame" x="0.0" y="240.5" width="414" height="0.5"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="0.5" id="knp-jD-FrM"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pfU-lk-NmB">
+                                        <rect key="frame" x="0.0" y="241" width="414" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나의 자녀" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qei-nt-Sll">
+                                                <rect key="frame" x="20" y="20.5" width="59.5" height="19.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PrX-Px-65b">
+                                                <rect key="frame" x="381" y="21" width="13" height="18"/>
+                                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="semibold"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="PrX-Px-65b" firstAttribute="centerY" secondItem="qei-nt-Sll" secondAttribute="centerY" id="85L-wl-mkQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="PrX-Px-65b" secondAttribute="trailing" constant="20" id="WbP-mM-8Sb"/>
+                                            <constraint firstAttribute="height" constant="60" id="ZZb-Qg-avX"/>
+                                            <constraint firstItem="qei-nt-Sll" firstAttribute="centerY" secondItem="pfU-lk-NmB" secondAttribute="centerY" id="aua-8n-03D"/>
+                                            <constraint firstItem="qei-nt-Sll" firstAttribute="leading" secondItem="pfU-lk-NmB" secondAttribute="leading" constant="20" id="rQe-Wh-bWb"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.7725490196" green="0.89411764709999997" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PhB-8a-S71" userLabel="구분선">
+                                        <rect key="frame" x="0.0" y="301" width="414" height="0.5"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="0.5" id="7Ec-zK-LZr"/>
@@ -180,6 +219,7 @@
                         <outlet property="profileImgLabel" destination="tcT-zR-ZVY" id="NF2-cr-6s8"/>
                         <outlet property="profileView" destination="S0Y-NS-kCo" id="DWM-sF-4e5"/>
                         <outlet property="schoolView" destination="jgn-8V-wvr" id="wXV-0F-Df7"/>
+                        <outlet property="studentView" destination="pfU-lk-NmB" id="4Yn-u3-P08"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TMP-59-gAH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -283,7 +323,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0o-cq-GnU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5658" y="798"/>
+            <point key="canvasLocation" x="4991" y="798"/>
         </scene>
         <!--Search School View Controller-->
         <scene sceneID="crX-L7-F6d">
@@ -360,7 +400,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MQf-mh-ieP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4887" y="798"/>
+            <point key="canvasLocation" x="4220" y="798"/>
         </scene>
         <!--Add Parent View Controller-->
         <scene sceneID="Oea-Aq-bHk">
@@ -442,7 +482,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j9l-PJ-3zi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3328" y="798"/>
+            <point key="canvasLocation" x="2577" y="1589"/>
+        </scene>
+        <!--My Page Student View Controller-->
+        <scene sceneID="pyQ-K2-mwZ">
+            <objects>
+                <viewController storyboardIdentifier="MyPageStudentViewController" id="lYC-dD-3W8" customClass="MyPageStudentViewController" customModule="Wooaham" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fpj-j5-d4J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="PTb-FW-89F"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qhg-hD-G46" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3441" y="1588"/>
         </scene>
         <!--Profile Edit View Controller-->
         <scene sceneID="3GA-Uu-6Tl">
@@ -641,7 +696,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pty-nI-eyc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4096" y="798"/>
+            <point key="canvasLocation" x="3441" y="798"/>
         </scene>
         <!--마이페이지-->
         <scene sceneID="zu2-0i-SkR">

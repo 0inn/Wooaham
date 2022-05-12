@@ -16,6 +16,7 @@ class MyPageViewController: UIViewController {
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var schoolView: UIView!
     @IBOutlet weak var parentView: UIView!
+    @IBOutlet weak var studentView: UIView!
     
     @IBOutlet weak var profileImgLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -47,10 +48,18 @@ class MyPageViewController: UIViewController {
         self.presentVC(vc)
     }
     
+    // 나의 자녀 페이지로 이동
+    @objc func myStudent(_ sender: Any) {
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "MyPageStudentViewController") else { return }
+        self.presentVC(vc)
+    }
+
+    
     private func setGesture() {
         setProfile()
         setSchool()
         setParent()
+        setStudent()
     }
 
     
@@ -69,6 +78,11 @@ extension MyPageViewController {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(addParent(_:)))
         self.parentView.addGestureRecognizer(gesture)
     }
+    private func setStudent() {
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(myStudent(_:)))
+        self.studentView.addGestureRecognizer(gesture)
+    }
+
 }
 
 extension MyPageViewController {
