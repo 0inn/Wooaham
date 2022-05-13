@@ -27,7 +27,7 @@ class SchoolAPI {
             case .success(let response):
                 
                 self.mySchool = response.schoolInfo[1].row
-                self.school = self.mySchool.filter({($0.schoolName).contains(searchSchoolName)})
+                self.school = self.mySchool.filter({($0.schoolName).contains(searchSchoolName) && ($0.schoolName).contains("초등학교")})
                 
                 delegate.didSuccessSearchSchool(self.school ?? [SchoolRow(schoolName: "검색 결과 없음.", officeCode: "", schoolCode: "")])
                 
