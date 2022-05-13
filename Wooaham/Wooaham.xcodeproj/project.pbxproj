@@ -32,6 +32,12 @@
 		A923CBCC282B530300608B3F /* AddPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CBCB282B530300608B3F /* AddPhoneViewController.swift */; };
 		A923CBCE282B66FB00608B3F /* MapKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CBCD282B66FB00608B3F /* MapKey.swift */; };
 		A923CBCF282B6FD100608B3F /* Pods_Wooaham.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECC2A0843E732B2894F27C7 /* Pods_Wooaham.framework */; };
+		A923CC28282D424C00608B3F /* MyPageStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC27282D424C00608B3F /* MyPageStudentViewController.swift */; };
+		A923CC2A282E475700608B3F /* MyStudentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC29282E475700608B3F /* MyStudentAPI.swift */; };
+		A923CC2C282E47FA00608B3F /* MyStudentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC2B282E47FA00608B3F /* MyStudentResponse.swift */; };
+		A923CC2F282E504A00608B3F /* MyStudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC2D282E504A00608B3F /* MyStudentTableViewCell.swift */; };
+		A923CC30282E504A00608B3F /* MyStudentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A923CC2E282E504A00608B3F /* MyStudentTableViewCell.xib */; };
+		A923CC32282E523200608B3F /* ChangeStudentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC31282E523200608B3F /* ChangeStudentAPI.swift */; };
 		A92D82BC28215FFF00DB796E /* MealPlannerOneDayAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D82BB28215FFF00DB796E /* MealPlannerOneDayAPI.swift */; };
 		A92D82BE28224F9800DB796E /* Join.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92D82BD28224F9800DB796E /* Join.storyboard */; };
 		A92D82C22822514900DB796E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D82C12822514900DB796E /* LoginViewController.swift */; };
@@ -163,6 +169,12 @@
 		A923CBC7282A93ED00608B3F /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
 		A923CBCB282B530300608B3F /* AddPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhoneViewController.swift; sourceTree = "<group>"; };
 		A923CBCD282B66FB00608B3F /* MapKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKey.swift; sourceTree = "<group>"; };
+		A923CC27282D424C00608B3F /* MyPageStudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageStudentViewController.swift; sourceTree = "<group>"; };
+		A923CC29282E475700608B3F /* MyStudentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStudentAPI.swift; sourceTree = "<group>"; };
+		A923CC2B282E47FA00608B3F /* MyStudentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStudentResponse.swift; sourceTree = "<group>"; };
+		A923CC2D282E504A00608B3F /* MyStudentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStudentTableViewCell.swift; sourceTree = "<group>"; };
+		A923CC2E282E504A00608B3F /* MyStudentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyStudentTableViewCell.xib; sourceTree = "<group>"; };
+		A923CC31282E523200608B3F /* ChangeStudentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeStudentAPI.swift; sourceTree = "<group>"; };
 		A92D82BB28215FFF00DB796E /* MealPlannerOneDayAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerOneDayAPI.swift; sourceTree = "<group>"; };
 		A92D82BD28224F9800DB796E /* Join.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Join.storyboard; sourceTree = "<group>"; };
 		A92D82C12822514900DB796E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -381,6 +393,16 @@
 			path = Phone;
 			sourceTree = "<group>";
 		};
+		A923CC26282D422100608B3F /* MyPageStudent */ = {
+			isa = PBXGroup;
+			children = (
+				A923CC27282D424C00608B3F /* MyPageStudentViewController.swift */,
+				A923CC2E282E504A00608B3F /* MyStudentTableViewCell.xib */,
+				A923CC2D282E504A00608B3F /* MyStudentTableViewCell.swift */,
+			);
+			path = MyPageStudent;
+			sourceTree = "<group>";
+		};
 		A92D82BF28224FB400DB796E /* Join */ = {
 			isa = PBXGroup;
 			children = (
@@ -513,6 +535,7 @@
 				A93740FB2827BFD9006FCC32 /* ProfileEdit */,
 				A93740FA2827BFC1006FCC32 /* MyPageSchool */,
 				A923CBBE282A4ABA00608B3F /* MyPageParent */,
+				A923CC26282D422100608B3F /* MyPageStudent */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -648,6 +671,8 @@
 			children = (
 				A93740FD2827C19F006FCC32 /* MyPageAPI.swift */,
 				A923CBC1282A53EB00608B3F /* AddParentAPI.swift */,
+				A923CC29282E475700608B3F /* MyStudentAPI.swift */,
+				A923CC31282E523200608B3F /* ChangeStudentAPI.swift */,
 			);
 			path = MyPageAPIs;
 			sourceTree = "<group>";
@@ -680,6 +705,7 @@
 			isa = PBXGroup;
 			children = (
 				A93741052827C59C006FCC32 /* MyPageResponse.swift */,
+				A923CC2B282E47FA00608B3F /* MyStudentResponse.swift */,
 			);
 			path = MyPageModels;
 			sourceTree = "<group>";
@@ -1159,6 +1185,7 @@
 				A93273C527FC1DA3001B0EDB /* AlarmTableViewCell.xib in Resources */,
 				A9AD1A6028191C740070F9AE /* NoticeDetail.storyboard in Resources */,
 				A93274A12804007B001B0EDB /* MealPlanner.storyboard in Resources */,
+				A923CC30282E504A00608B3F /* MyStudentTableViewCell.xib in Resources */,
 				A93273D127FEC7B0001B0EDB /* Home.storyboard in Resources */,
 				A93273CA27FEBAA2001B0EDB /* Map.storyboard in Resources */,
 				A9CEF41D28156DCF00B7B25B /* Homework.storyboard in Resources */,
@@ -1235,10 +1262,12 @@
 				A932749B280315E7001B0EDB /* AlarmResponse.swift in Sources */,
 				A93273A427F9DD1C001B0EDB /* MyPageViewController.swift in Sources */,
 				A923CBC8282A93ED00608B3F /* PhoneViewController.swift in Sources */,
+				A923CC2C282E47FA00608B3F /* MyStudentResponse.swift in Sources */,
 				A93273CC27FEBD28001B0EDB /* MapViewController.swift in Sources */,
 				A975743D2824EB530044D774 /* TimeTableResponse.swift in Sources */,
 				A9AD1AA8281A74920070F9AE /* ReadNoticeAPI.swift in Sources */,
 				A93273B427F9F6D2001B0EDB /* AddSchoolViewController.swift in Sources */,
+				A923CC2F282E504A00608B3F /* MyStudentTableViewCell.swift in Sources */,
 				A932739D27F9D222001B0EDB /* AuthSelectViewController.swift in Sources */,
 				A9AD1A9A281A64BC0070F9AE /* DeleteNoticeAPI.swift in Sources */,
 				A93273D327FEC7E2001B0EDB /* HomeViewController.swift in Sources */,
@@ -1259,6 +1288,7 @@
 				A99D2133281C0F190042F4BE /* MealPlannerAPI.swift in Sources */,
 				A93273BD27FC180C001B0EDB /* AlarmViewController.swift in Sources */,
 				A923CBCC282B530300608B3F /* AddPhoneViewController.swift in Sources */,
+				A923CC32282E523200608B3F /* ChangeStudentAPI.swift in Sources */,
 				A93273B227F9ED1E001B0EDB /* ProfileEditViewController.swift in Sources */,
 				A923CBC2282A53EB00608B3F /* AddParentAPI.swift in Sources */,
 				A9AD1A6A281921FD0070F9AE /* UINavigationController+.swift in Sources */,
@@ -1274,10 +1304,12 @@
 				A932737B27F9C83D001B0EDB /* AppDelegate.swift in Sources */,
 				A92D82BC28215FFF00DB796E /* MealPlannerOneDayAPI.swift in Sources */,
 				A996E4BB2824B42700926DDC /* TimeTableAPI.swift in Sources */,
+				A923CC28282D424C00608B3F /* MyPageStudentViewController.swift in Sources */,
 				A9BB8EBA28127787004F2990 /* Icon.swift in Sources */,
 				A9AD1AA2281A6B500070F9AE /* EditNoticeAPI.swift in Sources */,
 				A9BB8EAF28126781004F2990 /* EditAlarmResponse.swift in Sources */,
 				A9CEF4312815808400B7B25B /* SchoolHomeworkAPI.swift in Sources */,
+				A923CC2A282E475700608B3F /* MyStudentAPI.swift in Sources */,
 				A9AD1A8B281952430070F9AE /* DeleteHomeworkResponse.swift in Sources */,
 				A932739F27F9D940001B0EDB /* UIFont+.swift in Sources */,
 				A9AD1AA0281A6A870070F9AE /* EditNoticeRequest.swift in Sources */,
