@@ -174,8 +174,8 @@
 		A923CC2D282E504A00608B3F /* MyStudentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStudentTableViewCell.swift; sourceTree = "<group>"; };
 		A923CC2E282E504A00608B3F /* MyStudentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyStudentTableViewCell.xib; sourceTree = "<group>"; };
 		A923CC31282E523200608B3F /* ChangeStudentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeStudentAPI.swift; sourceTree = "<group>"; };
-		A923CC33282E5EB600608B3F /* AlarmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlarmDataManager.swift; path = Wooaham/Network/APIServices/MyPageAPIs/AlarmDataManager.swift; sourceTree = SOURCE_ROOT; };
-		A923CC35282E5EC700608B3F /* AlarmSwitchDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlarmSwitchDataManager.swift; path = Wooaham/Network/APIServices/MyPageAPIs/AlarmSwitchDataManager.swift; sourceTree = SOURCE_ROOT; };
+		A923CC33282E5EB600608B3F /* AlarmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlarmDataManager.swift; path = Wooaham/Network/APIServices/AlarmAPIs/AlarmAPI/AlarmDataManager.swift; sourceTree = SOURCE_ROOT; };
+		A923CC35282E5EC700608B3F /* AlarmSwitchDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlarmSwitchDataManager.swift; path = Wooaham/Network/APIServices/AlarmAPIs/AlarmSwitchAPI/AlarmSwitchDataManager.swift; sourceTree = SOURCE_ROOT; };
 		A92D82BB28215FFF00DB796E /* MealPlannerOneDayAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerOneDayAPI.swift; sourceTree = "<group>"; };
 		A92D82BD28224F9800DB796E /* Join.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Join.storyboard; sourceTree = "<group>"; };
 		A92D82C12822514900DB796E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -317,7 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				A9BB8EA2281266B0004F2990 /* AlarmAPI */,
-				A9BB8EA7281266F6004F2990 /* AlarmSwitchAPI */,
+				A923CC38282E63B400608B3F /* AlarmSwitchAPI */,
 				A9BB8EA3281266C2004F2990 /* AlarmDetailAPI */,
 				A9BB8EA4281266C9004F2990 /* AddAlarmAPI */,
 				A9BB8EA6281266E1004F2990 /* EditAlarmAPI */,
@@ -401,6 +401,14 @@
 				A923CC2D282E504A00608B3F /* MyStudentTableViewCell.swift */,
 			);
 			path = MyPageStudent;
+			sourceTree = "<group>";
+		};
+		A923CC38282E63B400608B3F /* AlarmSwitchAPI */ = {
+			isa = PBXGroup;
+			children = (
+				A923CC35282E5EC700608B3F /* AlarmSwitchDataManager.swift */,
+			);
+			path = AlarmSwitchAPI;
 			sourceTree = "<group>";
 		};
 		A92D82BF28224FB400DB796E /* Join */ = {
@@ -937,14 +945,6 @@
 				A90900A32809733000089CCA /* EditAlarmDataManager.swift */,
 			);
 			path = EditAlarmAPI;
-			sourceTree = "<group>";
-		};
-		A9BB8EA7281266F6004F2990 /* AlarmSwitchAPI */ = {
-			isa = PBXGroup;
-			children = (
-				A923CC35282E5EC700608B3F /* AlarmSwitchDataManager.swift */,
-			);
-			path = AlarmSwitchAPI;
 			sourceTree = "<group>";
 		};
 		A9BB8EA82812671B004F2990 /* AlarmModel */ = {
