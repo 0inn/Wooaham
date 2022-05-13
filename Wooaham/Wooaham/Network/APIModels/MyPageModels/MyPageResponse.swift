@@ -17,6 +17,7 @@ struct MyPageData: Codable {
     let userId: Int?
     let icon: Icon?
     let name, email, birth, role: String?
+    let schoolName: String?
 }
 
 struct Icon: Codable {

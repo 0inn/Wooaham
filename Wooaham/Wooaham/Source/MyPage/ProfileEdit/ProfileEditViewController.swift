@@ -61,6 +61,7 @@ class ProfileEditViewController: UIViewController {
         nameLabel.text = mypageInfo?.name
         emailLabel.text = mypageInfo?.email
         roleLabel.text = setRole(mypageInfo?.role ?? "")
+        schoolLabel.text = mypageInfo?.schoolName
     }
 }
 
