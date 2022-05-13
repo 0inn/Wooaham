@@ -10,6 +10,8 @@ import UIKit
 class MyPageStudentViewController: UIViewController {
     
     lazy var myStudentAPI = MyStudentAPI()
+    lazy var changeStudentAPI = ChangeStudentAPI()
+
     var myStudentList: [MyStudentData]?
     
     @IBOutlet weak var studentTableView: UITableView!
@@ -51,10 +53,14 @@ extension MyPageStudentViewController: UITableViewDelegate, UITableViewDataSourc
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        changeStudentAPI.changeStudent(UserId.shared.userId ?? 0, myStudentList?[indexPath.row].studentId ?? 0, self)
+    }
 }
 
 extension MyPageStudentViewController {
     
+    // 나의 자녀 목록 조회 API 결과
     func didSuccessMyStudent(_ studentInfo: [MyStudentData]) {
         myStudentList = studentInfo
         studentTableView.reloadData()
@@ -64,4 +70,14 @@ extension MyPageStudentViewController {
         presentAlert(title: msg)
     }
     
+    // 나의 자녀 변경 API 결과
+    func didSuccessChangeStudent() {
+        presentAlert(title: "자녀 변경에 성공하였습니다.")
+    }
+    
+    func failedToRequestChangeStudent(_ msg: String) {
+        presentAlert(title: msg)
+    }
+
+
 }

@@ -90,7 +90,7 @@
 		A93740FE2827C19F006FCC32 /* MyPageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93740FD2827C19F006FCC32 /* MyPageAPI.swift */; };
 		A93741032827C2BF006FCC32 /* setUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741022827C2BF006FCC32 /* setUtil.swift */; };
 		A93741062827C59C006FCC32 /* MyPageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741052827C59C006FCC32 /* MyPageResponse.swift */; };
-		A93741082827CE40006FCC32 /* UserId.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741072827CE40006FCC32 /* UserId.swift */; };
+		A93741082827CE40006FCC32 /* Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741072827CE40006FCC32 /* Id.swift */; };
 		A975743D2824EB530044D774 /* TimeTableResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A975743C2824EB530044D774 /* TimeTableResponse.swift */; };
 		A996E4AD2823A41600926DDC /* JoinAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A996E4AC2823A41600926DDC /* JoinAPI.swift */; };
 		A996E4B12823A48000926DDC /* JoinRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A996E4B02823A48000926DDC /* JoinRequest.swift */; };
@@ -229,7 +229,7 @@
 		A93740FD2827C19F006FCC32 /* MyPageAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageAPI.swift; sourceTree = "<group>"; };
 		A93741022827C2BF006FCC32 /* setUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setUtil.swift; sourceTree = "<group>"; };
 		A93741052827C59C006FCC32 /* MyPageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageResponse.swift; sourceTree = "<group>"; };
-		A93741072827CE40006FCC32 /* UserId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserId.swift; sourceTree = "<group>"; };
+		A93741072827CE40006FCC32 /* Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Id.swift; sourceTree = "<group>"; };
 		A975743C2824EB530044D774 /* TimeTableResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableResponse.swift; sourceTree = "<group>"; };
 		A996E4AC2823A41600926DDC /* JoinAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinAPI.swift; sourceTree = "<group>"; };
 		A996E4B02823A48000926DDC /* JoinRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRequest.swift; sourceTree = "<group>"; };
@@ -618,7 +618,7 @@
 		A93740EA282782DF006FCC32 /* Secret */ = {
 			isa = PBXGroup;
 			children = (
-				A93741072827CE40006FCC32 /* UserId.swift */,
+				A93741072827CE40006FCC32 /* Id.swift */,
 				A923CBCD282B66FB00608B3F /* MapKey.swift */,
 			);
 			path = Secret;
@@ -1293,7 +1293,7 @@
 				A923CBC2282A53EB00608B3F /* AddParentAPI.swift in Sources */,
 				A9AD1A6A281921FD0070F9AE /* UINavigationController+.swift in Sources */,
 				A93740F028279A70006FCC32 /* SearchSchoolViewController.swift in Sources */,
-				A93741082827CE40006FCC32 /* UserId.swift in Sources */,
+				A93741082827CE40006FCC32 /* Id.swift in Sources */,
 				A9AD1A6228191C860070F9AE /* NoticeDetailViewController.swift in Sources */,
 				A996E4B32823A9F600926DDC /* LoginAPI.swift in Sources */,
 				A9AD1A71281933BB0070F9AE /* WriteNoticeRequest.swift in Sources */,
