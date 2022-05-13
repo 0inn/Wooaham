@@ -18,7 +18,6 @@
 		A909009828095A9500089CCA /* AddAlarmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909009728095A9500089CCA /* AddAlarmDataManager.swift */; };
 		A909009A28095AEC00089CCA /* AddAlarmResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909009928095AEC00089CCA /* AddAlarmResponse.swift */; };
 		A909009C2809658300089CCA /* DeleteAlarmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909009B2809658300089CCA /* DeleteAlarmDataManager.swift */; };
-		A90900A02809673400089CCA /* AlarmSwtichDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A909009F2809673400089CCA /* AlarmSwtichDataManager.swift */; };
 		A90900A228096BCB00089CCA /* AlarmTestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A128096BCB00089CCA /* AlarmTestResponse.swift */; };
 		A90900A42809733000089CCA /* EditAlarmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A32809733000089CCA /* EditAlarmDataManager.swift */; };
 		A90900A62809784000089CCA /* EditAlarmRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A52809784000089CCA /* EditAlarmRequest.swift */; };
@@ -38,6 +37,8 @@
 		A923CC2F282E504A00608B3F /* MyStudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC2D282E504A00608B3F /* MyStudentTableViewCell.swift */; };
 		A923CC30282E504A00608B3F /* MyStudentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A923CC2E282E504A00608B3F /* MyStudentTableViewCell.xib */; };
 		A923CC32282E523200608B3F /* ChangeStudentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC31282E523200608B3F /* ChangeStudentAPI.swift */; };
+		A923CC34282E5EB600608B3F /* AlarmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC33282E5EB600608B3F /* AlarmDataManager.swift */; };
+		A923CC36282E5EC700608B3F /* AlarmSwitchDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC35282E5EC700608B3F /* AlarmSwitchDataManager.swift */; };
 		A92D82BC28215FFF00DB796E /* MealPlannerOneDayAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D82BB28215FFF00DB796E /* MealPlannerOneDayAPI.swift */; };
 		A92D82BE28224F9800DB796E /* Join.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92D82BD28224F9800DB796E /* Join.storyboard */; };
 		A92D82C22822514900DB796E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D82C12822514900DB796E /* LoginViewController.swift */; };
@@ -79,7 +80,6 @@
 		A93273E727FEEC27001B0EDB /* MealPlannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273E627FEEC27001B0EDB /* MealPlannerViewController.swift */; };
 		A93273EA27FEEC5D001B0EDB /* TimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93273E927FEEC5D001B0EDB /* TimeTableViewController.swift */; };
 		A932749B280315E7001B0EDB /* AlarmResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932749A280315E7001B0EDB /* AlarmResponse.swift */; };
-		A932749D28031604001B0EDB /* AlarmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A932749C28031604001B0EDB /* AlarmDataManager.swift */; };
 		A932749F2803FD50001B0EDB /* Notice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A932749E2803FD50001B0EDB /* Notice.storyboard */; };
 		A93274A12804007B001B0EDB /* MealPlanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A93274A02804007B001B0EDB /* MealPlanner.storyboard */; };
 		A93740EC2827846F006FCC32 /* JoinResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93740EB2827846F006FCC32 /* JoinResponse.swift */; };
@@ -156,7 +156,6 @@
 		A909009728095A9500089CCA /* AddAlarmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmDataManager.swift; sourceTree = "<group>"; };
 		A909009928095AEC00089CCA /* AddAlarmResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlarmResponse.swift; sourceTree = "<group>"; };
 		A909009B2809658300089CCA /* DeleteAlarmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAlarmDataManager.swift; sourceTree = "<group>"; };
-		A909009F2809673400089CCA /* AlarmSwtichDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSwtichDataManager.swift; sourceTree = "<group>"; };
 		A90900A128096BCB00089CCA /* AlarmTestResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTestResponse.swift; sourceTree = "<group>"; };
 		A90900A32809733000089CCA /* EditAlarmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlarmDataManager.swift; sourceTree = "<group>"; };
 		A90900A52809784000089CCA /* EditAlarmRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlarmRequest.swift; sourceTree = "<group>"; };
@@ -175,6 +174,8 @@
 		A923CC2D282E504A00608B3F /* MyStudentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStudentTableViewCell.swift; sourceTree = "<group>"; };
 		A923CC2E282E504A00608B3F /* MyStudentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyStudentTableViewCell.xib; sourceTree = "<group>"; };
 		A923CC31282E523200608B3F /* ChangeStudentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeStudentAPI.swift; sourceTree = "<group>"; };
+		A923CC33282E5EB600608B3F /* AlarmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlarmDataManager.swift; path = Wooaham/Network/APIServices/MyPageAPIs/AlarmDataManager.swift; sourceTree = SOURCE_ROOT; };
+		A923CC35282E5EC700608B3F /* AlarmSwitchDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlarmSwitchDataManager.swift; path = Wooaham/Network/APIServices/MyPageAPIs/AlarmSwitchDataManager.swift; sourceTree = SOURCE_ROOT; };
 		A92D82BB28215FFF00DB796E /* MealPlannerOneDayAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerOneDayAPI.swift; sourceTree = "<group>"; };
 		A92D82BD28224F9800DB796E /* Join.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Join.storyboard; sourceTree = "<group>"; };
 		A92D82C12822514900DB796E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -218,7 +219,6 @@
 		A93273E627FEEC27001B0EDB /* MealPlannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerViewController.swift; sourceTree = "<group>"; };
 		A93273E927FEEC5D001B0EDB /* TimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableViewController.swift; sourceTree = "<group>"; };
 		A932749A280315E7001B0EDB /* AlarmResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmResponse.swift; sourceTree = "<group>"; };
-		A932749C28031604001B0EDB /* AlarmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmDataManager.swift; sourceTree = "<group>"; };
 		A932749E2803FD50001B0EDB /* Notice.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Notice.storyboard; sourceTree = "<group>"; };
 		A93274A02804007B001B0EDB /* MealPlanner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MealPlanner.storyboard; sourceTree = "<group>"; };
 		A93740EB2827846F006FCC32 /* JoinResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinResponse.swift; sourceTree = "<group>"; };
@@ -902,7 +902,7 @@
 		A9BB8EA2281266B0004F2990 /* AlarmAPI */ = {
 			isa = PBXGroup;
 			children = (
-				A932749C28031604001B0EDB /* AlarmDataManager.swift */,
+				A923CC33282E5EB600608B3F /* AlarmDataManager.swift */,
 			);
 			path = AlarmAPI;
 			sourceTree = "<group>";
@@ -942,7 +942,7 @@
 		A9BB8EA7281266F6004F2990 /* AlarmSwitchAPI */ = {
 			isa = PBXGroup;
 			children = (
-				A909009F2809673400089CCA /* AlarmSwtichDataManager.swift */,
+				A923CC35282E5EC700608B3F /* AlarmSwitchDataManager.swift */,
 			);
 			path = AlarmSwitchAPI;
 			sourceTree = "<group>";
@@ -1278,7 +1278,6 @@
 				A93273DE27FED1B7001B0EDB /* TimeTableCollectionViewCell.swift in Sources */,
 				A909008C2807F40800089CCA /* DateUtil.swift in Sources */,
 				A93273EA27FEEC5D001B0EDB /* TimeTableViewController.swift in Sources */,
-				A932749D28031604001B0EDB /* AlarmDataManager.swift in Sources */,
 				A90900822805CD3D00089CCA /* Const.swift in Sources */,
 				A90900842805CD4800089CCA /* URL.swift in Sources */,
 				A93273E727FEEC27001B0EDB /* MealPlannerViewController.swift in Sources */,
@@ -1301,6 +1300,7 @@
 				A909009C2809658300089CCA /* DeleteAlarmDataManager.swift in Sources */,
 				A90900AA280999DA00089CCA /* NoticeAPI.swift in Sources */,
 				A93273A627F9E12E001B0EDB /* UIViewController+.swift in Sources */,
+				A923CC36282E5EC700608B3F /* AlarmSwitchDataManager.swift in Sources */,
 				A932737B27F9C83D001B0EDB /* AppDelegate.swift in Sources */,
 				A92D82BC28215FFF00DB796E /* MealPlannerOneDayAPI.swift in Sources */,
 				A996E4BB2824B42700926DDC /* TimeTableAPI.swift in Sources */,
@@ -1324,7 +1324,6 @@
 				A923CBBD282A446E00608B3F /* QuitAPI.swift in Sources */,
 				A92D82C4282252B800DB796E /* JoinViewController.swift in Sources */,
 				A90900862805CDAA00089CCA /* ViewController.swift in Sources */,
-				A90900A02809673400089CCA /* AlarmSwtichDataManager.swift in Sources */,
 				A93273A827F9E1CC001B0EDB /* CALayer+.swift in Sources */,
 				A932739B27F9CF31001B0EDB /* UIView+.swift in Sources */,
 				A996E4B12823A48000926DDC /* JoinRequest.swift in Sources */,
@@ -1343,6 +1342,7 @@
 				A93740F42827B1FC006FCC32 /* TokenUtil.swift in Sources */,
 				A90900A62809784000089CCA /* EditAlarmRequest.swift in Sources */,
 				A93273D527FECB4A001B0EDB /* NoticeViewController.swift in Sources */,
+				A923CC34282E5EB600608B3F /* AlarmDataManager.swift in Sources */,
 				A9AD1A7B281949F90070F9AE /* WriteHomeworkViewController.swift in Sources */,
 				A9CEF4332815897800B7B25B /* AcademyHomeworkAPI.swift in Sources */,
 				A9BB8EAD2812675E004F2990 /* AddAlarmRequest.swift in Sources */,
