@@ -6,7 +6,6 @@
 //
 
 import Alamofire
-import Foundation
 
 class SchoolAPI {
     
@@ -35,7 +34,7 @@ class SchoolAPI {
             case .failure:
                 let decoder = JSONDecoder()
                 if let data = response.data, let error = try? decoder.decode(ErrorResponse.self, from: data) {
-                    delegate.failedToRequestSearchSchool(error.message ?? "자녀 변경에 실패하였습니다.")
+                    delegate.failedToRequestSearchSchool(error.message ?? "학교 검색에 실패하였습니다.")
                 }
                 
             }

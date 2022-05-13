@@ -43,6 +43,8 @@
 		A923CC3F282E676800608B3F /* SchoolAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC3E282E676800608B3F /* SchoolAPI.swift */; };
 		A923CC44282E7A5300608B3F /* SchoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC42282E7A5300608B3F /* SchoolTableViewCell.swift */; };
 		A923CC45282E7A5300608B3F /* SchoolTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A923CC43282E7A5300608B3F /* SchoolTableViewCell.xib */; };
+		A923CC47282E7DEA00608B3F /* AddSchoolAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC46282E7DEA00608B3F /* AddSchoolAPI.swift */; };
+		A923CC49282E850300608B3F /* AddClassAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC48282E850300608B3F /* AddClassAPI.swift */; };
 		A92D82BC28215FFF00DB796E /* MealPlannerOneDayAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D82BB28215FFF00DB796E /* MealPlannerOneDayAPI.swift */; };
 		A92D82BE28224F9800DB796E /* Join.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A92D82BD28224F9800DB796E /* Join.storyboard */; };
 		A92D82C22822514900DB796E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D82C12822514900DB796E /* LoginViewController.swift */; };
@@ -184,6 +186,8 @@
 		A923CC3E282E676800608B3F /* SchoolAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolAPI.swift; sourceTree = "<group>"; };
 		A923CC42282E7A5300608B3F /* SchoolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolTableViewCell.swift; sourceTree = "<group>"; };
 		A923CC43282E7A5300608B3F /* SchoolTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolTableViewCell.xib; sourceTree = "<group>"; };
+		A923CC46282E7DEA00608B3F /* AddSchoolAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSchoolAPI.swift; sourceTree = "<group>"; };
+		A923CC48282E850300608B3F /* AddClassAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClassAPI.swift; sourceTree = "<group>"; };
 		A92D82BB28215FFF00DB796E /* MealPlannerOneDayAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerOneDayAPI.swift; sourceTree = "<group>"; };
 		A92D82BD28224F9800DB796E /* Join.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Join.storyboard; sourceTree = "<group>"; };
 		A92D82C12822514900DB796E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -441,6 +445,8 @@
 			isa = PBXGroup;
 			children = (
 				A923CC3E282E676800608B3F /* SchoolAPI.swift */,
+				A923CC46282E7DEA00608B3F /* AddSchoolAPI.swift */,
+				A923CC48282E850300608B3F /* AddClassAPI.swift */,
 			);
 			path = SchoolAPIs;
 			sourceTree = "<group>";
@@ -1308,6 +1314,7 @@
 				A9AD1A6528191DC20070F9AE /* NoticeDetailAPI.swift in Sources */,
 				A996E4B92823B5B400926DDC /* TimeTableOneDayResponse.swift in Sources */,
 				A93273BF27FC1A82001B0EDB /* UITabBarController+.swift in Sources */,
+				A923CC47282E7DEA00608B3F /* AddSchoolAPI.swift in Sources */,
 				A92D82C22822514900DB796E /* LoginViewController.swift in Sources */,
 				A93740F82827B375006FCC32 /* LoginResponse.swift in Sources */,
 				A9AD1A97281961200070F9AE /* EditHomeworkResponse.swift in Sources */,
@@ -1365,6 +1372,7 @@
 				A9BB8EAF28126781004F2990 /* EditAlarmResponse.swift in Sources */,
 				A9CEF4312815808400B7B25B /* SchoolHomeworkAPI.swift in Sources */,
 				A923CC2A282E475700608B3F /* MyStudentAPI.swift in Sources */,
+				A923CC49282E850300608B3F /* AddClassAPI.swift in Sources */,
 				A9AD1A8B281952430070F9AE /* DeleteHomeworkResponse.swift in Sources */,
 				A932739F27F9D940001B0EDB /* UIFont+.swift in Sources */,
 				A9AD1AA0281A6A870070F9AE /* EditNoticeRequest.swift in Sources */,

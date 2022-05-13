@@ -235,62 +235,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ucK-cF-QkM">
-                                <rect key="frame" x="20" y="152.5" width="374" height="411.5"/>
+                                <rect key="frame" x="20" y="64" width="374" height="291"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="학교 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6h-QP-LWe">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="학년" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2d-sD-fHl">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="학교 이름을 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gFj-wy-an9">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="학년을 입력하세요 (ex. 1)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="73U-Ng-IbH">
                                         <rect key="frame" x="0.0" y="50.5" width="374" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="U7e-RV-7mw"/>
+                                            <constraint firstAttribute="height" constant="40" id="Dlt-vh-WN8"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" red="1" green="0.74901960779999999" blue="0.78039215689999997" alpha="0.79700434600000003" colorSpace="custom" customColorSpace="displayP3"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="학년" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2d-sD-fHl">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="반" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dui-Pv-5b1">
                                         <rect key="frame" x="0.0" y="120.5" width="374" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="학년을 선택하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="73U-Ng-IbH">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="반을 입력하세요 (ex. 1)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2h5-vE-Bt6">
                                         <rect key="frame" x="0.0" y="171" width="374" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="Dlt-vh-WN8"/>
-                                        </constraints>
-                                        <color key="textColor" red="1" green="0.74901960779999999" blue="0.78039215689999997" alpha="0.79700434600000003" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="반" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dui-Pv-5b1">
-                                        <rect key="frame" x="0.0" y="241" width="374" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="반을 선택하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2h5-vE-Bt6">
-                                        <rect key="frame" x="0.0" y="291.5" width="374" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="liG-Ly-zVP"/>
                                         </constraints>
-                                        <color key="textColor" red="1" green="0.74901960779999999" blue="0.78039215689999997" alpha="0.79700434600000003" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XqI-Dh-sbi">
-                                        <rect key="frame" x="0.0" y="361.5" width="374" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XqI-Dh-sbi">
+                                        <rect key="frame" x="0.0" y="241" width="374" height="50"/>
                                         <color key="backgroundColor" red="0.7725490196" green="0.89411764709999997" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Lja-t8-amt"/>
@@ -299,6 +275,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="등록하기">
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -306,6 +283,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="addBtnDidTap:" destination="L9x-uv-Whe" eventType="touchUpInside" id="fVA-sM-1I8"/>
                                             <action selector="addParentBtnDidTap:" destination="kPi-vT-0dY" eventType="touchUpInside" id="DaR-So-5Nc"/>
                                         </connections>
                                     </button>
@@ -317,9 +295,14 @@
                         <constraints>
                             <constraint firstItem="ucK-cF-QkM" firstAttribute="leading" secondItem="ubL-ZM-JRY" secondAttribute="leading" constant="20" id="3VB-NG-w31"/>
                             <constraint firstItem="ubL-ZM-JRY" firstAttribute="trailing" secondItem="ucK-cF-QkM" secondAttribute="trailing" constant="20" id="g33-p7-S6K"/>
-                            <constraint firstItem="ucK-cF-QkM" firstAttribute="centerY" secondItem="kHF-HY-WhU" secondAttribute="centerY" multiplier="0.8" id="s58-Rk-3yp"/>
+                            <constraint firstItem="ucK-cF-QkM" firstAttribute="top" secondItem="ubL-ZM-JRY" secondAttribute="top" constant="20" id="nfM-Cg-xZw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addBtn" destination="XqI-Dh-sbi" id="qVQ-HC-fNh"/>
+                        <outlet property="classTextField" destination="2h5-vE-Bt6" id="sLd-ir-n9e"/>
+                        <outlet property="gradeTextField" destination="73U-Ng-IbH" id="ogq-EX-o5C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0o-cq-GnU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
