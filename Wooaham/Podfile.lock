@@ -1,55 +1,24 @@
 PODS:
   - Alamofire (5.6.1)
-  - KakaoSDKAuth (2.9.1):
-    - KakaoSDKCommon (= 2.9.1)
-  - KakaoSDKCommon (2.9.1):
-    - KakaoSDKCommon/Common (= 2.9.1)
-    - KakaoSDKCommon/Network (= 2.9.1)
-  - KakaoSDKCommon/Common (2.9.1)
-  - KakaoSDKCommon/Network (2.9.1):
-    - Alamofire (~> 5.1)
-    - KakaoSDKCommon/Common (= 2.9.1)
-  - KakaoSDKUser (2.9.1):
-    - KakaoSDKAuth (= 2.9.1)
-  - Pageboy (3.6.2)
   - SnapKit (5.6.0)
   - SwipeCellKit (2.7.1)
-  - Tabman (2.12.0):
-    - Pageboy (~> 3.6.0)
-  - Then (3.0.0)
 
 DEPENDENCIES:
-  - KakaoSDKAuth
-  - KakaoSDKCommon
-  - KakaoSDKUser
+  - Alamofire
   - SnapKit
   - SwipeCellKit
-  - Tabman
-  - Then
 
 SPEC REPOS:
   trunk:
     - Alamofire
-    - KakaoSDKAuth
-    - KakaoSDKCommon
-    - KakaoSDKUser
-    - Pageboy
     - SnapKit
     - SwipeCellKit
-    - Tabman
-    - Then
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
-  KakaoSDKAuth: 8ec514e64f57f405735e92483fdae1cc2830d351
-  KakaoSDKCommon: c4b08131fdba6770a280ffe83916048174f329bf
-  KakaoSDKUser: 3b82c8f4b7bdd8584b296cf91d1be4b4a84102fb
-  Pageboy: cf121b9dd48c63f3f281b2a9ec93d02e0f23879b
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SwipeCellKit: 3972254a826da74609926daf59b08d6c72e619ea
-  Tabman: 447a50447ed2869c39ab3b1a779327e43e067c4e
-  Then: 844265ae87834bbe1147d91d5d41a404da2ec27d
 
-PODFILE CHECKSUM: d935a28aa5493cb8924088bb8b106e9722f844f4
+PODFILE CHECKSUM: 66366519a0268c06e0cfc67cb780aaa48f7767d8
 
 COCOAPODS: 1.11.3

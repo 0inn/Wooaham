@@ -5,15 +5,10 @@ target 'Wooaham' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'KakaoSDKCommon'
-  pod 'KakaoSDKAuth'
-  pod 'KakaoSDKUser'
-
-  pod 'Tabman'
-  pod 'SwipeCellKit'
-
+  pod 'Alamofire'
   pod 'SnapKit'
-  pod 'Then'
+
+  pod 'SwipeCellKit'
 
   # Pods for Wooaham
 
