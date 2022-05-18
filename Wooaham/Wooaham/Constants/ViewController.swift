@@ -23,6 +23,8 @@ extension Const {
             
             static let homeworkVC = "HomeworkViewController"
             static let writeHomeworkVC = "WriteHomeworkViewController"
+            
+            static let mypageVC = "MyPageViewController"
         }
     }
 }

@@ -22,6 +22,8 @@ extension Const {
             
             static let homeworkSB = "Homework"
             static let writeHomeworkSB = "WriteHomework"
+            
+            static let mypageSB = "MyPage"
         }
     }
 }
