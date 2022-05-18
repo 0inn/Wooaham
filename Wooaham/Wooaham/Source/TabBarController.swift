@@ -24,16 +24,18 @@ class TabBarController: UITabBarController {
     private func setTabBarController() {
         let homeSB = UIStoryboard.init(name: Const.Storyboard.Name.homeSB, bundle: nil)
         let alarmSB = UIStoryboard.init(name: Const.Storyboard.Name.alarmSB, bundle: nil)
+        let mapSB =  UIStoryboard.init(name: Const.Storyboard.Name.mapSB, bundle: nil)
         let mypageSB = UIStoryboard.init(name: Const.Storyboard.Name.mypageSB, bundle: nil)
         
         guard let homeVC = homeSB.instantiateViewController(withIdentifier: Const.ViewController.Identifier.homeVC) as? HomeViewController,
               let alarmVC = alarmSB.instantiateViewController(withIdentifier: Const.ViewController.Identifier.alarmVC) as? AlarmViewController,
+              let mapVC = mapSB.instantiateViewController(withIdentifier: Const.ViewController.Identifier.mapVC) as? MapViewController,
               let mypageVC = mypageSB.instantiateViewController(withIdentifier: Const.ViewController.Identifier.mypageVC) as? MyPageViewController
         else { return }
         
         let homeNVC = UINavigationController(rootViewController: homeVC)
         let alarmNVC = UINavigationController(rootViewController: alarmVC)
-        let mapNVC = UINavigationController(rootViewController: MapViewController())
+        let mapNVC = UINavigationController(rootViewController: mapVC)
         let mypageNVC = UINavigationController(rootViewController: mypageVC)
         
         homeNVC.tabBarItem = UITabBarItem(
@@ -46,7 +48,7 @@ class TabBarController: UITabBarController {
             image: UIImage(systemName: "alarm"),
             selectedImage: UIImage(systemName: "alarm.fill")
         )
-        mapVC.tabBarItem = UITabBarItem(
+        mapNVC.tabBarItem = UITabBarItem(
             title: "지도",
             image: UIImage(systemName: "map"),
             selectedImage: UIImage(systemName: "map.fill")

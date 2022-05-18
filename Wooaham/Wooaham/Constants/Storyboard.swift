@@ -20,6 +20,8 @@ extension Const {
             
             static let alarmSB = "Alarm"
             
+            static let mapSB = "Map"
+            
             static let homeworkSB = "Homework"
             static let writeHomeworkSB = "WriteHomework"
             

@@ -21,6 +21,8 @@ extension Const {
             
             static let alarmVC = "AlarmViewController"
             
+            static let mapVC = "MapViewController"
+            
             static let homeworkVC = "HomeworkViewController"
             static let writeHomeworkVC = "WriteHomeworkViewController"
             
