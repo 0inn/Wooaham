@@ -30,7 +30,7 @@ class TokenUtils {
             kSecClass: kSecClassGenericPassword,
             kSecAttrService: service,
             kSecAttrAccount: userId,
-            kSecReturnData: kCFBooleanTrue,
+            //kSecReturnData: kCFBooleanTrue,
             kSecMatchLimit: kSecMatchLimitOne
         ]
         

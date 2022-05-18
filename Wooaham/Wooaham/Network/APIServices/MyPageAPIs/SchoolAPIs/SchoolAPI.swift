@@ -30,7 +30,6 @@ class SchoolAPI {
                 self.school = self.mySchool.filter({($0.schoolName).contains(searchSchoolName) && ($0.schoolName).contains("초등학교")})
                 
                 delegate.didSuccessSearchSchool(self.school ?? [SchoolRow(schoolName: "검색 결과 없음.", officeCode: "", schoolCode: "")])
-                
             case .failure:
                 let decoder = JSONDecoder()
                 if let data = response.data, let error = try? decoder.decode(ErrorResponse.self, from: data) {

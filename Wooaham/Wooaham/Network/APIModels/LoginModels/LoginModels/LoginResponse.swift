@@ -15,5 +15,6 @@ struct LoginResponse: Codable {
 
 struct LoginData: Codable {
     let userId: Int?
+    let role: String?
     let jwt: String?
 }
