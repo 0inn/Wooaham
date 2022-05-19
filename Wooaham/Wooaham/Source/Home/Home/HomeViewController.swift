@@ -114,7 +114,7 @@ extension HomeViewController {
     }
     
     func didFailMealPlannerOneDay() {
-        mealPlannerFood.text = "오늘은 급식이 없습니다."
+        mealPlannerFood.text = "급식표가 없습니다."
     }
     
     // 시간표 API 호출
@@ -129,7 +129,7 @@ extension HomeViewController {
     }
     
     func failToRequestTimeTableOneDay() {
-        noTimeTableLabel.text = "오늘은 수업이 없습니다."
+        noTimeTableLabel.text = "시간표가 없습니다."
     }
 }
 
