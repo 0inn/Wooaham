@@ -14,6 +14,7 @@ class MyPageViewController: UIViewController {
     var sendMyPageInfo: ((MyPageData) -> (MyPageData))?
     
     @IBOutlet weak var profileView: UIView!
+    
     @IBOutlet weak var schoolView: UIView!
     @IBOutlet weak var parentView: UIView!
     @IBOutlet weak var studentView: UIView!
@@ -22,9 +23,13 @@ class MyPageViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     
+    @IBOutlet weak var firstLine: UIView!
+    @IBOutlet weak var secondLine: UIView!
+    @IBOutlet weak var thirdLine: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setAuth()
         getMyPageAPI()
         setGesture()
     }
@@ -53,7 +58,24 @@ class MyPageViewController: UIViewController {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "MyPageStudentViewController") else { return }
         self.presentNVC(vc)
     }
-
+    
+    private func setAuth() {
+        switch Role.shared.role {
+        case "STUDENT":
+            studentView.isHidden = true
+            thirdLine.isHidden = true
+        case "PARENT":
+            schoolView.isHidden = true
+            parentView.isHidden = true
+            firstLine.isHidden = true
+            secondLine.isHidden = true
+        default:
+            parentView.isHidden = true
+            studentView.isHidden = true
+            secondLine.isHidden = true
+            thirdLine.isHidden = true
+        }
+    }
     
     private func setGesture() {
         setProfile()

@@ -214,12 +214,15 @@
                     </navigationItem>
                     <connections>
                         <outlet property="emailLabel" destination="4ct-yx-nTp" id="3eq-bo-3JO"/>
+                        <outlet property="firstLine" destination="CF4-Dt-jAH" id="mpG-mV-BwF"/>
                         <outlet property="nameLabel" destination="RDn-33-OpH" id="78L-Pp-TGC"/>
                         <outlet property="parentView" destination="f2X-J4-XY3" id="Lyf-s6-Bo3"/>
                         <outlet property="profileImgLabel" destination="tcT-zR-ZVY" id="NF2-cr-6s8"/>
                         <outlet property="profileView" destination="S0Y-NS-kCo" id="DWM-sF-4e5"/>
                         <outlet property="schoolView" destination="jgn-8V-wvr" id="wXV-0F-Df7"/>
+                        <outlet property="secondLine" destination="q1g-QB-gd5" id="rUT-YK-pXf"/>
                         <outlet property="studentView" destination="pfU-lk-NmB" id="4Yn-u3-P08"/>
+                        <outlet property="thirdLine" destination="PhB-8a-S71" id="1Ug-y4-oKB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TMP-59-gAH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -621,6 +624,13 @@
                                             <constraint firstItem="dKj-ZL-CMq" firstAttribute="leading" secondItem="Suj-d1-Jcu" secondAttribute="leading" constant="20" id="eLS-24-olk"/>
                                         </constraints>
                                     </view>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MvG-Gh-9C4" userLabel="구분선">
+                                        <rect key="frame" x="0.0" y="210" width="414" height="0.5"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="0.5" id="imh-TZ-J7h"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h14-yt-jAZ" userLabel="학교">
                                         <rect key="frame" x="0.0" y="210" width="414" height="70"/>
                                         <subviews>
@@ -662,6 +672,10 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="MvG-Gh-9C4" firstAttribute="leading" secondItem="u5c-oB-MmS" secondAttribute="leading" id="4xZ-Sw-tc6"/>
+                                    <constraint firstAttribute="trailing" secondItem="MvG-Gh-9C4" secondAttribute="trailing" id="Tjl-fI-zjk"/>
+                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42C-oU-7lv">
                                 <rect key="frame" x="15" y="817" width="69" height="30"/>
@@ -690,6 +704,7 @@
                     </view>
                     <connections>
                         <outlet property="emailLabel" destination="UZD-3V-lDb" id="W19-gb-26D"/>
+                        <outlet property="lineView" destination="MvG-Gh-9C4" id="Kd5-jA-bsQ"/>
                         <outlet property="nameLabel" destination="6LI-JS-Hqb" id="kay-1w-fqh"/>
                         <outlet property="profileImgLabel" destination="Bwp-dr-JIL" id="LzG-js-gKB"/>
                         <outlet property="roleLabel" destination="DVI-CR-M4r" id="OfI-5s-wX3"/>
@@ -699,7 +714,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pty-nI-eyc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3441" y="798"/>
+            <point key="canvasLocation" x="3440.579710144928" y="797.54464285714278"/>
         </scene>
         <!--마이페이지-->
         <scene sceneID="zu2-0i-SkR">

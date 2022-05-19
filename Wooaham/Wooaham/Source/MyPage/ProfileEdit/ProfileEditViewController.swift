@@ -20,6 +20,8 @@ class ProfileEditViewController: UIViewController {
     @IBOutlet weak var roleLabel: UILabel!
     @IBOutlet weak var schoolLabel: UILabel!
     
+    @IBOutlet weak var lineView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -41,9 +43,17 @@ class ProfileEditViewController: UIViewController {
     }
     
     private func setUI() {
+        setAuth()
         setNavigationBar()
         setSchool()
         setProfile()
+    }
+    
+    private func setAuth() {
+        if (Role.shared.role == "PARENT") {
+            schoolView.isHidden = true
+            lineView.isHidden = false
+        }
     }
     
     private func setNavigationBar() {
