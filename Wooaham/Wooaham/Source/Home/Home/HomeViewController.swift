@@ -37,6 +37,9 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         getMealPlannerOneDayAPI()
         getTimeTableOneDayAPI()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         tabBarController?.tabBar.isHidden = false
     }
     
