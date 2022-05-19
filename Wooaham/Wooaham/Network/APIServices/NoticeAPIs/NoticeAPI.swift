@@ -13,6 +13,11 @@ class NoticeAPI{
         
         let url = "\(Const.URL.BASE_URL)/info/notice/"
         
+        let token = TokenUtils()
+        guard let header = token.getAuthorizationHeader(accessToken: JWT.shared.jwt ?? "") else {
+            return
+        }
+        
         let params: [String: String] = [
             "classCode": classCode
         ]
@@ -21,15 +26,13 @@ class NoticeAPI{
                    method: .get,
                    parameters: params,
                    encoding: URLEncoding.default,
-                   headers: nil)
+                   headers: header)
         .validate()
         .responseDecodable(of: NoticeResponse.self) { (response) in
             switch response.result {
             case .success(let response):
                 if response.success {
                     delegate.didSuccessNotice(response.data)
-                } else {
-                    //delegate.failedToRequestAlarm("실패")
                 }
                 print("🔥\(response)")
             case .failure(let error):

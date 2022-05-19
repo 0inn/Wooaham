@@ -50,7 +50,7 @@ class WriteNoticeViewController: UIViewController {
         if isEdit ?? false {
             editNoticeAPI.editNotice(noticeId ?? 0, writeNoticeInput)
         } else {
-            writeNoticeAPI.postNotice(1, writeNoticeInput, self)
+            writeNoticeAPI.postNotice(writeNoticeInput, self)
         }
         
         self.dismiss(animated: true)

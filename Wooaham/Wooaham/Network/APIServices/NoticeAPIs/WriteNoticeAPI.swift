@@ -9,9 +9,14 @@ import Alamofire
 
 class WriteNoticeAPI {
     
-    func postNotice(_ userId: CLong, _ noticeInfo: WriteNoticeRequest, _ delegate: WriteNoticeViewController) {
+    func postNotice(_ noticeInfo: WriteNoticeRequest, _ delegate: WriteNoticeViewController) {
         
-        let url = "\(Const.URL.BASE_URL)/info/notice/\(userId)"
+        let url = "\(Const.URL.BASE_URL)/info/notice"
+        
+        let token = TokenUtils()
+        guard let header = token.getAuthorizationHeader(accessToken: JWT.shared.jwt ?? "") else {
+            return
+        }
         
         let body: [String: Any] = [
             "title": noticeInfo.title,
@@ -22,16 +27,11 @@ class WriteNoticeAPI {
                    method: .post,
                    parameters: body,
                    encoding: JSONEncoding.default,
-                   headers: nil)
+                   headers: header)
         .validate()
         .responseDecodable(of: WriteNoticeResponse.self) { (response) in
             switch response.result {
             case .success(let response):
-                if response.success {
-                    //delegate.didSuccessAddNotice(response.data)
-                } else {
-                    //delegate.failedToRequestAddAlarm("실패")
-                }
                 print("🔥\(response)")
             case .failure(let error):
                 print("🔥\(error)")
