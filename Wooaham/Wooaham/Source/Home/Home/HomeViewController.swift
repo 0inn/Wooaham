@@ -23,9 +23,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var noTimeTableLabel: UILabel!
     @IBOutlet weak var timeTableCollectionView: UICollectionView!
     
-    
+    @IBOutlet weak var homeworkView: UIView!
     @IBOutlet weak var schoolHomeworkView: UIView!
     @IBOutlet weak var academyHomeworkView: UIView!
+    
+    @IBOutlet weak var screenTimeView: UIView!
     
     let TIME_CELL = "TimeTableCollectionViewCell"
     
@@ -44,9 +46,22 @@ class HomeViewController: UIViewController {
     }
     
     private func setUI() {
+        setAuth()
         setCollectionView()
         setView()
         setViewEvent()
+    }
+    
+    private func setAuth() {
+        switch Role.shared.role {
+        case "TEACHER":
+            homeworkView.isHidden = true
+            screenTimeView.isHidden = true
+        case "STUDENT":
+            screenTimeView.isHidden = true
+        default:
+            return
+        }
     }
     
     @IBAction func noticeBtnClick(_ sender: Any) {
