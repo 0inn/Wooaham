@@ -8,6 +8,8 @@ target 'Wooaham' do
   pod 'Alamofire'
   pod 'SnapKit'
 
+  pod 'NMapsMap'
+
   pod 'SwipeCellKit'
 
   # Pods for Wooaham

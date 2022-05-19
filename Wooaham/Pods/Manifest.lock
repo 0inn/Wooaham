@@ -1,24 +1,28 @@
 PODS:
   - Alamofire (5.6.1)
+  - NMapsMap (3.15.0)
   - SnapKit (5.6.0)
   - SwipeCellKit (2.7.1)
 
 DEPENDENCIES:
   - Alamofire
+  - NMapsMap
   - SnapKit
   - SwipeCellKit
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - NMapsMap
     - SnapKit
     - SwipeCellKit
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  NMapsMap: f151761c088d6516064c59da03ab6503769486e6
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SwipeCellKit: 3972254a826da74609926daf59b08d6c72e619ea
 
-PODFILE CHECKSUM: 66366519a0268c06e0cfc67cb780aaa48f7767d8
+PODFILE CHECKSUM: 8a4c81e882364dbd102c0364fad0be5729b1a771
 
 COCOAPODS: 1.11.3
