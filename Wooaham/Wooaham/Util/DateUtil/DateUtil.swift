@@ -26,6 +26,7 @@ func getTodayTitle() -> String {
 func getTodaymmdd() -> String {
     let today = NSDate()
     let dateFormatter = DateFormatter()
+    dateFormatter.locale = Locale(identifier: "ko")
     dateFormatter.dateFormat = "M월 d일 (EEEE)"
     let todayString = dateFormatter.string(from: today as Date)
     return todayString
