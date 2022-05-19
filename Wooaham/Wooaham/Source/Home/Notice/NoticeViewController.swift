@@ -36,7 +36,9 @@ class NoticeViewController: UIViewController {
         self.title = "공지 및 알림사항"
         self.navigationItem.backButtonTitle = " "
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(writeNotice(_:)))
+        if (Role.shared.role == "TEACHER") {
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(writeNotice(_:)))
+        }
     }
     
     @objc func writeNotice(_ sender: Any) {
@@ -104,7 +106,9 @@ extension NoticeViewController: UICollectionViewDelegate, UICollectionViewDataSo
             cell.setNotice((noticeList?[indexPath.row])!)
         }
         if (noticeCollectionView.tag == 0) {
-            cell.delegate = self
+            if (Role.shared.role == "TEACHER") {
+                cell.delegate = self
+            }
         }
         return cell
     }
