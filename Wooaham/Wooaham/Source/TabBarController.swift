@@ -43,23 +43,33 @@ class TabBarController: UITabBarController {
             image: UIImage(systemName: "house"),
             selectedImage: UIImage(systemName: "house.fill")
         )
-        alarmNVC.tabBarItem = UITabBarItem(
-            title: "시간 알림",
-            image: UIImage(systemName: "alarm"),
-            selectedImage: UIImage(systemName: "alarm.fill")
-        )
-        mapNVC.tabBarItem = UITabBarItem(
-            title: "지도",
-            image: UIImage(systemName: "map"),
-            selectedImage: UIImage(systemName: "map.fill")
-        )
+        
+        if (Role.shared.role != "TEACHER") {
+            alarmNVC.tabBarItem = UITabBarItem(
+                title: "시간 알림",
+                image: UIImage(systemName: "alarm"),
+                selectedImage: UIImage(systemName: "alarm.fill")
+            )
+            mapNVC.tabBarItem = UITabBarItem(
+                title: "지도",
+                image: UIImage(systemName: "map"),
+                selectedImage: UIImage(systemName: "map.fill")
+            )
+        }
+        
         mypageNVC.tabBarItem = UITabBarItem(
             title: "마이페이지",
             image: UIImage(systemName: "person"),
             selectedImage: UIImage(systemName: "person.fill")
         )
         
-        setViewControllers([homeNVC, alarmNVC, mapNVC, mypageNVC], animated: false)
+        switch Role.shared.role {
+        case "TEACHER":
+            setViewControllers([homeNVC, mypageNVC], animated: false)
+        default:
+            setViewControllers([homeNVC, alarmNVC, mapNVC, mypageNVC], animated: false)
+        }
+        
     }
     
 }

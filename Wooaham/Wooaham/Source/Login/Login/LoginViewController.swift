@@ -79,8 +79,9 @@ class LoginViewController: UIViewController {
 
 //MARK: - 로그인 API 연동
 extension LoginViewController {
-    func didSuccessLogin() {
+    func didSuccessLogin(_ loginRole: String) {
         guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
+        Role.shared.role = loginRole
         changeRootViewController(vc)
     }
     

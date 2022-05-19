@@ -34,7 +34,7 @@ class LoginAPI {
                 UserId.shared.userId = userId
                 JWT.shared.jwt = accessToken
                 print(accessToken)
-                delegate.didSuccessLogin()
+                delegate.didSuccessLogin(response.data?.role ?? "")
             case .failure:
                 let decoder = JSONDecoder()
                 if let data = response.data, let error = try? decoder.decode(ErrorResponse.self, from: data) {
