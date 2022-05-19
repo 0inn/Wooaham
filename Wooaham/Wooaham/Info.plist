@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>UIUserInterfaceStyle</key>
-	<string>light</string>
+	<string>Light</string>
 	<key>NMFClientId</key>
 	<string>j60r0huh4x</string>
 	<key>UIApplicationSceneManifest</key>

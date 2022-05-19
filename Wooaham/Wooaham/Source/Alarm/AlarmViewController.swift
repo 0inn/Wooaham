@@ -18,7 +18,6 @@ class AlarmViewController: UIViewController {
     let ALARM_CELL = "AlarmTableViewCell"
     
     override func viewDidLoad() {
-        print(#function)
         super.viewDidLoad()
         setAlarmTableView()
         setNavigationBar()
