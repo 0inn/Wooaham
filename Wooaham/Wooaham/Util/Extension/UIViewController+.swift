@@ -9,6 +9,19 @@ import UIKit
 
 extension UIViewController {
     
+    // MARK: 빈 화면을 눌렀을 때 키보드가 내려가도록 처리
+    func dismissKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer =
+            UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        self.view.endEditing(false)
+    }
+
+    
     // MARK: 네비게이션 포함 화면 전환
     func presentNVC( _ vc: UIViewController) {
         vc.modalPresentationStyle = .fullScreen
