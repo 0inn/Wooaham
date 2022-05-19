@@ -73,11 +73,11 @@ extension HomeworkViewController {
     }
     
     private func getSchoolHomeworkAPI() {
-        schoolHomeworkAPI.getSchoolHomework("3", self)
+        schoolHomeworkAPI.getSchoolHomework(self)
     }
     
     private func getAcemdemyHomeworkAPI() {
-        academyHomeworkAPI.getAcademyHomework("3", self)
+        academyHomeworkAPI.getAcademyHomework(self)
     }
     
     func didSuccessHomework(_ homeworkDatum: [HomeworkData]) {

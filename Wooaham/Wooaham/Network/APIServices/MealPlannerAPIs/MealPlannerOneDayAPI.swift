@@ -9,9 +9,14 @@ import Alamofire
 
 class MealPlannerOneDayAPI{
     
-    func getMealPlannerOneDay(_ userId: CLong, _ startDay: String, _ delegate: HomeViewController) {
+    func getMealPlannerOneDay(_ startDay: String, _ delegate: HomeViewController) {
         
-        let url = "\(Const.URL.BASE_URL)/info/lunchtable/one-day/\(userId)"
+        let url = "\(Const.URL.BASE_URL)/info/lunchtable/one-day"
+        
+        let token = TokenUtils()
+        guard let header = token.getAuthorizationHeader(accessToken: JWT.shared.jwt ?? "") else {
+            return
+        }
         
         let body: [String: Any] = [
             "startDay": startDay
@@ -21,7 +26,7 @@ class MealPlannerOneDayAPI{
                    method: .get,
                    parameters: body,
                    encoding: URLEncoding.queryString,
-                   headers: nil)
+                   headers: header)
         .validate()
         .responseDecodable(of: MealPlannerResponse.self) { (response) in
             switch response.result {

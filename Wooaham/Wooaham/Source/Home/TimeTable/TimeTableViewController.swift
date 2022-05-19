@@ -107,7 +107,7 @@ class TimeTableViewController: UIViewController {
 // MARK: - 시간표 API 연동
 extension TimeTableViewController {
     private func getTimeTableAPI() {
-        timetableAPI.getTimeTable(1, self)
+        timetableAPI.getTimeTable(self)
     }
     
     func didSuccessTimeTable(_ timeTableInfo: [[TimeTableRow]]) {

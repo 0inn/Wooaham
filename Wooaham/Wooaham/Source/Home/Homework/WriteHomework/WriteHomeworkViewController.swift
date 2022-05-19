@@ -39,7 +39,7 @@ class WriteHomeworkViewController: UIViewController {
         } else {
         let type = isSchoolHW ?? false ? "SCHOOL" : "ACADEMY"
         let writeHomeworkInput = WriteHomeworkRequest(title: title, type: type, checked: false)
-        writeHomeworkAPI.postHomework(3, writeHomeworkInput, self)
+        writeHomeworkAPI.postHomework(writeHomeworkInput, self)
         }
         
         self.dismiss(animated: true)

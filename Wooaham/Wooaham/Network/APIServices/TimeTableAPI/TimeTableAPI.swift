@@ -9,9 +9,14 @@ import Alamofire
 
 class TimeTableAPI{
     
-    func getTimeTable(_ userId: CLong, _ delegate: TimeTableViewController) {
+    func getTimeTable(_ delegate: TimeTableViewController) {
         
-        let url = "\(Const.URL.BASE_URL)/info/timetable/\(userId)"
+        let url = "\(Const.URL.BASE_URL)/info/timetable"
+        
+        let token = TokenUtils()
+        guard let header = token.getAuthorizationHeader(accessToken: JWT.shared.jwt ?? "") else {
+            return
+        }
         
         let param: [String: Any] = [
             "startDay": getToday()
@@ -21,7 +26,7 @@ class TimeTableAPI{
                    method: .get,
                    parameters: param,
                    encoding: URLEncoding.queryString,
-                   headers: nil)
+                   headers: header)
         .validate()
         .responseDecodable(of: TimeTableResponse.self) { (response) in
             switch response.result {

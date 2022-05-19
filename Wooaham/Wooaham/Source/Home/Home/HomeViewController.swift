@@ -101,7 +101,7 @@ extension HomeViewController {
     
     // 시간표 API 호출
     private func getTimeTableOneDayAPI() {
-        timeTableOneDayAPI.getTimeTableOneDay(1, self)
+        timeTableOneDayAPI.getTimeTableOneDay(self)
     }
     
     func didSuccessTimeTableOneDay(_ timeTableInfo: [TimeTableOneDayRow]) {
