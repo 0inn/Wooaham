@@ -9,6 +9,6 @@ import Foundation
 
 extension Const {
     struct URL {
-        static let BASE_URL = "http://13.125.211.168:9000"
+        static let BASE_URL = "http://13.125.184.62:9000"
     }
 }
