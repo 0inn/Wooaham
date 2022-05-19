@@ -45,10 +45,6 @@ class MealPlannerViewController: UIViewController {
         getTodayMealAPI()
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        tabBarController?.tabBar.isHidden = false
-    }
-    
     @IBAction func lastweekBtnDidTap(_ sender: Any) {
         getMealPlannerAPI(startDay)
     }
@@ -88,7 +84,7 @@ class MealPlannerViewController: UIViewController {
 
 extension MealPlannerViewController {
     func getMealPlannerAPI(_ start: String) {
-        mealPlannerAPI.getMealPlanner(1, start, self)
+        mealPlannerAPI.getMealPlanner(start, self)
     }
     func didSuccessMealPlanner(_ mealInfo: [MealPlannerRow]) {
         mealPlannerList = mealInfo

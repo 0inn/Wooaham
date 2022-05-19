@@ -37,6 +37,7 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         getMealPlannerOneDayAPI()
         getTimeTableOneDayAPI()
+        tabBarController?.tabBar.isHidden = false
     }
     
     private func setUI() {
@@ -87,7 +88,7 @@ extension HomeViewController {
     // 급식표 API 호출
     private func getMealPlannerOneDayAPI() {
         mealPlannerDateLabel.text = getTodaymmdd()
-        mealPlannerOneDayAPI.getMealPlannerOneDay(1, getToday(), self)
+        mealPlannerOneDayAPI.getMealPlannerOneDay(getToday(), self)
     }
     
     func didSuccessMealPlannerOneDay(_ mealInfo: MealPlannerRow) {
