@@ -44,6 +44,7 @@ class HomeViewController: UIViewController {
         setCollectionView()
         setView()
         setViewEvent()
+        self.title = "우 아 함"
     }
     
     @IBAction func noticeBtnClick(_ sender: Any) {
