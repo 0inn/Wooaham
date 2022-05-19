@@ -1,5 +1,5 @@
 //
-//  AddAlarmDataManager.swift
+//  AddAlarmAPI.swift
 //  Wooaham
 //
 //  Created by 김영인 on 2022/04/15.
@@ -7,11 +7,16 @@
 
 import Alamofire
 
-class AddAlarmDataManager {
+class AddAlarmAPI {
     
-    func postAlarm(_ userId: CLong, _ alarmInfo: AddAlarmRequest, _ delegate: AddAlarmViewController) {
+    func postAlarm(_ alarmInfo: AddAlarmRequest, _ delegate: AddAlarmViewController) {
         
-        let url = "\(Const.URL.BASE_URL)/alarms/\(userId)"
+        let url = "\(Const.URL.BASE_URL)/alarms"
+        
+        let token = TokenUtils()
+        guard let header = token.getAuthorizationHeader(accessToken: JWT.shared.jwt ?? "") else {
+            return
+        }
         
         let body: [String: Any] = [
             "title": alarmInfo.title,
@@ -26,15 +31,13 @@ class AddAlarmDataManager {
                    method: .post,
                    parameters: body,
                    encoding: JSONEncoding.default,
-                   headers: nil)
+                   headers: header)
         .validate()
         .responseDecodable(of: AddAlarmResponse.self) { (response) in
             switch response.result {
             case .success(let response):
                 if response.success {
                     delegate.didSuccessAddAlarm(response.data)
-                } else {
-                    //delegate.failedToRequestAddAlarm("실패")
                 }
                 print("🔥\(response)")
             case .failure(let error):

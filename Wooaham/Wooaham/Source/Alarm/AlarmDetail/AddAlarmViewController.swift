@@ -10,16 +10,16 @@ import Foundation
 
 class AddAlarmViewController: UIViewController {
     
-    lazy var alarmDetailDataManager = AlarmDetailDataManager()
+    lazy var alarmDetailDataManager = AlarmDetailAPI()
     var alarmDetail: AlarmDetailData!
     var alarmId: CLong?
     
-    lazy var addAlarmDataManager = AddAlarmDataManager()
+    lazy var addAlarmDataManager = AddAlarmAPI()
     var alarmInfo: AddAlarmRequest!
     var userId: CLong?  // 나중에 무조건 jwt 사용해 저장
     var iconNum: CLong!
     
-    lazy var editAlarmDataManager = EditAlarmDataManager()
+    lazy var editAlarmDataManager = EditAlarmAPI()
     var editAlarmInfo: EditAlarmRequest!
     
     var AddFlag: Bool!
@@ -158,7 +158,7 @@ class AddAlarmViewController: UIViewController {
 // MARK: - 알람 생성
 extension AddAlarmViewController {
     private func addAlarm() {
-        addAlarmDataManager.postAlarm(1, alarmInfo, self)
+        addAlarmDataManager.postAlarm(alarmInfo, self)
     }
     func didSuccessAddAlarm(_ alarmId: CLong) {
         print("🕰 \(alarmId)번 알람 생성 완료")

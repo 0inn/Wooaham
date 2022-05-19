@@ -9,10 +9,10 @@ import UIKit
 
 class AlarmViewController: UIViewController {
     
-    lazy var alarmDataManager = AlarmDataManager()
+    lazy var alarmDataManager = AlarmAPI()
     var alarmList: [AlarmData]?
     
-    lazy var deleteAlarmDataManger = DeleteAlarmDataManager()
+    lazy var deleteAlarmDataManger = DeleteAlarmAPI()
     
     @IBOutlet weak var alarmTableView: UITableView!
     let ALARM_CELL = "AlarmTableViewCell"
@@ -32,8 +32,7 @@ class AlarmViewController: UIViewController {
 
 extension AlarmViewController {
     private func getAlarmAPI() {
-        // userId 받아서 줘야 돼
-        alarmDataManager.getAlarm(1, self)
+        alarmDataManager.getAlarm(self)
     }
     func didSuccessAlarm(_ alarmDatum: [AlarmData]) {
         alarmList = alarmDatum

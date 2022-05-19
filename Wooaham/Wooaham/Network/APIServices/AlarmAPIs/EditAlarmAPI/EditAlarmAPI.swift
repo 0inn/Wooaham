@@ -1,5 +1,5 @@
 //
-//  EditAlarmDataManager.swift
+//  EditAlarmAPI.swift
 //  Wooaham
 //
 //  Created by 김영인 on 2022/04/15.
@@ -7,10 +7,10 @@
 
 import Alamofire
 
-class EditAlarmDataManager {
+class EditAlarmAPI {
     
     func editAlarm(_ alarmId: CLong, _ alarmInfo: EditAlarmRequest, _ delegate: AddAlarmViewController) {
-        print(alarmInfo)
+        
         let url = "\(Const.URL.BASE_URL)/alarms/\(alarmId)"
         
         let body: [String: Any] = [
@@ -33,8 +33,6 @@ class EditAlarmDataManager {
             case .success(let response):
                 if response.success {
                     delegate.didSuccessEditAlarm(response.data.alarmId)
-                } else {
-                    //delegate.failedToRequestAddAlarm("실패")
                 }
                 print("🔥\(response)")
             case .failure(let error):

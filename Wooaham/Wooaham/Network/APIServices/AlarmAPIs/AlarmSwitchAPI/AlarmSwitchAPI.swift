@@ -1,5 +1,5 @@
 //
-//  AlarmSwitchDataManager.swift
+//  AlarmAPI.swift
 //  Wooaham
 //
 //  Created by 김영인 on 2022/04/15.
@@ -7,10 +7,10 @@
 
 import Alamofire
 
-class AlarmSwitchDataManager {
+class AlarmSwitchAPI {
     
     func postAlarmSwitch(_ alarmId: CLong, _ enabled: Bool) {
-        print("\(alarmId) \(enabled)")
+
         let url = "\(Const.URL.BASE_URL)/alarms/enable/\(alarmId)"
         
         let body: [String: Bool] = [

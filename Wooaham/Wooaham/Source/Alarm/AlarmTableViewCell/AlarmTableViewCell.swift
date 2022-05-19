@@ -9,7 +9,7 @@ import UIKit
 
 class AlarmTableViewCell: UITableViewCell {
     
-    lazy var alarmSwitchDataManager = AlarmSwitchDataManager()
+    lazy var alarmSwitchDataManager = AlarmSwitchAPI()
     var alarmId: CLong!
     
     @IBOutlet weak var alarmImg: UIImageView!
