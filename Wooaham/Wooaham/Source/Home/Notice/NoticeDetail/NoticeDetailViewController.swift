@@ -14,6 +14,9 @@ class NoticeDetailViewController: UIViewController {
     
     lazy var readNoticeAPI = ReadNoticeAPI()
     var noticeId: CLong?
+    
+    lazy var noticeParentAPI = NoticeParentAPI()
+    var parents: [String]?
 
     @IBOutlet weak var noticeContentLabel: UILabel!
     
@@ -49,6 +52,7 @@ class NoticeDetailViewController: UIViewController {
             readersView.isHidden = true
             btn.isSelected = false
         } else {
+            getParentAPI()
             readersView.isHidden = false
             btn.isSelected = true
         }
@@ -76,18 +80,27 @@ extension NoticeDetailViewController {
     private func postReadNoticeAPI() {
         readNoticeAPI.postReadNotice(noticeId ?? 0, 2)
     }
+    
+    private func getParentAPI() {
+        noticeParentAPI.getNoticeParent(noticeId ?? 0, self)
+    }
+    
+    func didSuccessNoticeParent(_ parentsInfo: [String]) {
+        parents = parentsInfo
+        parentTableView.reloadData()
+    }
 }
 
 extension NoticeDetailViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return parents?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ParentsTableViewCell.identifier, for: indexPath) as? ParentsTableViewCell else { return UITableViewCell() }
         
-        cell.setData("영인 부모님")
+        cell.setData(parents?[indexPath.row] ?? "")
         
         return cell
     }

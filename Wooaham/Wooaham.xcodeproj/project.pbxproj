@@ -98,6 +98,8 @@
 		A93741082827CE40006FCC32 /* Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741072827CE40006FCC32 /* Id.swift */; };
 		A9745AFA283776FF006EBA0E /* ParentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9745AF8283776FF006EBA0E /* ParentsTableViewCell.swift */; };
 		A9745AFB283776FF006EBA0E /* ParentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9745AF9283776FF006EBA0E /* ParentsTableViewCell.xib */; };
+		A9745AFE28377B8B006EBA0E /* NoticeParentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9745AFD28377B8B006EBA0E /* NoticeParentAPI.swift */; };
+		A9745B0028377CC9006EBA0E /* NoticeParentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9745AFF28377CC9006EBA0E /* NoticeParentResponse.swift */; };
 		A975743D2824EB530044D774 /* TimeTableResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A975743C2824EB530044D774 /* TimeTableResponse.swift */; };
 		A996E4AD2823A41600926DDC /* JoinAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A996E4AC2823A41600926DDC /* JoinAPI.swift */; };
 		A996E4B12823A48000926DDC /* JoinRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A996E4B02823A48000926DDC /* JoinRequest.swift */; };
@@ -245,6 +247,8 @@
 		A93741072827CE40006FCC32 /* Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Id.swift; sourceTree = "<group>"; };
 		A9745AF8283776FF006EBA0E /* ParentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentsTableViewCell.swift; sourceTree = "<group>"; };
 		A9745AF9283776FF006EBA0E /* ParentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParentsTableViewCell.xib; sourceTree = "<group>"; };
+		A9745AFD28377B8B006EBA0E /* NoticeParentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeParentAPI.swift; sourceTree = "<group>"; };
+		A9745AFF28377CC9006EBA0E /* NoticeParentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeParentResponse.swift; sourceTree = "<group>"; };
 		A975743C2824EB530044D774 /* TimeTableResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableResponse.swift; sourceTree = "<group>"; };
 		A996E4AC2823A41600926DDC /* JoinAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinAPI.swift; sourceTree = "<group>"; };
 		A996E4B02823A48000926DDC /* JoinRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRequest.swift; sourceTree = "<group>"; };
@@ -854,6 +858,7 @@
 			isa = PBXGroup;
 			children = (
 				A9AD1A6728191E2A0070F9AE /* NoticeDetailResponse.swift */,
+				A9745AFF28377CC9006EBA0E /* NoticeParentResponse.swift */,
 			);
 			path = NoticeDetailModel;
 			sourceTree = "<group>";
@@ -1052,6 +1057,7 @@
 				A9AD1A99281A64BC0070F9AE /* DeleteNoticeAPI.swift */,
 				A9AD1AA1281A6B500070F9AE /* EditNoticeAPI.swift */,
 				A9AD1AA7281A74920070F9AE /* ReadNoticeAPI.swift */,
+				A9745AFD28377B8B006EBA0E /* NoticeParentAPI.swift */,
 			);
 			path = NoticeAPIs;
 			sourceTree = "<group>";
@@ -1335,6 +1341,7 @@
 				A9AD1AA8281A74920070F9AE /* ReadNoticeAPI.swift in Sources */,
 				A93273B427F9F6D2001B0EDB /* AddSchoolViewController.swift in Sources */,
 				A923CC2F282E504A00608B3F /* MyStudentTableViewCell.swift in Sources */,
+				A9745B0028377CC9006EBA0E /* NoticeParentResponse.swift in Sources */,
 				A932739D27F9D222001B0EDB /* AuthSelectViewController.swift in Sources */,
 				A9AD1A9A281A64BC0070F9AE /* DeleteNoticeAPI.swift in Sources */,
 				A93273D327FEC7E2001B0EDB /* HomeViewController.swift in Sources */,
@@ -1376,6 +1383,7 @@
 				A923CC28282D424C00608B3F /* MyPageStudentViewController.swift in Sources */,
 				A9BB8EBA28127787004F2990 /* Icon.swift in Sources */,
 				A9AD1AA2281A6B500070F9AE /* EditNoticeAPI.swift in Sources */,
+				A9745AFE28377B8B006EBA0E /* NoticeParentAPI.swift in Sources */,
 				A9BB8EAF28126781004F2990 /* EditAlarmResponse.swift in Sources */,
 				A9CEF4312815808400B7B25B /* SchoolHomeworkAPI.swift in Sources */,
 				A923CC2A282E475700608B3F /* MyStudentAPI.swift in Sources */,
