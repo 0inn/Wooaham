@@ -17,7 +17,7 @@ class NoticeDetailViewController: UIViewController {
     
     lazy var noticeParentAPI = NoticeParentAPI()
     var parents: [String]?
-
+    
     @IBOutlet weak var noticeContentLabel: UILabel!
     
     @IBOutlet weak var readersView: UIView!
@@ -30,7 +30,9 @@ class NoticeDetailViewController: UIViewController {
     }
     
     private func setUI() {
-        setNavigationBar()
+        if (Role.shared.role == "TEACHER") {
+            setNavigationBar()
+        }
         setTableView()
     }
     
@@ -64,7 +66,7 @@ class NoticeDetailViewController: UIViewController {
         parentTableView.register(UINib(nibName: ParentsTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ParentsTableViewCell.identifier)
         parentTableView.rowHeight = 50
     }
-
+    
 }
 
 extension NoticeDetailViewController {
