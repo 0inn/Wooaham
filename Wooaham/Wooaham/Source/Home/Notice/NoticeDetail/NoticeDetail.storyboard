@@ -29,20 +29,60 @@
                                     <constraint firstAttribute="height" constant="1" id="o1n-Eo-X0f"/>
                                 </constraints>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YKZ-yk-f4x">
+                                <rect key="frame" x="20" y="64" width="374" height="778"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="📢 해당 공지사항 읽은 부모님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLg-Jv-ZHG">
+                                        <rect key="frame" x="10" y="20" width="202" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FFn-1N-aE0">
+                                        <rect key="frame" x="0.0" y="61" width="374" height="717"/>
+                                        <color key="backgroundColor" red="1" green="0.82745098039999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.82745098039999998" blue="0.84313725490000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="FFn-1N-aE0" firstAttribute="top" secondItem="hLg-Jv-ZHG" secondAttribute="bottom" constant="20" id="cf5-4T-qh3"/>
+                                    <constraint firstItem="hLg-Jv-ZHG" firstAttribute="top" secondItem="YKZ-yk-f4x" secondAttribute="top" constant="20" id="gmf-8Q-reQ"/>
+                                    <constraint firstItem="hLg-Jv-ZHG" firstAttribute="leading" secondItem="YKZ-yk-f4x" secondAttribute="leading" constant="10" id="kPe-pb-PDK"/>
+                                    <constraint firstItem="FFn-1N-aE0" firstAttribute="leading" secondItem="YKZ-yk-f4x" secondAttribute="leading" id="o9Y-Bo-dCI"/>
+                                    <constraint firstAttribute="bottom" secondItem="FFn-1N-aE0" secondAttribute="bottom" id="uQi-Nf-yeX"/>
+                                    <constraint firstAttribute="trailing" secondItem="FFn-1N-aE0" secondAttribute="trailing" id="yJc-WQ-Rha"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ogj-iE-rRp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="3cw-s3-hVV"/>
                             <constraint firstItem="Ogj-iE-rRp" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="BRP-IL-W0P"/>
+                            <constraint firstItem="YKZ-yk-f4x" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="Bgi-lJ-MWw"/>
                             <constraint firstItem="hCI-KQ-h89" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="TbP-CZ-f8y"/>
                             <constraint firstItem="hCI-KQ-h89" firstAttribute="top" secondItem="Ogj-iE-rRp" secondAttribute="bottom" constant="20" id="YNA-Y3-wmX"/>
+                            <constraint firstItem="YKZ-yk-f4x" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="ZOL-Co-uwU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YKZ-yk-f4x" secondAttribute="trailing" constant="20" id="Zgr-Wg-WzX"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ogj-iE-rRp" secondAttribute="trailing" id="bdm-x3-hNv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="YKZ-yk-f4x" secondAttribute="bottom" constant="20" id="iYg-db-it7"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hCI-KQ-h89" secondAttribute="trailing" constant="20" id="jf2-Vc-M8Q"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="noticeContentLabel" destination="hCI-KQ-h89" id="SCP-K5-fAC"/>
+                        <outlet property="parentTableView" destination="FFn-1N-aE0" id="oP5-vo-p7N"/>
+                        <outlet property="readersView" destination="YKZ-yk-f4x" id="INf-5V-zJz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

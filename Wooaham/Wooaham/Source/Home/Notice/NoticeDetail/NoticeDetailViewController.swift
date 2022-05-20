@@ -17,11 +17,50 @@ class NoticeDetailViewController: UIViewController {
 
     @IBOutlet weak var noticeContentLabel: UILabel!
     
+    @IBOutlet weak var readersView: UIView!
+    @IBOutlet weak var parentTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUI()
+        connectAPI()
+    }
+    
+    private func setUI() {
+        setNavigationBar()
+        setTableView()
+    }
+    
+    private func connectAPI() {
         getNoticeDetailAPI()
         postReadNoticeAPI()
     }
+    
+    private func setNavigationBar() {
+        let showParents = UIButton(type: .system)
+        showParents.setImage(UIImage(systemName: "person.circle"), for: .normal)
+        showParents.setImage(UIImage(systemName: "person.circle.fill"), for: .selected)
+        showParents.addTarget(self, action: #selector(ParentsView(_:)), for: .touchUpInside)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: showParents)
+    }
+    
+    @objc func ParentsView(_ btn: UIButton) {
+        if btn.isSelected {
+            readersView.isHidden = true
+            btn.isSelected = false
+        } else {
+            readersView.isHidden = false
+            btn.isSelected = true
+        }
+    }
+    
+    private func setTableView() {
+        parentTableView.delegate = self
+        parentTableView.dataSource = self
+        parentTableView.register(UINib(nibName: ParentsTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: ParentsTableViewCell.identifier)
+        parentTableView.rowHeight = 50
+    }
+
 }
 
 extension NoticeDetailViewController {
@@ -37,4 +76,20 @@ extension NoticeDetailViewController {
     private func postReadNoticeAPI() {
         readNoticeAPI.postReadNotice(noticeId ?? 0, 2)
     }
+}
+
+extension NoticeDetailViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ParentsTableViewCell.identifier, for: indexPath) as? ParentsTableViewCell else { return UITableViewCell() }
+        
+        cell.setData("영인 부모님")
+        
+        return cell
+    }
+    
 }
