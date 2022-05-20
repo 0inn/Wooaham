@@ -78,7 +78,7 @@ extension NoticeDetailViewController {
     }
     
     private func postReadNoticeAPI() {
-        readNoticeAPI.postReadNotice(noticeId ?? 0, 2)
+        readNoticeAPI.postReadNotice(noticeId ?? 0)
     }
     
     private func getParentAPI() {

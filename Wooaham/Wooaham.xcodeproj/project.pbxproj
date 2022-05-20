@@ -655,7 +655,6 @@
 				A9BB8EBD281294AF004F2990 /* NoticeCell */,
 				A9F2DD6728129622003AE78B /* NoticeDetail */,
 				A9AD1A5D281917600070F9AE /* WriteNotice */,
-				A9AD1A5E281917710070F9AE /* NoticeReaders */,
 			);
 			path = Notice;
 			sourceTree = "<group>";
@@ -845,13 +844,6 @@
 				A9AD1A6D281929740070F9AE /* WriteNoticeViewController.swift */,
 			);
 			path = WriteNotice;
-			sourceTree = "<group>";
-		};
-		A9AD1A5E281917710070F9AE /* NoticeReaders */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = NoticeReaders;
 			sourceTree = "<group>";
 		};
 		A9AD1A6628191E1D0070F9AE /* NoticeDetailModel */ = {

@@ -9,19 +9,20 @@ import Alamofire
 
 class ReadNoticeAPI {
     
-    func postReadNotice(_ noticeId: CLong, _ userId: CLong) {
+    func postReadNotice(_ noticeId: CLong) {
         
         let url = "\(Const.URL.BASE_URL)/info/notice/\(noticeId)/reading"
         
-        let params: [String: Any] = [
-            "userId": userId
-        ]
-            
+        let token = TokenUtils()
+        guard let header = token.getAuthorizationHeader(accessToken: JWT.shared.jwt ?? "") else {
+            return
+        }
+
         AF.request(url,
                    method: .post,
-                   parameters: params,
+                   parameters: nil,
                    encoding: URLEncoding.default,
-                   headers: nil)
+                   headers: header)
         .validate()
         .responseDecodable(of: Response.self) { (response) in
             switch response.result {
