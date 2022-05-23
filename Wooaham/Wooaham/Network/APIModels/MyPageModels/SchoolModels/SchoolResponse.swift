@@ -8,31 +8,11 @@
 import Foundation
 
 struct SchoolResponse: Codable {
-    let schoolInfo: [SchoolInfo]!
+    let success: Bool
+    let data: [SchoolData]?
+    let error: Bool?
 }
 
-struct SchoolInfo: Codable {
-    let head: [SchoolHead]!
-    let row: [SchoolRow]!
-}
-
-struct SchoolHead: Codable {
-    let list_total_count: Int?
-    let RESULT: SchoolResult!
-}
-
-struct SchoolResult: Codable {
-    let MESSAGE, CODE: String
-}
-
-struct SchoolRow: Codable {
-    let schoolName: String
-    let officeCode: String
-    let schoolCode: String
-
-    enum CodingKeys: String, CodingKey {
-        case schoolName = "SCHUL_NM"
-        case officeCode = "ATPT_OFCDC_SC_CODE"
-        case schoolCode = "SD_SCHUL_CODE"
-    }
+struct SchoolData: Codable {
+    let schoolCode, schoolName, officeCode, region: String?
 }

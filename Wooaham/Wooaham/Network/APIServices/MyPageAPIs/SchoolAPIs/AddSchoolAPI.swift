@@ -9,7 +9,7 @@ import Alamofire
 
 class AddSchoolAPI {
     
-    func addSchool(_ userId: CLong, _ schoolInfo: SchoolRow, _ delegate: SearchSchoolViewController) {
+    func addSchool(_ userId: CLong, _ schoolInfo: SchoolData, _ delegate: SearchSchoolViewController) {
         
         let url = "\(Const.URL.BASE_URL)/users/\(userId)/school"
         
@@ -19,9 +19,9 @@ class AddSchoolAPI {
         }
         
         let body: [String: Any] = [
-            "officeCode" : schoolInfo.officeCode,
-            "schoolName" : schoolInfo.schoolName,
-            "schoolCode" : schoolInfo.schoolCode
+            "officeCode" : schoolInfo.officeCode ?? "",
+            "schoolName" : schoolInfo.schoolName ?? "",
+            "schoolCode" : schoolInfo.schoolCode ?? ""
         ]
         
         AF.request(url,

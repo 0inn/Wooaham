@@ -11,7 +11,7 @@ class SearchSchoolViewController: UIViewController {
     
     lazy var schoolAPI = SchoolAPI()
     lazy var addSchoolAPI = AddSchoolAPI()
-    var schoolList: [SchoolRow]?
+    var schoolList: [SchoolData]?
     var schoolTitle: String?
 
     @IBOutlet weak var schoolTextField: UITextField!
@@ -65,7 +65,7 @@ extension SearchSchoolViewController: UITableViewDelegate, UITableViewDataSource
 extension SearchSchoolViewController {
     
     // 학교 조회 API 결과
-    func didSuccessSearchSchool(_ schoolInfo: [SchoolRow]) {
+    func didSuccessSearchSchool(_ schoolInfo: [SchoolData]) {
         schoolList = schoolInfo
         schoolTableView.reloadData()
     }

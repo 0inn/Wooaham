@@ -9,15 +9,12 @@ import Alamofire
 
 class SchoolAPI {
     
-    var mySchool = [SchoolRow]()
-    var school: [SchoolRow]?
-    
     func searchSchool(_ searchSchoolName: String, _ delegate: SearchSchoolViewController) {
         
         let url = "\(Const.URL.BASE_URL)/schools/"
         
         let param: [String: Any] = [
-            "page" : 1
+            "name" : searchSchoolName
         ]
         
         AF.request(url,
@@ -30,10 +27,8 @@ class SchoolAPI {
             switch response.result {
             case .success(let response):
                 print("🔥 \(response)")
-                self.mySchool = response.schoolInfo[1].row
-                self.school = self.mySchool.filter({($0.schoolName).contains(searchSchoolName) && ($0.schoolName).contains("초등학교")})
-                
-                delegate.didSuccessSearchSchool(self.school ?? [SchoolRow(schoolName: "검색 결과 없음.", officeCode: "", schoolCode: "")])
+                guard let schoolList = response.data else { return }
+                delegate.didSuccessSearchSchool(schoolList)
                 
             case .failure:
                 print("🔥 \(response)")
