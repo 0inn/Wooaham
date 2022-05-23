@@ -109,6 +109,8 @@
 		A996E4BB2824B42700926DDC /* TimeTableAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A996E4BA2824B42700926DDC /* TimeTableAPI.swift */; };
 		A99D212E281C0D2D0042F4BE /* MealPlannerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99D212D281C0D2D0042F4BE /* MealPlannerResponse.swift */; };
 		A99D2133281C0F190042F4BE /* MealPlannerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99D2132281C0F190042F4BE /* MealPlannerAPI.swift */; };
+		A9A096DD283B32910013BDBD /* PhoneTimeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A096DC283B32910013BDBD /* PhoneTimeResponse.swift */; };
+		A9A096DF283B35BD0013BDBD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9A096DE283B35BD0013BDBD /* GoogleService-Info.plist */; };
 		A9AD1A6028191C740070F9AE /* NoticeDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9AD1A5F28191C740070F9AE /* NoticeDetail.storyboard */; };
 		A9AD1A6228191C860070F9AE /* NoticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A6128191C860070F9AE /* NoticeDetailViewController.swift */; };
 		A9AD1A6528191DC20070F9AE /* NoticeDetailAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A6428191DC20070F9AE /* NoticeDetailAPI.swift */; };
@@ -258,6 +260,8 @@
 		A996E4BA2824B42700926DDC /* TimeTableAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTableAPI.swift; sourceTree = "<group>"; };
 		A99D212D281C0D2D0042F4BE /* MealPlannerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerResponse.swift; sourceTree = "<group>"; };
 		A99D2132281C0F190042F4BE /* MealPlannerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerAPI.swift; sourceTree = "<group>"; };
+		A9A096DC283B32910013BDBD /* PhoneTimeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTimeResponse.swift; sourceTree = "<group>"; };
+		A9A096DE283B35BD0013BDBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A9AD1A5F28191C740070F9AE /* NoticeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NoticeDetail.storyboard; sourceTree = "<group>"; };
 		A9AD1A6128191C860070F9AE /* NoticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailViewController.swift; sourceTree = "<group>"; };
 		A9AD1A6428191DC20070F9AE /* NoticeDetailAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailAPI.swift; sourceTree = "<group>"; };
@@ -356,6 +360,7 @@
 				A9BB8EB1281267BF004F2990 /* NoticeModels */,
 				A99D212C281C0D1D0042F4BE /* MealPlannerModels */,
 				A996E4B72823B59100926DDC /* TimeTableModels */,
+				A9A096DB283B32810013BDBD /* PhoneModels */,
 				A90900D4280C240400089CCA /* AlarmModels */,
 				A93741042827C589006FCC32 /* MyPageModels */,
 			);
@@ -527,6 +532,7 @@
 				A932737C27F9C83D001B0EDB /* SceneDelegate.swift */,
 				A932738327F9C83E001B0EDB /* Assets.xcassets */,
 				A932738527F9C83E001B0EDB /* LaunchScreen.storyboard */,
+				A9A096DE283B35BD0013BDBD /* GoogleService-Info.plist */,
 				A932738827F9C83E001B0EDB /* Info.plist */,
 			);
 			path = Wooaham;
@@ -835,6 +841,14 @@
 				A92D82BB28215FFF00DB796E /* MealPlannerOneDayAPI.swift */,
 			);
 			path = MealPlannerAPIs;
+			sourceTree = "<group>";
+		};
+		A9A096DB283B32810013BDBD /* PhoneModels */ = {
+			isa = PBXGroup;
+			children = (
+				A9A096DC283B32910013BDBD /* PhoneTimeResponse.swift */,
+			);
+			path = PhoneModels;
 			sourceTree = "<group>";
 		};
 		A9AD1A5D281917600070F9AE /* WriteNotice */ = {
@@ -1252,6 +1266,7 @@
 				A9CEF41D28156DCF00B7B25B /* Homework.storyboard in Resources */,
 				A9E3F4F02834D5C0004E0A86 /* Map.storyboard in Resources */,
 				A923CBC5282A93DE00608B3F /* Phone.storyboard in Resources */,
+				A9A096DF283B35BD0013BDBD /* GoogleService-Info.plist in Resources */,
 				A93273DF27FED1B7001B0EDB /* TimeTableCollectionViewCell.xib in Resources */,
 				A932738727F9C83E001B0EDB /* LaunchScreen.storyboard in Resources */,
 				A9745AFB283776FF006EBA0E /* ParentsTableViewCell.xib in Resources */,
@@ -1400,6 +1415,7 @@
 				A93273E327FEEA0E001B0EDB /* NoticeCollectionViewCell.swift in Sources */,
 				A932739927F9CEE6001B0EDB /* UIColor+.swift in Sources */,
 				A90900882805CDB300089CCA /* Storyboard.swift in Sources */,
+				A9A096DD283B32910013BDBD /* PhoneTimeResponse.swift in Sources */,
 				A9AD1A94281960720070F9AE /* EditHomeworkAPI.swift in Sources */,
 				A996E4B62823B57800926DDC /* TimeTableOneDayAPI.swift in Sources */,
 				A9AD1A73281933FC0070F9AE /* WriteNoticeAPI.swift in Sources */,
@@ -1592,6 +1608,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1622,6 +1639,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -9,9 +9,6 @@ import UIKit
 
 class AddPhoneViewController: UIViewController {
     
-    let hour = Array(0...23)
-    let minute = Array(0...59)
-    
     @IBOutlet weak var hourLabel: UILabel!
     @IBOutlet weak var minuteLabel: UILabel!
     @IBOutlet weak var timeLimitPickerView: UIPickerView!
@@ -44,9 +41,9 @@ extension AddPhoneViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch (component) {
         case 0:
-            return hour.count
+            return 24
         case 1:
-            return minute.count
+            return 61
         default:
             return 0
         }
@@ -55,9 +52,9 @@ extension AddPhoneViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch (component) {
         case 0:
-            return String(hour[row])
+            return "\(row)"
         case 1:
-            return String(minute[row])
+            return "\(row)"
         default:
             return ""
         }
@@ -66,9 +63,9 @@ extension AddPhoneViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch (component) {
         case 0:
-            hourLabel.text = String(hour[row])
+            hourLabel.text = "\(row)"
         case 1:
-            minuteLabel.text = String(minute[row])
+            minuteLabel.text = "\(row)"
         default:
             print("시간 제한 에러")
         }

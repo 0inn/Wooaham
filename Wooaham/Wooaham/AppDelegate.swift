@@ -6,17 +6,18 @@
 //
 
 import UIKit
+import FirebaseCore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // 네비게이션 바 백버튼 이미지 수정
+        
         UINavigationBar.appearance().backIndicatorImage = Const.Icon.back
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = Const.Icon.back
         
-        //NMFAuthManager.shared().clientId = MapKey.clientId
-
+        FirebaseApp.configure()
+        
         return true
     }
     

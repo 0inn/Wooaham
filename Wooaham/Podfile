@@ -7,10 +7,10 @@ target 'Wooaham' do
 
   pod 'Alamofire'
   pod 'SnapKit'
-
-  pod 'NMapsMap'
-
   pod 'SwipeCellKit'
+  pod 'NMapsMap'
+  pod 'Firebase/Analytics' 
+  pod 'Firebase/Messaging'
 
   # Pods for Wooaham
 
