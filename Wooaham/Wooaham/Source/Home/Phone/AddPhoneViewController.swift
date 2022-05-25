@@ -10,6 +10,7 @@ import UIKit
 class AddPhoneViewController: UIViewController {
     
     lazy var addPhoneTimeAPI = AddPhoneTimeAPI()
+    lazy var phoneTimeAlarmAPI = PhoneTimeAlarmAPI()
     var hour: CLong = 0
     var minute: CLong = 0
     
@@ -20,6 +21,10 @@ class AddPhoneViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setPickerView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        phoneTimeAlarmAPI.getPhoneTimeAlarm(self)
     }
 
     @IBAction func cancelBtnDidTap(_ sender: Any) {
@@ -34,6 +39,17 @@ class AddPhoneViewController: UIViewController {
     private func setPickerView() {
         timeLimitPickerView.delegate = self
         timeLimitPickerView.dataSource = self
+    }
+}
+
+extension AddPhoneViewController {
+    func didSuccessPhoneTimeAlarm(_ phoneTimeAlarmInfo: PhoneTimeData) {
+        timeLimitPickerView.selectRow(phoneTimeAlarmInfo.hour ?? 0, inComponent: 0, animated: false)
+        timeLimitPickerView.selectRow(phoneTimeAlarmInfo.minute ?? 0, inComponent: 1, animated: false)
+        hour = phoneTimeAlarmInfo.hour ?? 0
+        minute = phoneTimeAlarmInfo.minute ?? 0
+        hourLabel.text = "\(hour)"
+        minuteLabel.text = "\(minute)"
     }
 }
 
@@ -61,10 +77,10 @@ extension AddPhoneViewController: UIPickerViewDataSource, UIPickerViewDelegate {
         switch (component) {
         case 0:
             hour = row
-            hourLabel.text = "\(row)"
+            hourLabel.text = "\(hour)"
         case 1:
             minute = row
-            minuteLabel.text = "\(row)"
+            minuteLabel.text = "\(minute)"
         default:
             print("시간 제한 에러")
         }
