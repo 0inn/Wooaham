@@ -151,6 +151,10 @@
                             <constraint firstItem="MtA-wM-aeN" firstAttribute="top" secondItem="kW2-Mv-erN" secondAttribute="bottom" constant="20" id="plB-pB-x8W"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hourLabel" destination="rtA-Qg-kwd" id="uuj-tM-ZXu"/>
+                        <outlet property="minuteLabel" destination="Ugg-eu-tJe" id="hM1-uP-mkm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

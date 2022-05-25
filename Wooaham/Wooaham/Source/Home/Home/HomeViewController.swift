@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     lazy var phoneTimeAPI = PhoneTimeAPI()
     
     var timeTable: [TimeTableOneDayRow]?
+    var phoneTime: PhoneTimeData?
     
     @IBOutlet weak var mealTopView: UIView!
     @IBOutlet weak var mealBelowView: UIView!
@@ -85,6 +86,8 @@ class HomeViewController: UIViewController {
     
     @IBAction func phoneBtnClick(_ sender: Any) {
         guard let vc = UIStoryboard(name: "Phone", bundle: nil).instantiateViewController(withIdentifier: "PhoneViewController") as? PhoneViewController else { return }
+        vc.hour = phoneTime?.hour ?? 0
+        vc.minute = phoneTime?.minute ?? 0
         self.presentNVC(vc)
     }
 
@@ -142,8 +145,9 @@ extension HomeViewController {
     }
     
     func didSuccessPhoneTime(_ phoneTimeInfo: PhoneTimeData) {
-        phoneHour.text = "\(phoneTimeInfo.hour)"
-        phoneMinute.text = "\(phoneTimeInfo.minute)"
+        phoneTime = phoneTimeInfo
+        phoneHour.text = "\(phoneTimeInfo.hour ?? 0)"
+        phoneMinute.text = "\(phoneTimeInfo.minute ?? 0)"
     }
     
 }

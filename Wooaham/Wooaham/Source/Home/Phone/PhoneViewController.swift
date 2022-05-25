@@ -8,6 +8,12 @@
 import UIKit
 
 class PhoneViewController: UIViewController {
+    
+    var hour: Int = 0
+    var minute: Int = 0
+    
+    @IBOutlet weak var hourLabel: UILabel!
+    @IBOutlet weak var minuteLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,5 +27,7 @@ class PhoneViewController: UIViewController {
     
     private func setUI() {
         self.title = "휴대폰 사용시간"
+        hourLabel.text = "\(hour)"
+        minuteLabel.text = "\(minute)"
     }
 }
