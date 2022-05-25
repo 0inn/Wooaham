@@ -517,6 +517,8 @@
                         <outlet property="mealPlannerFood" destination="W1l-7l-SVs" id="ep7-MS-j8W"/>
                         <outlet property="mealTopView" destination="vRo-aK-JuG" id="Qk4-va-v45"/>
                         <outlet property="noTimeTableLabel" destination="5bN-eb-8pe" id="cWR-7n-MMK"/>
+                        <outlet property="phoneHour" destination="hHf-LT-Bbz" id="cE3-7x-9an"/>
+                        <outlet property="phoneMinute" destination="bWD-K4-ahD" id="Leo-ai-qcg"/>
                         <outlet property="schoolHomeworkView" destination="JcP-nE-yuj" id="WDe-Re-lcM"/>
                         <outlet property="screenTimeView" destination="5SC-8D-v1N" id="T7S-6L-WY6"/>
                         <outlet property="timeTableCollectionView" destination="anY-Jc-tKx" id="8xb-6g-Ycb"/>

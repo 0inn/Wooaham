@@ -9,7 +9,7 @@ import Foundation
 
 struct PhoneTimeResponse: Codable {
     let success: Bool
-    let data: [PhoneTimeData]
+    let data: PhoneTimeData?
     let error: Bool?
 }
 

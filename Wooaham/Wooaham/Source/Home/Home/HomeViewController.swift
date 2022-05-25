@@ -11,6 +11,7 @@ class HomeViewController: UIViewController {
     
     lazy var mealPlannerOneDayAPI = MealPlannerOneDayAPI()
     lazy var timeTableOneDayAPI = TimeTableOneDayAPI()
+    lazy var phoneTimeAPI = PhoneTimeAPI()
     
     var timeTable: [TimeTableOneDayRow]?
     
@@ -28,6 +29,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var academyHomeworkView: UIView!
     
     @IBOutlet weak var screenTimeView: UIView!
+    @IBOutlet weak var phoneHour: UILabel!
+    @IBOutlet weak var phoneMinute: UILabel!
     
     let TIME_CELL = "TimeTableCollectionViewCell"
     
@@ -39,6 +42,7 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         getMealPlannerOneDayAPI()
         getTimeTableOneDayAPI()
+        getPhoneTimeAPI()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -131,6 +135,17 @@ extension HomeViewController {
     func failToRequestTimeTableOneDay() {
         noTimeTableLabel.text = "시간표가 없습니다."
     }
+    
+    // 휴대폰 사용시간 API 호출
+    private func getPhoneTimeAPI() {
+        phoneTimeAPI.getPhoneTime(self)
+    }
+    
+    func didSuccessPhoneTime(_ phoneTimeInfo: PhoneTimeData) {
+        phoneHour.text = "\(phoneTimeInfo.hour)"
+        phoneMinute.text = "\(phoneTimeInfo.minute)"
+    }
+    
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
