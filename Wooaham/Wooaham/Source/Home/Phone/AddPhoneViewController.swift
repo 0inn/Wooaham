@@ -9,6 +9,10 @@ import UIKit
 
 class AddPhoneViewController: UIViewController {
     
+    lazy var addPhoneTimeAPI = AddPhoneTimeAPI()
+    var hour: CLong = 0
+    var minute: CLong = 0
+    
     @IBOutlet weak var hourLabel: UILabel!
     @IBOutlet weak var minuteLabel: UILabel!
     @IBOutlet weak var timeLimitPickerView: UIPickerView!
@@ -23,7 +27,7 @@ class AddPhoneViewController: UIViewController {
     }
     
     @IBAction func addBtnDidTap(_ sender: Any) {
-        // 알림 추가 API
+        addPhoneTimeAPI.addPhoneTime(hour, minute, self)
         dismiss(animated: true)
     }
     
@@ -50,21 +54,16 @@ extension AddPhoneViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        switch (component) {
-        case 0:
-            return "\(row)"
-        case 1:
-            return "\(row)"
-        default:
-            return ""
-        }
+        return "\(row)"
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch (component) {
         case 0:
+            hour = row
             hourLabel.text = "\(row)"
         case 1:
+            minute = row
             minuteLabel.text = "\(row)"
         default:
             print("시간 제한 에러")
