@@ -23,6 +23,9 @@
 		A90900A62809784000089CCA /* EditAlarmRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A52809784000089CCA /* EditAlarmRequest.swift */; };
 		A90900A8280999CA00089CCA /* NoticeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A7280999CA00089CCA /* NoticeResponse.swift */; };
 		A90900AA280999DA00089CCA /* NoticeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90900A9280999DA00089CCA /* NoticeAPI.swift */; };
+		A91FE281283E0EAB0085EABF /* PhoneTimeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91FE280283E0EAB0085EABF /* PhoneTimeAPI.swift */; };
+		A91FE283283E13230085EABF /* AddPhoneTimeAlarmAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91FE282283E13230085EABF /* AddPhoneTimeAlarmAPI.swift */; };
+		A91FE285283E21E30085EABF /* PhoneTimeAlarmAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91FE284283E21E30085EABF /* PhoneTimeAlarmAPI.swift */; };
 		A923CBBD282A446E00608B3F /* QuitAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CBBC282A446E00608B3F /* QuitAPI.swift */; };
 		A923CBC0282A4AE600608B3F /* AddParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CBBF282A4AE600608B3F /* AddParentViewController.swift */; };
 		A923CBC2282A53EB00608B3F /* AddParentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CBC1282A53EB00608B3F /* AddParentAPI.swift */; };
@@ -173,6 +176,9 @@
 		A90900A52809784000089CCA /* EditAlarmRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAlarmRequest.swift; sourceTree = "<group>"; };
 		A90900A7280999CA00089CCA /* NoticeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeResponse.swift; sourceTree = "<group>"; };
 		A90900A9280999DA00089CCA /* NoticeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeAPI.swift; sourceTree = "<group>"; };
+		A91FE280283E0EAB0085EABF /* PhoneTimeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTimeAPI.swift; sourceTree = "<group>"; };
+		A91FE282283E13230085EABF /* AddPhoneTimeAlarmAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhoneTimeAlarmAPI.swift; sourceTree = "<group>"; };
+		A91FE284283E21E30085EABF /* PhoneTimeAlarmAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTimeAlarmAPI.swift; sourceTree = "<group>"; };
 		A923CBBC282A446E00608B3F /* QuitAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitAPI.swift; sourceTree = "<group>"; };
 		A923CBBF282A4AE600608B3F /* AddParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParentViewController.swift; sourceTree = "<group>"; };
 		A923CBC1282A53EB00608B3F /* AddParentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParentAPI.swift; sourceTree = "<group>"; };
@@ -375,6 +381,7 @@
 				A9BB8EB0281267A0004F2990 /* NoticeAPIs */,
 				A99D2131281C0F070042F4BE /* MealPlannerAPIs */,
 				A996E4B42823B56500926DDC /* TimeTableAPI */,
+				A91FE27F283E0E970085EABF /* PhoneAPIs */,
 				A90900D0280C238C00089CCA /* AlarmAPIs */,
 				A93740FC2827C09F006FCC32 /* MyPageAPIs */,
 			);
@@ -398,6 +405,16 @@
 				A90900A128096BCB00089CCA /* AlarmTestResponse.swift */,
 			);
 			path = AlarmModels;
+			sourceTree = "<group>";
+		};
+		A91FE27F283E0E970085EABF /* PhoneAPIs */ = {
+			isa = PBXGroup;
+			children = (
+				A91FE280283E0EAB0085EABF /* PhoneTimeAPI.swift */,
+				A91FE282283E13230085EABF /* AddPhoneTimeAlarmAPI.swift */,
+				A91FE284283E21E30085EABF /* PhoneTimeAlarmAPI.swift */,
+			);
+			path = PhoneAPIs;
 			sourceTree = "<group>";
 		};
 		A923CBBE282A4ABA00608B3F /* MyPageParent */ = {
@@ -1351,7 +1368,9 @@
 				A9745B0028377CC9006EBA0E /* NoticeParentResponse.swift in Sources */,
 				A932739D27F9D222001B0EDB /* AuthSelectViewController.swift in Sources */,
 				A9AD1A9A281A64BC0070F9AE /* DeleteNoticeAPI.swift in Sources */,
+				A91FE285283E21E30085EABF /* PhoneTimeAlarmAPI.swift in Sources */,
 				A93273D327FEC7E2001B0EDB /* HomeViewController.swift in Sources */,
+				A91FE281283E0EAB0085EABF /* PhoneTimeAPI.swift in Sources */,
 				A93740F22827A2F9006FCC32 /* ErrorResponse.swift in Sources */,
 				A90900902809358600089CCA /* AlarmDetailAPI.swift in Sources */,
 				A93741062827C59C006FCC32 /* MyPageResponse.swift in Sources */,
@@ -1384,6 +1403,7 @@
 				A90900AA280999DA00089CCA /* NoticeAPI.swift in Sources */,
 				A93273A627F9E12E001B0EDB /* UIViewController+.swift in Sources */,
 				A923CC36282E5EC700608B3F /* AlarmSwitchAPI.swift in Sources */,
+				A91FE283283E13230085EABF /* AddPhoneTimeAlarmAPI.swift in Sources */,
 				A932737B27F9C83D001B0EDB /* AppDelegate.swift in Sources */,
 				A92D82BC28215FFF00DB796E /* MealPlannerOneDayAPI.swift in Sources */,
 				A996E4BB2824B42700926DDC /* TimeTableAPI.swift in Sources */,
