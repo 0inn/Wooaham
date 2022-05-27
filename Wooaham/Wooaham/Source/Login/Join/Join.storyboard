@@ -16,14 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wooaham" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dV-FX-3wd">
-                                <rect key="frame" x="134" y="161" width="146" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
-                                <color key="textColor" red="1" green="0.74901960779999999" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yAI-VC-FwD" userLabel="아이디/비밀번호">
-                                <rect key="frame" x="30" y="295" width="354" height="306"/>
+                                <rect key="frame" x="30" y="299.5" width="354" height="306"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vJD-KM-FQw">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="44"/>
@@ -85,22 +79,30 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정보를 입력해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNO-7U-cQz">
-                                <rect key="frame" x="138.5" y="236" width="137" height="20.5"/>
+                                <rect key="frame" x="138.5" y="229" width="137" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wooaham" translatesAutoresizingMaskIntoConstraints="NO" id="h3W-r1-fzU">
+                                <rect key="frame" x="100" y="139" width="214" height="80"/>
+                                <color key="tintColor" red="1" green="0.73416654670000003" blue="0.78939032050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="GEg-9e-avu"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="h3W-r1-fzU" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.4" id="63f-Ay-FgE"/>
                             <constraint firstItem="eNO-7U-cQz" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="8lU-HJ-I6b"/>
-                            <constraint firstItem="7dV-FX-3wd" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="HKN-3p-NIS"/>
-                            <constraint firstItem="eNO-7U-cQz" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.55" id="Ktl-KA-X58"/>
-                            <constraint firstItem="7dV-FX-3wd" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.4" id="QMX-pX-bTE"/>
+                            <constraint firstItem="h3W-r1-fzU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="100" id="Puv-lk-O7t"/>
                             <constraint firstItem="yAI-VC-FwD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="Qwn-CO-jVs"/>
+                            <constraint firstItem="eNO-7U-cQz" firstAttribute="top" secondItem="h3W-r1-fzU" secondAttribute="bottom" constant="10" id="RSv-Bi-V8d"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yAI-VC-FwD" secondAttribute="trailing" constant="30" id="VR1-lP-TRL"/>
-                            <constraint firstItem="yAI-VC-FwD" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Y6e-dN-ucg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="h3W-r1-fzU" secondAttribute="trailing" constant="100" id="mLe-dF-JOu"/>
+                            <constraint firstItem="yAI-VC-FwD" firstAttribute="top" secondItem="eNO-7U-cQz" secondAttribute="bottom" constant="50" id="oHX-g0-sPu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title=" " id="mKX-01-sUW">
@@ -126,14 +128,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wooaham" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMo-EA-MsA">
-                                <rect key="frame" x="134" y="206" width="146" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
-                                <color key="textColor" red="1" green="0.74901960779999999" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RBe-kc-xI7">
-                                <rect key="frame" x="30" y="353" width="354" height="190"/>
+                                <rect key="frame" x="30" y="344.5" width="354" height="190"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gL-sY-UPX">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
@@ -200,8 +196,15 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wooaham" translatesAutoresizingMaskIntoConstraints="NO" id="HSr-wf-UrM">
+                                <rect key="frame" x="100" y="184" width="214" height="80"/>
+                                <color key="tintColor" red="1" green="0.73416654670000003" blue="0.78939032050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="zZi-Vi-qNo"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="무엇으로 등록하시겠습니까 ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmD-9j-jio">
-                                <rect key="frame" x="110.5" y="303.5" width="193.5" height="20.5"/>
+                                <rect key="frame" x="110.5" y="274" width="193.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -211,13 +214,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="bmD-9j-jio" firstAttribute="centerX" secondItem="Kib-Rx-Ha4" secondAttribute="centerX" id="A57-dN-V5h"/>
+                            <constraint firstItem="HSr-wf-UrM" firstAttribute="leading" secondItem="fMO-zy-qYt" secondAttribute="leading" constant="100" id="F6e-pU-fGe"/>
+                            <constraint firstItem="RBe-kc-xI7" firstAttribute="top" secondItem="bmD-9j-jio" secondAttribute="bottom" constant="50" id="TE7-3E-Mzq"/>
                             <constraint firstItem="RBe-kc-xI7" firstAttribute="leading" secondItem="fMO-zy-qYt" secondAttribute="leading" constant="30" id="TfY-sK-KfB"/>
-                            <constraint firstItem="MMo-EA-MsA" firstAttribute="centerY" secondItem="Kib-Rx-Ha4" secondAttribute="centerY" multiplier="0.5" id="cf3-Gb-fsk"/>
-                            <constraint firstItem="MMo-EA-MsA" firstAttribute="centerX" secondItem="Kib-Rx-Ha4" secondAttribute="centerX" id="fEE-gx-vVt"/>
-                            <constraint firstItem="RBe-kc-xI7" firstAttribute="centerY" secondItem="Kib-Rx-Ha4" secondAttribute="centerY" id="hOx-rC-xNG"/>
+                            <constraint firstItem="bmD-9j-jio" firstAttribute="top" secondItem="HSr-wf-UrM" secondAttribute="bottom" constant="10" id="mTY-aR-M0M"/>
                             <constraint firstItem="RBe-kc-xI7" firstAttribute="centerX" secondItem="Kib-Rx-Ha4" secondAttribute="centerX" id="nCf-mD-vUI"/>
                             <constraint firstItem="fMO-zy-qYt" firstAttribute="trailing" secondItem="RBe-kc-xI7" secondAttribute="trailing" constant="30" id="qps-hj-mMO"/>
-                            <constraint firstItem="bmD-9j-jio" firstAttribute="centerY" secondItem="Kib-Rx-Ha4" secondAttribute="centerY" multiplier="0.7" id="rYp-LP-bva"/>
+                            <constraint firstItem="fMO-zy-qYt" firstAttribute="trailing" secondItem="HSr-wf-UrM" secondAttribute="trailing" constant="100" id="vck-13-9jM"/>
+                            <constraint firstItem="HSr-wf-UrM" firstAttribute="centerY" secondItem="Kib-Rx-Ha4" secondAttribute="centerY" multiplier="0.5" id="yVH-Pd-QQQ"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -227,6 +231,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="wooaham" width="389" height="125"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

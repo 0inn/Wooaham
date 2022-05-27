@@ -16,12 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wooaham" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wp-AR-7MM">
-                                <rect key="frame" x="134" y="206" width="146" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="30"/>
-                                <color key="textColor" red="1" green="0.74901960779999999" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인 후 이용해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bh3-gf-aXx">
                                 <rect key="frame" x="129" y="303.5" width="156" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -92,19 +86,27 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wooaham" translatesAutoresizingMaskIntoConstraints="NO" id="7hu-gI-8SE">
+                                <rect key="frame" x="100" y="184" width="214" height="80"/>
+                                <color key="tintColor" red="1" green="0.73416654665568792" blue="0.7893903204506344" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="iBG-4d-Ryq"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1wp-AR-7MM" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="BaA-N6-z5p"/>
-                            <constraint firstItem="1wp-AR-7MM" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.5" id="Cdn-rc-B6D"/>
+                            <constraint firstItem="7hu-gI-8SE" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.5" id="35q-AV-rVg"/>
                             <constraint firstItem="HnB-oa-W9k" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Ehv-tN-sSP"/>
                             <constraint firstItem="HnB-oa-W9k" firstAttribute="top" secondItem="3P9-m1-BJs" secondAttribute="bottom" constant="20" id="S7p-bo-Xcp"/>
                             <constraint firstItem="Bh3-gf-aXx" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.7" id="Vl3-qM-Ynf"/>
                             <constraint firstItem="3P9-m1-BJs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="ecQ-HT-aD2"/>
+                            <constraint firstItem="7hu-gI-8SE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="100" id="eel-rj-wc2"/>
                             <constraint firstItem="Bh3-gf-aXx" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ek9-0s-8d4"/>
                             <constraint firstItem="3P9-m1-BJs" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="gbW-da-8S8"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3P9-m1-BJs" secondAttribute="trailing" constant="30" id="jB3-MO-I7k"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7hu-gI-8SE" secondAttribute="trailing" constant="100" id="lgF-BL-Q3p"/>
                             <constraint firstItem="3P9-m1-BJs" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="lsc-cG-gDP"/>
                         </constraints>
                     </view>
@@ -141,6 +143,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="wooaham" width="389" height="125"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
