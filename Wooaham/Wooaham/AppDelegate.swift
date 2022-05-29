@@ -11,14 +11,9 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        UINavigationBar.appearance().backIndicatorImage = Const.Icon.back
-        UINavigationBar.appearance().backIndicatorTransitionMaskImage = Const.Icon.back
-        
         sleep(2)
-        
+        UINavigationBar.appearance().tintColor = .darkGray
         UNUserNotificationCenter.current().delegate = self
-        
         return true
     }
     
