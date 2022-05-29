@@ -13,12 +13,14 @@ import NMapsMap
 class MapViewController: UIViewController {
     
     var locationManager = CLLocationManager()
-    var storesLocation: [[String]] = [[]]
+    lazy var storesAPI = getStoresAPI()
+    var stores: [StoresData]?
     
     @IBOutlet weak var mapView: NMFMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getStores()
         setMap()
         setLocation()
     }
@@ -40,23 +42,17 @@ class MapViewController: UIViewController {
         marker.height = 80
         marker.position = NMGLatLng(lat: locationManager.location?.coordinate.latitude ?? 0, lng: locationManager.location?.coordinate.longitude ?? 0)
         marker.mapView = mapView
-        setMarkers()
     }
     
-    private func setMarkers() {
+    func setMarkers() {
         let image = NMFOverlayImage(name: "지킴이집")
-        if storesLocation.count > 1 {
-            for i in 1 ... (storesLocation.count - 1) {
-                let marker = NMFMarker()
-                marker.iconImage = image
-                marker.iconTintColor = .red
-                let x = Double(storesLocation[i][0])
-                let y = Double(storesLocation[i][1])
-                marker.position = NMGLatLng(lat: x ?? 0 , lng: y ?? 0)
-                marker.width = 70
-                marker.height = 70
-                marker.mapView = mapView
-            }
+        for i in 0 ... ((stores?.count ?? 0) - 1) {
+            let marker = NMFMarker()
+            marker.iconImage = image
+            marker.position = NMGLatLng(lat: stores?[i].lng ?? 0.0, lng: stores?[i].lat ?? 0.0)
+            marker.width = 60
+            marker.height = 70
+            marker.mapView = mapView
         }
     }
     
