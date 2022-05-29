@@ -13,6 +13,7 @@ import NMapsMap
 class MapViewController: UIViewController {
     
     var locationManager = CLLocationManager()
+    var storesLocation: [[String]] = [[]]
     
     @IBOutlet weak var mapView: NMFMapView!
     
@@ -43,7 +44,20 @@ class MapViewController: UIViewController {
     }
     
     private func setMarkers() {
-        
+        let image = NMFOverlayImage(name: "지킴이집")
+        if storesLocation.count > 1 {
+            for i in 1 ... (storesLocation.count - 1) {
+                let marker = NMFMarker()
+                marker.iconImage = image
+                marker.iconTintColor = .red
+                let x = Double(storesLocation[i][0])
+                let y = Double(storesLocation[i][1])
+                marker.position = NMGLatLng(lat: x ?? 0 , lng: y ?? 0)
+                marker.width = 70
+                marker.height = 70
+                marker.mapView = mapView
+            }
+        }
     }
     
 }
