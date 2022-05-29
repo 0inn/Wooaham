@@ -12,6 +12,7 @@ class AlarmTableViewCell: UITableViewCell {
     lazy var alarmSwitchDataManager = AlarmSwitchAPI()
     var alarmId: CLong!
     
+    @IBOutlet weak var alarmView: UIView!
     @IBOutlet weak var alarmImg: UIImageView!
     @IBOutlet weak var alarmTime: UILabel!
     @IBOutlet weak var alarmTitle: UILabel!
@@ -39,6 +40,12 @@ class AlarmTableViewCell: UITableViewCell {
     
     func setAlarmData(_ alarmData: AlarmData){
         alarmImg.image = setIcon(alarmData.iconId)
+        
+        if (alarmData.iconId == 7) {
+            alarmView.backgroundColor = .mainGreen.withAlphaComponent(0.5)
+        } else {
+            alarmView.backgroundColor = .mainPink.withAlphaComponent(0.5)
+        }
         
         let time = alarmData.time
         let ampmRange = time.index(time.startIndex, offsetBy: 2)

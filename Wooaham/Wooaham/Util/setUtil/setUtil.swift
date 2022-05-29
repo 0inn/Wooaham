@@ -16,6 +16,8 @@ func setIcon(_ imgId: Int) -> UIImage {
         return UIImage(named: "school")!
     case 6:
         return UIImage(named: "bus")!
+    case 7:
+        return UIImage(named: "homework")!
     default:
         return UIImage()
     }

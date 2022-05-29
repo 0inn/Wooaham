@@ -37,13 +37,16 @@ class AddAlarmViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var nameTextField: UITextField!
     
+    @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var firstView: UIView!
     @IBOutlet weak var secondView: UIView!
     @IBOutlet weak var thirdView: UIView!
+    @IBOutlet weak var fourthView: UIView!
     
     @IBOutlet weak var firstIcon: UIButton!
     @IBOutlet weak var secondIcon: UIButton!
     @IBOutlet weak var thirdIcon: UIButton!
+    @IBOutlet weak var fourthIcon: UIButton!
     
     @IBOutlet weak var sun: UIButton!
     @IBOutlet weak var mon: UIButton!
@@ -65,8 +68,8 @@ class AddAlarmViewController: UIViewController {
     }
     
     private func setData() {
-        iconViews = [UIView(), firstView, secondView, thirdView]
-        iconBtns = [UIButton(), firstIcon, secondIcon, thirdIcon]
+        iconViews = [UIView(), firstView, secondView, thirdView, fourthView]
+        iconBtns = [UIButton(), firstIcon, secondIcon, thirdIcon, fourthIcon]
         dayBtns = [sun,mon, tue, wed, thur, fri, sat]
         datePicker.locale = Locale(identifier: "ko-KR")
     }
@@ -84,7 +87,13 @@ class AddAlarmViewController: UIViewController {
         for btn in iconBtns {
             if btn == sender {
                 btn.isSelected = true
+                if (btn.tag == 4) {
+                    iconViews[btn.tag].backgroundColor = .mainGreen.withAlphaComponent(0.5)
+                    mainView.backgroundColor = .mainGreen
+                } else {
                 iconViews[btn.tag].backgroundColor = .mainPink.withAlphaComponent(0.5)
+                    mainView.backgroundColor = .mainPink
+                }
                 iconImg.image = btn.image(for: .normal)
                 iconNum = CLong(btn.tag)
             } else {
