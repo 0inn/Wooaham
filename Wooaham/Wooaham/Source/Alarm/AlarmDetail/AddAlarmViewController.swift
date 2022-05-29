@@ -10,6 +10,8 @@ import Foundation
 
 class AddAlarmViewController: UIViewController {
     
+    let userNotificationCenter = UNUserNotificationCenter.current()
+    
     lazy var alarmDetailDataManager = AlarmDetailAPI()
     var alarmDetail: AlarmDetailData!
     var alarmId: CLong?
@@ -66,6 +68,7 @@ class AddAlarmViewController: UIViewController {
         iconViews = [UIView(), firstView, secondView, thirdView]
         iconBtns = [UIButton(), firstIcon, secondIcon, thirdIcon]
         dayBtns = [sun,mon, tue, wed, thur, fri, sat]
+        datePicker.locale = Locale(identifier: "ko-KR")
     }
     
     // 취소 버튼
@@ -94,6 +97,7 @@ class AddAlarmViewController: UIViewController {
     // 알람 시간 설정
     @IBAction func changeAlarmTime(_ sender: UIDatePicker) {
         let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko")
         formatter.dateFormat = "a hh:mm"
         alarmTime = formatter.string(from: datePicker.date)
     }
@@ -150,6 +154,8 @@ class AddAlarmViewController: UIViewController {
             editAlarmInfo = EditAlarmRequest(title: name, time: alarmTime, daysOfWeek: postDays, enabled: alarmDetail.enabled, before10min: tenMinSwitch.isOn, iconId: iconNum + 3)
             editAlarm()
         }
+        requestAuthorization()
+        sendNotification(name, time)
         self.dismiss(animated: true)
     }
     

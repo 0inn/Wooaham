@@ -99,6 +99,7 @@
 		A93741032827C2BF006FCC32 /* setUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741022827C2BF006FCC32 /* setUtil.swift */; };
 		A93741062827C59C006FCC32 /* MyPageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741052827C59C006FCC32 /* MyPageResponse.swift */; };
 		A93741082827CE40006FCC32 /* Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741072827CE40006FCC32 /* Id.swift */; };
+		A96578EC284349D7005A1976 /* AddAlarmViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96578EB284349D7005A1976 /* AddAlarmViewController+Extension.swift */; };
 		A9745AFA283776FF006EBA0E /* ParentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9745AF8283776FF006EBA0E /* ParentsTableViewCell.swift */; };
 		A9745AFB283776FF006EBA0E /* ParentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9745AF9283776FF006EBA0E /* ParentsTableViewCell.xib */; };
 		A9745AFE28377B8B006EBA0E /* NoticeParentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9745AFD28377B8B006EBA0E /* NoticeParentAPI.swift */; };
@@ -253,6 +254,7 @@
 		A93741022827C2BF006FCC32 /* setUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setUtil.swift; sourceTree = "<group>"; };
 		A93741052827C59C006FCC32 /* MyPageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageResponse.swift; sourceTree = "<group>"; };
 		A93741072827CE40006FCC32 /* Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Id.swift; sourceTree = "<group>"; };
+		A96578EB284349D7005A1976 /* AddAlarmViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddAlarmViewController+Extension.swift"; sourceTree = "<group>"; };
 		A9745AF8283776FF006EBA0E /* ParentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentsTableViewCell.swift; sourceTree = "<group>"; };
 		A9745AF9283776FF006EBA0E /* ParentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParentsTableViewCell.xib; sourceTree = "<group>"; };
 		A9745AFD28377B8B006EBA0E /* NoticeParentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeParentAPI.swift; sourceTree = "<group>"; };
@@ -1118,6 +1120,7 @@
 			children = (
 				A93273C627FC2457001B0EDB /* AddAlarmViewController.swift */,
 				A909009128093AEF00089CCA /* AlarmDetail.swift */,
+				A96578EB284349D7005A1976 /* AddAlarmViewController+Extension.swift */,
 			);
 			path = AlarmDetail;
 			sourceTree = "<group>";
@@ -1380,6 +1383,7 @@
 				A93273EA27FEEC5D001B0EDB /* TimeTableViewController.swift in Sources */,
 				A90900822805CD3D00089CCA /* Const.swift in Sources */,
 				A90900842805CD4800089CCA /* URL.swift in Sources */,
+				A96578EC284349D7005A1976 /* AddAlarmViewController+Extension.swift in Sources */,
 				A93273E727FEEC27001B0EDB /* MealPlannerViewController.swift in Sources */,
 				A9AD1AC6281BE4910070F9AE /* SmallHomeworkTableViewCell.swift in Sources */,
 				A93273B627FB2D57001B0EDB /* String+.swift in Sources */,
