@@ -60,7 +60,6 @@ class HomeViewController: UIViewController {
     
     private func setNavigationBar() {
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 15, height: 15))
-        //imageView.tintColor = .black
         imageView.contentMode = .scaleAspectFit
         imageView.image = UIImage(named: "navigationBar")
         navigationItem.titleView = imageView
