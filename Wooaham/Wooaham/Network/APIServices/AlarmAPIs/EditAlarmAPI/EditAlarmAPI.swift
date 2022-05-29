@@ -36,7 +36,7 @@ class EditAlarmAPI {
                 }
                 print("🔥\(response)")
             case .failure(let error):
-                print("🔥\(error)")
+                print("❌ \(error)")
             }
         }
         
