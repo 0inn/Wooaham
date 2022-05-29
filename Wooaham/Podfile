@@ -9,8 +9,6 @@ target 'Wooaham' do
   pod 'SnapKit'
   pod 'SwipeCellKit'
   pod 'NMapsMap'
-  pod 'Firebase/Analytics' 
-  pod 'Firebase/Messaging'
 
   # Pods for Wooaham
 
