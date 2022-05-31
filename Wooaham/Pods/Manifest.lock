@@ -1,11 +1,13 @@
 PODS:
   - Alamofire (5.6.1)
+  - IQKeyboardManagerSwift (6.5.10)
   - NMapsMap (3.15.0)
   - SnapKit (5.6.0)
   - SwipeCellKit (2.7.1)
 
 DEPENDENCIES:
   - Alamofire
+  - IQKeyboardManagerSwift
   - NMapsMap
   - SnapKit
   - SwipeCellKit
@@ -13,16 +15,18 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - IQKeyboardManagerSwift
     - NMapsMap
     - SnapKit
     - SwipeCellKit
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
+  IQKeyboardManagerSwift: 52962c76ab33532f15ad9f3ff4e5715eda5335bb
   NMapsMap: f151761c088d6516064c59da03ab6503769486e6
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SwipeCellKit: 3972254a826da74609926daf59b08d6c72e619ea
 
-PODFILE CHECKSUM: 7fb4c16444126c8e5a7b1ba721201245945e897c
+PODFILE CHECKSUM: fb078090adb2f6d859b88fc3bfce8a48d4e70ed8
 
 COCOAPODS: 1.11.3
