@@ -36,7 +36,7 @@ class ProfileEditViewController: UIViewController {
     @IBAction func quitBtnDidTap(_ sender: Any) {
         let alert = UIAlertController(title: "계정탈퇴", message: "정말 탈퇴를 진행하시겠습니까?", preferredStyle: .alert)
         let actionDone = UIAlertAction(title: "확인", style: .default, handler: { action in
-            self.quitAPI.quit(UserId.shared.userId ?? 0, self)
+            self.quitAPI.quit(self)
         })
         alert.addAction(actionDone)
         self.present(alert, animated: true, completion: nil)

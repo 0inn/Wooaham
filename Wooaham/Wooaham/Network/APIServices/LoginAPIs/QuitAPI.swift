@@ -8,21 +8,12 @@
 import Alamofire
 
 class QuitAPI {
-    
-    func quit(_ userId: CLong , _ delegate: ProfileEditViewController) {
-        
-        let url = "\(Const.URL.BASE_URL)/users/\(userId)"
-        
-        let token = TokenUtils()
-        guard let header = token.getAuthorizationHeader(accessToken: JWT.shared.jwt ?? "") else {
-            return
-        }
-
-        AF.request(url,
+    func quit(_ delegate: ProfileEditViewController) {
+        AF.request(URLConstant.quit,
                    method: .put,
                    parameters: nil,
                    encoding: JSONEncoding.default,
-                   headers: header)
+                   headers: APIConstant.header)
         .validate()
         .response { response in
             switch response.result {
@@ -34,8 +25,6 @@ class QuitAPI {
                     delegate.failedToRequestQuit(error.message ?? "계정탈퇴에 실패하였습니다.")
                 }
             }
-            
         }
     }
-    
 }

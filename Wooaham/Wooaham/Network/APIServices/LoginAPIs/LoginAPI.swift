@@ -8,17 +8,12 @@
 import Alamofire
 
 class LoginAPI {
-    
     func postlogin(email: String, password: String, _ delegate: LoginViewController) {
-        
-        let url = "\(Const.URL.BASE_URL)/users/login"
-        
         let body: [String: Any] = [
             "email": email,
             "password": password
         ]
-        
-        AF.request(url,
+        AF.request(URLConstant.login,
                    method: .post,
                    parameters: body,
                    encoding: JSONEncoding.default,
@@ -29,11 +24,8 @@ class LoginAPI {
             case .success(let response):
                 guard let accessToken = response.data?.jwt else { return }
                 guard let userId = response.data?.userId else { return }
-                let token = TokenUtils()
-                token.create(url, userId: userId, jwt: accessToken)
-                UserId.shared.userId = userId
-                JWT.shared.jwt = accessToken
-                print(accessToken)
+                KeyChain.create(account: Key.KeyChainKey.accessToken, jwt: accessToken)
+                UserDefaults.standard.set(userId, forKey: "userId")
                 delegate.didSuccessLogin(response.data?.role ?? "")
             case .failure:
                 let decoder = JSONDecoder()
@@ -41,8 +33,6 @@ class LoginAPI {
                     delegate.failedToRequestLogin(error.message ?? "로그인에 실패하였습니다.")
                 }
             }
-            
         }
-        
     }
 }

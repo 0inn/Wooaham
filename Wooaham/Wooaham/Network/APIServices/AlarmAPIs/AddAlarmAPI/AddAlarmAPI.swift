@@ -8,16 +8,7 @@
 import Alamofire
 
 class AddAlarmAPI {
-    
     func postAlarm(_ alarmInfo: AddAlarmRequest, _ delegate: AddAlarmViewController) {
-        
-        let url = "\(Const.URL.BASE_URL)/alarms"
-        
-        let token = TokenUtils()
-        guard let header = token.getAuthorizationHeader(accessToken: JWT.shared.jwt ?? "") else {
-            return
-        }
-        
         let body: [String: Any] = [
             "title": alarmInfo.title,
             "time": alarmInfo.time,
@@ -26,12 +17,11 @@ class AddAlarmAPI {
             "before10min": alarmInfo.before10min ?? false,
             "iconId": alarmInfo.iconId
         ]
-        
-        AF.request(url,
+        AF.request(URLConstant.alarm,
                    method: .post,
                    parameters: body,
                    encoding: JSONEncoding.default,
-                   headers: header)
+                   headers: APIConstant.header)
         .validate()
         .responseDecodable(of: AddAlarmResponse.self) { (response) in
             switch response.result {
@@ -44,6 +34,5 @@ class AddAlarmAPI {
                 print("🔥\(error)")
             }
         }
-        
     }
 }

@@ -8,21 +8,12 @@
 import Alamofire
 
 class MyPageAPI {
-    
-    func getMyPage(_ userId: CLong, _ delegate: MyPageViewController) {
-        
-        let url = "\(Const.URL.BASE_URL)/users/\(userId)"
-        
-        let token = TokenUtils()
-        guard let header = token.getAuthorizationHeader(accessToken: JWT.shared.jwt ?? "") else {
-            return
-        }
-        
-        AF.request(url,
+    func getMyPage(_ delegate: MyPageViewController) {
+        AF.request(URLConstant.mypage,
                    method: .get,
                    parameters: nil,
                    encoding: JSONEncoding.default,
-                   headers: header)
+                   headers: APIConstant.header)
         .validate()
         .responseDecodable(of: MyPageResponse.self) { (response) in
             switch response.result {
@@ -37,5 +28,4 @@ class MyPageAPI {
             }
         }
     }
-    
 }

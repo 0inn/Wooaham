@@ -11,9 +11,23 @@ class TabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        checkAutoLogin()
         setUI()
         setTabBarController()
     }
+    
+    private func checkAutoLogin() {
+        if KeyChain.read(account: Key.KeyChainKey.accessToken) == nil {
+            setLogin()
+        }
+    }
+    
+    private func setLogin() {
+        guard let loginVC = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
+        let loginNVC = UINavigationController(rootViewController: loginVC)
+        changeRootViewController(loginNVC)
+    }
+    
     
     private func setUI() {
         tabBar.barTintColor = .white

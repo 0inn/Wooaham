@@ -8,30 +8,20 @@
 import Alamofire
 
 class AddPhoneTimeAPI {
-    
     func addPhoneTime(_ hour: CLong, _ minute: CLong, _ delegate: AddPhoneViewController) {
-        
-        let url = "\(Const.URL.BASE_URL)/phone-time/alarm"
-        
-        let token = TokenUtils()
-        guard let header = token.getAuthorizationHeader(accessToken: JWT.shared.jwt ?? "") else {
-            return
-        }
-        
         let body: [String: Any] = [
             "hour": hour,
             "minute": minute
         ]
         
-        AF.request(url,
+        AF.request(URLConstant.addPhoneTime,
                    method: .put,
                    parameters: body,
                    encoding: JSONEncoding.default,
-                   headers: header)
+                   headers: APIConstant.header)
         .validate()
         .response { (response) in
             print("🔥 \(response)")
         }
     }
-    
 }

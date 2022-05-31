@@ -34,6 +34,38 @@ class MyPageViewController: UIViewController {
         setGesture()
     }
     
+    private func setAuth() {
+        switch Role.shared.role {
+        case "STUDENT":
+            studentView.isHidden = true
+            thirdLine.isHidden = true
+        case "PARENT":
+            schoolView.isHidden = true
+            parentView.isHidden = true
+            firstLine.isHidden = true
+            secondLine.isHidden = true
+        default:
+            parentView.isHidden = true
+            studentView.isHidden = true
+            secondLine.isHidden = true
+            thirdLine.isHidden = true
+        }
+    }
+    
+    private func setGesture() {
+        setProfile()
+        setSchool()
+        setParent()
+        setStudent()
+    }
+    
+    private func setLogin() {
+        guard let loginVC = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
+        let loginNVC = UINavigationController(rootViewController: loginVC)
+        changeRootViewController(loginNVC)
+    }
+
+    
     // 프로필 수정 페이지로 이동
     @objc func profileEdit(_ sender: Any) {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "ProfileEditViewController") as? ProfileEditViewController else { return }
@@ -59,32 +91,12 @@ class MyPageViewController: UIViewController {
         self.presentNVC(vc)
     }
     
-    private func setAuth() {
-        switch Role.shared.role {
-        case "STUDENT":
-            studentView.isHidden = true
-            thirdLine.isHidden = true
-        case "PARENT":
-            schoolView.isHidden = true
-            parentView.isHidden = true
-            firstLine.isHidden = true
-            secondLine.isHidden = true
-        default:
-            parentView.isHidden = true
-            studentView.isHidden = true
-            secondLine.isHidden = true
-            thirdLine.isHidden = true
-        }
-    }
     
-    private func setGesture() {
-        setProfile()
-        setSchool()
-        setParent()
-        setStudent()
+    @IBAction func logoutBtnDidTap(_ sender: Any) {
+        //UserDefaults.standard.removeObject(forKey: "userId")
+        KeyChain.delete(account: Key.KeyChainKey.accessToken)
+        setLogin()
     }
-
-    
 }
 
 extension MyPageViewController {
@@ -109,7 +121,7 @@ extension MyPageViewController {
 
 extension MyPageViewController {
     private func getMyPageAPI() {
-        myPageAPI.getMyPage(UserId.shared.userId ?? 0, self)
+        myPageAPI.getMyPage(self)
     }
     
     func didSuccessMyPage(_ profileInfo: MyPageData) {

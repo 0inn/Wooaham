@@ -8,27 +8,18 @@
 import Alamofire
 
 class AddSchoolAPI {
-    
-    func addSchool(_ userId: CLong, _ schoolInfo: SchoolData, _ delegate: SearchSchoolViewController) {
-        
-        let url = "\(Const.URL.BASE_URL)/users/\(userId)/school"
-        
-        let token = TokenUtils()
-        guard let header = token.getAuthorizationHeader(accessToken: JWT.shared.jwt ?? "") else {
-            return
-        }
-        
+    func addSchool(_ schoolInfo: SchoolData, _ delegate: SearchSchoolViewController) {
         let body: [String: Any] = [
             "officeCode" : schoolInfo.officeCode ?? "",
             "schoolName" : schoolInfo.schoolName ?? "",
             "schoolCode" : schoolInfo.schoolCode ?? ""
         ]
         
-        AF.request(url,
+        AF.request(URLConstant.addSchool,
                    method: .put,
                    parameters: body,
                    encoding: JSONEncoding.default,
-                   headers: header)
+                   headers: APIConstant.header)
         .validate()
         .response { response in
             switch response.result {
@@ -43,6 +34,5 @@ class AddSchoolAPI {
                 print("❌ \(response)")
             }
         }
-        
     }
 }

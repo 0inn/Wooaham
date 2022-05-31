@@ -1,5 +1,5 @@
 //
-//  TokenUtil.swift
+//  KeyChain.swift
 //  Wooaham
 //
 //  Created by 김영인 on 2022/05/08.
@@ -8,14 +8,13 @@
 import Security
 import Alamofire
 
-class TokenUtils {
+class KeyChain {
     
-    func create(_ service: String, userId: CLong, jwt: String) {
+    class func create(account: String, jwt: String) {
         
         let keyChainQuery: NSDictionary = [
             kSecClass : kSecClassGenericPassword,
-            kSecAttrService: service,
-            kSecAttrAccount: userId,
+            kSecAttrAccount: account,
             kSecValueData: jwt.data(using: .utf8, allowLossyConversion: false)!
         ]
         
@@ -25,12 +24,11 @@ class TokenUtils {
         assert(status == noErr, "failed to saving Token")
     }
     
-    func read(_ service: String, userId: CLong) -> String? {
+    class func read(account: String) -> String? {
         let KeyChainQuery: NSDictionary = [
             kSecClass: kSecClassGenericPassword,
-            kSecAttrService: service,
-            kSecAttrAccount: userId,
-            //kSecReturnData: kCFBooleanTrue,
+            kSecAttrAccount: account,
+            kSecReturnData: kCFBooleanTrue as Any,
             kSecMatchLimit: kSecMatchLimitOne
         ]
         
@@ -47,28 +45,25 @@ class TokenUtils {
         }
     }
     
-    func delete(_ service: String, userId: CLong) {
+    class func delete(account: String) {
         let keyChainQuery: NSDictionary = [
             kSecClass: kSecClassGenericPassword,
-            kSecAttrService: service,
-            kSecAttrAccount: userId
+            kSecAttrAccount: account
         ]
         
         let status = SecItemDelete(keyChainQuery)
         assert(status == noErr, "failed to delete the value, status code = \(status)")
     }
     
-    // header에 jwt 넣는 함수
-    //    func getAuthorizationHeader(serviceID: String, userId: CLong) -> HTTPHeaders? {
-    //        let serviceID = serviceID
-    //        if let accessToken = self.read(serviceID, userId: userId) {
-    //            return ["ACCESS-TOKEN" : "\(accessToken)"] as HTTPHeaders
-    //        } else {
-    //            return nil
-    //        }
-    //    }
+    class func getAuthorizationHeader(account: String) -> HTTPHeaders? {
+        if let accessToken = KeyChain.read(account: account) {
+            return ["ACCESS-TOKEN" : "\(accessToken)"] as HTTPHeaders
+        } else {
+            return nil
+        }
+    }
     
-    func getAuthorizationHeader(accessToken: String) -> HTTPHeaders? {
+    class func getAuthorizationHeader(accessToken: String) -> HTTPHeaders? {
         return ["ACCESS-TOKEN" : "\(accessToken)"] as HTTPHeaders
     }
     

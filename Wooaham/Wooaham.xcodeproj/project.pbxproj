@@ -32,7 +32,6 @@
 		A923CBC5282A93DE00608B3F /* Phone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A923CBC4282A93DE00608B3F /* Phone.storyboard */; };
 		A923CBC8282A93ED00608B3F /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CBC7282A93ED00608B3F /* PhoneViewController.swift */; };
 		A923CBCC282B530300608B3F /* AddPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CBCB282B530300608B3F /* AddPhoneViewController.swift */; };
-		A923CBCE282B66FB00608B3F /* MapKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CBCD282B66FB00608B3F /* MapKey.swift */; };
 		A923CBCF282B6FD100608B3F /* Pods_Wooaham.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECC2A0843E732B2894F27C7 /* Pods_Wooaham.framework */; };
 		A923CC28282D424C00608B3F /* MyPageStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC27282D424C00608B3F /* MyPageStudentViewController.swift */; };
 		A923CC2A282E475700608B3F /* MyStudentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923CC29282E475700608B3F /* MyStudentAPI.swift */; };
@@ -93,13 +92,21 @@
 		A93740EC2827846F006FCC32 /* JoinResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93740EB2827846F006FCC32 /* JoinResponse.swift */; };
 		A93740F028279A70006FCC32 /* SearchSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93740EF28279A70006FCC32 /* SearchSchoolViewController.swift */; };
 		A93740F22827A2F9006FCC32 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93740F12827A2F9006FCC32 /* ErrorResponse.swift */; };
-		A93740F42827B1FC006FCC32 /* TokenUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93740F32827B1FC006FCC32 /* TokenUtil.swift */; };
+		A93740F42827B1FC006FCC32 /* KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93740F32827B1FC006FCC32 /* KeyChain.swift */; };
 		A93740F82827B375006FCC32 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93740F72827B375006FCC32 /* LoginResponse.swift */; };
 		A93740FE2827C19F006FCC32 /* MyPageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93740FD2827C19F006FCC32 /* MyPageAPI.swift */; };
 		A93741032827C2BF006FCC32 /* setUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741022827C2BF006FCC32 /* setUtil.swift */; };
 		A93741062827C59C006FCC32 /* MyPageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741052827C59C006FCC32 /* MyPageResponse.swift */; };
-		A93741082827CE40006FCC32 /* Id.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741072827CE40006FCC32 /* Id.swift */; };
+		A93741082827CE40006FCC32 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741072827CE40006FCC32 /* Role.swift */; };
 		A96578EC284349D7005A1976 /* AddAlarmViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96578EB284349D7005A1976 /* AddAlarmViewController+Extension.swift */; };
+		A96578EF2843A8D6005A1976 /* getStoresAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96578EE2843A8D6005A1976 /* getStoresAPI.swift */; };
+		A96578F22843A937005A1976 /* StoresResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96578F12843A937005A1976 /* StoresResponse.swift */; };
+		A96578F42843A9C6005A1976 /* MapViewController+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96578F32843A9C6005A1976 /* MapViewController+Network.swift */; };
+		A96578FB2845D4E6005A1976 /* KeychainKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96578FA2845D4E6005A1976 /* KeychainKey.swift */; };
+		A96578FD2845D519005A1976 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96578FC2845D519005A1976 /* Key.swift */; };
+		A96578FF2845D6CA005A1976 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96578FE2845D6CA005A1976 /* APIConstant.swift */; };
+		A96579012845D758005A1976 /* URLConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96579002845D758005A1976 /* URLConstant.swift */; };
+		A96579032845D8CC005A1976 /* UserIdKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96579022845D8CC005A1976 /* UserIdKey.swift */; };
 		A9745AFA283776FF006EBA0E /* ParentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9745AF8283776FF006EBA0E /* ParentsTableViewCell.swift */; };
 		A9745AFB283776FF006EBA0E /* ParentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9745AF9283776FF006EBA0E /* ParentsTableViewCell.xib */; };
 		A9745AFE28377B8B006EBA0E /* NoticeParentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9745AFD28377B8B006EBA0E /* NoticeParentAPI.swift */; };
@@ -114,7 +121,6 @@
 		A99D212E281C0D2D0042F4BE /* MealPlannerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99D212D281C0D2D0042F4BE /* MealPlannerResponse.swift */; };
 		A99D2133281C0F190042F4BE /* MealPlannerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99D2132281C0F190042F4BE /* MealPlannerAPI.swift */; };
 		A9A096DD283B32910013BDBD /* PhoneTimeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A096DC283B32910013BDBD /* PhoneTimeResponse.swift */; };
-		A9A096DF283B35BD0013BDBD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9A096DE283B35BD0013BDBD /* GoogleService-Info.plist */; };
 		A9AD1A6028191C740070F9AE /* NoticeDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9AD1A5F28191C740070F9AE /* NoticeDetail.storyboard */; };
 		A9AD1A6228191C860070F9AE /* NoticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A6128191C860070F9AE /* NoticeDetailViewController.swift */; };
 		A9AD1A6528191DC20070F9AE /* NoticeDetailAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9AD1A6428191DC20070F9AE /* NoticeDetailAPI.swift */; };
@@ -186,7 +192,6 @@
 		A923CBC4282A93DE00608B3F /* Phone.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Phone.storyboard; sourceTree = "<group>"; };
 		A923CBC7282A93ED00608B3F /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
 		A923CBCB282B530300608B3F /* AddPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhoneViewController.swift; sourceTree = "<group>"; };
-		A923CBCD282B66FB00608B3F /* MapKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKey.swift; sourceTree = "<group>"; };
 		A923CC27282D424C00608B3F /* MyPageStudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageStudentViewController.swift; sourceTree = "<group>"; };
 		A923CC29282E475700608B3F /* MyStudentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStudentAPI.swift; sourceTree = "<group>"; };
 		A923CC2B282E47FA00608B3F /* MyStudentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStudentResponse.swift; sourceTree = "<group>"; };
@@ -248,13 +253,21 @@
 		A93740EB2827846F006FCC32 /* JoinResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinResponse.swift; sourceTree = "<group>"; };
 		A93740EF28279A70006FCC32 /* SearchSchoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSchoolViewController.swift; sourceTree = "<group>"; };
 		A93740F12827A2F9006FCC32 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
-		A93740F32827B1FC006FCC32 /* TokenUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUtil.swift; sourceTree = "<group>"; };
+		A93740F32827B1FC006FCC32 /* KeyChain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChain.swift; sourceTree = "<group>"; };
 		A93740F72827B375006FCC32 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		A93740FD2827C19F006FCC32 /* MyPageAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageAPI.swift; sourceTree = "<group>"; };
 		A93741022827C2BF006FCC32 /* setUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setUtil.swift; sourceTree = "<group>"; };
 		A93741052827C59C006FCC32 /* MyPageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageResponse.swift; sourceTree = "<group>"; };
-		A93741072827CE40006FCC32 /* Id.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Id.swift; sourceTree = "<group>"; };
+		A93741072827CE40006FCC32 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
 		A96578EB284349D7005A1976 /* AddAlarmViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddAlarmViewController+Extension.swift"; sourceTree = "<group>"; };
+		A96578EE2843A8D6005A1976 /* getStoresAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getStoresAPI.swift; sourceTree = "<group>"; };
+		A96578F12843A937005A1976 /* StoresResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresResponse.swift; sourceTree = "<group>"; };
+		A96578F32843A9C6005A1976 /* MapViewController+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+Network.swift"; sourceTree = "<group>"; };
+		A96578FA2845D4E6005A1976 /* KeychainKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainKey.swift; sourceTree = "<group>"; };
+		A96578FC2845D519005A1976 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
+		A96578FE2845D6CA005A1976 /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
+		A96579002845D758005A1976 /* URLConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstant.swift; sourceTree = "<group>"; };
+		A96579022845D8CC005A1976 /* UserIdKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdKey.swift; sourceTree = "<group>"; };
 		A9745AF8283776FF006EBA0E /* ParentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentsTableViewCell.swift; sourceTree = "<group>"; };
 		A9745AF9283776FF006EBA0E /* ParentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParentsTableViewCell.xib; sourceTree = "<group>"; };
 		A9745AFD28377B8B006EBA0E /* NoticeParentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeParentAPI.swift; sourceTree = "<group>"; };
@@ -269,7 +282,6 @@
 		A99D212D281C0D2D0042F4BE /* MealPlannerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerResponse.swift; sourceTree = "<group>"; };
 		A99D2132281C0F190042F4BE /* MealPlannerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealPlannerAPI.swift; sourceTree = "<group>"; };
 		A9A096DC283B32910013BDBD /* PhoneTimeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTimeResponse.swift; sourceTree = "<group>"; };
-		A9A096DE283B35BD0013BDBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A9AD1A5F28191C740070F9AE /* NoticeDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NoticeDetail.storyboard; sourceTree = "<group>"; };
 		A9AD1A6128191C860070F9AE /* NoticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailViewController.swift; sourceTree = "<group>"; };
 		A9AD1A6428191DC20070F9AE /* NoticeDetailAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailAPI.swift; sourceTree = "<group>"; };
@@ -370,6 +382,7 @@
 				A996E4B72823B59100926DDC /* TimeTableModels */,
 				A9A096DB283B32810013BDBD /* PhoneModels */,
 				A90900D4280C240400089CCA /* AlarmModels */,
+				A96578F02843A922005A1976 /* MapModels */,
 				A93741042827C589006FCC32 /* MyPageModels */,
 			);
 			path = APIModels;
@@ -385,6 +398,7 @@
 				A996E4B42823B56500926DDC /* TimeTableAPI */,
 				A91FE27F283E0E970085EABF /* PhoneAPIs */,
 				A90900D0280C238C00089CCA /* AlarmAPIs */,
+				A96578ED2843A8C8005A1976 /* MapAPIs */,
 				A93740FC2827C09F006FCC32 /* MyPageAPIs */,
 			);
 			path = APIServices;
@@ -393,6 +407,8 @@
 		A90900D3280C23B400089CCA /* APIConstants */ = {
 			isa = PBXGroup;
 			children = (
+				A96578FE2845D6CA005A1976 /* APIConstant.swift */,
+				A96579002845D758005A1976 /* URLConstant.swift */,
 			);
 			path = APIConstants;
 			sourceTree = "<group>";
@@ -551,7 +567,6 @@
 				A932737C27F9C83D001B0EDB /* SceneDelegate.swift */,
 				A932738327F9C83E001B0EDB /* Assets.xcassets */,
 				A932738527F9C83E001B0EDB /* LaunchScreen.storyboard */,
-				A9A096DE283B35BD0013BDBD /* GoogleService-Info.plist */,
 				A932738827F9C83E001B0EDB /* Info.plist */,
 			);
 			path = Wooaham;
@@ -581,7 +596,7 @@
 			children = (
 				A93741012827C295006FCC32 /* setUtil */,
 				A93741002827C283006FCC32 /* DateUtil */,
-				A93740FF2827C27B006FCC32 /* TokenUtil */,
+				A93740FF2827C27B006FCC32 /* KeyChain */,
 				A932739127F9CD78001B0EDB /* Extension */,
 			);
 			path = Util;
@@ -655,6 +670,7 @@
 			children = (
 				A9E3F4EF2834D5C0004E0A86 /* Map.storyboard */,
 				A93273CB27FEBD28001B0EDB /* MapViewController.swift */,
+				A96578F32843A9C6005A1976 /* MapViewController+Network.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -716,8 +732,10 @@
 		A93740EA282782DF006FCC32 /* Secret */ = {
 			isa = PBXGroup;
 			children = (
-				A93741072827CE40006FCC32 /* Id.swift */,
-				A923CBCD282B66FB00608B3F /* MapKey.swift */,
+				A93741072827CE40006FCC32 /* Role.swift */,
+				A96578FC2845D519005A1976 /* Key.swift */,
+				A96578FA2845D4E6005A1976 /* KeychainKey.swift */,
+				A96579022845D8CC005A1976 /* UserIdKey.swift */,
 			);
 			path = Secret;
 			sourceTree = "<group>";
@@ -774,12 +792,12 @@
 			path = MyPageAPIs;
 			sourceTree = "<group>";
 		};
-		A93740FF2827C27B006FCC32 /* TokenUtil */ = {
+		A93740FF2827C27B006FCC32 /* KeyChain */ = {
 			isa = PBXGroup;
 			children = (
-				A93740F32827B1FC006FCC32 /* TokenUtil.swift */,
+				A93740F32827B1FC006FCC32 /* KeyChain.swift */,
 			);
-			path = TokenUtil;
+			path = KeyChain;
 			sourceTree = "<group>";
 		};
 		A93741002827C283006FCC32 /* DateUtil */ = {
@@ -806,6 +824,22 @@
 				A923CC39282E65F400608B3F /* SchoolModels */,
 			);
 			path = MyPageModels;
+			sourceTree = "<group>";
+		};
+		A96578ED2843A8C8005A1976 /* MapAPIs */ = {
+			isa = PBXGroup;
+			children = (
+				A96578EE2843A8D6005A1976 /* getStoresAPI.swift */,
+			);
+			path = MapAPIs;
+			sourceTree = "<group>";
+		};
+		A96578F02843A922005A1976 /* MapModels */ = {
+			isa = PBXGroup;
+			children = (
+				A96578F12843A937005A1976 /* StoresResponse.swift */,
+			);
+			path = MapModels;
 			sourceTree = "<group>";
 		};
 		A996E4AE2823A41B00926DDC /* LoginAPIs */ = {
@@ -1286,7 +1320,6 @@
 				A9CEF41D28156DCF00B7B25B /* Homework.storyboard in Resources */,
 				A9E3F4F02834D5C0004E0A86 /* Map.storyboard in Resources */,
 				A923CBC5282A93DE00608B3F /* Phone.storyboard in Resources */,
-				A9A096DF283B35BD0013BDBD /* GoogleService-Info.plist in Resources */,
 				A93273DF27FED1B7001B0EDB /* TimeTableCollectionViewCell.xib in Resources */,
 				A932738727F9C83E001B0EDB /* LaunchScreen.storyboard in Resources */,
 				A9745AFB283776FF006EBA0E /* ParentsTableViewCell.xib in Resources */,
@@ -1392,12 +1425,13 @@
 				A93273BD27FC180C001B0EDB /* AlarmViewController.swift in Sources */,
 				A923CBCC282B530300608B3F /* AddPhoneViewController.swift in Sources */,
 				A923CC32282E523200608B3F /* ChangeStudentAPI.swift in Sources */,
+				A96579012845D758005A1976 /* URLConstant.swift in Sources */,
 				A923CC3B282E661900608B3F /* SchoolResponse.swift in Sources */,
 				A93273B227F9ED1E001B0EDB /* ProfileEditViewController.swift in Sources */,
 				A923CBC2282A53EB00608B3F /* AddParentAPI.swift in Sources */,
 				A9AD1A6A281921FD0070F9AE /* UINavigationController+.swift in Sources */,
 				A93740F028279A70006FCC32 /* SearchSchoolViewController.swift in Sources */,
-				A93741082827CE40006FCC32 /* Id.swift in Sources */,
+				A93741082827CE40006FCC32 /* Role.swift in Sources */,
 				A9AD1A6228191C860070F9AE /* NoticeDetailViewController.swift in Sources */,
 				A996E4B32823A9F600926DDC /* LoginAPI.swift in Sources */,
 				A9AD1A71281933BB0070F9AE /* WriteNoticeRequest.swift in Sources */,
@@ -1409,23 +1443,27 @@
 				A923CC36282E5EC700608B3F /* AlarmSwitchAPI.swift in Sources */,
 				A91FE283283E13230085EABF /* AddPhoneTimeAlarmAPI.swift in Sources */,
 				A932737B27F9C83D001B0EDB /* AppDelegate.swift in Sources */,
+				A96578F22843A937005A1976 /* StoresResponse.swift in Sources */,
 				A92D82BC28215FFF00DB796E /* MealPlannerOneDayAPI.swift in Sources */,
 				A996E4BB2824B42700926DDC /* TimeTableAPI.swift in Sources */,
 				A923CC28282D424C00608B3F /* MyPageStudentViewController.swift in Sources */,
 				A9BB8EBA28127787004F2990 /* Icon.swift in Sources */,
 				A9AD1AA2281A6B500070F9AE /* EditNoticeAPI.swift in Sources */,
 				A9745AFE28377B8B006EBA0E /* NoticeParentAPI.swift in Sources */,
+				A96578FB2845D4E6005A1976 /* KeychainKey.swift in Sources */,
 				A9BB8EAF28126781004F2990 /* EditAlarmResponse.swift in Sources */,
 				A9CEF4312815808400B7B25B /* SchoolHomeworkAPI.swift in Sources */,
 				A923CC2A282E475700608B3F /* MyStudentAPI.swift in Sources */,
 				A923CC49282E850300608B3F /* AddClassAPI.swift in Sources */,
 				A9AD1A8B281952430070F9AE /* DeleteHomeworkResponse.swift in Sources */,
+				A96579032845D8CC005A1976 /* UserIdKey.swift in Sources */,
 				A932739F27F9D940001B0EDB /* UIFont+.swift in Sources */,
 				A9AD1AA0281A6A870070F9AE /* EditNoticeRequest.swift in Sources */,
 				A93273B827FB2D7B001B0EDB /* NSMutableAttributedString+.swift in Sources */,
 				A932737D27F9C83D001B0EDB /* SceneDelegate.swift in Sources */,
 				A9CEF42C28157D4B00B7B25B /* HomeworkResponse.swift in Sources */,
 				A9AD1A86281950960070F9AE /* DeleteHomeworkAPI.swift in Sources */,
+				A96578EF2843A8D6005A1976 /* getStoresAPI.swift in Sources */,
 				A9AD1A6E281929740070F9AE /* WriteNoticeViewController.swift in Sources */,
 				A909008E2809348000089CCA /* AlarmDetailResponse.swift in Sources */,
 				A90900A228096BCB00089CCA /* AlarmTestResponse.swift in Sources */,
@@ -1443,21 +1481,22 @@
 				A9AD1A94281960720070F9AE /* EditHomeworkAPI.swift in Sources */,
 				A996E4B62823B57800926DDC /* TimeTableOneDayAPI.swift in Sources */,
 				A9AD1A73281933FC0070F9AE /* WriteNoticeAPI.swift in Sources */,
-				A923CBCE282B66FB00608B3F /* MapKey.swift in Sources */,
 				A9AD1AA5281A745B0070F9AE /* Response.swift in Sources */,
 				A9AD1A91281956B80070F9AE /* HomeworkCheckAPI.swift in Sources */,
 				A9AD1A8128194D8D0070F9AE /* WriteHomeworkRequest.swift in Sources */,
 				A9AD1A75281936070070F9AE /* WriteNoticeResponse.swift in Sources */,
 				A923CBC0282A4AE600608B3F /* AddParentViewController.swift in Sources */,
-				A93740F42827B1FC006FCC32 /* TokenUtil.swift in Sources */,
+				A93740F42827B1FC006FCC32 /* KeyChain.swift in Sources */,
 				A90900A62809784000089CCA /* EditAlarmRequest.swift in Sources */,
 				A93273D527FECB4A001B0EDB /* NoticeViewController.swift in Sources */,
 				A923CC34282E5EB600608B3F /* AlarmAPI.swift in Sources */,
 				A9AD1A7B281949F90070F9AE /* WriteHomeworkViewController.swift in Sources */,
 				A9CEF4332815897800B7B25B /* AcademyHomeworkAPI.swift in Sources */,
 				A9BB8EAD2812675E004F2990 /* AddAlarmRequest.swift in Sources */,
+				A96578FF2845D6CA005A1976 /* APIConstant.swift in Sources */,
 				A909009828095A9500089CCA /* AddAlarmAPI.swift in Sources */,
 				A9AD1A9E281A6A680070F9AE /* EditNoticeResponse.swift in Sources */,
+				A96578F42843A9C6005A1976 /* MapViewController+Network.swift in Sources */,
 				A99D212E281C0D2D0042F4BE /* MealPlannerResponse.swift in Sources */,
 				A923CC3F282E676800608B3F /* SchoolAPI.swift in Sources */,
 				A996E4AD2823A41600926DDC /* JoinAPI.swift in Sources */,
@@ -1467,6 +1506,7 @@
 				A93273C427FC1DA3001B0EDB /* AlarmTableViewCell.swift in Sources */,
 				A909009A28095AEC00089CCA /* AddAlarmResponse.swift in Sources */,
 				A9AD1A6828191E2A0070F9AE /* NoticeDetailResponse.swift in Sources */,
+				A96578FD2845D519005A1976 /* Key.swift in Sources */,
 				A9CEF42628157B6D00B7B25B /* HomeworkTableViewCell.swift in Sources */,
 				A9AD1A7F28194D850070F9AE /* WriteHomeworkResponse.swift in Sources */,
 				A9AD1A8F281956620070F9AE /* HomeworkCheckResponse.swift in Sources */,

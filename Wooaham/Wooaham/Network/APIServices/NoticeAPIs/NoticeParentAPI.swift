@@ -8,21 +8,14 @@
 import Alamofire
 
 class NoticeParentAPI{
-    
     func getNoticeParent(_ noticeId: CLong, _ delegate: NoticeDetailViewController) {
-        
         let url = "\(Const.URL.BASE_URL)/info/notice/\(noticeId)/reading"
-        
-        let token = TokenUtils()
-        guard let header = token.getAuthorizationHeader(accessToken: JWT.shared.jwt ?? "") else {
-            return
-        }
         
         AF.request(url,
                    method: .get,
                    parameters: nil,
                    encoding: URLEncoding.default,
-                   headers: header)
+                   headers: APIConstant.header)
         .validate()
         .responseDecodable(of: NoticeParentResponse.self) { (response) in
             switch response.result {
@@ -36,5 +29,4 @@ class NoticeParentAPI{
             }
         }
     }
-    
 }

@@ -7,26 +7,18 @@
 
 import Alamofire
 
-class NoticeAPI{
-    
+class NoticeAPI {
     func getNotice(_ classCode: String, _ delegate: NoticeViewController) {
-        
-        let url = "\(Const.URL.BASE_URL)/info/notice/"
-        
-        let token = TokenUtils()
-        guard let header = token.getAuthorizationHeader(accessToken: JWT.shared.jwt ?? "") else {
-            return
-        }
-        
+        URLCache.shared.removeAllCachedResponses()
         let params: [String: String] = [
             "classCode": classCode
         ]
         
-        AF.request(url,
+        AF.request(URLConstant.notice,
                    method: .get,
                    parameters: params,
                    encoding: URLEncoding.default,
-                   headers: header)
+                   headers: APIConstant.header)
         .validate()
         .responseDecodable(of: NoticeResponse.self) { (response) in
             switch response.result {
@@ -40,5 +32,4 @@ class NoticeAPI{
             }
         }
     }
-    
 }

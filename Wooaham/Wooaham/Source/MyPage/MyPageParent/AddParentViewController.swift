@@ -23,7 +23,7 @@ class AddParentViewController: UIViewController {
     
     @IBAction func addParentBtnDidTap(_ sender: Any) {
         print("hi")
-        addParentAPI.addParent(UserId.shared.userId ?? 0, parentEmailTextField.text ?? "", self)
+        addParentAPI.addParent(parentEmailTextField.text ?? "", self)
     }
 }
 

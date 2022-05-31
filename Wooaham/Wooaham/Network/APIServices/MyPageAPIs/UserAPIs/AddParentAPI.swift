@@ -8,26 +8,15 @@
 import Alamofire
 
 class AddParentAPI {
-    
-    func addParent(_ userId: CLong , _ email: String,_ delegate: AddParentViewController) {
-        
-        let url = "\(Const.URL.BASE_URL)/users/\(userId)/link"
-        
-        let token = TokenUtils()
-        guard let header = token.getAuthorizationHeader(accessToken: JWT.shared.jwt ?? "") else {
-            return
-        }
-        
+    func addParent(_ email: String,_ delegate: AddParentViewController) {
         let body: [String: Any] = [
             "email": email
         ]
-
-
-        AF.request(url,
+        AF.request(URLConstant.addParent,
                    method: .put,
                    parameters: body,
                    encoding: JSONEncoding.default,
-                   headers: header)
+                   headers: APIConstant.header)
         .validate()
         .response { response in
             switch response.result {

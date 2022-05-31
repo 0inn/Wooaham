@@ -23,7 +23,7 @@ class MyPageStudentViewController: UIViewController {
     }
     
     private func getStudentAPI() {
-        myStudentAPI.myStudent(UserId.shared.userId ?? 0, self)
+        myStudentAPI.myStudent(self)
     }
     
     private func setUI() {
@@ -54,7 +54,7 @@ extension MyPageStudentViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        changeStudentAPI.changeStudent(UserId.shared.userId ?? 0, myStudentList?[indexPath.row].studentId ?? 0, self)
+        changeStudentAPI.changeStudent(myStudentList?[indexPath.row].studentId ?? 0, self)
     }
 }
 

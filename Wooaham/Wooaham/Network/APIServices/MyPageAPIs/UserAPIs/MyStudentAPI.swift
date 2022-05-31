@@ -8,21 +8,12 @@
 import Alamofire
 
 class MyStudentAPI {
-    
-    func myStudent(_ userId: CLong, _ delegate: MyPageStudentViewController) {
-        
-        let url = "\(Const.URL.BASE_URL)/users/\(userId)/children"
-        
-        let token = TokenUtils()
-        guard let header = token.getAuthorizationHeader(accessToken: JWT.shared.jwt ?? "") else {
-            return
-        }
-        
-        AF.request(url,
+    func myStudent(_ delegate: MyPageStudentViewController) {
+        AF.request(URLConstant.children,
                    method: .get,
                    parameters: nil,
                    encoding: URLEncoding.default,
-                   headers: header)
+                   headers: APIConstant.header)
         .validate()
         .responseDecodable(of: MyStudentResponse.self) { response in
             switch response.result {
@@ -34,8 +25,6 @@ class MyStudentAPI {
                     delegate.failedToRequestMyStudent(error.message ?? "자녀 조회에 실패하였습니다.")
                 }
             }
-            
         }
     }
-    
 }

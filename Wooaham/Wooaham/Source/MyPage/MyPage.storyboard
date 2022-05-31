@@ -197,6 +197,9 @@
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="13"/>
                                     <color key="baseForegroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="logoutBtnDidTap:" destination="aQ7-JL-dUF" eventType="touchUpInside" id="u7Z-cH-lkk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cGa-r9-puT"/>

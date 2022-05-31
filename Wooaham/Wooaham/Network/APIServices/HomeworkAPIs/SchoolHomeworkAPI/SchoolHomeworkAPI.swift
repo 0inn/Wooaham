@@ -8,21 +8,12 @@
 import Alamofire
 
 class SchoolHomeworkAPI{
-    
     func getSchoolHomework(_ delegate: HomeworkViewController) {
-        
-        let url = "\(Const.URL.BASE_URL)/info/hw/school/"
-        
-        let token = TokenUtils()
-        guard let header = token.getAuthorizationHeader(accessToken: JWT.shared.jwt ?? "") else {
-            return
-        }
-        
-        AF.request(url,
+        AF.request(URLConstant.schoolHW,
                    method: .get,
                    parameters: nil,
                    encoding: URLEncoding.default,
-                   headers: header)
+                   headers: APIConstant.header)
         .validate()
         .responseDecodable(of: HomeworkResponse.self) { (response) in
             switch response.result {
@@ -36,5 +27,4 @@ class SchoolHomeworkAPI{
             }
         }
     }
-    
 }

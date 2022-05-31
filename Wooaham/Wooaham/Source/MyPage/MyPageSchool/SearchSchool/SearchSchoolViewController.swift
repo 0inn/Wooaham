@@ -56,7 +56,7 @@ extension SearchSchoolViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let selectedSchool = schoolList?[indexPath.row] else { return }
-        addSchoolAPI.addSchool(UserId.shared.userId ?? 0, selectedSchool, self)
+        addSchoolAPI.addSchool(selectedSchool, self)
         schoolTitle = selectedSchool.schoolName
     }
     

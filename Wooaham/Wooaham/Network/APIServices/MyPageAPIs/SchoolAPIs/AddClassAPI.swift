@@ -8,26 +8,17 @@
 import Alamofire
 
 class AddClassAPI {
-    
-    func addClass(_ userId: CLong, _ grade: Int, _ classNum: Int, _ delegate: AddSchoolViewController) {
-        
-        let url = "\(Const.URL.BASE_URL)/users/\(userId)/class"
-        
-        let token = TokenUtils()
-        guard let header = token.getAuthorizationHeader(accessToken: JWT.shared.jwt ?? "") else {
-            return
-        }
-        
+    func addClass(_ grade: Int, _ classNum: Int, _ delegate: AddSchoolViewController) {
         let body: [String: Any] = [
             "grade" : grade,
             "classNum" : classNum
         ]
         
-        AF.request(url,
+        AF.request(URLConstant.addClass,
                    method: .put,
                    parameters: body,
                    encoding: JSONEncoding.default,
-                   headers: header)
+                   headers: APIConstant.header)
         .validate()
         .response { response in
             switch response.result {
@@ -42,6 +33,5 @@ class AddClassAPI {
                 print("❌ \(response)")
             }
         }
-        
     }
 }

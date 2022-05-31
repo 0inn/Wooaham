@@ -52,7 +52,7 @@ class AddSchoolViewController: UIViewController {
         guard let grade = Int(gradeTextField.text ?? "error"),
               let classNum = Int(classTextField.text ?? "error")
         else { return }
-        addClassAPI.addClass(UserId.shared.userId ?? 0, grade, classNum, self)
+        addClassAPI.addClass(grade, classNum, self)
     }
     
     

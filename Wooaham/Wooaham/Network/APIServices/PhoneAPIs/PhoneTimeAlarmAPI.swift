@@ -8,21 +8,12 @@
 import Alamofire
 
 class PhoneTimeAlarmAPI {
-    
     func getPhoneTimeAlarm(_ delegate: AddPhoneViewController) {
-        
-        let url = "\(Const.URL.BASE_URL)/phone-time/alarm"
-        
-        let token = TokenUtils()
-        guard let header = token.getAuthorizationHeader(accessToken: JWT.shared.jwt ?? "") else {
-            return
-        }
-        
-        AF.request(url,
+        AF.request(URLConstant.phoneTimeAlarm,
                    method: .get,
                    parameters: nil,
                    encoding: JSONEncoding.default,
-                   headers: header)
+                   headers: APIConstant.header)
         .validate()
         .responseDecodable(of: PhoneTimeResponse.self) { (response) in
             switch response.result {
@@ -35,5 +26,4 @@ class PhoneTimeAlarmAPI {
             }
         }
     }
-    
 }

@@ -8,25 +8,15 @@
 import Alamofire
 
 class MealPlannerAPI{
-    
     func getMealPlanner(_ startDay: String, _ delegate: MealPlannerViewController) {
-        
-        let url = "\(Const.URL.BASE_URL)/info/lunchtable"
-        
-        let token = TokenUtils()
-        guard let header = token.getAuthorizationHeader(accessToken: JWT.shared.jwt ?? "") else {
-            return
-        }
-        
         let body: [String: Any] = [
             "startDay": startDay
         ]
-        
-        AF.request(url,
+        AF.request(URLConstant.lunchtable,
                    method: .get,
                    parameters: body,
                    encoding: URLEncoding.queryString,
-                   headers: header)
+                   headers: APIConstant.header)
         .validate()
         .responseDecodable(of: MealPlannerResponse.self) { (response) in
             switch response.result {
@@ -38,5 +28,4 @@ class MealPlannerAPI{
             }
         }
     }
-    
 }

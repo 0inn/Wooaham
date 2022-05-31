@@ -8,25 +8,15 @@
 import Alamofire
 
 class ChangeStudentAPI {
-    
-    func changeStudent(_ userId: CLong, _ studentId: CLong, _ delegate: MyPageStudentViewController) {
-        
-        let url = "\(Const.URL.BASE_URL)/users/\(userId)/link/change"
-        
-        let token = TokenUtils()
-        guard let header = token.getAuthorizationHeader(accessToken: JWT.shared.jwt ?? "") else {
-            return
-        }
-        
+    func changeStudent(_ studentId: CLong, _ delegate: MyPageStudentViewController) {
         let body: [String: Any] = [
             "studentId": studentId
         ]
-        
-        AF.request(url,
+        AF.request(URLConstant.changeChild,
                    method: .put,
                    parameters: body,
                    encoding: JSONEncoding.default,
-                   headers: header)
+                   headers: APIConstant.header)
         .validate()
         .response { response in
             switch response.result {
@@ -38,8 +28,6 @@ class ChangeStudentAPI {
                     delegate.failedToRequestChangeStudent(error.message ?? "자녀 변경에 실패하였습니다.")
                 }
             }
-            
         }
     }
-    
 }
