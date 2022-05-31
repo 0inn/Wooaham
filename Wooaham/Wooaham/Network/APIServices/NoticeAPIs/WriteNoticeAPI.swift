@@ -17,7 +17,7 @@ class WriteNoticeAPI {
                    method: .post,
                    parameters: body,
                    encoding: JSONEncoding.default,
-                   headers: APIConstant.header)
+                   headers: KeyChain.getAuthorizationHeader(account: Key.KeyChainKey.accessToken))
         .validate()
         .responseDecodable(of: WriteNoticeResponse.self) { (response) in
             switch response.result {

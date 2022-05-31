@@ -16,7 +16,7 @@ class TimeTableOneDayAPI{
                    method: .get,
                    parameters: param,
                    encoding: URLEncoding.queryString,
-                   headers: APIConstant.header)
+                   headers: KeyChain.getAuthorizationHeader(account: Key.KeyChainKey.accessToken))
         .validate()
         .responseDecodable(of: TimeTableOneDayResponse.self) { (response) in
             switch response.result {

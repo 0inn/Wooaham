@@ -18,7 +18,7 @@ class NoticeAPI {
                    method: .get,
                    parameters: params,
                    encoding: URLEncoding.default,
-                   headers: APIConstant.header)
+                   headers: KeyChain.getAuthorizationHeader(account: Key.KeyChainKey.accessToken))
         .validate()
         .responseDecodable(of: NoticeResponse.self) { (response) in
             switch response.result {

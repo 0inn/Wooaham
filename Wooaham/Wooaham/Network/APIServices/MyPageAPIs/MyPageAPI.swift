@@ -9,11 +9,12 @@ import Alamofire
 
 class MyPageAPI {
     func getMyPage(_ delegate: MyPageViewController) {
-        AF.request(URLConstant.mypage,
+        let mypage = "\(URLConstant.baseURL)/users/\(UserDefaults.standard.integer(forKey: Key.UserIdKey.key))"
+        AF.request(mypage,
                    method: .get,
                    parameters: nil,
                    encoding: JSONEncoding.default,
-                   headers: APIConstant.header)
+                   headers: KeyChain.getAuthorizationHeader(account: Key.KeyChainKey.accessToken))
         .validate()
         .responseDecodable(of: MyPageResponse.self) { (response) in
             switch response.result {

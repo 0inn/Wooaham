@@ -9,14 +9,15 @@ import Alamofire
 
 class AddParentAPI {
     func addParent(_ email: String,_ delegate: AddParentViewController) {
+        let addParent = "\(URLConstant.baseURL)/users/\(UserDefaults.standard.integer(forKey: Key.UserIdKey.key))/link"
         let body: [String: Any] = [
             "email": email
         ]
-        AF.request(URLConstant.addParent,
+        AF.request(addParent,
                    method: .put,
                    parameters: body,
                    encoding: JSONEncoding.default,
-                   headers: APIConstant.header)
+                   headers: KeyChain.getAuthorizationHeader(account: Key.KeyChainKey.accessToken))
         .validate()
         .response { response in
             switch response.result {

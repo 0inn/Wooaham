@@ -9,16 +9,16 @@ import Alamofire
 
 class AddClassAPI {
     func addClass(_ grade: Int, _ classNum: Int, _ delegate: AddSchoolViewController) {
+        let addClass = "\(URLConstant.baseURL)/users/\(UserDefaults.standard.integer(forKey: Key.UserIdKey.key))/class"
         let body: [String: Any] = [
             "grade" : grade,
             "classNum" : classNum
         ]
-        
-        AF.request(URLConstant.addClass,
+        AF.request(addClass,
                    method: .put,
                    parameters: body,
                    encoding: JSONEncoding.default,
-                   headers: APIConstant.header)
+                   headers: KeyChain.getAuthorizationHeader(account: Key.KeyChainKey.accessToken))
         .validate()
         .response { response in
             switch response.result {

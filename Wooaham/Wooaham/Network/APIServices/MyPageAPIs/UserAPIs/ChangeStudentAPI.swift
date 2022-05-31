@@ -9,14 +9,15 @@ import Alamofire
 
 class ChangeStudentAPI {
     func changeStudent(_ studentId: CLong, _ delegate: MyPageStudentViewController) {
+        let changeChild = "\(URLConstant.baseURL)/users/\(UserDefaults.standard.integer(forKey: Key.UserIdKey.key))/link/change"
         let body: [String: Any] = [
             "studentId": studentId
         ]
-        AF.request(URLConstant.changeChild,
+        AF.request(changeChild,
                    method: .put,
                    parameters: body,
                    encoding: JSONEncoding.default,
-                   headers: APIConstant.header)
+                   headers: KeyChain.getAuthorizationHeader(account: Key.KeyChainKey.accessToken))
         .validate()
         .response { response in
             switch response.result {

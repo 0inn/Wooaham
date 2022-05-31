@@ -15,7 +15,7 @@ class NoticeParentAPI{
                    method: .get,
                    parameters: nil,
                    encoding: URLEncoding.default,
-                   headers: APIConstant.header)
+                   headers:  KeyChain.getAuthorizationHeader(account: Key.KeyChainKey.accessToken))
         .validate()
         .responseDecodable(of: NoticeParentResponse.self) { (response) in
             switch response.result {

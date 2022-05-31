@@ -104,7 +104,6 @@
 		A96578F42843A9C6005A1976 /* MapViewController+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96578F32843A9C6005A1976 /* MapViewController+Network.swift */; };
 		A96578FB2845D4E6005A1976 /* KeychainKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96578FA2845D4E6005A1976 /* KeychainKey.swift */; };
 		A96578FD2845D519005A1976 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96578FC2845D519005A1976 /* Key.swift */; };
-		A96578FF2845D6CA005A1976 /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96578FE2845D6CA005A1976 /* APIConstant.swift */; };
 		A96579012845D758005A1976 /* URLConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96579002845D758005A1976 /* URLConstant.swift */; };
 		A96579032845D8CC005A1976 /* UserIdKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96579022845D8CC005A1976 /* UserIdKey.swift */; };
 		A9745AFA283776FF006EBA0E /* ParentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9745AF8283776FF006EBA0E /* ParentsTableViewCell.swift */; };
@@ -265,7 +264,6 @@
 		A96578F32843A9C6005A1976 /* MapViewController+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+Network.swift"; sourceTree = "<group>"; };
 		A96578FA2845D4E6005A1976 /* KeychainKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainKey.swift; sourceTree = "<group>"; };
 		A96578FC2845D519005A1976 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
-		A96578FE2845D6CA005A1976 /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
 		A96579002845D758005A1976 /* URLConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstant.swift; sourceTree = "<group>"; };
 		A96579022845D8CC005A1976 /* UserIdKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdKey.swift; sourceTree = "<group>"; };
 		A9745AF8283776FF006EBA0E /* ParentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentsTableViewCell.swift; sourceTree = "<group>"; };
@@ -407,7 +405,6 @@
 		A90900D3280C23B400089CCA /* APIConstants */ = {
 			isa = PBXGroup;
 			children = (
-				A96578FE2845D6CA005A1976 /* APIConstant.swift */,
 				A96579002845D758005A1976 /* URLConstant.swift */,
 			);
 			path = APIConstants;
@@ -1493,7 +1490,6 @@
 				A9AD1A7B281949F90070F9AE /* WriteHomeworkViewController.swift in Sources */,
 				A9CEF4332815897800B7B25B /* AcademyHomeworkAPI.swift in Sources */,
 				A9BB8EAD2812675E004F2990 /* AddAlarmRequest.swift in Sources */,
-				A96578FF2845D6CA005A1976 /* APIConstant.swift in Sources */,
 				A909009828095A9500089CCA /* AddAlarmAPI.swift in Sources */,
 				A9AD1A9E281A6A680070F9AE /* EditNoticeResponse.swift in Sources */,
 				A96578F42843A9C6005A1976 /* MapViewController+Network.swift in Sources */,

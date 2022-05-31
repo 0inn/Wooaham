@@ -52,7 +52,12 @@ class KeyChain {
         ]
         
         let status = SecItemDelete(keyChainQuery)
-        assert(status == noErr, "failed to delete the value, status code = \(status)")
+        if status == errSecSuccess {
+            print("remove key-data complete")
+        } else {
+            print("remove key-data failed")
+        }
+        //assert(status == noErr, "failed to delete the value, status code = \(status)")
     }
     
     class func getAuthorizationHeader(account: String) -> HTTPHeaders? {

@@ -14,7 +14,7 @@ class ReadNoticeAPI {
                    method: .post,
                    parameters: nil,
                    encoding: URLEncoding.default,
-                   headers: APIConstant.header)
+                   headers: KeyChain.getAuthorizationHeader(account: Key.KeyChainKey.accessToken))
         .validate()
         .responseDecodable(of: Response.self) { (response) in
             switch response.result {

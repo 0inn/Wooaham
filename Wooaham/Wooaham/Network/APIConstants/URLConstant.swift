@@ -49,14 +49,4 @@ struct URLConstant {
     // MARK: - Alarm URL
     
     static let alarm = "\(baseURL)/alarms"
-    
-    // MARK: - MyPage URL
-    
-    static let mypage = "\(baseURL)/users/\(Key.UserIdKey.userId ?? "")"
-    static let quit = "\(baseURL)/users/\(Key.UserIdKey.userId ?? "")"
-    static let addSchool = "\(baseURL)/users/\(Key.UserIdKey.userId ?? "")/school"
-    static let addClass = "\(baseURL)/users/\(Key.UserIdKey.userId ?? "")/class"
-    static let children = "\(baseURL)/users/\(Key.UserIdKey.userId ?? "")/children"
-    static let changeChild = "\(baseURL)/users/\(Key.UserIdKey.userId ?? "")/link/change"
-    static let addParent = "\(baseURL)/users/\(Key.UserIdKey.userId ?? "")/link"
 }

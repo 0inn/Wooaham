@@ -18,7 +18,7 @@ class AddPhoneTimeAPI {
                    method: .put,
                    parameters: body,
                    encoding: JSONEncoding.default,
-                   headers: APIConstant.header)
+                   headers: KeyChain.getAuthorizationHeader(account: Key.KeyChainKey.accessToken))
         .validate()
         .response { (response) in
             print("🔥 \(response)")

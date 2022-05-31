@@ -13,7 +13,7 @@ class PhoneTimeAlarmAPI {
                    method: .get,
                    parameters: nil,
                    encoding: JSONEncoding.default,
-                   headers: APIConstant.header)
+                   headers: KeyChain.getAuthorizationHeader(account: Key.KeyChainKey.accessToken))
         .validate()
         .responseDecodable(of: PhoneTimeResponse.self) { (response) in
             switch response.result {

@@ -9,17 +9,17 @@ import Alamofire
 
 class AddSchoolAPI {
     func addSchool(_ schoolInfo: SchoolData, _ delegate: SearchSchoolViewController) {
+        let addSchool = "\(URLConstant.baseURL)/users/\(UserDefaults.standard.integer(forKey: Key.UserIdKey.key))/school"
         let body: [String: Any] = [
             "officeCode" : schoolInfo.officeCode ?? "",
             "schoolName" : schoolInfo.schoolName ?? "",
             "schoolCode" : schoolInfo.schoolCode ?? ""
         ]
-        
-        AF.request(URLConstant.addSchool,
+        AF.request(addSchool,
                    method: .put,
                    parameters: body,
                    encoding: JSONEncoding.default,
-                   headers: APIConstant.header)
+                   headers: KeyChain.getAuthorizationHeader(account: Key.KeyChainKey.accessToken))
         .validate()
         .response { response in
             switch response.result {

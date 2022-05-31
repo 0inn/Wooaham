@@ -16,7 +16,7 @@ class MealPlannerOneDayAPI{
                    method: .get,
                    parameters: body,
                    encoding: URLEncoding.queryString,
-                   headers: APIConstant.header)
+                   headers: KeyChain.getAuthorizationHeader(account: Key.KeyChainKey.accessToken))
         .validate()
         .responseDecodable(of: MealPlannerResponse.self) { (response) in
             switch response.result {

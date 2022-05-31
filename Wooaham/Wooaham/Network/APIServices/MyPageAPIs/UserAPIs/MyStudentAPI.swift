@@ -9,11 +9,12 @@ import Alamofire
 
 class MyStudentAPI {
     func myStudent(_ delegate: MyPageStudentViewController) {
-        AF.request(URLConstant.children,
+        let children = "\(URLConstant.baseURL)/users/\(UserDefaults.standard.integer(forKey: Key.UserIdKey.key))/children"
+        AF.request(children,
                    method: .get,
                    parameters: nil,
                    encoding: URLEncoding.default,
-                   headers: APIConstant.header)
+                   headers: KeyChain.getAuthorizationHeader(account: Key.KeyChainKey.accessToken))
         .validate()
         .responseDecodable(of: MyStudentResponse.self) { response in
             switch response.result {

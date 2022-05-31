@@ -59,10 +59,9 @@ class MyPageViewController: UIViewController {
         setStudent()
     }
     
-    private func setLogin() {
-        guard let loginVC = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
-        let loginNVC = UINavigationController(rootViewController: loginVC)
-        changeRootViewController(loginNVC)
+    private func setMain() {
+        guard let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
+        changeRootViewController(mainVC)
     }
 
     
@@ -93,9 +92,9 @@ class MyPageViewController: UIViewController {
     
     
     @IBAction func logoutBtnDidTap(_ sender: Any) {
-        //UserDefaults.standard.removeObject(forKey: "userId")
         KeyChain.delete(account: Key.KeyChainKey.accessToken)
-        setLogin()
+        UserDefaults.standard.removeObject(forKey: "userId")
+        setMain()
     }
 }
 

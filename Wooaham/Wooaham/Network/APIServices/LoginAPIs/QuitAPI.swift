@@ -9,11 +9,12 @@ import Alamofire
 
 class QuitAPI {
     func quit(_ delegate: ProfileEditViewController) {
-        AF.request(URLConstant.quit,
+        let quit = "\(URLConstant.baseURL)/users/\(UserDefaults.standard.integer(forKey: Key.UserIdKey.key))"
+        AF.request(quit,
                    method: .put,
                    parameters: nil,
                    encoding: JSONEncoding.default,
-                   headers: APIConstant.header)
+                   headers: KeyChain.getAuthorizationHeader(account: Key.KeyChainKey.accessToken))
         .validate()
         .response { response in
             switch response.result {

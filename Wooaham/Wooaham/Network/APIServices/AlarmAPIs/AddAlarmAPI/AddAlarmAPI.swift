@@ -21,7 +21,7 @@ class AddAlarmAPI {
                    method: .post,
                    parameters: body,
                    encoding: JSONEncoding.default,
-                   headers: APIConstant.header)
+                   headers: KeyChain.getAuthorizationHeader(account: Key.KeyChainKey.accessToken))
         .validate()
         .responseDecodable(of: AddAlarmResponse.self) { (response) in
             switch response.result {
