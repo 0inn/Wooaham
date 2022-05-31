@@ -7,6 +7,8 @@
 
 import UIKit
 
+import IQKeyboardManagerSwift
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -14,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         sleep(2)
         UINavigationBar.appearance().tintColor = .darkGray
         UNUserNotificationCenter.current().delegate = self
+        
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enableAutoToolbar = false
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        
         return true
     }
     
