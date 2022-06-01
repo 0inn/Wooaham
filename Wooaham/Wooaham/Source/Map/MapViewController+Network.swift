@@ -14,4 +14,13 @@ extension MapViewController {
         stores = storesInfo
         setMarkers()
     }
+    
+    func getStoresInfo(_ storeId: String) {
+        storesInfoAPI.getStoresInfo(storeId, self)
+    }
+    
+    func didSuccessStoresInfo(_ storeInfo: StoresInfoData) {
+        self.storeId = storeInfo.storeId
+        self.setStoresUI(storeInfo)
+    }
 }

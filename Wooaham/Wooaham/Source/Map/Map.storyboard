@@ -37,12 +37,48 @@
                                     <action selector="locationBtnDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6dq-DD-Izj"/>
                                 </connections>
                             </button>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zjG-If-ide">
+                                <rect key="frame" x="0.0" y="786" width="414" height="110"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영인집" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrU-nJ-BmF">
+                                        <rect key="frame" x="20" y="15" width="52" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="010-2020-2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJC-XR-E3C">
+                                        <rect key="frame" x="20" y="49" width="124" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="무슨구 무슨동 어쩌구" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9T-SC-RXk">
+                                        <rect key="frame" x="20" y="75" width="141.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="E9T-SC-RXk" firstAttribute="top" secondItem="XJC-XR-E3C" secondAttribute="bottom" constant="5" id="BS0-UZ-spP"/>
+                                    <constraint firstAttribute="height" constant="110" id="FQj-MC-lyE"/>
+                                    <constraint firstItem="E9T-SC-RXk" firstAttribute="leading" secondItem="zjG-If-ide" secondAttribute="leading" constant="20" id="GNZ-VI-Wmh"/>
+                                    <constraint firstItem="XrU-nJ-BmF" firstAttribute="top" secondItem="zjG-If-ide" secondAttribute="top" constant="15" id="b1X-Oa-wDd"/>
+                                    <constraint firstItem="XJC-XR-E3C" firstAttribute="top" secondItem="XrU-nJ-BmF" secondAttribute="bottom" constant="10" id="f2o-PT-3af"/>
+                                    <constraint firstItem="XrU-nJ-BmF" firstAttribute="leading" secondItem="zjG-If-ide" secondAttribute="leading" constant="20" id="g4W-O4-QO5"/>
+                                    <constraint firstItem="XJC-XR-E3C" firstAttribute="leading" secondItem="zjG-If-ide" secondAttribute="leading" constant="20" id="gPE-4N-3p1"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="zjG-If-ide" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="8It-tx-GdZ"/>
                             <constraint firstItem="pS9-N2-M7K" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Aot-NK-ccT"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nFz-BL-OST" secondAttribute="trailing" constant="20" id="FEf-1P-wG5"/>
+                            <constraint firstAttribute="bottom" secondItem="zjG-If-ide" secondAttribute="bottom" id="cqr-3a-2Vh"/>
+                            <constraint firstItem="zjG-If-ide" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dwM-R4-Hr3"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="pS9-N2-M7K" secondAttribute="bottom" id="eze-Lp-cuh"/>
                             <constraint firstItem="pS9-N2-M7K" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="jD1-AS-tOl"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pS9-N2-M7K" secondAttribute="trailing" id="rva-Vb-mTP"/>
@@ -53,8 +89,12 @@
                         <barButtonItem key="backBarButtonItem" title=" " id="pDk-s4-4Xx"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="addressLabel" destination="E9T-SC-RXk" id="3PV-b4-dFB"/>
                         <outlet property="locationBtn" destination="nFz-BL-OST" id="t4J-Gm-2lD"/>
                         <outlet property="mapView" destination="pS9-N2-M7K" id="UwV-Nt-2Xa"/>
+                        <outlet property="nameLabel" destination="XrU-nJ-BmF" id="nrU-vS-mt0"/>
+                        <outlet property="phoneNumLabel" destination="XJC-XR-E3C" id="CE2-UV-fZO"/>
+                        <outlet property="storeView" destination="zjG-If-ide" id="Pxv-gZ-wjj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

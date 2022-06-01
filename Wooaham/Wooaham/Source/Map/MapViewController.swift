@@ -7,24 +7,46 @@
 
 import UIKit
 
+import Alamofire
 import CoreLocation
 import NMapsMap
 
 class MapViewController: UIViewController {
     
+    // MARK: - Properties
+    
     var locationManager = CLLocationManager()
     lazy var storesAPI = getStoresAPI()
+    lazy var storesInfoAPI = getStoresInfoAPI()
     var stores: [StoresData]?
+    var storeId: String?
+    
+    // MARK: - IBOutlet
     
     @IBOutlet weak var mapView: NMFMapView!
     @IBOutlet weak var locationBtn: UIButton!
+    @IBOutlet weak var storeView: UIView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var phoneNumLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    
+    // MARK: - VC Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
-        getStores()
         setLocation()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        getStores()
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?){
+        if (!storeView.isHidden) { dismissStoreView() }
+    }
+    
+    // MARK: - Function
     
     private func setUI() {
         setMap()
@@ -32,6 +54,7 @@ class MapViewController: UIViewController {
     }
     
     private func setButton() {
+        //locationBtn.transform = CGAffineTransform(translationX: 0, y: -100)
         locationBtn.layer.shadowColor = UIColor.darkGray.cgColor
         locationBtn.layer.shadowOffset = CGSize.zero
         locationBtn.layer.shadowRadius = 6
@@ -50,14 +73,6 @@ class MapViewController: UIViewController {
     }
     
     func setMarkers() {
-        let image = NMFOverlayImage(name: "myLocation")
-        let marker = NMFMarker()
-        marker.iconImage = image
-        marker.width = 80
-        marker.height = 80
-        marker.position = NMGLatLng(lat: locationManager.location?.coordinate.latitude ?? 0, lng: locationManager.location?.coordinate.longitude ?? 0)
-        marker.mapView = mapView
-        
         let myImage = NMFOverlayImage(name: "지킴이집")
         for i in 0 ... ((stores?.count ?? 0) - 1) {
             let marker = NMFMarker()
@@ -65,9 +80,39 @@ class MapViewController: UIViewController {
             marker.position = NMGLatLng(lat: stores?[i].lng ?? 0.0, lng: stores?[i].lat ?? 0.0)
             marker.width = 60
             marker.height = 70
+            marker.touchHandler = { (overlay) -> Bool in
+                self.getStoresInfo(self.stores?[i].storeId ?? "")
+                return false
+            }
             marker.mapView = mapView
         }
     }
+    
+    func setStoresUI(_ storesInfo: StoresInfoData) {
+        nameLabel.text = "\(storesInfo.name)"
+        phoneNumLabel.text = "\(storesInfo.phoneNum)"
+        addressLabel.text = "\(storesInfo.newAddress)"
+        if (storeView.isHidden && storeId == storesInfo.storeId) { showStoreView() }
+        else { dismissStoreView() }
+    }
+    
+    func showStoreView() {
+        UIView.animate(withDuration: 0, animations: {
+            self.locationBtn.transform = CGAffineTransform(translationX: 0, y: -50)
+        })
+        tabBarController?.tabBar.isHidden = true
+        storeView.isHidden = false
+    }
+    
+    func dismissStoreView() {
+        UIView.animate(withDuration: 0, animations: {
+            self.locationBtn.transform = CGAffineTransform(translationX: 0, y: 0)
+        })
+        tabBarController?.tabBar.isHidden = false
+        storeView.isHidden = true
+    }
+    
+    // MARK: - IBAction
     
     @IBAction func locationBtnDidTap(_ sender: Any) {
         setLocation()
