@@ -20,20 +20,40 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFz-BL-OST">
+                                <rect key="frame" x="344" y="792" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="AH5-XP-MEV"/>
+                                    <constraint firstAttribute="width" secondItem="nFz-BL-OST" secondAttribute="height" multiplier="1:1" id="eCB-E4-iSJ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="location.fill" catalog="system">
+                                    <backgroundConfiguration key="background" cornerRadius="25">
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </backgroundConfiguration>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="locationBtnDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6dq-DD-Izj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pS9-N2-M7K" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Aot-NK-ccT"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nFz-BL-OST" secondAttribute="trailing" constant="20" id="FEf-1P-wG5"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="pS9-N2-M7K" secondAttribute="bottom" id="eze-Lp-cuh"/>
                             <constraint firstItem="pS9-N2-M7K" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="jD1-AS-tOl"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pS9-N2-M7K" secondAttribute="trailing" id="rva-Vb-mTP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="nFz-BL-OST" secondAttribute="bottom" constant="20" id="tG9-Ix-YgS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="지도" id="7ah-0i-fBu">
                         <barButtonItem key="backBarButtonItem" title=" " id="pDk-s4-4Xx"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="locationBtn" destination="nFz-BL-OST" id="t4J-Gm-2lD"/>
                         <outlet property="mapView" destination="pS9-N2-M7K" id="UwV-Nt-2Xa"/>
                     </connections>
                 </viewController>
@@ -61,6 +81,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="location.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

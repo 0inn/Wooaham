@@ -17,12 +17,25 @@ class MapViewController: UIViewController {
     var stores: [StoresData]?
     
     @IBOutlet weak var mapView: NMFMapView!
+    @IBOutlet weak var locationBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUI()
         getStores()
-        setMap()
         setLocation()
+    }
+    
+    private func setUI() {
+        setMap()
+        setButton()
+    }
+    
+    private func setButton() {
+        locationBtn.layer.shadowColor = UIColor.darkGray.cgColor
+        locationBtn.layer.shadowOffset = CGSize.zero
+        locationBtn.layer.shadowRadius = 6
+        locationBtn.layer.shadowOpacity = 0.7
     }
     
     private func setMap() {
@@ -34,7 +47,9 @@ class MapViewController: UIViewController {
         let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: locationManager.location?.coordinate.latitude ?? 0, lng: locationManager.location?.coordinate.longitude ?? 0))
         cameraUpdate.animation = .easeIn
         mapView.moveCamera(cameraUpdate)
-        
+    }
+    
+    func setMarkers() {
         let image = NMFOverlayImage(name: "myLocation")
         let marker = NMFMarker()
         marker.iconImage = image
@@ -42,18 +57,20 @@ class MapViewController: UIViewController {
         marker.height = 80
         marker.position = NMGLatLng(lat: locationManager.location?.coordinate.latitude ?? 0, lng: locationManager.location?.coordinate.longitude ?? 0)
         marker.mapView = mapView
-    }
-    
-    func setMarkers() {
-        let image = NMFOverlayImage(name: "지킴이집")
+        
+        let myImage = NMFOverlayImage(name: "지킴이집")
         for i in 0 ... ((stores?.count ?? 0) - 1) {
             let marker = NMFMarker()
-            marker.iconImage = image
+            marker.iconImage = myImage
             marker.position = NMGLatLng(lat: stores?[i].lng ?? 0.0, lng: stores?[i].lat ?? 0.0)
             marker.width = 60
             marker.height = 70
             marker.mapView = mapView
         }
+    }
+    
+    @IBAction func locationBtnDidTap(_ sender: Any) {
+        setLocation()
     }
     
 }

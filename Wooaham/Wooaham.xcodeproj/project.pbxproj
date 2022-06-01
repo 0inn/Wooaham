@@ -97,7 +97,6 @@
 		A93740FE2827C19F006FCC32 /* MyPageAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93740FD2827C19F006FCC32 /* MyPageAPI.swift */; };
 		A93741032827C2BF006FCC32 /* setUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741022827C2BF006FCC32 /* setUtil.swift */; };
 		A93741062827C59C006FCC32 /* MyPageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741052827C59C006FCC32 /* MyPageResponse.swift */; };
-		A93741082827CE40006FCC32 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93741072827CE40006FCC32 /* Role.swift */; };
 		A96578EC284349D7005A1976 /* AddAlarmViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96578EB284349D7005A1976 /* AddAlarmViewController+Extension.swift */; };
 		A96578EF2843A8D6005A1976 /* getStoresAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96578EE2843A8D6005A1976 /* getStoresAPI.swift */; };
 		A96578F22843A937005A1976 /* StoresResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96578F12843A937005A1976 /* StoresResponse.swift */; };
@@ -258,7 +257,6 @@
 		A93740FD2827C19F006FCC32 /* MyPageAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageAPI.swift; sourceTree = "<group>"; };
 		A93741022827C2BF006FCC32 /* setUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = setUtil.swift; sourceTree = "<group>"; };
 		A93741052827C59C006FCC32 /* MyPageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageResponse.swift; sourceTree = "<group>"; };
-		A93741072827CE40006FCC32 /* Role.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
 		A96578EB284349D7005A1976 /* AddAlarmViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddAlarmViewController+Extension.swift"; sourceTree = "<group>"; };
 		A96578EE2843A8D6005A1976 /* getStoresAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getStoresAPI.swift; sourceTree = "<group>"; };
 		A96578F12843A937005A1976 /* StoresResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresResponse.swift; sourceTree = "<group>"; };
@@ -731,7 +729,6 @@
 		A93740EA282782DF006FCC32 /* Secret */ = {
 			isa = PBXGroup;
 			children = (
-				A93741072827CE40006FCC32 /* Role.swift */,
 				A96578FC2845D519005A1976 /* Key.swift */,
 				A96578FA2845D4E6005A1976 /* KeychainKey.swift */,
 				A96579022845D8CC005A1976 /* UserIdKey.swift */,
@@ -1431,7 +1428,6 @@
 				A923CBC2282A53EB00608B3F /* AddParentAPI.swift in Sources */,
 				A9AD1A6A281921FD0070F9AE /* UINavigationController+.swift in Sources */,
 				A93740F028279A70006FCC32 /* SearchSchoolViewController.swift in Sources */,
-				A93741082827CE40006FCC32 /* Role.swift in Sources */,
 				A9AD1A6228191C860070F9AE /* NoticeDetailViewController.swift in Sources */,
 				A996E4B32823A9F600926DDC /* LoginAPI.swift in Sources */,
 				A9AD1A71281933BB0070F9AE /* WriteNoticeRequest.swift in Sources */,
