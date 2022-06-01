@@ -106,6 +106,8 @@
 		A96579012845D758005A1976 /* URLConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96579002845D758005A1976 /* URLConstant.swift */; };
 		A96579032845D8CC005A1976 /* UserIdKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96579022845D8CC005A1976 /* UserIdKey.swift */; };
 		A9657910284711BA005A1976 /* RoleKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965790F284711BA005A1976 /* RoleKey.swift */; };
+		A965791228471AEB005A1976 /* StoresInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965791128471AEB005A1976 /* StoresInfoResponse.swift */; };
+		A965791428471B17005A1976 /* getStoresInfoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965791328471B17005A1976 /* getStoresInfoAPI.swift */; };
 		A9745AFA283776FF006EBA0E /* ParentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9745AF8283776FF006EBA0E /* ParentsTableViewCell.swift */; };
 		A9745AFB283776FF006EBA0E /* ParentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9745AF9283776FF006EBA0E /* ParentsTableViewCell.xib */; };
 		A9745AFE28377B8B006EBA0E /* NoticeParentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9745AFD28377B8B006EBA0E /* NoticeParentAPI.swift */; };
@@ -266,6 +268,8 @@
 		A96579002845D758005A1976 /* URLConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstant.swift; sourceTree = "<group>"; };
 		A96579022845D8CC005A1976 /* UserIdKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdKey.swift; sourceTree = "<group>"; };
 		A965790F284711BA005A1976 /* RoleKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleKey.swift; sourceTree = "<group>"; };
+		A965791128471AEB005A1976 /* StoresInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresInfoResponse.swift; sourceTree = "<group>"; };
+		A965791328471B17005A1976 /* getStoresInfoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getStoresInfoAPI.swift; sourceTree = "<group>"; };
 		A9745AF8283776FF006EBA0E /* ParentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentsTableViewCell.swift; sourceTree = "<group>"; };
 		A9745AF9283776FF006EBA0E /* ParentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParentsTableViewCell.xib; sourceTree = "<group>"; };
 		A9745AFD28377B8B006EBA0E /* NoticeParentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeParentAPI.swift; sourceTree = "<group>"; };
@@ -827,6 +831,7 @@
 			isa = PBXGroup;
 			children = (
 				A96578EE2843A8D6005A1976 /* getStoresAPI.swift */,
+				A965791328471B17005A1976 /* getStoresInfoAPI.swift */,
 			);
 			path = MapAPIs;
 			sourceTree = "<group>";
@@ -835,6 +840,7 @@
 			isa = PBXGroup;
 			children = (
 				A96578F12843A937005A1976 /* StoresResponse.swift */,
+				A965791128471AEB005A1976 /* StoresInfoResponse.swift */,
 			);
 			path = MapModels;
 			sourceTree = "<group>";
@@ -1426,6 +1432,7 @@
 				A923CC3B282E661900608B3F /* SchoolResponse.swift in Sources */,
 				A93273B227F9ED1E001B0EDB /* ProfileEditViewController.swift in Sources */,
 				A923CBC2282A53EB00608B3F /* AddParentAPI.swift in Sources */,
+				A965791428471B17005A1976 /* getStoresInfoAPI.swift in Sources */,
 				A9AD1A6A281921FD0070F9AE /* UINavigationController+.swift in Sources */,
 				A93740F028279A70006FCC32 /* SearchSchoolViewController.swift in Sources */,
 				A9AD1A6228191C860070F9AE /* NoticeDetailViewController.swift in Sources */,
@@ -1477,6 +1484,7 @@
 				A9AD1A94281960720070F9AE /* EditHomeworkAPI.swift in Sources */,
 				A996E4B62823B57800926DDC /* TimeTableOneDayAPI.swift in Sources */,
 				A9AD1A73281933FC0070F9AE /* WriteNoticeAPI.swift in Sources */,
+				A965791228471AEB005A1976 /* StoresInfoResponse.swift in Sources */,
 				A9AD1AA5281A745B0070F9AE /* Response.swift in Sources */,
 				A9AD1A91281956B80070F9AE /* HomeworkCheckAPI.swift in Sources */,
 				A9AD1A8128194D8D0070F9AE /* WriteHomeworkRequest.swift in Sources */,
