@@ -50,7 +50,7 @@ class ProfileEditViewController: UIViewController {
     }
     
     private func setAuth() {
-        if (Role.shared.role == "PARENT") {
+        if (UserDefaults.standard.string(forKey: Key.RoleKey.key) == "PARENT") {
             schoolView.isHidden = true
             lineView.isHidden = false
         }

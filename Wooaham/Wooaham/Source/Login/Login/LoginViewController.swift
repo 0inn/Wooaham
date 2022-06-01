@@ -81,7 +81,6 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     func didSuccessLogin(_ loginRole: String) {
         guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else { return }
-        Role.shared.role = loginRole
         changeRootViewController(vc)
     }
     

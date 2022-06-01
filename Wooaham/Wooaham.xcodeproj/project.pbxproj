@@ -106,6 +106,7 @@
 		A96578FD2845D519005A1976 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96578FC2845D519005A1976 /* Key.swift */; };
 		A96579012845D758005A1976 /* URLConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96579002845D758005A1976 /* URLConstant.swift */; };
 		A96579032845D8CC005A1976 /* UserIdKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96579022845D8CC005A1976 /* UserIdKey.swift */; };
+		A9657910284711BA005A1976 /* RoleKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965790F284711BA005A1976 /* RoleKey.swift */; };
 		A9745AFA283776FF006EBA0E /* ParentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9745AF8283776FF006EBA0E /* ParentsTableViewCell.swift */; };
 		A9745AFB283776FF006EBA0E /* ParentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9745AF9283776FF006EBA0E /* ParentsTableViewCell.xib */; };
 		A9745AFE28377B8B006EBA0E /* NoticeParentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9745AFD28377B8B006EBA0E /* NoticeParentAPI.swift */; };
@@ -266,6 +267,7 @@
 		A96578FC2845D519005A1976 /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		A96579002845D758005A1976 /* URLConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstant.swift; sourceTree = "<group>"; };
 		A96579022845D8CC005A1976 /* UserIdKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserIdKey.swift; sourceTree = "<group>"; };
+		A965790F284711BA005A1976 /* RoleKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleKey.swift; sourceTree = "<group>"; };
 		A9745AF8283776FF006EBA0E /* ParentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentsTableViewCell.swift; sourceTree = "<group>"; };
 		A9745AF9283776FF006EBA0E /* ParentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParentsTableViewCell.xib; sourceTree = "<group>"; };
 		A9745AFD28377B8B006EBA0E /* NoticeParentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeParentAPI.swift; sourceTree = "<group>"; };
@@ -733,6 +735,7 @@
 				A96578FC2845D519005A1976 /* Key.swift */,
 				A96578FA2845D4E6005A1976 /* KeychainKey.swift */,
 				A96579022845D8CC005A1976 /* UserIdKey.swift */,
+				A965790F284711BA005A1976 /* RoleKey.swift */,
 			);
 			path = Secret;
 			sourceTree = "<group>";
@@ -1500,6 +1503,7 @@
 				A93273C727FC2457001B0EDB /* AddAlarmViewController.swift in Sources */,
 				A9745AFA283776FF006EBA0E /* ParentsTableViewCell.swift in Sources */,
 				A93273C427FC1DA3001B0EDB /* AlarmTableViewCell.swift in Sources */,
+				A9657910284711BA005A1976 /* RoleKey.swift in Sources */,
 				A909009A28095AEC00089CCA /* AddAlarmResponse.swift in Sources */,
 				A9AD1A6828191E2A0070F9AE /* NoticeDetailResponse.swift in Sources */,
 				A96578FD2845D519005A1976 /* Key.swift in Sources */,

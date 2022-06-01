@@ -58,7 +58,7 @@ class TabBarController: UITabBarController {
             selectedImage: UIImage(systemName: "house.fill")
         )
         
-        if (Role.shared.role != "TEACHER") {
+        if (UserDefaults.standard.string(forKey: Key.RoleKey.key) != "TEACHER") {
             alarmNVC.tabBarItem = UITabBarItem(
                 title: "시간 알림",
                 image: UIImage(systemName: "alarm"),
@@ -77,7 +77,7 @@ class TabBarController: UITabBarController {
             selectedImage: UIImage(systemName: "person.fill")
         )
         
-        switch Role.shared.role {
+        switch UserDefaults.standard.string(forKey: Key.RoleKey.key) {
         case "TEACHER":
             setViewControllers([homeNVC, mypageNVC], animated: false)
         default:

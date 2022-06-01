@@ -35,7 +35,7 @@ class MyPageViewController: UIViewController {
     }
     
     private func setAuth() {
-        switch Role.shared.role {
+        switch UserDefaults.standard.string(forKey: Key.RoleKey.key) {
         case "STUDENT":
             studentView.isHidden = true
             thirdLine.isHidden = true
@@ -93,7 +93,8 @@ class MyPageViewController: UIViewController {
     
     @IBAction func logoutBtnDidTap(_ sender: Any) {
         KeyChain.delete(account: Key.KeyChainKey.accessToken)
-        UserDefaults.standard.removeObject(forKey: "userId")
+        UserDefaults.standard.removeObject(forKey: Key.UserIdKey.key)
+        UserDefaults.standard.removeObject(forKey: Key.RoleKey.key)
         setMain()
     }
 }

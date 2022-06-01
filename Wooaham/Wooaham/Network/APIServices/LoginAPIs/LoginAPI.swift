@@ -24,8 +24,10 @@ class LoginAPI {
             case .success(let response):
                 guard let accessToken = response.data?.jwt else { return }
                 guard let userId = response.data?.userId else { return }
+                guard let role = response.data?.role else { return }
                 KeyChain.create(account: Key.KeyChainKey.accessToken, jwt: accessToken)
-                UserDefaults.standard.set(userId, forKey: "userId")
+                UserDefaults.standard.set(userId, forKey: Key.UserIdKey.key)
+                UserDefaults.standard.set(role, forKey: Key.RoleKey.key)
                 delegate.didSuccessLogin(response.data?.role ?? "")
             case .failure:
                 let decoder = JSONDecoder()

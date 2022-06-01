@@ -66,7 +66,7 @@ class HomeViewController: UIViewController {
     }
     
     private func setAuth() {
-        switch Role.shared.role {
+        switch UserDefaults.standard.string(forKey: Key.RoleKey.key) {
         case "TEACHER":
             homeworkView.isHidden = true
             screenTimeView.isHidden = true

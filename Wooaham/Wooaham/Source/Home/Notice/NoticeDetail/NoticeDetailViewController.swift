@@ -30,7 +30,7 @@ class NoticeDetailViewController: UIViewController {
     }
     
     private func setUI() {
-        if (Role.shared.role == "TEACHER") {
+        if (UserDefaults.standard.string(forKey: Key.RoleKey.key) == "TEACHER") {
             setNavigationBar()
         }
         setTableView()
