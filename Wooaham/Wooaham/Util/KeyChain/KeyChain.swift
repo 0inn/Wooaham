@@ -57,7 +57,6 @@ class KeyChain {
         } else {
             print("remove key-data failed")
         }
-        //assert(status == noErr, "failed to delete the value, status code = \(status)")
     }
     
     class func getAuthorizationHeader(account: String) -> HTTPHeaders? {
@@ -68,8 +67,11 @@ class KeyChain {
         }
     }
     
-    class func getAuthorizationHeader(accessToken: String) -> HTTPHeaders? {
-        return ["ACCESS-TOKEN" : "\(accessToken)"] as HTTPHeaders
+    class func getAuthorizationHeaderWithLocation(account: String) -> HTTPHeaders? {
+        if let accessToken = KeyChain.read(account: account) {
+            return ["ACCESS-TOKEN" : "\(accessToken)", "LOCATION-LAT": "\(UserDefaults.standard.string(forKey: Key.MapKey.latKey) ?? "")", "LOCATION-LNG": "\(UserDefaults.standard.string(forKey: Key.MapKey.lngKey) ?? "")"] as HTTPHeaders
+        } else {
+            return nil
+        }
     }
-    
 }

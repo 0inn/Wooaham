@@ -17,7 +17,7 @@ class ChangeStudentAPI {
                    method: .put,
                    parameters: body,
                    encoding: JSONEncoding.default,
-                   headers: KeyChain.getAuthorizationHeader(account: Key.KeyChainKey.accessToken))
+                   headers: KeyChain.getAuthorizationHeaderWithLocation(account: Key.KeyChainKey.accessToken))
         .validate()
         .response { response in
             switch response.result {

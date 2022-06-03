@@ -14,7 +14,7 @@ class MyStudentAPI {
                    method: .get,
                    parameters: nil,
                    encoding: URLEncoding.default,
-                   headers: KeyChain.getAuthorizationHeader(account: Key.KeyChainKey.accessToken))
+                   headers: KeyChain.getAuthorizationHeaderWithLocation(account: Key.KeyChainKey.accessToken))
         .validate()
         .responseDecodable(of: MyStudentResponse.self) { response in
             switch response.result {

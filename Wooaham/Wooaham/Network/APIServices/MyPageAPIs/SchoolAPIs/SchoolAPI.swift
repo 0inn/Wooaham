@@ -21,7 +21,7 @@ class SchoolAPI {
                    method: .get,
                    parameters: param,
                    encoding: URLEncoding.default,
-                   headers: nil)
+                   headers: KeyChain.getAuthorizationHeaderWithLocation(account: Key.KeyChainKey.accessToken))
         .validate()
         .responseDecodable(of: SchoolResponse.self) { response in
             switch response.result {

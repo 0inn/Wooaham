@@ -14,7 +14,7 @@ class MyPageAPI {
                    method: .get,
                    parameters: nil,
                    encoding: JSONEncoding.default,
-                   headers: KeyChain.getAuthorizationHeader(account: Key.KeyChainKey.accessToken))
+                   headers: KeyChain.getAuthorizationHeaderWithLocation(account: Key.KeyChainKey.accessToken))
         .validate()
         .responseDecodable(of: MyPageResponse.self) { (response) in
             switch response.result {
