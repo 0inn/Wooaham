@@ -18,6 +18,7 @@ class MapViewController: UIViewController {
     var locationManager = CLLocationManager()
     lazy var storesAPI = getStoresAPI()
     lazy var storesInfoAPI = getStoresInfoAPI()
+    lazy var mapAPI = getMapAPI()
     var stores: [StoresData]?
     var storeId: String?
     
@@ -40,6 +41,7 @@ class MapViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         getStores()
+        getMap()
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?){
@@ -66,8 +68,8 @@ class MapViewController: UIViewController {
         mapView.zoomLevel = 16.0
     }
     
-    private func setCamera() {
-        let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: locationManager.location?.coordinate.latitude ?? 0, lng: locationManager.location?.coordinate.longitude ?? 0))
+    func setCamera() {
+        let cameraUpdate = NMFCameraUpdate(scrollTo: NMGLatLng(lat: UserDefaults.standard.double(forKey: Key.MapKey.latKey), lng: UserDefaults.standard.double(forKey: Key.MapKey.lngKey)))
         cameraUpdate.animation = .easeIn
         mapView.moveCamera(cameraUpdate)
     }
@@ -116,25 +118,36 @@ class MapViewController: UIViewController {
     
     @IBAction func locationBtnDidTap(_ sender: Any) {
         setLocation()
+        if (UserDefaults.standard.string(forKey: Key.RoleKey.key) == "PARENT") {
+            let image = NMFOverlayImage(name: "myLocation")
+            let marker = NMFMarker()
+            marker.iconImage = image
+            marker.position = NMGLatLng(lat: UserDefaults.standard.double(forKey: Key.MapKey.latKey), lng: UserDefaults.standard.double(forKey: Key.MapKey.lngKey))
+            marker.width = 70
+            marker.height = 70
+            marker.mapView = mapView
+        }
     }
     
 }
 
 extension MapViewController: CLLocationManagerDelegate {
-    private func setLocation() {
+    func setLocation() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
-        
+
         if CLLocationManager.locationServicesEnabled() {
             print("위치 서비스 On 상태")
             locationManager.startUpdatingLocation()
+            UserDefaults.standard.set("\(locationManager.location?.coordinate.latitude ?? 0)", forKey: Key.MapKey.latKey)
+            UserDefaults.standard.set("\(locationManager.location?.coordinate.longitude ?? 0)", forKey: Key.MapKey.lngKey)
             setCamera()
         } else {
             print("위치 서비스 Off 상태")
         }
     }
-    
+
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch(CLLocationManager.authorizationStatus()) {
         case .authorizedAlways, .authorizedWhenInUse:

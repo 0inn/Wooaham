@@ -28,6 +28,8 @@ class LoginAPI {
                 KeyChain.create(account: Key.KeyChainKey.accessToken, jwt: accessToken)
                 UserDefaults.standard.set(userId, forKey: Key.UserIdKey.key)
                 UserDefaults.standard.set(role, forKey: Key.RoleKey.key)
+                UserDefaults.standard.set("0.0",forKey: Key.MapKey.latKey)
+                UserDefaults.standard.set("0.0",forKey: Key.MapKey.lngKey)
                 delegate.didSuccessLogin(response.data?.role ?? "")
             case .failure:
                 let decoder = JSONDecoder()

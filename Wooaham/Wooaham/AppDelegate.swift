@@ -7,10 +7,12 @@
 
 import UIKit
 
+import CoreLocation
 import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    var locationManager = CLLocationManager()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         sleep(2)
@@ -20,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        
+        setLocation()
         
         return true
     }
@@ -55,3 +59,28 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     }
 }
 
+extension AppDelegate: CLLocationManagerDelegate {
+    func setLocation() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            print("위치 서비스 On 상태")
+            locationManager.startUpdatingLocation()
+            UserDefaults.standard.set("\(locationManager.location?.coordinate.latitude ?? 0)", forKey: Key.MapKey.latKey)
+            UserDefaults.standard.set("\(locationManager.location?.coordinate.longitude ?? 0)", forKey: Key.MapKey.lngKey)
+        } else {
+            print("위치 서비스 Off 상태")
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch(CLLocationManager.authorizationStatus()) {
+        case .authorizedAlways, .authorizedWhenInUse:
+            locationManager.startUpdatingLocation()
+        case .denied, .notDetermined, .restricted:
+            locationManager.stopUpdatingLocation()
+        }
+    }
+}

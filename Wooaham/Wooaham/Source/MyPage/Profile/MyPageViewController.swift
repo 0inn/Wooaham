@@ -95,6 +95,8 @@ class MyPageViewController: UIViewController {
         KeyChain.delete(account: Key.KeyChainKey.accessToken)
         UserDefaults.standard.removeObject(forKey: Key.UserIdKey.key)
         UserDefaults.standard.removeObject(forKey: Key.RoleKey.key)
+        UserDefaults.standard.removeObject(forKey: Key.MapKey.latKey)
+        UserDefaults.standard.removeObject(forKey: Key.MapKey.lngKey)
         setMain()
     }
 }

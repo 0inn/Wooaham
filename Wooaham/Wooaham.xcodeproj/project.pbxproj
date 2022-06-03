@@ -108,6 +108,9 @@
 		A9657910284711BA005A1976 /* RoleKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965790F284711BA005A1976 /* RoleKey.swift */; };
 		A965791228471AEB005A1976 /* StoresInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965791128471AEB005A1976 /* StoresInfoResponse.swift */; };
 		A965791428471B17005A1976 /* getStoresInfoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965791328471B17005A1976 /* getStoresInfoAPI.swift */; };
+		A96579202849A869005A1976 /* MapKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A965791F2849A869005A1976 /* MapKey.swift */; };
+		A96579222849AB5C005A1976 /* MapResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96579212849AB5C005A1976 /* MapResponse.swift */; };
+		A96579242849AB89005A1976 /* getMapAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96579232849AB89005A1976 /* getMapAPI.swift */; };
 		A9745AFA283776FF006EBA0E /* ParentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9745AF8283776FF006EBA0E /* ParentsTableViewCell.swift */; };
 		A9745AFB283776FF006EBA0E /* ParentsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9745AF9283776FF006EBA0E /* ParentsTableViewCell.xib */; };
 		A9745AFE28377B8B006EBA0E /* NoticeParentAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9745AFD28377B8B006EBA0E /* NoticeParentAPI.swift */; };
@@ -270,6 +273,9 @@
 		A965790F284711BA005A1976 /* RoleKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleKey.swift; sourceTree = "<group>"; };
 		A965791128471AEB005A1976 /* StoresInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoresInfoResponse.swift; sourceTree = "<group>"; };
 		A965791328471B17005A1976 /* getStoresInfoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getStoresInfoAPI.swift; sourceTree = "<group>"; };
+		A965791F2849A869005A1976 /* MapKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKey.swift; sourceTree = "<group>"; };
+		A96579212849AB5C005A1976 /* MapResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapResponse.swift; sourceTree = "<group>"; };
+		A96579232849AB89005A1976 /* getMapAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getMapAPI.swift; sourceTree = "<group>"; };
 		A9745AF8283776FF006EBA0E /* ParentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentsTableViewCell.swift; sourceTree = "<group>"; };
 		A9745AF9283776FF006EBA0E /* ParentsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParentsTableViewCell.xib; sourceTree = "<group>"; };
 		A9745AFD28377B8B006EBA0E /* NoticeParentAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeParentAPI.swift; sourceTree = "<group>"; };
@@ -737,6 +743,7 @@
 				A96578FA2845D4E6005A1976 /* KeychainKey.swift */,
 				A96579022845D8CC005A1976 /* UserIdKey.swift */,
 				A965790F284711BA005A1976 /* RoleKey.swift */,
+				A965791F2849A869005A1976 /* MapKey.swift */,
 			);
 			path = Secret;
 			sourceTree = "<group>";
@@ -832,6 +839,7 @@
 			children = (
 				A96578EE2843A8D6005A1976 /* getStoresAPI.swift */,
 				A965791328471B17005A1976 /* getStoresInfoAPI.swift */,
+				A96579232849AB89005A1976 /* getMapAPI.swift */,
 			);
 			path = MapAPIs;
 			sourceTree = "<group>";
@@ -841,6 +849,7 @@
 			children = (
 				A96578F12843A937005A1976 /* StoresResponse.swift */,
 				A965791128471AEB005A1976 /* StoresInfoResponse.swift */,
+				A96579212849AB5C005A1976 /* MapResponse.swift */,
 			);
 			path = MapModels;
 			sourceTree = "<group>";
@@ -1420,6 +1429,7 @@
 				A90900822805CD3D00089CCA /* Const.swift in Sources */,
 				A90900842805CD4800089CCA /* URL.swift in Sources */,
 				A96578EC284349D7005A1976 /* AddAlarmViewController+Extension.swift in Sources */,
+				A96579222849AB5C005A1976 /* MapResponse.swift in Sources */,
 				A93273E727FEEC27001B0EDB /* MealPlannerViewController.swift in Sources */,
 				A9AD1AC6281BE4910070F9AE /* SmallHomeworkTableViewCell.swift in Sources */,
 				A93273B627FB2D57001B0EDB /* String+.swift in Sources */,
@@ -1464,6 +1474,7 @@
 				A9AD1AA0281A6A870070F9AE /* EditNoticeRequest.swift in Sources */,
 				A93273B827FB2D7B001B0EDB /* NSMutableAttributedString+.swift in Sources */,
 				A932737D27F9C83D001B0EDB /* SceneDelegate.swift in Sources */,
+				A96579242849AB89005A1976 /* getMapAPI.swift in Sources */,
 				A9CEF42C28157D4B00B7B25B /* HomeworkResponse.swift in Sources */,
 				A9AD1A86281950960070F9AE /* DeleteHomeworkAPI.swift in Sources */,
 				A96578EF2843A8D6005A1976 /* getStoresAPI.swift in Sources */,
@@ -1480,6 +1491,7 @@
 				A93273E327FEEA0E001B0EDB /* NoticeCollectionViewCell.swift in Sources */,
 				A932739927F9CEE6001B0EDB /* UIColor+.swift in Sources */,
 				A90900882805CDB300089CCA /* Storyboard.swift in Sources */,
+				A96579202849A869005A1976 /* MapKey.swift in Sources */,
 				A9A096DD283B32910013BDBD /* PhoneTimeResponse.swift in Sources */,
 				A9AD1A94281960720070F9AE /* EditHomeworkAPI.swift in Sources */,
 				A996E4B62823B57800926DDC /* TimeTableOneDayAPI.swift in Sources */,
