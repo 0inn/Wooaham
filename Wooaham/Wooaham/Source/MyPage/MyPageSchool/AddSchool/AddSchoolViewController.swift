@@ -34,6 +34,7 @@ class AddSchoolViewController: UIViewController {
     
     private func setTextField() {
         [gradeTextField, classTextField].forEach {
+            $0?.delegate = self
             $0?.addTarget(self, action: #selector(editingChanged(_:)), for: .editingChanged)
         }
     }

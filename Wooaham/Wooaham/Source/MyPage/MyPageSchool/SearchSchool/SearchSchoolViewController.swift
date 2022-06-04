@@ -30,6 +30,7 @@ class SearchSchoolViewController: UIViewController {
     
     private func setUI() {
         self.navigationItem.backButtonTitle = ""
+        schoolTextField.delegate = self
     }
     
     private func setTableView() {

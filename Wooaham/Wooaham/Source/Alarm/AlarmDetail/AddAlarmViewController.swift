@@ -61,6 +61,7 @@ class AddAlarmViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setData()
+        setTextField()
         // 저장 방식 생각하자
         if alarmId != nil {
             getAlarmDetailAPI()
@@ -72,6 +73,10 @@ class AddAlarmViewController: UIViewController {
         iconBtns = [UIButton(), firstIcon, secondIcon, thirdIcon, fourthIcon]
         dayBtns = [sun,mon, tue, wed, thur, fri, sat]
         datePicker.locale = Locale(identifier: "ko-KR")
+    }
+    
+    private func setTextField() {
+        nameTextField.delegate = self
     }
     
     // 취소 버튼

@@ -16,64 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인 후 이용해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bh3-gf-aXx">
-                                <rect key="frame" x="129" y="303.5" width="156" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="3P9-m1-BJs" userLabel="아이디/비밀번호">
-                                <rect key="frame" x="30" y="364" width="354" height="168"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UVd-d5-504">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="44"/>
-                                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.55023799669999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="2m6-sg-CwL"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="username"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Pt-uD-k6s">
-                                        <rect key="frame" x="0.0" y="59" width="354" height="44"/>
-                                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.55023799669999995" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="44" id="JL7-QS-gc6"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oot-38-2o2">
-                                        <rect key="frame" x="0.0" y="118" width="354" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="HZQ-Fa-oka"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="로그인">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="loginBtnDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6v4-ih-0EG"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="UVd-d5-504" firstAttribute="centerX" secondItem="3P9-m1-BJs" secondAttribute="centerX" id="AgW-5x-jGr"/>
-                                    <constraint firstItem="8Pt-uD-k6s" firstAttribute="centerX" secondItem="3P9-m1-BJs" secondAttribute="centerX" id="WMk-EY-uUU"/>
-                                    <constraint firstItem="Oot-38-2o2" firstAttribute="centerX" secondItem="3P9-m1-BJs" secondAttribute="centerX" id="lko-X0-TxK"/>
-                                </constraints>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HnB-oa-W9k" userLabel="가입하기">
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J9X-qq-faR" userLabel="가입하기">
                                 <rect key="frame" x="121.5" y="552" width="171.5" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="계정이 없으신가요? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yc1-it-Fwl">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="계정이 없으신가요? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkp-kU-5Pm">
                                         <rect key="frame" x="0.0" y="0.0" width="119.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ef9-cV-388">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cq0-0a-kum">
                                         <rect key="frame" x="119.5" y="0.0" width="52" height="30"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -81,42 +33,89 @@
                                             <color key="titleColor" systemColor="tintColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="goToJoinBtnDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="MM2-th-tua"/>
+                                            <action selector="goToJoinBtnDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="wIS-hB-Bk5"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wooaham" translatesAutoresizingMaskIntoConstraints="NO" id="7hu-gI-8SE">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wooaham" translatesAutoresizingMaskIntoConstraints="NO" id="JAR-FO-MuR">
                                 <rect key="frame" x="100" y="184" width="214" height="80"/>
-                                <color key="tintColor" red="1" green="0.73416654665568792" blue="0.7893903204506344" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" red="1" green="0.73416654670000003" blue="0.78939032050000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="iBG-4d-Ryq"/>
+                                    <constraint firstAttribute="height" constant="80" id="lcm-Wr-uS2"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="CA0-IT-Q4M" userLabel="아이디/비밀번호">
+                                <rect key="frame" x="20" y="364" width="374" height="168"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B1m-kh-TrW">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.55023799669999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="xSh-EK-Mr8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="username"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="  비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BX4-FV-u2F">
+                                        <rect key="frame" x="0.0" y="59" width="374" height="44"/>
+                                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="0.55023799669999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="DVS-U3-lbm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OD3-CE-bYZ">
+                                        <rect key="frame" x="0.0" y="118" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="VHY-XP-JFp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="로그인">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginBtnDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="r1u-v5-Tpf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="BX4-FV-u2F" firstAttribute="centerX" secondItem="CA0-IT-Q4M" secondAttribute="centerX" id="b0a-ma-jvl"/>
+                                    <constraint firstItem="B1m-kh-TrW" firstAttribute="centerX" secondItem="CA0-IT-Q4M" secondAttribute="centerX" id="dZT-3F-f77"/>
+                                    <constraint firstItem="OD3-CE-bYZ" firstAttribute="centerX" secondItem="CA0-IT-Q4M" secondAttribute="centerX" id="iFx-5t-QwW"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인 후 이용해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kff-gI-JB7">
+                                <rect key="frame" x="129" y="303.5" width="156" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="7hu-gI-8SE" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.5" id="35q-AV-rVg"/>
-                            <constraint firstItem="HnB-oa-W9k" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Ehv-tN-sSP"/>
-                            <constraint firstItem="HnB-oa-W9k" firstAttribute="top" secondItem="3P9-m1-BJs" secondAttribute="bottom" constant="20" id="S7p-bo-Xcp"/>
-                            <constraint firstItem="Bh3-gf-aXx" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.7" id="Vl3-qM-Ynf"/>
-                            <constraint firstItem="3P9-m1-BJs" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="ecQ-HT-aD2"/>
-                            <constraint firstItem="7hu-gI-8SE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="100" id="eel-rj-wc2"/>
-                            <constraint firstItem="Bh3-gf-aXx" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="ek9-0s-8d4"/>
-                            <constraint firstItem="3P9-m1-BJs" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="gbW-da-8S8"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="3P9-m1-BJs" secondAttribute="trailing" constant="30" id="jB3-MO-I7k"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7hu-gI-8SE" secondAttribute="trailing" constant="100" id="lgF-BL-Q3p"/>
-                            <constraint firstItem="3P9-m1-BJs" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="lsc-cG-gDP"/>
+                            <constraint firstItem="JAR-FO-MuR" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.5" id="4uy-Ie-hWP"/>
+                            <constraint firstItem="J9X-qq-faR" firstAttribute="top" secondItem="CA0-IT-Q4M" secondAttribute="bottom" constant="20" id="9aL-rP-t4e"/>
+                            <constraint firstItem="CA0-IT-Q4M" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="AyO-hg-Uhz"/>
+                            <constraint firstItem="JAR-FO-MuR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="100" id="IaE-hM-iYN"/>
+                            <constraint firstItem="CA0-IT-Q4M" firstAttribute="top" secondItem="Kff-gI-JB7" secondAttribute="bottom" constant="40" id="KxI-em-inK"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="JAR-FO-MuR" secondAttribute="trailing" constant="100" id="Pan-7h-vb7"/>
+                            <constraint firstItem="J9X-qq-faR" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="WDL-uR-ytU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="CA0-IT-Q4M" secondAttribute="trailing" constant="20" id="gG8-nH-9hW"/>
+                            <constraint firstItem="Kff-gI-JB7" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="rAC-Bz-hSR"/>
+                            <constraint firstItem="Kff-gI-JB7" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" multiplier="0.7" id="zW4-dk-pYd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5Ph-gZ-HVD">
                         <barButtonItem key="backBarButtonItem" title=" " id="pPL-qI-1jw"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="idTextField" destination="UVd-d5-504" id="S1v-KE-LKe"/>
-                        <outlet property="loginBtn" destination="Oot-38-2o2" id="v9X-it-YpS"/>
-                        <outlet property="passwordTextField" destination="8Pt-uD-k6s" id="nFX-ld-qK8"/>
+                        <outlet property="idTextField" destination="B1m-kh-TrW" id="6gH-QY-6pP"/>
+                        <outlet property="loginBtn" destination="OD3-CE-bYZ" id="Fmc-PS-956"/>
+                        <outlet property="passwordTextField" destination="BX4-FV-u2F" id="4Ep-ii-XN5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

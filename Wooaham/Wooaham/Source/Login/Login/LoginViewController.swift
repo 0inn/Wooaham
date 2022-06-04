@@ -10,7 +10,7 @@ import UIKit
 class LoginViewController: UIViewController {
     
     lazy var loginAPI = LoginAPI()
-
+    
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
@@ -23,7 +23,7 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         resetTextField()
     }
-
+    
     // MARK: - 가입하기 버튼 클릭
     @IBAction func goToJoinBtnDidTap(_ sender: Any) {
         guard let vc = UIStoryboard(name: Const.Storyboard.Name.joinSB, bundle: nil).instantiateViewController(withIdentifier: Const.ViewController.Identifier.authSelectVC) as? AuthSelectViewController else { return }
@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
         }
         loginAPI.postlogin(email: id, password: pw, self)
     }
-
+    
     private func setUI() {
         setButton()
         setTextField()
@@ -61,6 +61,7 @@ class LoginViewController: UIViewController {
     private func setTextField() {
         idTextField.clearButtonMode = .whileEditing
         [idTextField, passwordTextField].forEach {
+            $0?.delegate = self
             $0?.addTarget(self, action: #selector(editingChanged(_:)), for: .editingChanged)
         }
     }
@@ -74,7 +75,6 @@ class LoginViewController: UIViewController {
             loginBtn.isEnabled = false
         }
     }
-    
 }
 
 //MARK: - 로그인 API 연동

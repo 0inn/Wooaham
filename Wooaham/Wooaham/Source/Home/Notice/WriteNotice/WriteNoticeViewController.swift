@@ -26,6 +26,7 @@ class WriteNoticeViewController: UIViewController {
     }
     
     private func setTextField() {
+        titleTextField.delegate = self
         titleTextField.text = noticeTitle ?? ""
         contentTextView.text = noticeContent ?? ""
     }

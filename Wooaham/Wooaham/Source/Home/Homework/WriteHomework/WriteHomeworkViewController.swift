@@ -46,6 +46,7 @@ class WriteHomeworkViewController: UIViewController {
     }
     
     private func setTextField() {
+        homeworkTextField.delegate = self
         homeworkTextField.text = content ?? ""
     }
 }

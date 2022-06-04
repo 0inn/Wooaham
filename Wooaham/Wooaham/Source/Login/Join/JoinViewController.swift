@@ -41,6 +41,7 @@ class JoinViewController: UIViewController {
     
     private func setTextField() {
         [idTextField, passwordTextField, nameTextField, birthTextField].forEach {
+            $0?.delegate = self
             $0?.addTarget(self, action: #selector(editingChanged(_:)), for: .editingChanged)
         }
     }
