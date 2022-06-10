@@ -64,7 +64,9 @@ class MapViewController: UIViewController {
     }
     
     private func setMap() {
-        mapView.positionMode = .direction
+        if (UserDefaults.standard.string(forKey: Key.RoleKey.key) == "STUDENT") {
+            mapView.positionMode = .direction
+        }
         mapView.zoomLevel = 16.0
     }
     
@@ -136,7 +138,7 @@ extension MapViewController: CLLocationManagerDelegate {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
-
+        
         if CLLocationManager.locationServicesEnabled() {
             print("위치 서비스 On 상태")
             locationManager.startUpdatingLocation()
@@ -147,7 +149,7 @@ extension MapViewController: CLLocationManagerDelegate {
             print("위치 서비스 Off 상태")
         }
     }
-
+    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         switch(CLLocationManager.authorizationStatus()) {
         case .authorizedAlways, .authorizedWhenInUse:
