@@ -1,10 +1,47 @@
-# Wooaham
+# 우아함 (우리 아이 함께)
 
-## ✨우 아 함 (우리 아이 함께)✨
+## 📢  서비스 소개
+<img src = "https://user-images.githubusercontent.com/74968390/173279625-d0c10919-3af2-488e-920a-5641e27560a8.png" width = 25%>
 
-### 기능 소개
-시간 알림, 자녀 위치, 학교의 공지사항 등의 정보를 한 번에 손쉽게 받아볼 수 있도록 하여 바쁜 학부모들에게 편의 제공
-주변 편의시설 및 아동지킴이 집 위치를 제공함으로써 학생들에게 편의를 제공하고, 공지 및 알림 사항 읽은 사람 목록을 표시함으로써 교사들에게도 편의를 제공
+**우리 아이와 함께 해요!**  
+부모, 자녀, 교사가 하나로 연결되어 서로의 정보를 주고 받는 서비스  
+`학교 및 반 정보를 등록하여 급식표, 시간표의 정보도 얻을 수 있어요!`    
+
+## ⚙️  기술 스택 - iOS
+- **Swift**
+- **Library**
+  - Alamofire
+  - SnapKit
 
 
- 
+## 🗂  폴더링
+```
+Wooaham 
+├── AppDelegate.swift  
+├── SceneDelegate.swift  
+├── Assets.xcassets  
+├── Constants  
+├── Util/  
+│   ├── Extension  
+│   └── + Util
+├── Network/  
+│   ├── APIConstants/  
+│   ├── APIModels/  
+│   └── APIServices/  
+├── Secret/  
+└── Source/  
+    ├── Login/  
+    ├── Home/  
+    ├── Alarm/  
+    ├── Map/  
+    └── MyPage/  
+```
+
+## 📱 기능 및 View
+<img src = "https://user-images.githubusercontent.com/74968390/173288728-e1166933-051a-4de9-aa85-8c6788919d17.jpg" width = 80%>
+<img src = "https://user-images.githubusercontent.com/74968390/173289542-6b1194cf-cb0d-428d-9165-8e09fee08f07.jpg" width = 80%>
+<img src = "https://user-images.githubusercontent.com/74968390/173289548-a1689d14-10b5-4694-8bec-55e3bd1dbdfc.jpg" width = 80%>
+<img src = "https://user-images.githubusercontent.com/74968390/173289603-6984912a-cb3a-42d1-9fcc-088ef58f7943.jpg" width = 80%>
+<img src = "https://user-images.githubusercontent.com/74968390/173289617-86207c2d-3d12-458b-ac6c-3247ca117e62.jpg" width = 80%>
+<img src = "https://user-images.githubusercontent.com/74968390/173289625-95e1c2d7-bb9b-424d-835a-82224c758812.jpg" width = 80%>
+<img src = "https://user-images.githubusercontent.com/74968390/173289951-3e2d37e9-b0b7-4343-a756-91127cae7e94.jpg" width = 80%>
