@@ -38,10 +38,10 @@ Wooaham
 ```
 
 ## 📱 기능 및 View
-<img src = "https://user-images.githubusercontent.com/74968390/173288728-e1166933-051a-4de9-aa85-8c6788919d17.jpg" width = 80%>
-<img src = "https://user-images.githubusercontent.com/74968390/173289542-6b1194cf-cb0d-428d-9165-8e09fee08f07.jpg" width = 80%>
-<img src = "https://user-images.githubusercontent.com/74968390/173289548-a1689d14-10b5-4694-8bec-55e3bd1dbdfc.jpg" width = 80%>
-<img src = "https://user-images.githubusercontent.com/74968390/173289603-6984912a-cb3a-42d1-9fcc-088ef58f7943.jpg" width = 80%>
-<img src = "https://user-images.githubusercontent.com/74968390/173289617-86207c2d-3d12-458b-ac6c-3247ca117e62.jpg" width = 80%>
-<img src = "https://user-images.githubusercontent.com/74968390/173289625-95e1c2d7-bb9b-424d-835a-82224c758812.jpg" width = 80%>
-<img src = "https://user-images.githubusercontent.com/74968390/173289951-3e2d37e9-b0b7-4343-a756-91127cae7e94.jpg" width = 80%>
+<img src = "https://user-images.githubusercontent.com/74968390/173288728-e1166933-051a-4de9-aa85-8c6788919d17.jpg">
+<img src = "https://user-images.githubusercontent.com/74968390/173289542-6b1194cf-cb0d-428d-9165-8e09fee08f07.jpg">
+<img src = "https://user-images.githubusercontent.com/74968390/173289548-a1689d14-10b5-4694-8bec-55e3bd1dbdfc.jpg">
+<img src = "https://user-images.githubusercontent.com/74968390/173289603-6984912a-cb3a-42d1-9fcc-088ef58f7943.jpg">
+<img src = "https://user-images.githubusercontent.com/74968390/173289617-86207c2d-3d12-458b-ac6c-3247ca117e62.jpg">
+<img src = "https://user-images.githubusercontent.com/74968390/173289625-95e1c2d7-bb9b-424d-835a-82224c758812.jpg">
+<img src = "https://user-images.githubusercontent.com/74968390/173289951-3e2d37e9-b0b7-4343-a756-91127cae7e94.jpg">
